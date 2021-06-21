@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
+import {ResizeServiceService} from '../../../core/services/Helpers/resize-service.service';
 
 @Component({
   selector: 'app-service-section',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServiceSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private resizeServiceService: ResizeServiceService) {
+  }
+
+  numberofcells = 3;
 
   ngOnInit(): void {
+    this.numberofcells = this.resizeServiceService.checkWindowSize();
+  }
+
+
+  @HostListener('window:resize', ['$event'])
+
+  // tslint:disable-next-line:typedef
+  onResize(event: { target: { innerWidth: any; }; }) {
+    this.numberofcells = this.resizeServiceService.checkWindowSize();
   }
 
 }

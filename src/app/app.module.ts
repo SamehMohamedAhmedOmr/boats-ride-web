@@ -22,6 +22,13 @@ import { NewsComponent } from './home/news/news.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import { PopularDestinationComponent } from './home/popular-destination/popular-destination.component';
 import { ContactComponent } from './contact/contact.component';
+import { SecondryHeaderComponent } from './secondry-header/secondry-header.component';
+import { SecondryFooterComponent } from './secondry-footer/secondry-footer.component';
+import { OffersComponent } from './offers/offers.component';
+import { MainAboutComponent } from './main-about/main-about.component';
+import { MainYachtRentalComponent } from './main-yacht-rental/main-yacht-rental.component';
+import { FishingSectionComponent } from './home/fishing-section/fishing-section.component';
+import { MainDestinationComponent } from './main-destination/main-destination.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +49,14 @@ import { ContactComponent } from './contact/contact.component';
     FluidsComponent,
     NewsComponent,
     PopularDestinationComponent,
-    ContactComponent
+    ContactComponent,
+    SecondryHeaderComponent,
+    SecondryFooterComponent,
+    OffersComponent,
+    MainAboutComponent,
+    MainYachtRentalComponent,
+    FishingSectionComponent,
+    MainDestinationComponent
   ],
   imports: [
     BrowserModule,

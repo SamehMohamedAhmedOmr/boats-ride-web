@@ -1,31 +1,4 @@
 <!--Services Section-->
-<section class="section-landing padding-section bg-sea" style="background-image:url(./assets/images/landing/bg/bg-sea.jpg);">
-
-  <div class="container">
-
-
-    <div class="gallery-wrap row">
-      <div class="col-sm-6">
-        <img src="assets/images/landing/fishing/gallery3.jpg">
-      </div>
-      <div class="col-sm-3">
-        <img src="assets/images/landing/fishing/gallery7.jpg">
-        <img src="assets/images/landing/fishing/gallery8.jpg">
-      </div>
-      <div class="col-sm-3">
-        <img src="assets/images/landing/fishing/gallery5.jpg">
-        <img src="assets/images/landing/fishing/gallery4.jpg">
-      </div>
-    </div>
-
-
-  </div><!-- container // -->
-</section>
-
-<div class="wave-wrap">
-  <div class="wave1" style="background-image:url(./assets/images/landing/wave1.png);"></div>
-  <div class="wave2" style="background-image:url(./assets/images/landing/wave2.png);"></div>
-</div>
 <section class="services-section">
   <div class="title-box">
     <div class="image-layer" style="background-image: url(./assets/images/background/image-1.jpg);"></div>
@@ -39,10 +12,9 @@
     </div>
   </div>
   <div class="auto-container">
-    <div class="carousel-outer">
-      <!--Services Carousel-->
-      <div class="services-carousel owl-theme owl-carousel">
-        <!--Service Block-->
+    <carousel [margin]="20" [height]="600" [cellWidth]="400" [cellsToShow]="numberofcells"
+              [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
+      <div class="carousel-cell">
         <div class="service-block">
           <div class="inner-box">
 
@@ -75,7 +47,8 @@
             </div>
           </div>
         </div>
-        <!--Service Block-->
+      </div>
+      <div class="carousel-cell">
         <div class="service-block">
           <div class="inner-box">
 
@@ -86,113 +59,21 @@
 
                 <div class="img-wrap flip-container">
                   <div class="flipper ">
-                    <img src="assets/images/resource/Dubai-Water-Sports.jpg" class="front">
-                    <img src="assets/images/Watersports/banana-boat_1.jpg" class="back">
+                    <img src="assets/images/resource/39.jpg" class="front">
+                    <img src="assets/images/Watersports/jet-ski_2.jpg" class="back">
                   </div>
                 </div> <!-- img-wrap.// -->
 
               </article> <!-- yacht .// -->
             </div>
+
 
             <div class="lower-box">
               <div class="lower-content">
                 <div class="icon-box"><span class="flaticon-surf-sea"></span></div>
-                <h4><a href="jetpack.html">JetPack</a></h4>
+                <h4><a href="water-slide.html">Water Slide</a></h4>
                 <div class="link-box">
-                  <a href="jetpack.html" class="default-link">
-                    <span class="icon flaticon-logout"></span> <span class="link-text">Read More </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Service Block-->
-        <div class="service-block">
-          <div class="inner-box">
-
-            <div class="yacht-wrap">
-
-              <article class="yacht">
-
-
-                <div class="img-wrap flip-container">
-                  <div class="flipper ">
-                    <img src="assets/images/resource/Jet-Ski-2.jpg" class="front">
-                    <img src="assets/images/Watersports/banana-boat_2.jpg" class="back">
-                  </div>
-                </div> <!-- img-wrap.// -->
-
-              </article> <!-- yacht .// -->
-            </div>
-            <div class="lower-box">
-              <div class="lower-content">
-                <div class="icon-box"><span class="flaticon-jet-ski"></span></div>
-                <h4><a href="jet-ski.html">Jet Ski</a></h4>
-                <div class="link-box">
-                  <a href="jet-ski.html" class="default-link">
-                    <span class="icon flaticon-logout"></span> <span class="link-text">Read More </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Service Block-->
-        <div class="service-block">
-          <div class="inner-box">
-
-            <div class="yacht-wrap">
-
-              <article class="yacht">
-
-
-                <div class="img-wrap flip-container">
-                  <div class="flipper ">
-                    <img src="assets/images/resource/33.jpg" class="front">
-                    <img src="assets/images/Watersports/donut-ride_1.jpg" class="back">
-                  </div>
-                </div> <!-- img-wrap.// -->
-
-              </article> <!-- yacht .// -->
-            </div>
-            <div class="lower-box">
-              <div class="lower-content">
-                <div class="icon-box"><span class="flaticon-jet-ski"></span></div>
-                <h4><a href="shark-water.html">Shark Water </a></h4>
-                <div class="link-box">
-                  <a href="shark-water.html" class="default-link">
-                    <span class="icon flaticon-logout"></span> <span class="link-text">Read More </span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Service Block-->
-        <div class="service-block">
-          <div class="inner-box">
-
-            <div class="yacht-wrap">
-
-              <article class="yacht">
-
-
-                <div class="img-wrap flip-container">
-                  <div class="flipper ">
-                    <img src="assets/images/resource/32.jpeg" class="front">
-                    <img src="assets/images/Watersports/donut-ride_2.jpg" class="back">
-                  </div>
-                </div> <!-- img-wrap.// -->
-
-              </article> <!-- yacht .// -->
-            </div>
-            <div class="lower-box">
-              <div class="lower-content">
-                <div class="icon-box"><span class="flaticon-yacht-1"></span></div>
-                <h4><a href="donat-ride.html">Donut Ride</a></h4>
-                <div class="link-box">
-                  <a href="donat-ride.html" class="default-link">
+                  <a href="water-slide.html" class="default-link">
                     <span class="icon flaticon-logout"></span> <span class="link-text">Read More</span>
                   </a>
                 </div>
@@ -200,9 +81,8 @@
             </div>
           </div>
         </div>
-        <!--Service Block-->
-
-
+      </div>
+      <div class="carousel-cell">
         <div class="service-block">
           <div class="inner-box">
 
@@ -213,29 +93,29 @@
 
                 <div class="img-wrap flip-container">
                   <div class="flipper ">
-                    <img src="assets/images/resource/36.jpg" class="front">
+                    <img src="assets/images/resource/39.jpg" class="front">
                     <img src="assets/images/Watersports/jet-ski_2.jpg" class="back">
                   </div>
                 </div> <!-- img-wrap.// -->
 
               </article> <!-- yacht .// -->
             </div>
+
+
             <div class="lower-box">
               <div class="lower-content">
-                <div class="icon-box"><span class="flaticon-yacht-1"></span></div>
-                <h4><a href="banana-boat.html">Banana Boat</a></h4>
+                <div class="icon-box"><span class="flaticon-surf-sea"></span></div>
+                <h4><a href="water-slide.html">Water Slide</a></h4>
                 <div class="link-box">
-                  <a href="banana-boat.html" class="default-link">
-                    <span class="icon flaticon-logout"></span> <span class="link-text">Read More </span>
+                  <a href="water-slide.html" class="default-link">
+                    <span class="icon flaticon-logout"></span> <span class="link-text">Read More</span>
                   </a>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-      </div><!--End Services Carousel-->
-
-    </div>
+      </div>
+    </carousel>
   </div>
 </section>
