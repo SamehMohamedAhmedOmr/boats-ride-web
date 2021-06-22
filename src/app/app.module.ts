@@ -29,6 +29,9 @@ import { MainAboutComponent } from './main-about/main-about.component';
 import { MainYachtRentalComponent } from './main-yacht-rental/main-yacht-rental.component';
 import { FishingSectionComponent } from './home/fishing-section/fishing-section.component';
 import { MainDestinationComponent } from './main-destination/main-destination.component';
+import { WaterSportsComponent } from './water-sports/water-sports.component';
+import { FishingTripComponent } from './fishing-trip/fishing-trip.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,10 @@ import { MainDestinationComponent } from './main-destination/main-destination.co
     MainAboutComponent,
     MainYachtRentalComponent,
     FishingSectionComponent,
-    MainDestinationComponent
+    MainDestinationComponent,
+    WaterSportsComponent,
+    FishingTripComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
