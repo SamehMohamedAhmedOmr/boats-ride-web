@@ -32,6 +32,10 @@ import { MainDestinationComponent } from './main-destination/main-destination.co
 import { WaterSportsComponent } from './water-sports/water-sports.component';
 import { FishingTripComponent } from './fishing-trip/fishing-trip.component';
 import { ServicesComponent } from './services/services.component';
+import { YachtDetailsComponent } from './yacht-details/yacht-details.component';
+import { ServiceDetailsComponent } from './service-details/service-details.component';
+import { BlogsComponent } from './blogs/blogs.component';
+import { BlogDetailsComponent } from './blog-details/blog-details.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +66,11 @@ import { ServicesComponent } from './services/services.component';
     MainDestinationComponent,
     WaterSportsComponent,
     FishingTripComponent,
-    ServicesComponent
+    ServicesComponent,
+    YachtDetailsComponent,
+    ServiceDetailsComponent,
+    BlogsComponent,
+    BlogDetailsComponent
   ],
   imports: [
     BrowserModule,

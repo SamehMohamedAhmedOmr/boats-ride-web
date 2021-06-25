@@ -9,6 +9,10 @@ import {MainDestinationComponent} from './main-destination/main-destination.comp
 import {FishingTripComponent} from './fishing-trip/fishing-trip.component';
 import {ServicesComponent} from './services/services.component';
 import {WaterSportsComponent} from './water-sports/water-sports.component';
+import {YachtDetailsComponent} from './yacht-details/yacht-details.component';
+import {ServiceDetailsComponent} from './service-details/service-details.component';
+import {BlogsComponent} from './blogs/blogs.component';
+import {BlogDetailsComponent} from './blog-details/blog-details.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
@@ -19,7 +23,11 @@ const routes: Routes = [
   {path:'destination',component:MainDestinationComponent},
   {path:'fishingtrip',component:FishingTripComponent},
   {path:'services',component:ServicesComponent},
-  {path:'watersports',component:WaterSportsComponent}
+  {path:'watersports',component:WaterSportsComponent},
+  {path:'yachtdetails',component:YachtDetailsComponent},
+  {path:'servicedetails',component:ServiceDetailsComponent},
+  {path:'blogs',component:BlogsComponent},
+  {path:'blogdetails',component:BlogDetailsComponent}
 ];
 
 @NgModule({
