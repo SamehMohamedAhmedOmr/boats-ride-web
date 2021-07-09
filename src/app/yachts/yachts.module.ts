@@ -7,6 +7,7 @@ import { IndexComponent } from './index/index.component';
 import {SharedModule} from '../../shared/shared.module';
 import {YachtDetailsComponent} from './yacht-details/yacht-details.component';
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     YachtsRoutingModule,
     SharedModule,
-    NgbCarouselModule
+    NgbCarouselModule,
+    NgxSkeletonLoaderModule
   ]
 })
 export class YachtsModule { }
