@@ -1,84 +1,48 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { SeachPopUpComponent } from './home/seach-pop-up/seach-pop-up.component';
-import { BannerComponent } from './home/banner/banner.component';
-import { FeatureReserveComponent } from './home/feature-reserve/feature-reserve.component';
-import { DestinationComponent } from './home/destination/destination.component';
-import { BookingSectionComponent } from './home/booking-section/booking-section.component';
-import { YachtRentalComponent } from './home/yacht-rental/yacht-rental.component';
-import { MapComponent } from './home/map/map.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ServiceSectionComponent } from './home/service-section/service-section.component';
-import { AboutComponent } from './home/about/about.component';
-import { TestmoinailsComponent } from './home/testmoinails/testmoinails.component';
-import { FluidsComponent } from './home/fluids/fluids.component';
-import { NewsComponent } from './home/news/news.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {HeaderComponent} from './header/header.component';
+import {FooterComponent} from './footer/footer.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
-import { PopularDestinationComponent } from './home/popular-destination/popular-destination.component';
-import { ContactComponent } from './contact/contact.component';
-import { SecondryHeaderComponent } from './secondry-header/secondry-header.component';
-import { SecondryFooterComponent } from './secondry-footer/secondry-footer.component';
-import { OffersComponent } from './offers/offers.component';
-import { MainAboutComponent } from './main-about/main-about.component';
-import { MainYachtRentalComponent } from './main-yacht-rental/main-yacht-rental.component';
-import { FishingSectionComponent } from './home/fishing-section/fishing-section.component';
-import { MainDestinationComponent } from './main-destination/main-destination.component';
-import { WaterSportsComponent } from './water-sports/water-sports.component';
-import { FishingTripComponent } from './fishing-trip/fishing-trip.component';
-import { ServicesComponent } from './services/services.component';
-import { YachtDetailsComponent } from './yacht-details/yacht-details.component';
-import { ServiceDetailsComponent } from './service-details/service-details.component';
-import { BlogsComponent } from './blogs/blogs.component';
-import { BlogDetailsComponent } from './blog-details/blog-details.component';
+import {SecondryHeaderComponent} from './secondry-header/secondry-header.component';
+import {SecondryFooterComponent} from './secondry-footer/secondry-footer.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {ServiceWorkerModule} from '@angular/service-worker';
+import {environment} from '../environments/environment';
+import {CommonInterceptor} from './common.interceptor';
+import {SharedModule} from '../shared/shared.module';
+import {HomeModule} from './home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
-    SeachPopUpComponent,
-    BannerComponent,
-    FeatureReserveComponent,
-    DestinationComponent,
-    BookingSectionComponent,
-    YachtRentalComponent,
-    MapComponent,
-    ServiceSectionComponent,
-    AboutComponent,
-    TestmoinailsComponent,
-    FluidsComponent,
-    NewsComponent,
-    PopularDestinationComponent,
-    ContactComponent,
     SecondryHeaderComponent,
     SecondryFooterComponent,
-    OffersComponent,
-    MainAboutComponent,
-    MainYachtRentalComponent,
-    FishingSectionComponent,
-    MainDestinationComponent,
-    WaterSportsComponent,
-    FishingTripComponent,
-    ServicesComponent,
-    YachtDetailsComponent,
-    ServiceDetailsComponent,
-    BlogsComponent,
-    BlogDetailsComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'serverApp'}),
     AppRoutingModule,
     NgbModule,
-    IvyCarouselModule
+    IvyCarouselModule,
+    HttpClientModule,
+    SharedModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
+    HomeModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: CommonInterceptor, multi: true},
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

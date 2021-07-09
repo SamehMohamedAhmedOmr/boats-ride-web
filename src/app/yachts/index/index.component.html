@@ -1,0 +1,227 @@
+
+<section class="page-banner">
+  <div class="image-layer" style="background-image:url(./assets/images/resource/509.jpg);"></div>
+
+  <div class="banner-inner">
+    <div class="auto-container">
+      <div class="inner-container clearfix">
+        <br><br><br><br><br><br>
+        <h1>Yachts for <br>Rental</h1>
+        <br><br><br>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<br><br>
+<!--Welcome Section-->
+<div class="title-row clearfix">
+  <div class="sec-title-two centered with-border">
+    <div class="upper-text">Welcome To Boats Ride </div>
+    <h2>Our  <strong> Yachts </strong></h2>
+    <p style="text-align:center;font-size:18px"><span style="color:#5f727f">Our luxury yachts will take you in several of the city’s sights, including Palm Jumeirah, the sail-shaped Burj Al Arab, Jumeirah Beach, World Island, Dubai Canal, Dubai Creek ... </span></p>
+    <div class="separator"></div>
+  </div>
+</div>
+
+<!--Rent / Buy Section-->
+<section class="rent-buy-section">
+  <div class="auto-container">
+
+
+
+    <div class="results-row">
+      <div class="row clearfix">
+        <!--Rental Block-->
+
+        <!--Rental Block-->
+
+        <!--Rental Block-->
+
+        <div class="rental-block mix all russia india service-block col-lg-4 col-md-6 col-sm-12"
+             *ngFor="let yacht of yachts">
+          <div class="inner-box">
+            <div class="image-box">
+
+              <figure class="image">
+
+                <a href="majesty-yachr-48-feet.html">
+                  <div class="offer-info"><span>{{yacht.horse_Power}} FT</span></div>
+
+                  <img src="{{yacht.images[0].image}}" alt="" title=""></a>
+              </figure>
+              <div class="price-box">
+                <div class="price"> {{yacht.services[0].price}} AED </div>
+                <div class="cycle">PAR / H</div>
+
+
+              </div>
+
+            </div>
+            <div class="title-box">
+              <div class="more-link-box">
+                <a routerLink="/yachts/{{yacht.slug}}" class="theme-btn">View Details</a>
+              </div>
+              <h4><a href="majesty-yachr-48-feet.html">{{yacht.name}}</a></h4>
+            </div>
+            <div class="meta-info">
+              <ul class="clearfix" style="margin-bottom: unset!important;">
+                <li><a href="#"><img src="assets/images/icons/captain.png" style="width: unset!important;" > Captain: {{yacht.no_of_captain}}</a></li>
+                <li><a href="#"><img src="assets/images/icons/crew.png"  style="width: unset!important;">Crew: {{yacht.crew_members}}</a></li>
+              </ul>
+              <ul class="clearfix">
+                <li><a href="#"><img src="assets/images/icons/users.png" style="width: unset!important;"> People: {{yacht.passenger_capacity}}</a></li>
+                <li><a href="#"><img src="assets/images/icons/beds.png" style="width: unset!important;"> Beds: {{yacht.size}} </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Pagination-->
+    </div>
+  </div>
+</section>
+
+
+
+<!--Destinations Section-->
+<app-popular-destination></app-popular-destination>
+<!--Destinations Section-->
+<section class="destinations-section">
+  <div class="auto-container">
+    <div class="title-row clearfix">
+      <div class="sec-title-two centered with-border">
+        <h2>Top  <strong> YACHT  Events</strong></h2>
+        <div class="separator"></div>
+      </div>
+    </div>
+
+    <div class="destinations-box">
+      <div class="row clearfix">
+        <!--Destination Block-->
+        <div class="destination-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image">
+                <a href="birthday-party-yacht.html"><img src="assets/images/resource/86.jpg" alt="" title=""></a>
+              </figure>
+              <div class="caption-box">
+                <div class="count">24 / 7 </div>
+              </div>
+              <div class="hover-box">
+                <div class="hover-inner">
+                  <div class="hover-content">
+                    <h5 class="title">24 Hours  / 7 Days</h5>
+                    <div class="link-box">
+                      <a href="yacht-rent.html" class="theme-btn btn-style-two"><div class="btn-title">View All Yachts</div></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="title-box">
+              <h4><a href="birthday-party-yacht.html">Birthday Party Yacht</a></h4>
+            </div>
+            <div class="meta-info">
+            </div>
+          </div>
+        </div>
+        <!--Destination Block-->
+        <div class="destination-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="200ms" data-wow-duration="1500ms">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image">
+                <a href="private-party-yacht.html"><img src="assets/images/resource/75.png" alt="" title=""></a>
+              </figure>
+              <div class="caption-box">
+              </div>
+              <div class="hover-box">
+                <div class="hover-inner">
+                  <div class="hover-content">
+                    <h5 class="title">24 Hours  / 7 Days</h5>
+                    <div class="link-box">
+                      <a href="yacht-renthtml" class="theme-btn btn-style-two"><div class="btn-title">View All Yachts</div></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="title-box">
+              <h4><a href="private-party-yacht.html">Private Party Yacht </a></h4>
+            </div>
+            <div class="meta-info">
+
+            </div>
+          </div>
+        </div>
+        <!--Destination Block-->
+        <div class="destination-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="400ms" data-wow-duration="1500ms">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image">
+                <a href="fishing-trip.html"><img src="assets/images/resource/78.jpg" alt="" title=""></a>
+              </figure>
+              <div class="caption-box">
+              </div>
+              <div class="hover-box">
+                <div class="hover-inner">
+                  <div class="hover-content">
+                    <h5 class="title">24 Hours  / 7 Days</h5>
+                    <div class="link-box">
+                      <a href="yacht-rent.html" class="theme-btn btn-style-two"><div class="btn-title">View All Yachts</div></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="title-box">
+              <h4><a href="fishing-trip.html">Fishing Trip Yacht</a></h4>
+            </div>
+            <div class="meta-info">
+            </div>
+          </div>
+        </div>
+        <!--Destination Block-->
+        <div class="destination-block col-xl-3 col-lg-4 col-md-6 col-sm-12 wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image">
+                <a href="water-sport.html"><img src="assets/images/resource/77.jpg" alt="" title=""></a>
+              </figure>
+              <div class="caption-box">
+              </div>
+              <div class="hover-box">
+                <div class="hover-inner">
+                  <div class="hover-content">
+                    <h5 class="title">24 Hours  / 7 Days</h5>
+                    <div class="link-box">
+                      <a href="yacht-rent.html" class="theme-btn btn-style-two"><div class="btn-title">View All Yachts</div></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="title-box">
+              <h4><a href="water-sport.html">Water Sport</a></h4>
+            </div>
+            <div class="meta-info">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="see-all">
+      <a href="coming-soon.html" class="default-link">
+        <span class="icon flaticon-logout"></span>
+        <span class="link-text">View All Offers</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!--Services Section-->
+<app-service-section></app-service-section>

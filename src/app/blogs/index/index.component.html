@@ -1,0 +1,99 @@
+
+<!--Page Title-->
+<section class="page-banner">
+  <div class="image-layer" style="background-image:url(./assets/images/background/banner-1.jpg);"></div>
+
+  <div class="banner-inner">
+    <div class="auto-container">
+      <div class="inner-container clearfix">
+        <h1>Blogs</h1>
+        <div class="page-nav">
+          <ul class="bread-crumb clearfix">
+            <li><a href="index.html">Home</a></li>
+            <li>Blog</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--News Section-->
+<section class="news-section-three">
+  <div class="auto-container">
+    <div class="news-list">
+      <!--News Block-->
+      <div class="news-block-five" *ngFor="let blog of blogs">
+        <div class="inner-box">
+          <div class="row clearfix">
+            <div class="image-column col-lg-5 col-md-12 col-sm-12">
+              <figure class="image">
+                <a routerLink="/blogs/{{blog.slug}}"><img src="{{blog.image}}" alt="" title=""></a>
+                <a routerLink="/blogs/{{blog.slug}}" class="link-layer"><span class="icon flaticon-link-3"></span></a>
+              </figure>
+            </div>
+            <div class="content-column col-lg-7 col-md-12 col-sm-12">
+              <div class="inner">
+                <div class="content">
+                  <div class="meta-info">
+                    <ul class="clearfix">
+                      <li>
+                        <span class="icon fa fa-folder-open"></span>
+                        <a href="#">{{blog.title}}</a>
+                      </li>
+                      <li>
+                        <span class="icon fa fa-user"></span>
+                        <a href="#">By {{blog.author}}</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <h3><a routerLink="/blogs/{{blog.slug}}">Present the Ultimate Explorer Yacht at International Boat Show</a></h3>
+                  <div class="text">{{blog.description}}</div>
+                  <div class="link-box">
+                    <a routerLink="/blogs/{{blog.slug}}">
+                      <span class="icon flaticon-logout"></span>
+                      <span class="link-text">Continue Reading</span>
+                    </a>
+                  </div>
+
+                </div>
+                <div class="other-info">
+                  <div class="post-date"><span class="day">10</span><span class="month">Nov</span></div>
+                  <div class="add-to-fav">
+                    <a href="#"><span class="icon flaticon-heart"></span></a>
+                  </div>
+                  <div class="add-comment">
+                    <a href="#"><span class="icon flaticon-chat-comment-oval-speech-bubble-with-text-lines"></span></a>
+                  </div>
+                  <div class="share-it">
+                    <a class="share-btn" href="#"><span class="icon flaticon-share"></span></a>
+                    <div class="share-list">
+                      <ul>
+                        <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Pagination-->
+    <div class="pagination-box text-right">
+      <ul class="styled-pagination">
+        <li><a href="#" class="prev"><span class="icon flaticon-back"></span></a></li>
+        <li><a href="#" class="active">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#" class="next"><span class="icon flaticon-next"></span></a></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+

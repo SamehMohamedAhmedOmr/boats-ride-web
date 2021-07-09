@@ -922,7 +922,7 @@ img{
   padding: 80px;
   width: 100%;
   padding-top: 250px;
-  top: 5%;
+  top: -2%;
 
 }
 .headerText{
@@ -966,7 +966,7 @@ img{
     font-size: 50px;
   }
   .carousel-inner {
-    height: 450px;
+    height: 200px;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -18554,34 +18554,34 @@ img.lazy-image.loaded{
 }
 .box1{
   background-color: #00a8ff;
-  height: 220px;
+  height: fit-content;
   width: 80%;
   margin: auto;
   border-bottom: 1px solid #e5e5e5;
 }
 .box2{
   background-color: #00a8ff ;
-  height: 220px;
+  height: fit-content;
   width: 80%;
   margin: auto;
   border-bottom: 1px solid #e5e5e5;
 }.box3{
    background-color: #00a8ff ;
-   height: 220px;
+   height: fit-content;
    width: 80%;
    margin: auto;
    border-bottom: 1px solid #e5e5e5;
  }
 .box4{
   background-color: #00a8ff ;
-  height: 220px;
+  height: fit-content;
   width: 80%;
   margin: auto;
   border-bottom: 1px solid #e5e5e5;
 }
 .box5{
   background-color: #00a8ff ;
-  height: 220px;
+  height: fit-content;
   width: 80%;
   margin: auto;
   border-bottom: 1px solid #e5e5e5;
@@ -18592,7 +18592,8 @@ img.lazy-image.loaded{
 }
 .content1{
   text-align: center;
-  padding-top: 50px;
+  padding-bottom: 13px;
+  padding-top: 13px;
   color: white;
 }
 .content1 .title{

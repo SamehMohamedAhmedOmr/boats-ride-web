@@ -1,15 +1,15 @@
-<app-secondry-header></app-secondry-header>
+
 <section class="page-banner">
   <div class="image-layer" style="background-image:url(./assets/images/background/banner-1.jpg);"></div>
 
   <div class="banner-inner">
     <div class="auto-container">
       <div class="inner-container clearfix">
-        <h1>Services</h1>
+        <h1>Offers</h1>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
             <li><a href="index.html">Home</a></li>
-            <li>Services</li>
+            <li>Offers</li>
           </ul>
         </div>
       </div>
@@ -23,58 +23,21 @@
     <div class="row clearfix">
 
       <!--Service Block-->
-      <div class="service-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+      <div *ngFor="let offer of offers"
+        class="service-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
         <div class="inner-box">
-          <div class="image">
-            <img src="assets/images/resource/featured-image-35.jpg" alt="" title="">
+          <div class="image" style="height: 300px">
+            <img src="{{offer.image}}" alt="" title="">
           </div>
           <div class="lower-box">
             <div class="title-box">
               <div class="inner">
                 <div class="subtitle">Top landmarks & amazing</div>
-                <h4><a href="yacht-tour-1.html">Yacht Tour</a></h4>
+                <h4><a href="yacht-rent-buy.html">{{offer.title}}</a></h4>
               </div>
             </div>
-            <div class="text">Right to find fault with a man who chooses to enjoy a pleasure that has annoying consequences.</div>
-            <div class="link-box"><a href="yacht-tour-1.html">Read More</a></div>
-          </div>
-        </div>
-      </div>
-
-      <!--Service Block-->
-      <div class="service-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
-        <div class="inner-box">
-          <div class="image">
-            <img src="assets/images/resource/featured-image-36.jpg" alt="" title="">
-          </div>
-          <div class="lower-box">
-            <div class="title-box">
-              <div class="inner">
-                <div class="subtitle">Top landmarks & amazing</div>
-                <h4><a href="yacht-rent-buy.html">Yacht Travel</a></h4>
-              </div>
-            </div>
-            <div class="text">Right to find fault with a man who chooses to enjoy a pleasure that has annoying consequences.</div>
+            <div class="text">{{offer.description}}</div>
             <div class="link-box"><a href="yacht-rent-buy.html">Read More</a></div>
-          </div>
-        </div>
-      </div>
-
-      <!--Service Block-->
-      <div class="service-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
-        <div class="inner-box">
-          <div class="image">
-            <img src="assets/images/resource/featured-image-37.jpg" alt="" title="">
-          </div>
-          <div class="lower-box">
-            <div class="title-box">
-              <div class="inner">
-                <div class="subtitle">Top landmarks & amazing</div>
-                <h4><a href="yacht-tour-2.html">Water Sports</a></h4>
-              </div>
-            </div>
-            <div class="text">Right to find fault with a man who chooses to enjoy a pleasure that has annoying consequences.</div>
-            <div class="link-box"><a href="yacht-tour-2.html">Read More</a></div>
           </div>
         </div>
       </div>
@@ -244,4 +207,3 @@
     </div>
   </div>
 </section>
-<app-secondry-footer></app-secondry-footer>

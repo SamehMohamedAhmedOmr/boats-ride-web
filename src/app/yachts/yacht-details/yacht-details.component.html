@@ -1,0 +1,504 @@
+
+<section class="yacht-details" *ngIf="yacht">
+  <div class="auto-container">
+
+
+
+    <br><br>
+    <div class="main-image-box">
+      <figure class="image" >
+        <img src="{{yacht.images[0].image}}" alt="" title="">
+      </figure>
+      <div class="caption-box">
+        <h2>{{yacht.name}}</h2>
+        <div class="info">{{yacht.horse_Power}} FEET</div>
+      </div>
+    </div>
+    <div class="basic-info clearfix">
+      <div class="left-info">
+        <div class="icon"><span class="flaticon-gas"></span></div>
+        <div class="p-title">Price / Hour</div>
+        <div class="p-amount">EAD {{yacht.selling_per_hour}}</div>
+      </div>
+
+    </div>
+
+    <div class="row clearfix">
+      <div class="content-column col-xl-7 col-lg-6 col-md-12 cl-sm-12">
+        <div class="inner">
+          <div class="tour-widget recommended-widget carousel-widget">
+            <div class="widget-inner">
+              <ngb-carousel  [wrap]="true" [interval]="2500" [pauseOnHover]="true"
+                            [showNavigationArrows]="false" [showNavigationIndicators]="true">
+                <ng-template ngbSlide *ngFor="let yachts of yacht.images">
+                  <div class="recommend-block">
+                    <div class="inner">
+                      <div class="image-box">
+                        <a href="yacht-tour-single.html"><img src="{{yachts.image}}" alt="" title=""></a>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-carousel>
+            </div>
+
+          </div>
+          <div class="text-block">
+            <h4>About Yacht</h4>
+            <p>With a length of {{yacht.horse_Power}} feet the yacht has a wide beam which gives the boat huge space and more volume. The yacht has the capacity to cater up to {{yacht.passenger_capacity}} people in pure comfort. For added convenience, The yacht comes with a fully equipped kitchen..</p>
+            <p>The yacht has huge sundeck provides an astonishing view of the scenic beauty. The state of the art satellite system keeps you connected no matter wherever you are. The Tv and the latest music system as well as DVD not only provides entertainment but also makes the guests feel at home. The yacht has {{yacht.size}} bedrooms are fully furnished for added comfort.</p>
+            <h4 class="title-detail"><span>DESTINATIONS</span></h4>
+            <p>We recommend at least 03 to 04 hours of cruising. Cruise along Dubai's beautiful coastal waters and see the most stunning landmarks including:</p>
+            <h4 class="title-detail"><span>IMPORTANT INFORMATION</span></h4>
+            <table class="table table-bordered">
+              <tr>
+                <td> Duration:	</td>
+                <td> Minimum reservation should be of  2 Hours (recommended to reserve 4 hours or more) </td>
+              </tr>
+              <tr>
+                <td> Days of operation: </td>
+                <td> 7 days a week </td>
+              </tr>
+              <tr>
+                <td> Age constraint: </td>
+                <td> No age limit </td>
+              </tr>
+            </table>
+          </div>
+
+
+
+
+        </div>
+      </div>
+
+
+      <div class="specs-column col-xl-5 col-lg-6 col-md-12 cl-sm-12">
+        <div class="inner">
+          <div class="title-box clearfix">
+            <h4>Majesty Ruby {{yacht.horse_Power}} FEET</h4>
+          </div>
+          <div class="features-list">
+            <ul class="list-features">
+              <li> <span class="icon-wrap"><img src="../../../assets/images/icons/long.png"></span> {{yacht.horse_Power}} Feet</li>
+              <li> <span class="icon-wrap"><img src="../../../assets/images/icons/people.png"></span> Max {{yacht.passenger_capacity}} people </li>
+              <li> <span class="icon-wrap"><img src="../../../assets/images/icons/bed.png"></span> Beds {{yacht.size}}</li>
+              <li *ngIf="yacht.safety_equipment==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/safety.png"></span> Safety Equipment</li>
+              <li *ngIf="yacht.soft_drinks_refreshments==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/drink.png"></span> Soft drinks &amp; Refreshments</li>
+              <li *ngIf="yacht.ice_tea_water==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/tea.png"></span> Ice tea/ Water</li>
+              <li *ngIf="yacht.DVD_player==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/dvd.png"></span> DVD Player</li>
+              <li *ngIf="yacht.spacious_saloon==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/Sofa.png"></span> Spacious Saloon</li>
+              <li *ngIf="yacht.BBQ_grill_equipment==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/BBQ.png"></span> BBQ Grill Equipment</li>
+              <li *ngIf="yacht.bathroom_amenities==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/shower.png"></span> Bathroom Amenities</li>
+              <li *ngIf="yacht.LED_screen_tv==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/TV.png"></span> LED Screen TV</li>
+              <li *ngIf="yacht.sunbathing_on_the_foredeck==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/Sun.png"></span> Sunbathing on the Foredeck</li>
+            </ul>
+          </div>
+        </div>
+        <div class="widget-inner">
+          <br>
+          <div class="default-form main-booking-form">
+            <form method="post" action="http://boatsride/contact.html">
+              <h5>Price Details</h5>
+              <br>
+
+              <div class="estimate-table">
+                <ul>
+                  <li class="totals clearfix"><span class="ttle">Price:</span> <span class="dtl">AED {{yacht.selling_per_hour}} / Hour</span></li>
+                </ul>
+              </div>
+              <br>
+              <div class="info"><span class="icon flaticon-wall-clock"></span> Reservations: 24 / 7</div>
+              <br>
+              <div class="form-group">
+                <button type="submit" class="theme-btn"><span class="btn-title">Book Now</span></button>
+              </div>
+
+            </form>
+            <div class="instruction">Do you need suggestion pls contact our expert team.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<app-destination></app-destination>
+<br><br><br><br>
+<!--Services Section Three-->
+<section class="services-section-three">
+  <div class="main-image-layer" style="background-image:url(../../../assets/images/background/image-13.jpg);"></div>
+
+  <div class="upper-row">
+    <div class="image-layer" style="background-image:url(../../../assets/images/background/image-14.jpg);"></div>
+    <div class="auto-container">
+      <div class="row clearfix">
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <div class="lower-row">
+    <div class="auto-container">
+      <div class="process-container">
+        <div class="row clearfix">
+          <!--Block-->
+          <div class="process-block col-lg-4 col-md-12 col-sm-12">
+            <div class="inner-box">
+              <div class="inner">
+                <div class="count"><span>01</span></div>
+                <div class="title-box">
+                  <h4>Choose Your Yacht</h4>
+                </div>
+                <div class="text">Call Us, Select Date, Time & Number of Guest.</div>
+              </div>
+            </div>
+          </div>
+          <!--Block-->
+          <div class="process-block col-lg-4 col-md-12 col-sm-12">
+            <div class="inner-box">
+              <div class="inner">
+                <div class="count"><span>02</span></div>
+                <div class="title-box">
+                  <h4>Choose Your Crew</h4>
+                </div>
+                <div class="text"> Check Our Crow, Optional Services & Food on Board.</div>
+              </div>
+            </div>
+          </div>
+          <!--Block-->
+          <div class="process-block col-lg-4 col-md-12 col-sm-12">
+            <div class="inner-box">
+              <div class="inner">
+                <div class="count"><span>03</span></div>
+                <div class="title-box">
+                  <h4>Enjoy With Us</h4>
+                </div>
+                <div class="text"> Enjoy spending an enjoyable trip with your family and friends.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!--Similar-->
+<section class="similar-yachts">
+  <div class="auto-container">
+    <div class="upper-title">
+      <h4>Similar Yachts</h4>
+    </div>
+    <div class="row clearfix">
+      <!--Rental Block-->
+      <div class="rental-block col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-box">
+          <div class="image-box">
+
+            <figure class="image">
+
+              <a href="majesty-yachr-48-feet.html">
+                <div class="offer-info"><span>48 FT</span></div>
+
+                <img src="../../../assets/images/resource/6.jpg" alt="" title=""></a>
+            </figure>
+            <div class="price-box">
+              <div class="price"> 600 AED </div>
+              <div class="cycle">PAR / H</div>
+
+
+            </div>
+
+          </div>
+          <div class="title-box">
+            <div class="more-link-box">
+              <a href="majesty-yachr-48-feet.html" class="theme-btn">View Details</a>
+            </div>
+            <h4><a href="majesty-yachr-48-feet.html">Majesty Yacht</a></h4>
+          </div>
+          <div class="price">
+            <div style="display: inline-block"><small>From</small>  <del class="price-old">AED 799/hr</del></div>
+            <div style="display: inline-block; margin-left: 10px;" data-toggle="tooltip" data-html="true" title="" data-original-title="Summer Offer">
+              <span class="blink" style="color: red;font-size: 15px;border-radius: 5px;font-weight: bolder;"><i class="fa fa-info-circle"></i> AED 600</span>
+            </div>
+            <small class="label label-warning pull-right" style="color: #fff;">VAT INCLUDE</small>
+          </div>
+          <div class="meta-info">
+            <ul class="clearfix" style="margin-bottom: unset!important;">
+              <li><a href="#"><img src="../../../assets/images/icons/captain.png" style="width: unset!important;" > Captain: 01</a></li>
+              <li><a href="#"><img src="../../../assets/images/icons/crew.png" style="width: unset!important;">Crew : 01</a></li>
+            </ul>
+            <ul class="clearfix">
+              <li><a href="#"><img src="../../../assets/images/icons/users.png" style="width: unset!important;"> Peaple : 12</a></li>
+              <li><a href="#"><img src="../../../assets/images/icons/beds.png" style="width: unset!important;"> Beds : 02</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="rental-block col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-box">
+          <div class="image-box">
+
+            <figure class="image">
+
+              <a href="majesty-yachr-48-feet.html">
+                <div class="offer-info"><span>48 FT</span></div>
+
+                <img src="../../../assets/images/resource/6.jpg" alt="" title=""></a>
+            </figure>
+            <div class="price-box">
+              <div class="price"> 600 AED </div>
+              <div class="cycle">PAR / H</div>
+
+
+            </div>
+
+          </div>
+          <div class="title-box">
+            <div class="more-link-box">
+              <a href="majesty-yachr-48-feet.html" class="theme-btn">View Details</a>
+            </div>
+            <h4><a href="majesty-yachr-48-feet.html">Majesty Yacht</a></h4>
+          </div>
+          <div class="price">
+            <div style="display: inline-block"><small>From</small>  <del class="price-old">AED 799/hr</del></div>
+            <div style="display: inline-block; margin-left: 10px;" data-toggle="tooltip" data-html="true" title="" data-original-title="Summer Offer">
+              <span class="blink" style="color: red;font-size: 15px;border-radius: 5px;font-weight: bolder;"><i class="fa fa-info-circle"></i> AED 600</span>
+            </div>
+            <small class="label label-warning pull-right" style="color: #fff;">VAT INCLUDE</small>
+          </div>
+          <div class="meta-info">
+            <ul class="clearfix" style="margin-bottom: unset!important;">
+              <li><a href="#"><img src="../../../assets/images/icons/captain.png" style="width: unset!important;" > Captain: 01</a></li>
+              <li><a href="#"><img src="../../../assets/images/icons/crew.png" style="width: unset!important;">Crew : 01</a></li>
+            </ul>
+            <ul class="clearfix">
+              <li><a href="#"><img src="../../../assets/images/icons/users.png" style="width: unset!important;"> Peaple : 12</a></li>
+              <li><a href="#"><img src="../../../assets/images/icons/beds.png" style="width: unset!important;"> Beds : 02</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="rental-block col-lg-4 col-md-6 col-sm-12">
+        <div class="inner-box">
+          <div class="image-box">
+
+            <figure class="image">
+
+              <a href="majesty-yachr-48-feet.html">
+                <div class="offer-info"><span>48 FT</span></div>
+
+                <img src="../../../assets/images/resource/6.jpg" alt="" title=""></a>
+            </figure>
+            <div class="price-box">
+              <div class="price"> 600 AED </div>
+              <div class="cycle">PAR / H</div>
+
+
+            </div>
+
+          </div>
+          <div class="title-box">
+            <div class="more-link-box">
+              <a href="majesty-yachr-48-feet.html" class="theme-btn">View Details</a>
+            </div>
+            <h4><a href="majesty-yachr-48-feet.html">Majesty Yacht</a></h4>
+          </div>
+          <div class="price">
+            <div style="display: inline-block"><small>From</small>  <del class="price-old">AED 799/hr</del></div>
+            <div style="display: inline-block; margin-left: 10px;" data-toggle="tooltip" data-html="true" title="" data-original-title="Summer Offer">
+              <span class="blink" style="color: red;font-size: 15px;border-radius: 5px;font-weight: bolder;"><i class="fa fa-info-circle"></i> AED 600</span>
+            </div>
+            <small class="label label-warning pull-right" style="color: #fff;">VAT INCLUDE</small>
+          </div>
+          <div class="meta-info">
+            <ul class="clearfix" style="margin-bottom: unset!important;">
+              <li><a href="#"><img src="../../../assets/images/icons/captain.png" style="width: unset!important;" > Captain: 01</a></li>
+              <li><a href="#"><img src="../../../assets/images/icons/crew.png" style="width: unset!important;">Crew : 01</a></li>
+            </ul>
+            <ul class="clearfix">
+              <li><a href="#"><img src="../../../assets/images/icons/users.png" style="width: unset!important;"> Peaple : 12</a></li>
+              <li><a href="#"><img src="../../../assets/images/icons/beds.png" style="width: unset!important;"> Beds : 02</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+</section>
+
+
+<!--About Section-->
+<section class="about-section">
+  <div class="auto-container">
+    <div class="row clearfix">
+      <!--Left Column-->
+      <div class="left-col col-lg-7 col-md-12 col-sm-12">
+        <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+          <div class="upper-row clearfix">
+            <div class="image-box">
+              <figure class="image"><img src="../../../assets/images/resource/151.jpg" alt="" title=""></figure>
+            </div>
+            <div class="content">
+              <div class="sec-title">
+                <div class="upper-text">Welcome to</div>
+                <h3>Boats Ride! <br>Best Water Sports Agency in Dubai.</h3>
+              </div>
+              <div class="video-link">
+                <div class="video-thumb">
+                  <figure class="image"><img src="../../../assets/images/resource/video-thumb-1.jpg" alt="" title=""></figure>
+                  <a href="https://www.youtube.com/watch?v=UHWwQtNqtmk" class="overlink lightbox-image"><span class="icon flaticon-media-play-symbol"></span></a>
+                </div>
+                <div class="video-title">
+                  <a href="https://www.youtube.com/watch?v=UHWwQtNqtmk" class="lightbox-image">Watch <br>Our Intro Video!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lower-content">
+            <div class="text"><span>E</span>stablished in 1984 power choiceand when nothing prevents being able like best management to foresee the pain and trouble that are bound to ensue  weakness of will, which is the same as saying through shrinking.</div>
+            <div class="link-box">
+              <a href="about.html" class="default-link">
+                <span class="icon flaticon-logout"></span> <span class="link-text">More About Us</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br><br><br>
+      <!--Right Column-->
+      <div class="right-col col-lg-5 col-md-12 col-sm-12">
+        <div class="inner">
+          <br><br><br><br><br>
+          <div class="book-form-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+            <div class="title"><h4>Book For Activities</h4></div>
+            <div class="default-form booking-form">
+              <form method="post" action="http://st.ourhtmldemo.com/new/sailing-demo/contact.html">
+                <div class="row clearfix">
+                  <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                    <div class="field-label">Your Name</div>
+                    <div class="field-inner">
+                      <input type="text" name="field-name" placeholder="" required="" value="">
+                    </div>
+                  </div>
+
+                  <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                    <div class="field-label">Phone Number</div>
+                    <div class="field-inner">
+                      <input type="text" name="field-name" placeholder="" required="" value="">
+                    </div>
+                  </div>
+                  <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                    <div class="field-label">Date</div>
+                    <div class="field-inner">
+                      <input class="datepicker" type="text" name="text" placeholder="" autocomplete="off" required>
+                    </div>
+                  </div>
+                  <div class="form-group col-lg-6 col-md-6 col-sm-12">
+                    <div class="field-label">No.of Person</div>
+                    <div class="field-inner">
+                      <div class="quantity-spinner">
+                        <div class="inner-box clearfix">
+                          <button type="button" class="minus">-</button>
+                          <input type="text" name="product" value="1" class="prod_qty">
+                          <button type="button" class="plus">+</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                    <div class="field-label">Activity</div>
+                    <div class="field-inner">
+                      <select class="custom-select-box" name="field-name">
+                        <option>Yacht Rent</option>
+                        <option>Water Sport</option>
+                        <option>Fishing Trip</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                    <button type="submit" class="theme-btn btn-style-three"><span class="btn-title">Start Booking</span></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!--Team-->
+<section class="team-section-two">
+  <div class="auto-container">
+    <div class="upper-title">
+      <h4>Contact Our Team</h4>
+    </div>
+    <div class="row clearfix">
+      <!--Team Block-->
+      <div class="team-block-two col-lg-6 col-md-12 col-sm-12">
+        <div class="inner-box">
+          <div class="row clearfix">
+            <div class="image-column col-lg-6 col-md-6 col-sm-12">
+              <div class="image-box">
+                <figure class="image">
+                  <a href="#"><img src="../../../assets/images/resource/team-4.jpg" alt="" title=""></a>
+                </figure>
+              </div>
+            </div>
+            <div class="content-column col-lg-6 col-md-6 col-sm-12">
+              <div class="inner">
+                <div class="title">
+                  <h4><a href="#">Mohammed Sahraoui</a></h4>
+                  <div class="designation">CEO & FOUNDERr</div>
+                </div>
+                <ul class="info">
+                  <li>Phone: +971 524918686</li>
+                  <li>Email: mohamedsahraoui@boatsride.com</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Team Block-->
+      <div class="team-block-two col-lg-6 col-md-12 col-sm-12">
+        <div class="inner-box">
+          <div class="row clearfix">
+            <div class="image-column col-lg-6 col-md-6 col-sm-12">
+              <div class="image-box">
+                <figure class="image">
+                  <a href="#"><img src="../../../assets/images/resource/team-5.jpg" alt="" title=""></a>
+                </figure>
+              </div>
+            </div>
+            <div class="content-column col-lg-6 col-md-6 col-sm-12">
+              <div class="inner">
+                <div class="title">
+                  <h4><a href="#">Other Name </a></h4>
+                  <div class="designation">Skipper</div>
+                </div>
+                <ul class="info">
+                  <li>Phone: +971 56 415 7579</li>
+                  <li>Email: fullname@boatsride.com</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

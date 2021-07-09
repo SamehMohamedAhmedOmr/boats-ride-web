@@ -1,0 +1,204 @@
+<!--Page Title-->
+<section class="page-banner">
+  <div class="image-layer" style="background-image:url(./assets/images/resource/448.jpeg);"></div>
+  <div class="banner-inner">
+    <div class="auto-container">
+      <div class="inner-container clearfix">
+        <br><br><br><br><br><br>
+        <h1>Additional Services</h1>
+        <br><br><br>
+        <div class="page-nav">
+          <ul class="bread-crumb clearfix">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="yacht-rent.html">Yacht</a></li>
+            <li>Additional Services</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--End Banner Section -->
+
+
+<!--Yacht Tours Section-->
+<section class="yacht-tours-container">
+  <div class="auto-container">
+    <div class="main-title"><h3>Additional Services</h3></div>
+    <div class="default-form yacht-search-form">
+      <form method="post" action="http://st.ourhtmldemo.com/new/sailing-demo/yacht-tour-single.html">
+        <div class="row clearfix">
+
+        </div>
+      </form>
+    </div>
+
+    <div class="content-container">
+      <div class="row clearfix">
+        <!--Content Side-->
+        <div class="content-side col-lg-8 col-md-12 col-sm-12">
+          <div class="content-inner">
+            <div class="lower-filter-row clearfix">
+              <div class="results-count">
+                <span></span>
+              </div>
+
+
+            </div>
+
+            <div class="results-row">
+              <!--Activity Block-->
+              <div class="activity-block-two" *ngFor="let services of Services">
+                <div class="inner-box clearfix" >
+                  <div class="image-layer" style="background-image:url({{services.image}});"></div>
+
+                  <div class="image-box">
+                    <a href="yacht-decoration.html"><img src="{{services.image}}" alt="" title=""></a>
+                  </div>
+
+                  <div class="content-box">
+                    <div class="overlay22" style="height: 310px; margin: -40px;">
+                      <div class="content">
+                        <h4><a href="yacht-decoration.html">{{services.name}}</a></h4>
+                        <br>
+                        <div class="info">
+                          <ul class="clearfix">
+                            <div class="text">{{services.description}} </div>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="ratings">
+                        <div class="rate-text"><strong>4.0</strong> <a href="#">[101 Reviews]</a></div>
+                        <div class="rate">
+                          <span class="fa fa-star"></span>
+                          <span class="fa fa-star"></span>
+                          <span class="fa fa-star"></span>
+                          <span class="fa fa-star"></span>
+                          <span class="fa fa-star empty-star"></span>
+                        </div>
+                      </div>
+                      <div class="links-box clearfix">
+                        <div class="link">
+                          <a routerLink="/services/{{services.slug}}"
+                             class="theme-btn btn-style-two"><span class="btn-title">More Details</span></a>
+                          <a href="contact.html" class="theme-btn btn-style-two"><span class="btn-title">Book Now</span></a>
+                        </div>
+                        <div class="link">
+                          <div class="info-btn-box">
+                            <div class="theme-btn info-btn"><span class="icon flaticon-information-1"></span></div>
+                            <div class="info-panel">
+                              <div class="panel-inner">
+                                <div class="panel-title">Includes</div>
+                                <ul class="panel-list">
+                                  <li>Hotel pick-up/drop-off</li>
+                                  <li>Free Life Vest</li>
+                                  <li>Soft Drinks</li>
+                                  <li>Seafood Barbecue</li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+        <!--Widgets Side-->
+        <div class="widgets-side col-lg-4 col-md-12 col-sm-12">
+          <div class="widgets-content">
+            <!--Widget-->
+            <div class="divboxes">
+              <div class="box1">
+                <div class="content1">
+                  <a href="https://sirene.ancorathemes.com/services/sailing/" id="sc_services_1061452142_icon-2" class="sc_services_item_icon icon-2"></a>
+                  <p class="title">Sailing</p>
+                  <p style="width: 200px; margin: auto;">We offer an excellent way to learn the basics of boat sailing.</p>
+                </div>
+              </div>
+              <div class="box2">
+                <div class="content1">
+                  <a href="https://sirene.ancorathemes.com/services/club/" id="sc_services_1061452142_icon-3" class="sc_services_item_icon icon-3"></a>
+                  <p class="title">Club</p>
+                  <p style="width: 200px; margin: auto;">Join our premier private yacht club in the Pacific ocean.</p>
+                </div>
+              </div>
+              <div class="box3">
+                <div class="content1">
+                  <a href="https://sirene.ancorathemes.com/services/diving/" id="sc_services_1310323539_icon-4" class="sc_services_item_icon icon-4"></a>
+                  <p class="title">Diving</p>
+                  <p style="width: 200px; margin: auto;">All our yachts are equipped with everything divers need.</p>
+                </div>
+              </div>
+              <div class="box4">
+                <div class="content1">
+                  <a href="https://sirene.ancorathemes.com/services/fishing/" id="sc_services_1062841435_icon-5" class="sc_services_item_icon icon-5"></a>
+                  <p class="title">Fishing</p>
+                  <p style="width: 200px; margin: auto;">Our yachts are built to explore untouched fishing grounds.</p>
+                </div>
+              </div>
+              <div class="box5">
+                <div class="content1">
+                  <a href="https://sirene.ancorathemes.com/services/tours/" id="sc_services_1062841435_icon-6" class="sc_services_item_icon icon-6"></a>
+                  <p class="title">Tours</p>
+                  <p style="width: 200px; margin: auto;">We offer you exclusive yacht tours with professional crew.</p>
+                </div>
+              </div>
+
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<app-yacht-rental></app-yacht-rental>
+<app-service-section></app-service-section>
+<!--Subscribe Section-->
+<section class="subscribe-section style-three">
+  <div class="auto-container">
+    <div class="inner">
+      <div class="image-layer" style="background-image:url(./assets/images/background/image-12.jpg);"></div>
+      <div class="title">
+        <h4>Subscribe to our newsletter</h4>
+        <div class="subtitle">Subscribe & Get Updates in Your Inbox </div>
+      </div>
+      <div class="default-form subscribe-form-two">
+        <form method="post" action="http://st.ourhtmldemo.com/new/sailing-demo/contact.html">
+          <div class="row clearfix">
+            <div class="form-group col-lg-4 col-md-6 col-sm-12">
+              <div class="field-inner">
+                <input type="text" name="field-name" placeholder="Your Name" required="" value="">
+              </div>
+            </div>
+
+            <div class="form-group col-lg-4 col-md-6 col-sm-12">
+              <div class="field-inner">
+                <input type="email" name="field-name" placeholder="Email Address" required="" value="">
+              </div>
+            </div>
+
+            <div class="form-group col-lg-4 col-md-12 col-sm-12">
+              <button type="submit" class="theme-btn btn-style-three"><span class="btn-title">Subscribe Now</span></button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+

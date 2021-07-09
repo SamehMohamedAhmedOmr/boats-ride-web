@@ -1,0 +1,20 @@
+.overlay22{
+  width: unset!important;
+}
+
+
+@media only screen and (max-width: 700px){
+  .overlay22{
+    display: contents !important;
+  }
+  .header-style-three .header-upper .max-nav-toggler {
+    position: relative;
+    float: left;
+    padding-top: 12px;
+    margin-left: -5px;
+  }
+  .header-style-three .header-upper .max-nav-toggler {
+    float: none;
+
+  }
+}

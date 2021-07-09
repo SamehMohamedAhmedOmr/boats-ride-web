@@ -30,14 +30,14 @@
 28. Subscribe Section
 29. Yacht Rent / Buy Section
 30. Rent / Buy Details / Yacht Details
-31. Yacht Tour 01 / 02 / 03 / 04 
+31. Yacht Tour 01 / 02 / 03 / 04
 32. Tour Details
 33. Choose Destination
 34. Welcome Section
 35. Portfolio / One Column / Two COlumn / Three Column / Masonry Style
 36. Contact Section
 37. Coming Soon
-38. Blog Grid 
+38. Blog Grid
 39. Blog List
 40. Blog Large Image
 41. Blog Post Details
@@ -47,7 +47,7 @@
 
 **********************************************/
 
-/*** 
+/***
 
 ====================================================================
 			Fonts
@@ -75,7 +75,7 @@
 @import url('hover.css');
 @import url('custom-animate.css');
 
-/*** 
+/***
 
 ====================================================================
 	Reset
@@ -92,7 +92,7 @@
 	line-height: inherit;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Global Settings
@@ -101,7 +101,7 @@
  ***/
 
 body {
-	
+
 	font-size:15px;
 	color:#7f8a99;
 	line-height:1.6em;
@@ -171,7 +171,7 @@ input,select,button{
 
 textarea{
 	overflow:hidden;
-	resize: none;	
+	resize: none;
 }
 
 button{
@@ -216,7 +216,7 @@ p{
 ul,li{
 	list-style:none;
 	padding:0px;
-	margin:0px;	
+	margin:0px;
 }
 
 
@@ -487,42 +487,42 @@ figure{
 	color: #ffffff;
 }
 
- 
+
 
 .pull-left{
 	float: left;
 }
 
-.preloader{ 
-	position:fixed; 
-	left:0px; 
-	top:0px; 
-	width:100%; 
-	height:100%; 
-	z-index:999999; 
+.preloader{
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	z-index:999999;
 	background-color:rgba(0,0,0,0);
-} 
+}
 
-.preloader .icon{ 
-	position:fixed; 
-	left:0px; 
-	top:0px; 
-	width:100%; 
-	height:100%; 
-	z-index:5; 
-	background-color:rgba(0,0,0,0); 
-	background-position:center center; 
-	background-repeat:no-repeat; 
+.preloader .icon{
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	z-index:5;
+	background-color:rgba(0,0,0,0);
+	background-position:center center;
+	background-repeat:no-repeat;
 	background-image:url(../images/icons/preloader.svg);
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
-} 
+}
 
 .page-loaded .preloader .icon{
-	opacity:0; 
+	opacity:0;
 }
 
 .preloader:before{
@@ -533,7 +533,7 @@ figure{
 	width:51%;
 	height:100%;
 	background:#ffffff;
-	z-index:0; 
+	z-index:0;
 	-webkit-transform:translateX(0%);
 	-ms-transform:translateX(0%);
 	transform:translateX(0%);
@@ -558,7 +558,7 @@ figure{
 	width:51%;
 	height:100%;
 	background:#ffffff;
-	z-index:2; 
+	z-index:2;
 	-webkit-transform:translateX(0%);
 	-ms-transform:translateX(0%);
 	transform:translateX(0%);
@@ -578,7 +578,7 @@ figure{
 img{
 	display:inline-block;
 	max-width:100%;
-	height:auto;	
+	height:auto;
 }
 
 .dropdown-toggle::after{
@@ -589,7 +589,7 @@ img{
 	line-height: inherit;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Scroll To Top style
@@ -635,7 +635,7 @@ img{
 }
 
 
-/*** 
+/***
 
 ====================================================================
 	Main Header style / Header Style One
@@ -714,7 +714,7 @@ img{
 	width: 100%;
 	margin-top:-80px;
     padding-top: 180px;
- 
+
 }
 .overlay22{
  	background-color: rgba(0,0,0,.3);
@@ -722,9 +722,9 @@ img{
 	z-index:200;
 	padding: 80px;
 	width: 100%;
- 
+
 }
- 
+
 .main-menu .navigation > li:last-child{
 	margin-right:0px;
 }
@@ -766,7 +766,7 @@ img{
 }
 
 .sticky-header .main-menu .navigation > li.dropdown{
-	padding-right:0px;	
+	padding-right:0px;
 }
 
 .main-menu .navigation > li > ul{
@@ -794,7 +794,7 @@ img{
 
 .main-menu .navigation > li > ul.from-right{
 	left:auto;
-	right:0px;	
+	right:0px;
 }
 
 .main-menu .navigation > li > ul > li{
@@ -822,7 +822,7 @@ img{
 }
 
 .main-menu .navigation > li > ul > li:last-child > a{
-	border-bottom:none;	
+	border-bottom:none;
 }
 
 .main-menu .navigation > li > ul > li > a:before{
@@ -901,7 +901,7 @@ img{
 }
 
 .main-menu .navigation > li > ul > li > ul > li:last-child > a{
-	border-bottom:none;	
+	border-bottom:none;
 }
 
 .main-menu .navigation > li > ul > li > ul > li > a:before{
@@ -932,7 +932,7 @@ img{
 	line-height:24px;
 	font-size:16px;
 	font-weight:900;
-	z-index:5;	
+	z-index:5;
 }
 
 .main-menu .navigation > li.dropdown:hover > ul{
@@ -954,7 +954,7 @@ img{
 	-moz-transition:all 300ms ease;
 	-webkit-transition:all 500ms ease;
 	-ms-transition:all 300ms ease;
-	-o-transition:all 300ms ease;	
+	-o-transition:all 300ms ease;
 }
 
 .main-menu .navigation li.dropdown .dropdown-btn{
@@ -973,7 +973,7 @@ img{
 	display:none;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Header Style One
@@ -1359,7 +1359,7 @@ img{
 	height: 42px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Header Style Two
@@ -1647,7 +1647,7 @@ img{
 	border-bottom-color: #ffffff;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Header Style Three
@@ -1926,7 +1926,7 @@ img{
 	border-bottom-color: #ffffff;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Inner Header Style
@@ -1938,7 +1938,7 @@ img{
 	position: relative;
 }
 
-/*** 
+/***
 
 ====================================================================
 				Sticky Header
@@ -2017,7 +2017,7 @@ img{
 .sticky-header .main-menu .navigation > li > ul > li > ul{
 	left:auto;
 	right:100%;
-	margin-right: 10px;	
+	margin-right: 10px;
 }
 
 .sticky-header .main-menu .navigation > li > ul > li > ul:before{
@@ -2061,7 +2061,7 @@ img{
 	vertical-align: middle;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Search Popup
@@ -2140,14 +2140,14 @@ body.search-visible{
 }
 
 .search-popup .close-search:hover{
-	opacity:0.70;	
+	opacity:0.70;
 }
 
 .search-popup .search-form{
 	position:relative;
 	padding:0px 15px 0px;
 	max-width:1024px;
-	margin:0 auto;	
+	margin:0 auto;
 	margin-top:150px;
 	margin-bottom: 100px;
 	opacity: 0;
@@ -2215,7 +2215,7 @@ body.search-visible{
 	color:#ffffff;
 	margin-bottom:20px;
 	letter-spacing:1px;
-	text-align:center;	
+	text-align:center;
 }
 
 .search-popup .recent-searches{
@@ -2226,7 +2226,7 @@ body.search-visible{
 
 .search-popup .recent-searches li{
 	display:inline-block;
-	margin:0px 10px 10px 0px;	
+	margin:0px 10px 10px 0px;
 }
 
 .search-popup .recent-searches li a{
@@ -2245,12 +2245,12 @@ body.search-visible{
 
 .search-popup .recent-searches li a:hover{
 	color:#be1935;
-	border-color:#be1935;	
+	border-color:#be1935;
 }
 
 
 
-/*** 
+/***
 
 ====================================================================
 			Mobile Menu
@@ -2284,17 +2284,17 @@ body.search-visible{
 }
 
 .mobile-menu .mCSB_inside>.mCSB_container{
-	margin-right:5px;	
+	margin-right:5px;
 }
 
 .mobile-menu .navbar-collapse{
-	display:block ;	
+	display:block ;
 }
 
 .mobile-menu .nav-logo{
 	position:relative;
 	padding:30px 25px;
-	text-align:left;	
+	text-align:left;
 }
 
 .mobile-menu .nav-logo img{
@@ -2437,7 +2437,7 @@ body.search-visible{
 	-moz-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
-	transition: all 500ms ease;	
+	transition: all 500ms ease;
 }
 
 .mobile-menu .navigation li ul li > a{
@@ -2457,7 +2457,7 @@ body.search-visible{
 	-moz-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
-	transition: all 500ms ease;	
+	transition: all 500ms ease;
 }
 
 .mobile-menu .navigation li.current > a:before{
@@ -2481,7 +2481,7 @@ body.search-visible{
 	-moz-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
-	transition: all 500ms ease;	
+	transition: all 500ms ease;
 	z-index:5;
 }
 
@@ -2492,7 +2492,7 @@ body.search-visible{
 .mobile-menu .navigation li.dropdown .dropdown-btn.open{
 	-webkit-transform:rotate(90deg);
 	-ms-transform:rotate(90deg);
-	transform:rotate(90deg);	
+	transform:rotate(90deg);
 }
 
 .mobile-menu .navigation li > ul,
@@ -2521,10 +2521,10 @@ body.search-visible{
 	-moz-transition: all 500ms ease;
 	-ms-transition: all 500ms ease;
 	-o-transition: all 500ms ease;
-	transition: all 500ms ease;	
+	transition: all 500ms ease;
 }
 
-/*** 
+/***
 
 ====================================================================
 		Lazy Load Settings
@@ -2533,7 +2533,7 @@ body.search-visible{
 ***/
 
 img.lazy-image{
-	background:url(../images/icons/image-bg.svg) center center no-repeat;	
+	background:url(../images/icons/image-bg.svg) center center no-repeat;
 }
 
 img.lazy-image.loaded{
@@ -2719,7 +2719,7 @@ img.lazy-image.loaded{
 	top:3px;
 	right: -5px;
 	text-indent:0px;
-	color:#333333;	
+	color:#333333;
 }
 
 .form-group .ui-button .ui-icon:before{
@@ -2752,7 +2752,7 @@ img.lazy-image.loaded{
 }
 
 .ui-menu .ui-menu-item:last-child{
-	border:none;	
+	border:none;
 }
 
 .ui-menu .ui-menu-item-wrapper{
@@ -2839,7 +2839,7 @@ img.lazy-image.loaded{
 	z-index: 10 ;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Hidden Sidebar style
@@ -2862,7 +2862,7 @@ img.lazy-image.loaded{
 }
 
 .hidden-bar .mCSB_inside > .mCSB_container{
-	margin-right:10px;	
+	margin-right:10px;
 }
 
 .hidden-bar.right-align {
@@ -2870,7 +2870,7 @@ img.lazy-image.loaded{
 }
 
 .hidden-bar.right-align.visible-sidebar{
-	right:0px;	
+	right:0px;
 }
 
 .hidden-bar.right-align {
@@ -2926,7 +2926,7 @@ img.lazy-image.loaded{
 
 .hidden-bar .logo img{
 	display:inline-block;
-	max-width:100%;	
+	max-width:100%;
 }
 
 .hidden-bar .content-box{
@@ -3001,7 +3001,7 @@ img.lazy-image.loaded{
 }
 
 
-/*** 
+/***
 
 ====================================================================
 		Banner Section
@@ -3345,7 +3345,7 @@ img.lazy-image.loaded{
 	background: none;
 	height: 70px;
 	width: 70px;
-	border: none; 
+	border: none;
 	text-align: center;
 	line-height: 70px;
 	color: #acb7c6;
@@ -3365,7 +3365,7 @@ img.lazy-image.loaded{
 	background: none;
 	height: 70px;
 	width: 70px;
-	border: none; 
+	border: none;
 	text-align: center;
 	line-height: 70px;
 	color: #acb7c6;
@@ -3379,7 +3379,7 @@ img.lazy-image.loaded{
 	transition: all 300ms ease;
 }
 
-.banner-section .owl-nav .owl-prev:hover, 
+.banner-section .owl-nav .owl-prev:hover,
 .banner-section .owl-nav .owl-next:hover{
 	color: #be1935;
  }
@@ -3413,7 +3413,7 @@ img.lazy-image.loaded{
 	outline-offset: 4px;
 }
 
- 
+
 .banner-three .banner-carousel .owl-nav{
 	display: none;
 }
@@ -3503,7 +3503,7 @@ img.lazy-image.loaded{
 }
 
 
-/*** 
+/***
 
 ====================================================================
 		Section Title
@@ -3732,7 +3732,7 @@ img.lazy-image.loaded{
 	margin-left: -20px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	About Section
@@ -3872,7 +3872,7 @@ img.lazy-image.loaded{
 
 .about-section .left-col .lower-content .text:first-letter{
 	color: #061138;
-	float: left; 
+	float: left;
 	font-family: 'Playfair Display', serif;
 	font-size: 48px;
 	line-height: 0.8em;
@@ -3956,7 +3956,7 @@ img.lazy-image.loaded{
 	margin-top: 10px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	About Section
@@ -4097,7 +4097,7 @@ img.lazy-image.loaded{
 	border-radius: 0px 0px 3px 3px;
 	z-index: 1;
 }
- 
+
 .service-block .lower-content .icon-box{
 	position: absolute;
 	right: 30px;
@@ -4206,8 +4206,8 @@ border-radius: .25em;
 	transform: scale(1.1);
 }
 
- 
-/*** 
+
+/***
 
 ====================================================================
 	Activities Section
@@ -4607,7 +4607,7 @@ border-radius: .25em;
 	background: none;
 	height: 64px;
 	width: 64px;
-	border: none; 
+	border: none;
 	text-align: center;
 	line-height: 62px;
 	border: 1px solid rgba(0,0,0,0.10);
@@ -4629,7 +4629,7 @@ border-radius: .25em;
 	background: none;
 	height: 64px;
 	width: 64px;
-	border: none; 
+	border: none;
 	text-align: center;
 	line-height: 62px;
 	border: 1px solid rgba(0,0,0,0.10);
@@ -4645,7 +4645,7 @@ border-radius: .25em;
 	transition: all 300ms ease;
 }
 
-.activities-section .owl-nav .owl-prev:hover, 
+.activities-section .owl-nav .owl-prev:hover,
 .activities-section .owl-nav .owl-next:hover{
 	color: #be1935;
 	border-color: #be1935;
@@ -4658,7 +4658,7 @@ border-radius: .25em;
 	padding-top: 50px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Features Section
@@ -4804,7 +4804,7 @@ border-radius: .25em;
 	color: #be1935;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Pricing Section
@@ -4958,7 +4958,7 @@ border-radius: .25em;
 	line-height:24px;
 	font-size:13px;
 	font-weight:800;
-	color: #be1935;	
+	color: #be1935;
 }
 
 .price-block .link-box{
@@ -5004,7 +5004,7 @@ border-radius: .25em;
 	visibility: visible;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Testimonials Section
@@ -5182,7 +5182,7 @@ border-radius: .25em;
 	display: none;
 }
 
-/*** 
+/***
 
 ====================================================================
 	News Section
@@ -5202,7 +5202,7 @@ border-radius: .25em;
 
 .news-section .news-column .inner{
 	position: relative;
-	display: block; 
+	display: block;
 }
 
 .news-section .title-row{
@@ -5753,7 +5753,7 @@ border-radius: .25em;
 	display: block;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Main Footer
@@ -6035,7 +6035,7 @@ border-radius: .25em;
 	text-decoration: underline;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Footer Style Two
@@ -6224,7 +6224,7 @@ border-radius: .25em;
 .footer-style-two .offer-carousel-box .owl-theme .owl-dots .owl-dot.active span{
 	background: #ffffff;
 }
-/*** 
+/***
 
 ====================================================================
 	Booking Section
@@ -6430,7 +6430,7 @@ border-radius: .25em;
 	font-size: 16px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Featured Service Section
@@ -6596,7 +6596,7 @@ border-radius: .25em;
 	transform: scale(1);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Yacht Rental Section
@@ -6940,7 +6940,7 @@ border-radius: .25em;
 }
 
 
-/*** 
+/***
 
 ====================================================================
 	Destinations Section
@@ -7226,7 +7226,7 @@ border-radius: .25em;
 	padding-top: 10px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	About Section Two
@@ -7425,7 +7425,7 @@ border-radius: .25em;
 	line-height: 1.7em;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Testimonials Section Two
@@ -7496,7 +7496,7 @@ border-radius: .25em;
 	transform: scale(1.1);
 }
 
- 
+
 .owl-theme .owl-nav {
 	text-align:center;
 	-webkit-tap-highlight-color:transparent
@@ -7554,7 +7554,7 @@ border-radius: .25em;
 	background:#be1935;
 	color:rgb(255, 255, 255);
    }
-   
+
 
    .owl-next:hover {
 	background:#be1935;
@@ -7568,8 +7568,8 @@ border-radius: .25em;
 	right:-60px;
 	content:">";
    }
-   
-/*** 
+
+/***
 
 ====================================================================
 	Fluid Section
@@ -7728,7 +7728,7 @@ border-radius: .25em;
 	margin-bottom: 30px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Destinations Section
@@ -8602,7 +8602,7 @@ border-radius: .25em;
 	color: #be1935;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Featured Services Two
@@ -8782,7 +8782,7 @@ border-radius: .25em;
 	color: #ffffff;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Top Destinations
@@ -8986,7 +8986,7 @@ border-radius: .25em;
 	color: #b5c0cf;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Facts Section
@@ -9139,7 +9139,7 @@ border-radius: .25em;
 	background: #be1935;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Team Section
@@ -9392,7 +9392,7 @@ border-radius: .25em;
 	background: none;
 	height: 70px;
 	width: 70px;
-	border: none; 
+	border: none;
 	text-align: center;
 	line-height: 68px;
 	border: 1px solid rgba(0,0,0,.10);
@@ -9407,7 +9407,7 @@ border-radius: .25em;
 	transition: all 300ms ease;
 }
 
-.team-section .owl-nav .owl-prev:hover, 
+.team-section .owl-nav .owl-prev:hover,
 .team-section .owl-nav .owl-next:hover{
 	color: #be1935;
 	border-color: #be1935;
@@ -9420,7 +9420,7 @@ border-radius: .25em;
 	padding-top: 10px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Testimonials Section Two
@@ -9620,7 +9620,7 @@ border-radius: .25em;
 	color: #061138;
 }
 
-/*** 
+/***
 
 ====================================================================
 	News Section Two
@@ -9924,7 +9924,7 @@ border-radius: .25em;
 	padding-left: 42px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Subscribe Section
@@ -10043,7 +10043,7 @@ border-radius: .25em;
 }
 
 
-/*** 
+/***
 
 ====================================================================
 	Footer Three
@@ -10397,7 +10397,7 @@ border-radius: .25em;
 	color:#be1935;
 }
 
-/*** 
+/***
 
 ====================================================================
 		Page Banner
@@ -10508,10 +10508,10 @@ border-radius: .25em;
 }
 
 .page-banner .bread-crumb li a:hover{
-	color:#be1935;	
+	color:#be1935;
 }
 
-/*** 
+/***
 
 ====================================================================
 	News Section
@@ -10829,7 +10829,7 @@ border-radius: .25em;
 	min-width: 190px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	News Section
@@ -11676,7 +11676,7 @@ border-radius: .25em;
 	color: #be1935;
 }
 
-/*** 
+/***
 
 ====================================================================
 		Styled Pagination
@@ -11738,7 +11738,7 @@ border-radius: .25em;
 	border-color: #be1935;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Sidebar Page Container
@@ -11818,7 +11818,7 @@ border-radius: .25em;
 
 .sidebar .search-box .form-group{
 	position:relative;
-	margin:0px;	
+	margin:0px;
 }
 
 .sidebar .search-box .form-group input[type="text"],
@@ -11842,7 +11842,7 @@ border-radius: .25em;
 }
 
 .sidebar .search-box .form-group input:focus{
-	border-color:#be1935;	
+	border-color:#be1935;
 }
 
 .sidebar .search-box .form-group button{
@@ -11925,7 +11925,7 @@ border-radius: .25em;
 	position:relative;
 	display:block;
 	width: 100%;
-	border-radius:50%;	
+	border-radius:50%;
 }
 
 .sidebar .recent-posts .title{
@@ -11941,7 +11941,7 @@ border-radius: .25em;
 }
 
 .sidebar .recent-posts .title a:hover{
-	color:#be1935;	
+	color:#be1935;
 }
 
 .sidebar .recent-posts .post-date{
@@ -12082,7 +12082,7 @@ border-radius: .25em;
 
 .sidebar .archives ul li:last-child{
 	padding-bottom: 0;
-	border:none;	
+	border:none;
 }
 
 .sidebar .archives ul li a{
@@ -12430,7 +12430,7 @@ border-radius: .25em;
 	text-transform: uppercase;
 }
 
-/*** 
+/***
 
 ====================================================================
 		Comment Area
@@ -12546,7 +12546,7 @@ border-radius: .25em;
 	color: #be1935;
 }
 
-/*** 
+/***
 
 ====================================================================
 		Leave Comments Form
@@ -12573,7 +12573,7 @@ border-radius: .25em;
 	height: 140px;
 }
 
-/*** 
+/***
 
 ====================================================================
 		Portfolio Section
@@ -12607,7 +12607,7 @@ border-radius: .25em;
 	margin-bottom: 60px;
 }
 
- 
+
 .gallery-block .inner-box{
 	position: relative;
 	display: block;
@@ -13399,7 +13399,7 @@ border-radius: .25em;
 	padding-top: 10px;
 }
 
-/*** 
+/***
 
 ====================================================================
 		Welcome Section
@@ -13579,7 +13579,7 @@ border-radius: .25em;
 	border-color: #be1935;
 }
 
-/*** 
+/***
 
 ====================================================================
 	About Section TThreewo
@@ -13711,7 +13711,7 @@ border-radius: .25em;
 	line-height: 1.7em;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Choose Destinations Section
@@ -13781,7 +13781,7 @@ border-radius: .25em;
 	width: 100%;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Services Section
@@ -13923,7 +13923,7 @@ border-radius: .25em;
 	text-decoration: underline;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Services Section
@@ -14293,7 +14293,7 @@ border-radius: .25em;
 	transform: translateY(-18px);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Services Section Four
@@ -14378,7 +14378,7 @@ border-radius: .25em;
 }
 
 
-/*** 
+/***
 
 ====================================================================
 	Coming Soon
@@ -14492,7 +14492,7 @@ border-radius: .25em;
 .comming-soon .social-links li a:hover{
 	color:#ffffff;
 	background: #be1935;
-	border-color:#be1935;	
+	border-color:#be1935;
 }
 
 .comming-soon .links-box{
@@ -14505,7 +14505,7 @@ border-radius: .25em;
 	margin: 0px 10px 20px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Countdown style
@@ -14558,7 +14558,7 @@ border-radius: .25em;
 	font-weight:700;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Contact Section
@@ -14782,7 +14782,7 @@ border-radius: .25em;
 	width: 100%;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Rent Buy Section
@@ -14953,7 +14953,7 @@ border-radius: .25em;
 }
 
 .yacht-search-form .row .form-group .ui-button .ui-icon:before{
-	color: #868da5;	
+	color: #868da5;
 	font-style: normal;
 }
 
@@ -15054,7 +15054,7 @@ border-radius: .25em;
 	border-bottom-color: rgba(255,255,255,0.30);
 }
 
-/*** 
+/***
 
 ====================================================================
 		Secondary Breadcrumb
@@ -15120,10 +15120,10 @@ border-radius: .25em;
 
 .secondary-breadcrumb .bread-crumb li a:hover,
 .secondary-breadcrumb .bread-crumb li.current{
-	color:#be1935;	
+	color:#be1935;
 }
 
-/*** 
+/***
 
 ====================================================================
 		Yacht Details
@@ -15433,7 +15433,7 @@ border-radius: .25em;
 	float: right;
 }
 
-/*** 
+/***
 
 ====================================================================
 		Yacht Featured Images
@@ -15597,7 +15597,7 @@ border-radius: .25em;
 	color: #061138;
 }
 
-/*** 
+/***
 
 ====================================================================
 		Similar Yachts
@@ -15680,7 +15680,7 @@ border-radius: .25em;
 	border-bottom-color: rgba(255,255,255,0.30);
 }
 
-/*** 
+/***
 
 ====================================================================
 		Team Section Two
@@ -15841,7 +15841,7 @@ border-radius: .25em;
 	border-color: #be1935;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Yacht Tours Section
@@ -17398,7 +17398,7 @@ border-radius: .25em;
 
 
 
-/*** 
+/***
 
 ====================================================================
 	Info Popup
@@ -17559,7 +17559,7 @@ border-radius: .25em;
 }
 
 .main-booking-form .form-group .ui-button .ui-icon:before{
-	color: #aaaaaa;	
+	color: #aaaaaa;
 	font-style: normal;
 }
 
@@ -17658,7 +17658,7 @@ border-radius: .25em;
 }
 
 
-/*** 
+/***
 
 ====================================================================
 		Upcoming Tours
@@ -17685,7 +17685,7 @@ border-radius: .25em;
 }
 
 
-/*** 
+/***
 
 ====================================================================
 		Tour Details
@@ -17844,7 +17844,7 @@ border-radius: .25em;
 
 
 
-/*** 
+/***
 
 ====================================================================
 	Accordion
@@ -18268,7 +18268,7 @@ border-radius: .25em;
      position: relative;
      -webkit-transform: translate3d(0px, 0px, 0px);
      overflow-x: clip;
-  
+
 }
 .scheme_lightblue .scheme_lightblue .scheme_dark .sc_services_alter .sc_services_item a, .scheme_lightblue .scheme_lightblue .scheme_dark .sc_services_alter .sc_services_item_title::after {
     color: red;
@@ -18278,34 +18278,34 @@ margin-top: 55px;
 }
 .box1{
 	background-color: #00a8ff;
-	height: 220px;
+	height: fit-content;
 	width: 80%;
 	margin: auto;
 	border-bottom: 1px solid #e5e5e5;
 }
 .box2{
 	background-color: #00a8ff ;
-	height: 220px;
+	height: fit-content;
 	width: 80%;
 	margin: auto;
 	border-bottom: 1px solid #e5e5e5;
 }.box3{
 	background-color: #00a8ff ;
-	height: 220px;
+	height: fit-content;
 	width: 80%;
 	margin: auto;
 	border-bottom: 1px solid #e5e5e5;
 }
 .box4{
 	background-color: #00a8ff ;
-	height: 220px;
+	height: fit-content;
 	width: 80%;
 	margin: auto;
 	border-bottom: 1px solid #e5e5e5;
 }
 .box5{
 	background-color: #00a8ff ;
-	height: 220px;
+	height: fit-content;
 	width: 80%;
 	margin: auto;
 	border-bottom: 1px solid #e5e5e5;
@@ -18316,7 +18316,8 @@ margin-top: 55px;
 }
 .content1{
 text-align: center;
-padding-top: 50px;
+  padding-bottom: 13px;
+  padding-top: 13px;
 color: white;
  }
 .content1 .title{
@@ -18347,7 +18348,7 @@ font-weight: bold;
 }
 .navbar-expand-md .navbar-collapse {
     display: contents;}
-    
+
     .vatdiv{
    background-color: red;
     position: relative;
@@ -18358,8 +18359,7 @@ font-weight: bold;
     margin-left: -14px;
     margin-bottom: -7px;
     }
-     
 
 
 
- 
+

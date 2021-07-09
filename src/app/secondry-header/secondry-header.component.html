@@ -1,4 +1,3 @@
-
 <!-- Main Header -->
 <header class="main-header header-style-three">
   <!-- Header Top -->
@@ -25,55 +24,61 @@
 
         <div class="contact-text">
           <span class="icon flaticon-assistance"></span>
-          <span class="txt">Speak to Tour Planner : <a href="tel:+971524918686">+971 52 491 8686</a><span class="icon fa fa-clock"></span>Week Days: 09:00am to 03:00am  </span>
+          <span class="txt">Speak to Tour Planner :
+            <a href="tel:+971524918686">+971 52 491 8686</a>
+            <span class="icon fa fa-clock" style="padding-left: 5px"></span>Week Days: 09:00am to 03:00am  </span>
 
 
-        </div>
-
-        <div class="top-right clearfix">
-          <div class="my-account">
-            <ul class="clearfix">
-              <li><a href="#"><span class="icon flaticon-password"></span> Login</a></li>
-              <li><a href="#"><span class="icon flaticon-user-2"></span> Signup</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
   </div>
 
+
+  <div>
+
+  </div>
   <!-- Header Upper -->
   <div class="header-upper">
     <div class="auto-container">
       <div class="inner clearfix">
-        <!--Logo-->
-        <div class="logo-box">
-          <div class="logo"><a href="index.html" title="Sailing - Water Sports HTML Template"><img src="assets/images/logo-three.png" alt="Sailing - Water Sports HTML Template" title="Sailing - Water Sports HTML Template"></a></div>
-        </div>
         <div class="nav-content clearfix">
           <div class="nav-outer clearfix">
             <!--Mobile Navigation Toggler-->
             <div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
 
             <!-- Main Menu -->
-            <nav class="main-menu navbar-expand-md navbar-light">
+            <nav class="main-menu navbar navbar-expand-lg navbar-light">
+              <div class="logo-box navbar-brand">
+                <div class="logo">
+                  <a href="index.html" title="Sailing - Water Sports HTML Template">
+                    <img src="assets/images/logo-three.png"
+                         alt="Sailing - Water Sports HTML Template"
+                         title="Sailing - Water Sports HTML Template">
+                  </a>
+                </div>
+              </div>
               <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                 <ul class="navigation clearfix">
-                  <li class="sub-menu"><a routerLink="">Home</a></li>
-                  <li class="sub-menu"><a routerLink="/about">About</a></li>
-                  <li class="sub-menu"><a routerLink="/yachtrental">Yacht Rent</a>
+                  <li class="sub-menu"><a [routerLink]="''">Home</a></li>
+                  <li class="sub-menu"><a [routerLink]="'/about'">About</a></li>
+                  <li class="sub-menu"><a [routerLink]="'/yachts'">Yacht Rent</a>
                   </li>
-                  <li class="sub-menu"><a routerLink="/watersports">Water Sports</a>
-                  <li class="sub-menu"><a routerLink="/fishingtrip">Fishing Trip</a>
+                  <li class="sub-menu"><a [routerLink]="'/water-sports'">Water Sports</a>
+                  <li class="sub-menu"><a [routerLink]="'/fishing-trip'">Fishing Trip</a>
                   </li>
-                  <li class="sub-menu"><a routerLink="/destination">Destinations</a>
+                  <li class="sub-menu"><a [routerLink]="'/destination'">Destinations</a>
                   </li>
-                  <li class="sub-menu"><a routerLink="/offers">Offers</a></li>
-                  <li class="sub-menu"><a routerLink="/services">Services</a></li>
-                  <li class="sub-menu"><a routerLink="/contact">Contact</a></li>
+                  <li class="sub-menu"><a [routerLink]="'/blogs'">Blogs</a>
+                  </li>
+                  <li class="sub-menu"><a [routerLink]="'/offers'">Offers</a></li>
+                  <li class="sub-menu"><a [routerLink]="'/services'">Services</a></li>
+                  <li class="sub-menu"><a [routerLink]="'/contact'">Contact</a></li>
                 </ul>
               </div>
             </nav>
+
+
           </div>
 
           <!--Search Btn-->
@@ -138,7 +143,7 @@
       <form method="post" action="http://st.ourhtmldemo.com/new/sailing-demo/index.html">
         <div class="form-group">
           <fieldset>
-            <input type="search" class="form-control" name="search-input" value="" placeholder="Search Here" required >
+            <input type="search" class="form-control" name="search-input" value="" placeholder="Search Here" required>
             <input type="submit" value="Search Now!" class="theme-btn">
           </fieldset>
         </div>
@@ -170,20 +175,28 @@
   <div class="hidden-bar-wrapper">
 
     <div class="logo">
-      <a href="index.html"><img src="assets/images/logo-two.png" alt="" /></a>
+      <a href="index.html"><img src="assets/images/logo-two.png" alt=""/></a>
     </div>
     <div class="content-box">
       <h3>Get In Touch</h3>
-      <div class="text">Welcome to the most important yacht and boat rental platform in Dubai, we can help you find a yacht or boat for rent in Dubai and we also organize cruises and special events such as birthdays, letters, wedding anniversaries, company parties and many other events.</div>
-      <a href="contact.html" class="theme-btn btn-style-two"><div class="btn-title">Book Now</div></a>
+      <div class="text">Welcome to the most important yacht and boat rental platform in Dubai, we can help you find a
+        yacht or boat for rent in Dubai and we also organize cruises and special events such as birthdays, letters,
+        wedding anniversaries, company parties and many other events.
+      </div>
+      <a href="contact.html" class="theme-btn btn-style-two">
+        <div class="btn-title">Book Now</div>
+      </a>
     </div>
     <div class="contact-info">
       <h2>Contact Info</h2>
       <ul class="list-style-two">
-        <li><span class="icon fa fa-map-marker-alt"></span>King Salman Bin Abdulaziz Al Saud St - Dubai Marina - Dubai, UAE.</li>
+        <li><span class="icon fa fa-map-marker-alt"></span>King Salman Bin Abdulaziz Al Saud St - Dubai Marina - Dubai,
+          UAE.
+        </li>
         <li><span class="icon fa fa-phone-alt"></span><a href="tel:+971524918686">+971 52 491 8686</a></li>
-        <li><span class="icon fa fa-envelope-open"></span> <a href="mailto:info@boatsride.com">info@boatsride.com</a></li>
-        <li><span class="icon fa fa-clock"></span>Week Days: 09:00am to 03:00am  </li>
+        <li><span class="icon fa fa-envelope-open"></span> <a href="mailto:info@boatsride.com">info@boatsride.com</a>
+        </li>
+        <li><span class="icon fa fa-clock"></span>Week Days: 09:00am to 03:00am</li>
       </ul>
     </div>
   </div>

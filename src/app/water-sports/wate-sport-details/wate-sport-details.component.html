@@ -1,0 +1,134 @@
+<!--Page Title-->
+<section class="page-banner">
+  <div class="image-layer" style="background-image:url(../../../assets/images/background/banner-1.jpg);"></div>
+  <div class="banner-inner">
+    <div class="auto-container">
+      <div class="inner-container clearfix">
+        <h1>{{watersport.name}}</h1>
+        <div class="page-nav">
+          <ul class="bread-crumb clearfix">
+            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="yacht-rent.html">Yacht</a></li>
+            <li>{{watersport.name}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="info-pop">
+  <div class="auto-container">
+    <div class="inner">
+      <div class="text">Our tour bookings are filling fastly, Book Your’s Now</div>
+      <div class="close-btn"><span class="flaticon-letter-x"></span></div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--Yacht Tours Section-->
+<section class="yacht-tours-container alternate-bg-two">
+  <div class="auto-container">
+
+    <div class="content-container">
+      <div class="row clearfix">
+        <!--Content Side-->
+        <div class="content-side col-lg-8 col-md-12 col-sm-12">
+          <div class="content-inner">
+            <!--Tour Details-->
+            <div class="tour-details">
+
+              <div class="info-title clearfix">
+                <div class="left-info">
+                </div>
+              </div>
+
+              <div class="tour-widget recommended-widget carousel-widget">
+                <div class="widget-inner">
+                  <ngb-carousel  [wrap]="true" [interval]="2500" [pauseOnHover]="true"
+                                 [showNavigationArrows]="false" [showNavigationIndicators]="true">
+                    <ng-template ngbSlide *ngFor="let image of watersport.images">
+                      <div class="recommend-block">
+                        <div class="inner">
+                          <div class="image-box">
+                            <a href="yacht-tour-single.html"><img src="{{image.image}}" alt="" title=""></a>
+                          </div>
+                        </div>
+                      </div>
+                    </ng-template>
+                  </ngb-carousel>
+                </div>
+
+              </div>
+
+              <div class="text-block">
+                <h4></h4>
+                <p> {{watersport.water_sport_description}}</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!--Widgets Side-->
+        <div class="widgets-side col-lg-4 col-md-6 col-sm-12">
+          <div class="widgets-content">
+            <!--Widget-->
+            <div class="tour-widget single-booking-widget">
+              <div class="widget-inner">
+                <br>
+                <div class="default-form main-booking-form">
+                  <form method="post" action="http://boatsride/contact.html">
+                    <h5>Price Details</h5>
+                    <br>
+
+                    <div class="estimate-table">
+                      <ul>
+                        <li class="totals clearfix"><span class="ttle">Price:</span> <span class="dtl">AED {{watersport.selling_per_hour}} / Hour</span></li>
+                      </ul>
+                    </div>
+                    <br>
+                    <div class="info"><span class="icon flaticon-wall-clock"></span> Reservations: 24 / 7</div>
+                    <br>
+                    <div class="form-group">
+                      <button type="submit" class="theme-btn"><span class="btn-title">Book Now</span></button>
+                    </div>
+
+                  </form>
+                  <div class="instruction">Do you need suggestion pls contact our expert team.</div>
+                </div>
+              </div>
+
+              <!--Widget-->
+              <div class="tour-widget advisor-widget">
+                <div class="widget-inner">
+                  <!--Advisor Block-->
+                  <div class="advisor-block">
+                    <div class="inner-box">
+                      <div class="image-box">
+                        <a href="#"><img src="../../../assets/images/resource/team-6.jpg" alt="" title=""></a>
+                      </div>
+                      <div class="lower-box clearfix">
+                        <div class="lower-content">
+                          <h4><a href="#">Mohammed Sahraoui</a></h4>
+                          <div class="info"><span class="icon flaticon-assistance"></span>+971 52 491 8686  [24/Hours]</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<app-service-section></app-service-section>
+

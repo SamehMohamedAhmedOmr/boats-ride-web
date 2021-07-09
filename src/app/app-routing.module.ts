@@ -1,37 +1,65 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import {HomeComponent} from './home/home.component';
-import {ContactComponent} from './contact/contact.component';
-import {OffersComponent} from './offers/offers.component';
-import {MainAboutComponent} from './main-about/main-about.component';
-import {MainYachtRentalComponent} from './main-yacht-rental/main-yacht-rental.component';
-import {MainDestinationComponent} from './main-destination/main-destination.component';
-import {FishingTripComponent} from './fishing-trip/fishing-trip.component';
-import {ServicesComponent} from './services/services.component';
-import {WaterSportsComponent} from './water-sports/water-sports.component';
-import {YachtDetailsComponent} from './yacht-details/yacht-details.component';
-import {ServiceDetailsComponent} from './service-details/service-details.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {BlogsComponent} from './blogs/blogs.component';
-import {BlogDetailsComponent} from './blog-details/blog-details.component';
+import {BlogDetailsComponent} from './blogs/blog-details/blog-details.component';
 
 const routes: Routes = [
-  {path:'', component: HomeComponent},
-    {path:'contact',component:ContactComponent},
-  {path:'offers',component:OffersComponent},
-  {path:'about',component:MainAboutComponent},
-  {path:'yachtrental',component:MainYachtRentalComponent},
-  {path:'destination',component:MainDestinationComponent},
-  {path:'fishingtrip',component:FishingTripComponent},
-  {path:'services',component:ServicesComponent},
-  {path:'watersports',component:WaterSportsComponent},
-  {path:'yachtdetails',component:YachtDetailsComponent},
-  {path:'servicedetails',component:ServiceDetailsComponent},
-  {path:'blogs',component:BlogsComponent},
-  {path:'blogdetails',component:BlogDetailsComponent}
+  {
+    path: '', // <= Page URL ,
+    loadChildren: () => import('./home/home.module')
+      .then(m => m.HomeModule)
+  },
+  {
+    path: 'contact', // <= Page URL ,
+    loadChildren: () => import('./contact/contact.module')
+      .then(m => m.ContactModule)
+  },
+  {
+    path: 'offers', // <= Page URL ,
+    loadChildren: () => import('./offers/offers.module')
+      .then(m => m.OffersModule)
+  },
+  {
+    path: 'about', // <= Page URL ,
+    loadChildren: () => import('./main-about/about.module')
+      .then(m => m.AboutModule)
+  },
+  {
+    path: 'destination', // <= Page URL ,
+    loadChildren: () => import('./main-destination/destination.module')
+      .then(m => m.DestinationModule)
+  },
+  {
+    path: 'fishing-trip', // <= Page URL ,
+    loadChildren: () => import('./fishing-trip/fishing-trip.module')
+      .then(m => m.FishingTripModule)
+  },
+  {
+    path: 'services', // <= Page URL ,
+    loadChildren: () => import('./services/services.module')
+      .then(m => m.ServicesModule)
+  },
+  {
+    path: 'water-sports', // <= Page URL ,
+    loadChildren: () => import('./water-sports/water-sports.module')
+      .then(m => m.WaterSportsModule)
+  },
+  {
+    path: 'yachts', // <= Page URL ,
+    loadChildren: () => import('./yachts/yachts.module')
+      .then(m => m.YachtsModule)
+  },
+  {
+    path: 'blogs', // <= Page URL ,
+    loadChildren: () => import('./blogs/blogs.module')
+      .then(m => m.BlogsModule)
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    initialNavigation: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
