@@ -21,7 +21,14 @@
 <section class="services-section-two">
   <div class="auto-container">
     <div class="row clearfix">
-
+      <div class="item" *ngIf="!offers.length">
+        <ngx-skeleton-loader count="3" appearance="circle" [theme]="{
+    width: '400px',
+    height: '490px',
+    'border-radius': '10px'
+  }">
+        </ngx-skeleton-loader>
+      </div>
       <!--Service Block-->
       <div *ngFor="let offer of offers"
         class="service-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">

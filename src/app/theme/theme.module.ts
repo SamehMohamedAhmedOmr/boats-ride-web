@@ -6,6 +6,9 @@ import {FooterComponent} from './footer/footer.component';
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 import {RouterModule} from '@angular/router';
 import { MenuHeaderComponent } from './secondry-header/menu-header/menu-header.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -13,7 +16,10 @@ import { MenuHeaderComponent } from './secondry-header/menu-header/menu-header.c
   imports: [
     CommonModule,
     NgbCarouselModule,
-    RouterModule
+    RouterModule,
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   exports:[
     SecondryFooterComponent, SecondryHeaderComponent,FooterComponent

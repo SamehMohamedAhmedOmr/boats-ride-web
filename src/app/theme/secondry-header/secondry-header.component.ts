@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-secondry-header',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./secondry-header.component.css']
 })
 export class SecondryHeaderComponent implements OnInit {
-
+@Input() public drawer: any;
   constructor() { }
 
   ngOnInit(): void {

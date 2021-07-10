@@ -14,7 +14,36 @@ import {HomeModule} from './home/home.module';
 import {ThemeModule} from './theme/theme.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
-
+import {NgxUiLoaderConfig, NgxUiLoaderModule} from 'ngx-ui-loader';
+import {MatSidenavModule} from '@angular/material/sidenav';
+const ngxUiLoaderConfig: NgxUiLoaderConfig = {
+  "bgsColor": "red",
+  "bgsOpacity": 0.4,
+  "bgsPosition": "bottom-right",
+  "bgsSize": 20,
+  "blur": 0,
+  "delay": 0,
+  "fastFadeOut": true,
+  "fgsColor": "rgba(40, 40, 40, 0.8)",
+  "fgsPosition": "center-center",
+  "fgsSize": 20,
+  "gap": 24,
+  "logoPosition": "center-center",
+  "logoSize": 120,
+  "logoUrl": "assets/images/preloader.svg",
+  "masterLoaderId": "master",
+  "overlayBorderRadius": "0",
+  "overlayColor": "rgba(40, 40, 40, 0.8)",
+  "pbColor": "red",
+  "pbDirection": "ltr",
+  "pbThickness": 3,
+  "hasProgressBar": true,
+  "text": "",
+  "textColor": "#FFFFFF",
+  "textPosition": "center-center",
+  "maxTime": -1,
+  "minTime": 300
+};
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +56,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     HttpClientModule,
     SharedModule,
     ThemeModule,
+    NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
     NgxSkeletonLoaderModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
@@ -35,7 +65,8 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
       registrationStrategy: 'registerWhenStable:30000'
     }),
     HomeModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSidenavModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: CommonInterceptor, multi: true},

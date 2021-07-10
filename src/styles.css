@@ -141,6 +141,9 @@ body {
   line-height: 0;
   height: 0; }
 
+.sk-ball-spin-clockwise{
+  display: none!important;
+}
 
 /* fix for flashing background */
 
@@ -912,12 +915,12 @@ img{
 }
 
 .slide-up {
-  animation: slide-up 2s;
+  animation: slide-up 3s;
 }
 .overlay2{
   position: absolute;
   background-color: rgba(0,0,0,.3);
-  height:900px;
+  height:1000px;
   z-index:200;
   padding: 80px;
   width: 100%;
@@ -926,9 +929,10 @@ img{
 
 }
 .headerText{
-  font-size: 62px;
+  font-size: 62px!important;
+  font-weight: bold!important;
 }
-@media (max-width: 321px) {
+@media (max-width: 360px) {
   .overlay2{
     position: absolute;
     background-color: rgba(0,0,0,.3);
@@ -941,10 +945,10 @@ img{
 
   }
   .headerText{
-    font-size: 40px;
+    font-size: 40px!important;
   }
   .carousel-inner {
-    height: 450px;
+    height: 500px;
   }
   .btn-style-two .btn-title{
     font-size: 11px;
@@ -963,10 +967,10 @@ img{
 
   }
   .headerText{
-    font-size: 50px;
+    font-size: 40px!important;
   }
   .carousel-inner {
-    height: 200px;
+    height: 500px;
   }
 }
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -982,7 +986,7 @@ img{
 
   }
   .headerText{
-    font-size: 60px;
+    font-size: 60px!important;
   }
   .carousel-inner {
     height: 700px;
@@ -3123,9 +3127,6 @@ img.lazy-image.loaded{
 .hidden-bar{
   position: fixed;
   top: 0;
-  width: 320px;
-  height: 100%;
-  background: #1c1c1c;
   z-index: 9999;
   transition: all 700ms ease;
   -webkit-transition: all 700ms ease;
@@ -3134,25 +3135,7 @@ img.lazy-image.loaded{
   -moz-transition: all 700ms ease;
 }
 
-.hidden-bar .mCSB_inside > .mCSB_container{
-  margin-right:10px;
-}
 
-.hidden-bar.right-align {
-  right: -400px;
-}
-
-.hidden-bar.right-align.visible-sidebar{
-  right:0px;
-}
-
-.hidden-bar.right-align {
-  right: -400px;
-}
-
-.hidden-bar.right-align.visible-sidebar {
-  right: 0px;
-}
 
 .hidden-bar .hidden-bar-closer {
   width: 40px;
@@ -3192,29 +3175,25 @@ img.lazy-image.loaded{
   padding:30px 5px 30px 30px;
 }
 
-.hidden-bar .logo {
+ .logo {
   padding:0px 0px 30px;
-  background: #1c1c1c;
 }
 
-.hidden-bar .logo img{
+ .logo img{
   display:inline-block;
   max-width:100%;
 }
 
-.hidden-bar .content-box{
-  position:relative;
-}
 
-.hidden-bar .content-box h3{
+
+.content-box h3{
   position:relative;
   font-size:24px;
   color:#ffffff;
   font-weight:700;
   margin-bottom:20px;
 }
-
-.hidden-bar .content-box .text{
+ .content-box .text{
   position:relative;
   font-size:14px;
   color:rgba(255,255,255,0.60);

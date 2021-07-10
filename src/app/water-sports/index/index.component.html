@@ -51,6 +51,14 @@
             </div>
 
             <div class="results-row">
+              <div class="item" *ngIf="!waterSports.length">
+                <ngx-skeleton-loader count="1" appearance="circle" [theme]="{
+    width: '740px',
+    height: '310px',
+    'border-radius': '10px'
+  }">
+                </ngx-skeleton-loader>
+              </div>
               <!--Activity Block-->
               <div class="activity-block-two" *ngFor="let watersport of waterSports">
                 <div class="inner-box clearfix">

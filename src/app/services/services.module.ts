@@ -7,16 +7,18 @@ import {SharedModule} from '../../shared/shared.module';
 import {ServicesComponent} from './services.component';
 import {ServiceDetailsComponent} from './service-details/service-details.component';
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
 
 
 @NgModule({
   declarations: [IndexComponent, ServicesComponent, ServiceDetailsComponent],
-  imports: [
-    CommonModule,
-    ServicesRoutingModule,
-    SharedModule,
-    NgbCarouselModule
-  ]
+    imports: [
+        CommonModule,
+        ServicesRoutingModule,
+        SharedModule,
+        NgbCarouselModule,
+        NgxSkeletonLoaderModule
+    ]
 })
 export class ServicesModule {
 }

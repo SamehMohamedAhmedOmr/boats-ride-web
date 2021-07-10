@@ -8,16 +8,18 @@ import {WateSportDetailsComponent} from './wate-sport-details/wate-sport-details
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import {SharedModule} from '../../shared/shared.module';
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
+import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
 
 
 @NgModule({
   declarations: [IndexComponent,WaterSportsComponent,WateSportDetailsComponent],
-  imports: [
-    CommonModule,
-    WaterSportsRoutingModule,
-    IvyCarouselModule,
-    SharedModule,
-    NgbCarouselModule
-  ]
+    imports: [
+        CommonModule,
+        WaterSportsRoutingModule,
+        IvyCarouselModule,
+        SharedModule,
+        NgbCarouselModule,
+        NgxSkeletonLoaderModule
+    ]
 })
 export class WaterSportsModule { }

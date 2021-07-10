@@ -34,7 +34,7 @@
     </div>
   </div>
 
-  <app-menu-header></app-menu-header>
+  <app-menu-header [drawer]="drawer"></app-menu-header>
   <!-- Sticky Header  -->
   <div class="sticky-header">
     <div class="auto-container clearfix">
@@ -78,70 +78,5 @@
 </header>
 <!-- End Main Header -->
 
-<!--Search Popup-->
-<div id="search-popup" class="search-popup">
-  <div class="close-search theme-btn"><span class="flaticon-targeting-cross"></span></div>
-  <div class="popup-inner">
-    <div class="overlay-layer"></div>
-    <div class="search-form">
-      <form method="post" action="http://st.ourhtmldemo.com/new/sailing-demo/index.html">
-        <div class="form-group">
-          <fieldset>
-            <input type="search" class="form-control" name="search-input" value="" placeholder="Search Here" required>
-            <input type="submit" value="Search Now!" class="theme-btn">
-          </fieldset>
-        </div>
-      </form>
 
-      <br>
-      <h3>Recent Search Keywords</h3>
-      <ul class="recent-searches">
-        <li><a href="#">Finance</a></li>
-        <li><a href="#">Idea</a></li>
-        <li><a href="#">Service</a></li>
-        <li><a href="#">Growth</a></li>
-        <li><a href="#">Plan</a></li>
-      </ul>
 
-    </div>
-
-  </div>
-</div>
-
-<!-- Hidden Navigation Bar -->
-<section class="hidden-bar right-align">
-
-  <div class="hidden-bar-closer">
-    <button><span class="flaticon-letter-x"></span></button>
-  </div>
-
-  <!-- Hidden Bar Wrapper -->
-  <div class="hidden-bar-wrapper">
-
-    <div class="logo">
-      <a href="../../../index.html"><img src="../../../assets/images/logo-two.png" alt=""/></a>
-    </div>
-    <div class="content-box">
-      <h3>Get In Touch</h3>
-      <div class="text">Welcome to the most important yacht and boat rental platform in Dubai, we can help you find a
-        yacht or boat for rent in Dubai and we also organize cruises and special events such as birthdays, letters,
-        wedding anniversaries, company parties and many other events.
-      </div>
-      <a href="contact.html" class="theme-btn btn-style-two">
-        <div class="btn-title">Book Now</div>
-      </a>
-    </div>
-    <div class="contact-info">
-      <h2>Contact Info</h2>
-      <ul class="list-style-two">
-        <li><span class="icon fa fa-map-marker-alt"></span>King Salman Bin Abdulaziz Al Saud St - Dubai Marina - Dubai,
-          UAE.
-        </li>
-        <li><span class="icon fa fa-phone-alt"></span><a href="tel:+971524918686">+971 52 491 8686</a></li>
-        <li><span class="icon fa fa-envelope-open"></span> <a href="mailto:info@boatsride.com">info@boatsride.com</a>
-        </li>
-        <li><span class="icon fa fa-clock"></span>Week Days: 09:00am to 03:00am</li>
-      </ul>
-    </div>
-  </div>
-</section>

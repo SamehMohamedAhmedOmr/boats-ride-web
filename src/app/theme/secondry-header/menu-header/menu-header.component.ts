@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-menu-header',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu-header.component.css']
 })
 export class MenuHeaderComponent implements OnInit {
-
+  @Input() public drawer: any;
   constructor() { }
 
   ngOnInit(): void {

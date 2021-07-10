@@ -1,0 +1,30 @@
+mat-drawer{
+  width: 320px;
+  height: 100%;
+  background: #1c1c1c;
+  position: fixed;
+}
+ .hidden-bar-closer {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right:10px;
+  top:10px;
+  background: none;
+  color: #ffffff;
+  border-radius: 0px;
+  text-align: center;
+  line-height: 40px;
+  z-index: 999999;
+}
+
+.hidden-bar-closer button {
+  background: none;
+  display:block;
+  font-size: 16px;
+  color:#ffffff;
+  width:40px;
+  height:40px;
+  line-height:40px;
+}
+
