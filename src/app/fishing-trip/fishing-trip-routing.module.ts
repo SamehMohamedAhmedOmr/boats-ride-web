@@ -3,7 +3,10 @@ import {Routes, RouterModule} from '@angular/router';
 import {FishingTripComponent} from './fishing-trip.component';
 
 
-const routes: Routes = [{path: '', component: FishingTripComponent}];
+const routes: Routes = [
+  {path: '', component: FishingTripComponent},
+  {path: '**', redirectTo: '', pathMatch: 'full'},
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

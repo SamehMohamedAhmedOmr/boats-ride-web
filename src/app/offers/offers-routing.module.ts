@@ -4,7 +4,8 @@ import {OffersComponent} from './offers.component';
 
 
 const routes: Routes = [
-  {path: '', component: OffersComponent}
+  {path: '', component: OffersComponent},
+  {path: '**', redirectTo: '', pathMatch: 'full'},
 ];
 
 @NgModule({

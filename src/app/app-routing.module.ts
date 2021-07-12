@@ -1,7 +1,5 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {BlogsComponent} from './blogs/blogs.component';
-import {BlogDetailsComponent} from './blogs/blog-details/blog-details.component';
 
 const routes: Routes = [
   {
@@ -53,6 +51,11 @@ const routes: Routes = [
     path: 'blogs', // <= Page URL ,
     loadChildren: () => import('./blogs/blogs.module')
       .then(m => m.BlogsModule)
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
   },
 ];
 
