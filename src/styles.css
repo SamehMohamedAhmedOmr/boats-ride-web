@@ -2632,9 +2632,6 @@ body.search-visible{
   opacity: 0;
   visibility: hidden;
   border-radius: 0px;
-  -webkit-transform: translateX(101%);
-  -ms-transform: translateX(101%);
-  transform: translateX(101%);
 }
 
 .mobile-menu-visible .mobile-menu .menu-box{
@@ -4373,7 +4370,9 @@ img.lazy-image.loaded{
   background: #be1935;
   color: #ffffff;
 }
-
+.flaticon-surf-sea:before{
+  display: none!important;
+}
 .service-block .lower-content .cat{
   position: relative;
   display: block;

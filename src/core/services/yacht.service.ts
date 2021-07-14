@@ -4,6 +4,7 @@ import {environment} from '../../environments/environment';
 import {Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import {Yacht} from '../../Models/yacht';
+import {Voucher} from '../../Models/voucher';
 
 @Injectable({
   providedIn: 'root'
@@ -17,9 +18,13 @@ export class YachtService {
   }
   getYachts() :Observable<Yacht[]>{
     console.log(this.Url);
-    return this.http.get<Yacht[]>(this.Url+'yachts').pipe(map((data: any) => data.body as Yacht[]));;
+    return this.http.get<Yacht[]>(this.Url+'yachts').pipe(map((data: any) => data.body as Yacht[]));
   }
   getYacht(slug: any){
-    return this.http.get(this.Url+'yachts/'+slug).pipe(map((data: any) => data.body as Yacht));;
+    return this.http.get(this.Url+'yachts/'+slug).pipe(map((data: any) => data.body as Yacht));
+  }
+  getVoucher(booking_number:string){
+    return this.http.get(this.Url+'trips/voutcher-email-link/'+booking_number)
+      .pipe(map((data: any) => data.body as Voucher));
   }
 }

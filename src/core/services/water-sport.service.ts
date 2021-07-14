@@ -5,6 +5,7 @@ import {map} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
 import {Offer} from '../../Models/offer';
 import {WaterSport} from '../../Models/water-sport';
+import {Voucher} from '../../Models/voucher';
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +23,9 @@ export class WaterSportService {
   }
   getWaterSport(slug: any){
     return this.http.get(this.Url+'water_sports/'+slug).pipe(map((data: any) => data.body as WaterSport));;
+  }
+  getVoucher(booking_number:string){
+    return this.http.get(this.Url+'water_sport_trips/voutcher-email-link/'+booking_number)
+      .pipe(map((data: any) => data.body as Voucher));
   }
 }

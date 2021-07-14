@@ -5,6 +5,7 @@ import {PopularDestinationComponent} from './popular-destination/popular-destina
 import {ServiceSectionComponent} from './service-section/service-section.component';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import {DestinationComponent} from './destination/destination.component';
+import {RouterModule} from '@angular/router';
 
 
 @NgModule({
@@ -14,10 +15,11 @@ import {DestinationComponent} from './destination/destination.component';
     PopularDestinationComponent,
     DestinationComponent,
   ],
-  imports: [
-    CommonModule,
-    IvyCarouselModule
-  ],
+    imports: [
+        CommonModule,
+        IvyCarouselModule,
+        RouterModule
+    ],
   exports: [
     YachtRentalComponent,
     ServiceSectionComponent,

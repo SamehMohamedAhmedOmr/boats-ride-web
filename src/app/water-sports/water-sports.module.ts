@@ -9,10 +9,11 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
 import {SharedModule} from '../../shared/shared.module';
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
+import { VoucherComponent } from './voucher/voucher.component';
 
 
 @NgModule({
-  declarations: [IndexComponent,WaterSportsComponent,WateSportDetailsComponent],
+  declarations: [IndexComponent,WaterSportsComponent,WateSportDetailsComponent, VoucherComponent],
     imports: [
         CommonModule,
         WaterSportsRoutingModule,

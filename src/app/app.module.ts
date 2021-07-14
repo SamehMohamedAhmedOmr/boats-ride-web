@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import {NgxUiLoaderConfig, NgxUiLoaderModule} from 'ngx-ui-loader';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {HeaderComponent} from './header/header.component';
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   "bgsColor": "red",
   "bgsOpacity": 0.4,
@@ -47,6 +48,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),
@@ -70,6 +72,8 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: CommonInterceptor, multi: true},
+  ],
+  exports: [
   ],
   bootstrap: [AppComponent]
 })

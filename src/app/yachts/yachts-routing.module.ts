@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {YachtsComponent} from './yachts.component';
 import {YachtDetailsComponent} from './yacht-details/yacht-details.component';
 import {IndexComponent} from './index/index.component';
+import {VoucherComponent} from './voucher/voucher.component';
 
 
 const routes: Routes = [
@@ -17,6 +18,10 @@ const routes: Routes = [
       {
         path: ':slug',
         component: YachtDetailsComponent
+      } ,
+      {
+        path: 'voucher/:booking_number',
+        component: VoucherComponent
       } ,
       {path: '**', redirectTo: '', pathMatch: ''},
     ]

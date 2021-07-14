@@ -1,5 +1,7 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, HostListener, OnInit} from '@angular/core';
 import {ResizeServiceService} from '../../core/services/Helpers/resize-service.service';
+import {ServicesService} from '../../core/services/services.service';
+import {Services} from '../../Models/services';
 
 @Component({
   selector: 'app-popular-destination',
@@ -7,13 +9,14 @@ import {ResizeServiceService} from '../../core/services/Helpers/resize-service.s
   styleUrls: ['./popular-destination.component.css']
 })
 export class PopularDestinationComponent implements OnInit {
-  constructor(private resizeServiceService: ResizeServiceService) {
+  constructor(private resizeServiceService: ResizeServiceService,private services: ServicesService, private cdr:ChangeDetectorRef) {
   }
-
+  public Services: Services [] = [];
   numberofcells = 3;
 
   ngOnInit(): void {
     this.numberofcells = this.resizeServiceService.checkWindowSize();
+    this.getServices();
   }
 
 
@@ -23,5 +26,11 @@ export class PopularDestinationComponent implements OnInit {
   onResize(event: { target: { innerWidth: any; }; }) {
     this.numberofcells = this.resizeServiceService.checkWindowSize();
   }
-
+  getServices() {
+    this.services.getSevices().subscribe(data => {
+      this.Services = data;
+      console.log(this.Services);
+      this.cdr.markForCheck();
+    });
+  }
 }

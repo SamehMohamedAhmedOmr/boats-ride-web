@@ -12,9 +12,9 @@
     </div>
   </div>
   <div class="auto-container">
-    <carousel [margin]="20" [height]="600" [cellWidth]="400" [cellsToShow]="numberofcells"
+    <carousel *ngIf="waterSports.length" [margin]="20" [height]="600" [cellWidth]="400" [cellsToShow]="numberofcells"
               [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
-      <div class="carousel-cell">
+      <div class="carousel-cell" *ngFor="let watersport of waterSports">
         <div class="service-block">
           <div class="inner-box">
 
@@ -24,9 +24,9 @@
 
 
                 <div class="img-wrap flip-container">
-                  <div class="flipper ">
-                    <img src="assets/images/resource/39.jpg" class="front">
-                    <img src="assets/images/Watersports/jet-ski_2.jpg" class="back">
+                  <div>
+                    <img *ngIf="watersport.images[0].image" src="{{watersport.images[0].image}}" class="front">
+<!--                    <img *ngIf="watersport.images[1].image" src="{{watersport.images[1].image}}" class="back">-->
                   </div>
                 </div> <!-- img-wrap.// -->
 
@@ -37,9 +37,9 @@
             <div class="lower-box">
               <div class="lower-content">
                 <div class="icon-box"><span class="flaticon-surf-sea"></span></div>
-                <h4><a href="water-slide.html">Water Slide</a></h4>
+                <h4><a href="">{{watersport.name}}</a></h4>
                 <div class="link-box">
-                  <a href="water-slide.html" class="default-link">
+                  <a routerLink="/water-sports/{{watersport.slug}}" class="default-link">
                     <span class="icon flaticon-logout"></span> <span class="link-text">Read More</span>
                   </a>
                 </div>
@@ -48,74 +48,8 @@
           </div>
         </div>
       </div>
-      <div class="carousel-cell">
-        <div class="service-block">
-          <div class="inner-box">
-
-            <div class="yacht-wrap">
-
-              <article class="yacht">
 
 
-                <div class="img-wrap flip-container">
-                  <div class="flipper ">
-                    <img src="assets/images/resource/39.jpg" class="front">
-                    <img src="assets/images/Watersports/jet-ski_2.jpg" class="back">
-                  </div>
-                </div> <!-- img-wrap.// -->
-
-              </article> <!-- yacht .// -->
-            </div>
-
-
-            <div class="lower-box">
-              <div class="lower-content">
-                <div class="icon-box"><span class="flaticon-surf-sea"></span></div>
-                <h4><a href="water-slide.html">Water Slide</a></h4>
-                <div class="link-box">
-                  <a href="water-slide.html" class="default-link">
-                    <span class="icon flaticon-logout"></span> <span class="link-text">Read More</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-cell">
-        <div class="service-block">
-          <div class="inner-box">
-
-            <div class="yacht-wrap">
-
-              <article class="yacht">
-
-
-                <div class="img-wrap flip-container">
-                  <div class="flipper ">
-                    <img src="assets/images/resource/39.jpg" class="front">
-                    <img src="assets/images/Watersports/jet-ski_2.jpg" class="back">
-                  </div>
-                </div> <!-- img-wrap.// -->
-
-              </article> <!-- yacht .// -->
-            </div>
-
-
-            <div class="lower-box">
-              <div class="lower-content">
-                <div class="icon-box"><span class="flaticon-surf-sea"></span></div>
-                <h4><a href="water-slide.html">Water Slide</a></h4>
-                <div class="link-box">
-                  <a href="water-slide.html" class="default-link">
-                    <span class="icon flaticon-logout"></span> <span class="link-text">Read More</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </carousel>
   </div>
 </section>

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {WaterSportsComponent} from './water-sports.component';
 import {WateSportDetailsComponent} from './wate-sport-details/wate-sport-details.component';
 import {IndexComponent} from './index/index.component';
+import {VoucherComponent} from './voucher/voucher.component';
 
 
 const routes: Routes = [ {
@@ -16,6 +17,10 @@ const routes: Routes = [ {
     {
       path: ':slug',
       component: WateSportDetailsComponent
+    } ,
+    {
+      path: 'voucher/:booking_number',
+      component: VoucherComponent
     } ,
     {path: '**', redirectTo: '', pathMatch: ''},
   ]

@@ -1,24 +1,26 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { YachtsRoutingModule } from './yachts-routing.module';
-import { YachtsComponent } from './yachts.component';
-import { IndexComponent } from './index/index.component';
+import {YachtsRoutingModule} from './yachts-routing.module';
+import {YachtsComponent} from './yachts.component';
+import {IndexComponent} from './index/index.component';
 import {SharedModule} from '../../shared/shared.module';
 import {YachtDetailsComponent} from './yacht-details/yacht-details.component';
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
+import {VoucherComponent} from './voucher/voucher.component';
 
 
 @NgModule({
-  declarations: [YachtsComponent, IndexComponent,YachtDetailsComponent],
+  declarations: [YachtsComponent, IndexComponent, YachtDetailsComponent, VoucherComponent],
 
   imports: [
     CommonModule,
     YachtsRoutingModule,
     SharedModule,
     NgbCarouselModule,
-    NgxSkeletonLoaderModule
+    NgxSkeletonLoaderModule,
   ]
 })
-export class YachtsModule { }
+export class YachtsModule {
+}
