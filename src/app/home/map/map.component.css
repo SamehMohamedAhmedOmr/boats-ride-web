@@ -1,7 +1,353 @@
-.pin .text{display:block;font-size:16px;text-shadow:0 2px 2px #000;color:#eee;width:150px}
-.circle-pulse{background-color:#EC6F23}.circle-pulse{background-size:cover;position:absolute;top:-20px;-webkit-transform:translateX(-50%) translateY(-50%);-ms-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);width:20px;height:20px;display:block;border-radius:15px;box-shadow:0 0 8px rgba(255,255,255,.3);-webkit-animation:pulse-dot 1.25s cubic-bezier(.455,.03,.515,.955) -.4s infinite;animation:pulse-dot 1.25s cubic-bezier(.455,.03,.515,.955) -.4s infinite}.circle-pulse:before{content:'';z-index:2;position:absolute;display:block;width:200%;height:200%;box-sizing:border-box;margin-left:-50%;margin-top:-50%;border-radius:45px;background-color:#fff;-webkit-animation:pulse-ring 1.25s cubic-bezier(.215,.61,.355,1) infinite;animation:pulse-ring 1.25s cubic-bezier(.215,.61,.355,1) infinite}@-webkit-keyframes pulse-ring{0%{-webkit-transform:scale(.25);transform:scale(.25);opacity:1}100%,90%{opacity:0}}@keyframes pulse-ring{0%{-webkit-transform:scale(.25);transform:scale(.25);opacity:1}100%,90%{opacity:0}}@-webkit-keyframes pulse-dot{0%,100%{-webkit-transform:scale(.8);transform:scale(.8)}50%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes pulse-dot{0%,100%{-webkit-transform:scale(.8);transform:scale(.8)}50%{-webkit-transform:scale(1);transform:scale(1)}}
-.place-wrap,.place-wrap .info{position:absolute}
-.place-wrap.palm{top:39%;left:42%}.place-wrap.westin{top:71%;left:48%}.place-wrap.onepalm{top:56%;left:41%}.place-wrap.yachtclub{top:92%;left:38%}.place-wrap.kempinski{top:36%;left:27%}.place-wrap.anantara{top:29%;left:58%}.place-wrap.jumeirah{top:34%;left:90%}
-.place-wrap .info img{width:100%}.place-wrap:hover .info{display:block}.place-wrap.one-and-one{top:67%;left:54%}.place-wrap.atlantis{top:21%;left:33%}.place-wrap.blue{top:81%;left:24%}.place-wrap.burjalarab{top:34%;left:84%}.place-wrap.jbr{top:78%;left:36%}.place-wrap.lagoon{top:69%;left:42%}.place-wrap.marina{top:89%;left:42%}.place-wrap.rixos{top:39%;left:59%}.place-wrap.zabeel{top:53%;left:34%}
-.link-route-more i.fa{float:right;margin-top:10px;font-size:18px}.section-route .link-route-more:hover{border-color:#EC6F23}
-.place-wrap,.place-wrap .info{position:absolute}.section-route img{width:100%}.section-route .link-route-more{display:block;position:absolute;right:20px;top:15px;font-size:13px;text-transform:uppercase;background-color:rgba(0,0,0,.3);width:100px;height:60px;padding:10px 10px 5px;border:2px solid #fff;border-radius:5px;color:#fff}.section-route .link-route-more i.fa{float:right;margin-top:10px;font-size:18px}.section-route .link-route-more:hover{border-color:#EC6F23}.place-wrap .pin .text{display:block;font-size:16px;text-shadow:0 2px 2px #000;color:#eee;width:150px}.place-wrap .info{display:none;z-index:90;width:200px;height:180px;border-radius:7px;overflow:hidden;border:3px solid #fff;box-shadow:0 0 7px rgba(0,0,0,.5);background-color:#fff}.item-deal img,.place-wrap .info img{width:100%}.place-wrap:hover .info{display:block}.place-wrap.one-and-one{top:67%;left:54%}.place-wrap.atlantis{top:21%;left:33%}.place-wrap.blue{top:81%;left:24%}.place-wrap.burjalarab{top:34%;left:84%}.place-wrap.jbr{top:78%;left:36%}.place-wrap.lagoon{top:69%;left:42%}.place-wrap.marina{top:89%;left:42%}.place-wrap.rixos{top:39%;left:59%}.place-wrap.zabeel{top:53%;left:34%}.place-wrap.palm{top:39%;left:42%}.place-wrap.westin{top:71%;left:48%}.place-wrap.onepalm{top:56%;left:41%}.place-wrap.yachtclub{top:92%;left:38%}.place-wrap.kempinski{top:36%;left:27%}.place-wrap.anantara{top:29%;left:58%}.place-wrap.jumeirah{top:34%;left:90%}.section-deal .item-slide{padding:10px}.section-deal .owl-next,.section-deal .owl-prev{top:45%}.item-deal{height:400px;margin-bottom:10px;position:relative;border-radius:14px;background-color:#113F6D;overflow:hidden;box-shadow:0 0 15px rgba(0,0,0,.3)}.item-deal .title-lead{color:#FF9800}
+.pin .text {
+  display: block;
+  font-size: 16px;
+  text-shadow: 0 2px 2px #000;
+  color: #eee;
+  width: 150px
+}
+
+.circle-pulse {
+  background-color: #EC6F23
+}
+
+.circle-pulse {
+  background-size: cover;
+  position: absolute;
+  top: -20px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, .3);
+  -webkit-animation: pulse-dot 1.25s cubic-bezier(.455, .03, .515, .955) -.4s infinite;
+  animation: pulse-dot 1.25s cubic-bezier(.455, .03, .515, .955) -.4s infinite
+}
+
+.circle-pulse:before {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  display: block;
+  width: 200%;
+  height: 200%;
+  box-sizing: border-box;
+  margin-left: -50%;
+  margin-top: -50%;
+  border-radius: 45px;
+  background-color: #fff;
+  -webkit-animation: pulse-ring 1.25s cubic-bezier(.215, .61, .355, 1) infinite;
+  animation: pulse-ring 1.25s cubic-bezier(.215, .61, .355, 1) infinite
+}
+
+@-webkit-keyframes pulse-ring {
+  0% {
+    -webkit-transform: scale(.25);
+    transform: scale(.25);
+    opacity: 1
+  }
+  100%, 90% {
+    opacity: 0
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    -webkit-transform: scale(.25);
+    transform: scale(.25);
+    opacity: 1
+  }
+  100%, 90% {
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes pulse-dot {
+  0%, 100% {
+    -webkit-transform: scale(.8);
+    transform: scale(.8)
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    -webkit-transform: scale(.8);
+    transform: scale(.8)
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+.place-wrap, .place-wrap .info {
+  position: absolute
+}
+
+.place-wrap.palm {
+  top: 39%;
+  left: 42%
+}
+
+.place-wrap.westin {
+  top: 71%;
+  left: 48%
+}
+
+.place-wrap.onepalm {
+  top: 56%;
+  left: 41%
+}
+
+.place-wrap.yachtclub {
+  top: 92%;
+  left: 38%
+}
+
+.place-wrap.kempinski {
+  top: 36%;
+  left: 27%
+}
+
+.place-wrap.anantara {
+  top: 29%;
+  left: 58%
+}
+
+.place-wrap.jumeirah {
+  top: 34%;
+  left: 90%
+}
+
+.place-wrap .info img {
+  width: 100%
+}
+
+.place-wrap:hover .info {
+  display: block
+}
+
+.place-wrap.one-and-one {
+  top: 67%;
+  left: 54%
+}
+
+.place-wrap.atlantis {
+  top: 21%;
+  left: 33%
+}
+
+.place-wrap.blue {
+  top: 81%;
+  left: 24%
+}
+
+.place-wrap.burjalarab {
+  top: 34%;
+  left: 84%
+}
+
+.place-wrap.jbr {
+  top: 78%;
+  left: 36%
+}
+
+.place-wrap.lagoon {
+  top: 69%;
+  left: 42%
+}
+
+.place-wrap.marina {
+  top: 89%;
+  left: 42%
+}
+
+.place-wrap.rixos {
+  top: 39%;
+  left: 59%
+}
+
+.place-wrap.zabeel {
+  top: 53%;
+  left: 34%
+}
+
+.link-route-more i.fa {
+  float: right;
+  margin-top: 10px;
+  font-size: 18px
+}
+
+.section-route .link-route-more:hover {
+  border-color: #EC6F23
+}
+
+.place-wrap, .place-wrap .info {
+  position: absolute
+}
+
+.section-route img {
+  width: 100%
+}
+
+.section-route .link-route-more {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 13px;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, .3);
+  width: 100px;
+  height: 60px;
+  padding: 10px 10px 5px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff
+}
+
+.section-route .link-route-more i.fa {
+  float: right;
+  margin-top: 10px;
+  font-size: 18px
+}
+
+.section-route .link-route-more:hover {
+  border-color: #EC6F23
+}
+
+.place-wrap .pin .text {
+  display: block;
+  font-size: 16px;
+  text-shadow: 0 2px 2px #000;
+  color: #eee;
+  width: 150px
+}
+
+.place-wrap .info {
+  display: none;
+  z-index: 90;
+  width: 200px;
+  height: 180px;
+  border-radius: 7px;
+  overflow: hidden;
+  border: 3px solid #fff;
+  box-shadow: 0 0 7px rgba(0, 0, 0, .5);
+  background-color: #fff
+}
+
+.item-deal img, .place-wrap .info img {
+  width: 100%
+}
+
+.place-wrap:hover .info {
+  display: block
+}
+
+.place-wrap.one-and-one {
+  top: 67%;
+  left: 54%
+}
+
+.place-wrap.atlantis {
+  top: 21%;
+  left: 33%
+}
+
+.place-wrap.blue {
+  top: 81%;
+  left: 24%
+}
+
+.place-wrap.burjalarab {
+  top: 34%;
+  left: 84%
+}
+
+.place-wrap.jbr {
+  top: 78%;
+  left: 36%
+}
+
+.place-wrap.lagoon {
+  top: 69%;
+  left: 42%
+}
+
+.place-wrap.marina {
+  top: 89%;
+  left: 42%
+}
+
+.place-wrap.rixos {
+  top: 39%;
+  left: 59%
+}
+
+.place-wrap.zabeel {
+  top: 53%;
+  left: 34%
+}
+
+.place-wrap.palm {
+  top: 39%;
+  left: 42%
+}
+
+.place-wrap.westin {
+  top: 71%;
+  left: 48%
+}
+
+.place-wrap.onepalm {
+  top: 56%;
+  left: 41%
+}
+
+.place-wrap.yachtclub {
+  top: 92%;
+  left: 38%
+}
+
+.place-wrap.kempinski {
+  top: 36%;
+  left: 27%
+}
+
+.place-wrap.anantara {
+  top: 29%;
+  left: 58%
+}
+
+.place-wrap.jumeirah {
+  top: 34%;
+  left: 90%
+}
+
+.section-deal .item-slide {
+  padding: 10px
+}
+
+.section-deal .owl-next, .section-deal .owl-prev {
+  top: 45%
+}
+
+.item-deal {
+  height: 400px;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 14px;
+  background-color: #113F6D;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .3)
+}
+
+.item-deal .title-lead {
+  color: #FF9800
+}
