@@ -7,7 +7,7 @@
         <h1>Offers</h1>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
-            <li><a href="index.html">Home</a></li>
+            <li><a routerLink="/">Home</a></li>
             <li>Offers</li>
           </ul>
         </div>
@@ -43,7 +43,7 @@
                 <h4><a href="yacht-rent-buy.html">{{offer.title}}</a></h4>
               </div>
             </div>
-            <div class="text">{{offer.description}}</div>
+            <div class="text" [innerHTML]="offer.description"></div>
             <div class="link-box"><a href="yacht-rent-buy.html">Read More</a></div>
           </div>
         </div>
@@ -54,7 +54,7 @@
 </section>
 
 <!--Services Section Three-->
-<section class="services-section-three">
+<section class="services-section-three overflow-hidden">
   <div class="main-image-layer" style="background-image:url(./assets/images/background/image-13.jpg);"></div>
 
   <div class="upper-row">

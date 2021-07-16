@@ -7,8 +7,8 @@
         <h1>{{watersport.name}}</h1>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
-            <li><a href="../../../index.html">Home</a></li>
-            <li><a href="yacht-rent.html">Yacht</a></li>
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/water-sports">Water Sport</a></li>
             <li>{{watersport.name}}</li>
           </ul>
         </div>
@@ -25,7 +25,6 @@
     </div>
   </div>
 </div>
-
 
 
 <!--Yacht Tours Section-->
@@ -47,13 +46,13 @@
 
               <div class="tour-widget recommended-widget carousel-widget">
                 <div class="widget-inner">
-                  <ngb-carousel  [wrap]="true" [interval]="2500" [pauseOnHover]="true"
-                                 [showNavigationArrows]="false" [showNavigationIndicators]="true">
+                  <ngb-carousel [wrap]="true" [interval]="2500" [pauseOnHover]="true"
+                                [showNavigationArrows]="false" [showNavigationIndicators]="true">
                     <ng-template ngbSlide *ngFor="let image of watersport.images">
                       <div class="recommend-block">
                         <div class="inner">
                           <div class="image-box">
-                            <a href="yacht-tour-single.html"><img src="{{image.image}}" alt="" title=""></a>
+                            <a><img src="{{image.image}}" alt="" title=""></a>
                           </div>
                         </div>
                       </div>
@@ -65,7 +64,7 @@
 
               <div class="text-block">
                 <h4></h4>
-                <p> {{watersport.water_sport_description}}</p>
+                <p [innerHTML]="watersport.water_sport_description"></p>
               </div>
             </div>
 
@@ -80,23 +79,23 @@
               <div class="widget-inner">
                 <br>
                 <div class="default-form main-booking-form">
-                  <form method="post" action="http://boatsride/contact.html">
-                    <h5>Price Details</h5>
-                    <br>
+                  <h5>Price Details</h5>
+                  <br>
 
-                    <div class="estimate-table">
-                      <ul>
-                        <li class="totals clearfix"><span class="ttle">Price:</span> <span class="dtl">AED {{watersport.selling_per_hour}} / Hour</span></li>
-                      </ul>
-                    </div>
-                    <br>
-                    <div class="info"><span class="icon flaticon-wall-clock"></span> Reservations: 24 / 7</div>
-                    <br>
-                    <div class="form-group">
-                      <button type="submit" class="theme-btn"><span class="btn-title">Book Now</span></button>
-                    </div>
+                  <div class="estimate-table">
+                    <ul>
+                      <li class="totals clearfix"><span class="ttle">Price:</span> <span
+                        class="dtl">AED {{watersport.selling_per_hour}} / Hour</span></li>
+                    </ul>
+                  </div>
+                  <br>
+                  <div class="info"><span class="icon flaticon-wall-clock"></span> Reservations: 24 / 7</div>
+                  <br>
+                  <div class="form-group">
+                    <button type="button" routerLink="/contact" class="theme-btn"><span class="btn-title">Book Now</span>
+                    </button>
+                  </div>
 
-                  </form>
                   <div class="instruction">Do you need suggestion pls contact our expert team.</div>
                 </div>
               </div>
@@ -113,7 +112,8 @@
                       <div class="lower-box clearfix">
                         <div class="lower-content">
                           <h4><a href="#">Mohammed Sahraoui</a></h4>
-                          <div class="info"><span class="icon flaticon-assistance"></span>+971 52 491 8686  [24/Hours]</div>
+                          <div class="info"><span class="icon flaticon-assistance"></span>+971 52 491 8686 [24/Hours]
+                          </div>
                         </div>
                       </div>
                     </div>

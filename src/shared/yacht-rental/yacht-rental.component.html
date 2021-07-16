@@ -53,7 +53,7 @@
                     <span class="blink" style="color: red;font-size: 15px;border-radius: 5px;font-weight: bolder;"><i
                       class="fa fa-info-circle"></i> AED {{yacht.yacht_special_price}}</span>
                   </div>
-                  <small class="label label-warning pull-right" style="color: #fff;">VAT INCLUDE</small>
+                  <small *ngIf="yacht.apply_vat" class="label label-warning pull-right" style="color: #fff;">VAT INCLUDE</small>
                 </div>
 
                 <div class="meta-info">
@@ -78,8 +78,12 @@
                         People :{{yacht.passenger_capacity}}
                       </a>
                     </li>
-                    <li><a href="#"><img src="assets/images/icons/beds.png" style="width: unset!important;"> Beds
-                      : {{yacht.length}}</a></li>
+                    <li>
+                      <a>
+                        <img src="assets/images/icons/beds.png" style="width: unset!important;">
+                        Beds : {{yacht.length}}
+                      </a>
+                    </li>
                   </ul>
                 </div>
 

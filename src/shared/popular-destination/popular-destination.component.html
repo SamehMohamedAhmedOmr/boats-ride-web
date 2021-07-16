@@ -36,8 +36,10 @@
 
                     <div class="content-box">
                       <div class="content">
-                        <div class="package-title"><a href="#">{{service.name}}</a></div>
-                        <p style="font-weight: 400">{{service.description}}</p>
+                        <div class="package-title">
+                          <a routerLink="/services/{{service.slug}}">{{service.name}}</a>
+                        </div>
+                        <p style="font-weight: 400" [innerHTML]="service.description"></p>
                       </div>
                     </div>
                   </div>

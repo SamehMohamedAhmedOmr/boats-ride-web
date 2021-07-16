@@ -37,7 +37,9 @@
             <div class="lower-box">
               <div class="lower-content">
                 <div class="icon-box"><span class="flaticon-surf-sea"></span></div>
-                <h4><a href="">{{watersport.name}}</a></h4>
+                <h4>
+                  <a routerLink="/water-sports/{{watersport.slug}}">{{watersport.name}}</a>
+                </h4>
                 <div class="link-box">
                   <a routerLink="/water-sports/{{watersport.slug}}" class="default-link">
                     <span class="icon flaticon-logout"></span> <span class="link-text">Read More</span>

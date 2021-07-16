@@ -9,8 +9,8 @@
         <br><br><br>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="yacht-rent.html">Yacht</a></li>
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/yachts">Yacht</a></li>
             <li>Additional Services</li>
           </ul>
         </div>
@@ -43,8 +43,6 @@
               <div class="results-count">
                 <span></span>
               </div>
-
-
             </div>
 
             <div class="results-row">
@@ -62,13 +60,17 @@
                   <div class="image-layer" style="background-image:url({{services.image}});"></div>
 
                   <div class="image-box">
-                    <a href="yacht-decoration.html"><img src="{{services.image}}" alt="" title=""></a>
+                    <a routerLink="/services/{{services.slug}}">
+                      <img src="{{services.image}}" alt="" title="">
+                    </a>
                   </div>
 
                   <div class="content-box">
                     <div class="overlay22" style="height: 310px; margin: -40px;">
                       <div class="content">
-                        <h4><a href="yacht-decoration.html">{{services.name}}</a></h4>
+                        <h4>
+                          <a routerLink="/services/{{services.slug}}">{{services.name}}</a>
+                        </h4>
                         <br>
                         <div class="info">
                           <ul class="clearfix">
@@ -90,7 +92,7 @@
                         <div class="link">
                           <a routerLink="/services/{{services.slug}}"
                              class="theme-btn btn-style-two"><span class="btn-title">More Details</span></a>
-                          <a href="contact.html" class="theme-btn btn-style-two"><span class="btn-title">Book Now</span></a>
+                          <a routerLink="/yachts" class="theme-btn btn-style-two"><span class="btn-title">Book Now</span></a>
                         </div>
                         <div class="link">
                           <div class="info-btn-box">

@@ -2,6 +2,7 @@ import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 import {ActivatedRoute} from '@angular/router';
 import {YachtService} from '../../../core/services/yacht.service';
+import {Yacht} from "../../../Models/yacht";
 
 @Component({
   selector: 'app-yacht-details',
@@ -10,7 +11,8 @@ import {YachtService} from '../../../core/services/yacht.service';
 })
 export class YachtDetailsComponent implements OnInit {
   slug: any;
-  yacht: any;
+  // @ts-ignore
+  yacht: Yacht;
   showNavigationArrows = true;
   showNavigationIndicators = false;
 
