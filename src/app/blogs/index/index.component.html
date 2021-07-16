@@ -35,8 +35,8 @@
         <div class="inner-box">
           <div class="row clearfix">
             <div class="image-column col-lg-5 col-md-12 col-sm-12">
-              <figure class="image">
-                <a routerLink="/blogs/{{blog.slug}}"><img src="{{blog.image}}" alt="" title=""></a>
+              <figure class="image h-100">
+                <a routerLink="/blogs/{{blog.slug}}"><img class="object-fit-cover h-100" src="{{blog.image}}" alt="" title=""></a>
                 <a routerLink="/blogs/{{blog.slug}}" class="link-layer"><span class="icon flaticon-link-3"></span></a>
               </figure>
             </div>
@@ -47,7 +47,7 @@
                     <ul class="clearfix">
                       <li>
                         <span class="icon fa fa-folder-open"></span>
-                        <a href="#">{{blog.title}}</a>
+                        <a href="#">Boats Ride</a>
                       </li>
                       <li>
                         <span class="icon fa fa-user"></span>
@@ -55,8 +55,10 @@
                       </li>
                     </ul>
                   </div>
-                  <h3><a routerLink="/blogs/{{blog.slug}}">Present the Ultimate Explorer Yacht at International Boat Show</a></h3>
-                  <div class="text">{{blog.description}}</div>
+                  <h3><a routerLink="/blogs/{{blog.slug}}">
+                    {{ blog.title }}
+                  </a></h3>
+                  <div class="text" [innerHTML]="blog.description"></div>
                   <div class="link-box">
                     <a routerLink="/blogs/{{blog.slug}}">
                       <span class="icon flaticon-logout"></span>

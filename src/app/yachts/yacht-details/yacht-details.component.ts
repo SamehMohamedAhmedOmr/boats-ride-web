@@ -31,7 +31,6 @@ export class YachtDetailsComponent implements OnInit {
   getYacht() {
     this.yachtServie.getYacht(this.slug).subscribe(data => {
       this.yacht = data;
-      console.log(this.yacht);
       this.cdr.markForCheck();
     });
   }

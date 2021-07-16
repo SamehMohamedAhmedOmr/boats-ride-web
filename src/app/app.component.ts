@@ -8,7 +8,7 @@ import {ToggleHeaderService} from '../core/services/Helpers/toggle.header.servic
 })
 export class AppComponent implements OnInit{
   constructor(private ngxService: NgxUiLoaderService,private toggleHeader:ToggleHeaderService) {}
-  title = 'BoatRide';
+  title = 'Boats Ride - Yacht Rental Dubai Marina | Yacht Charter Dubai | Boats Rental Dubai Marina | www.boatsride.com';
   isHome :boolean = false;
   ngOnInit() {
     this.subscribeHeader();

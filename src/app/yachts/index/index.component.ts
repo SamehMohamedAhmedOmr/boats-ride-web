@@ -9,19 +9,20 @@ import {YachtService} from '../../../core/services/yacht.service';
 })
 export class IndexComponent implements OnInit {
 
-  public yachts : Yacht [] = [];
+  public yachts: Yacht [] = [];
 
-  constructor(private yachtService:YachtService, private cdr:ChangeDetectorRef) { }
+  constructor(private yachtService: YachtService, private cdr: ChangeDetectorRef) {
+  }
 
   ngOnInit(): void {
     this.getYachts();
   }
-  getYachts(){
-    this.yachtService.getYachts().subscribe(data =>{
+
+  getYachts() {
+    this.yachtService.getYachts().subscribe(data => {
       this.yachts = data;
-      console.log(this.yachts);
       this.cdr.markForCheck();
-    })
+    });
   }
 
 }

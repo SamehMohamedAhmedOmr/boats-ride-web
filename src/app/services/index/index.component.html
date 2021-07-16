@@ -25,7 +25,7 @@
 <!--Yacht Tours Section-->
 <section class="yacht-tours-container">
   <div class="auto-container">
-    <div class="main-title"><h3>Additional Services</h3></div>
+    <div class="main-title"><h2 style="font-size: 3rem;">Additional Services</h2></div>
     <div class="default-form yacht-search-form">
       <form method="post" action="http://st.ourhtmldemo.com/new/sailing-demo/yacht-tour-single.html">
         <div class="row clearfix">
@@ -72,7 +72,7 @@
                         <br>
                         <div class="info">
                           <ul class="clearfix">
-                            <div class="text">{{services.description}} </div>
+                            <div class="text" [innerHTML]="services.description"> </div>
                           </ul>
                         </div>
                       </div>

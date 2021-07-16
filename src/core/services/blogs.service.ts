@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {Observable} from 'rxjs';
@@ -11,15 +11,16 @@ import {Blogs} from '../../Models/blogs';
 export class BlogsService {
 
   private Url = environment.url();
-  constructor(
-    private http: HttpClient,
-  ) {
+
+  constructor(private http: HttpClient) {
   }
-  getBlogs() :Observable<Blogs[]>{
-    console.log(this.Url);
-    return this.http.get<Blogs[]>(this.Url+'blogs').pipe(map((data: any) => data.body as Blogs[]));;
+
+  getBlogs(): Observable<Blogs[]> {
+    return this.http.get<Blogs[]>(this.Url + 'blogs').pipe(map((data: any) => data.body as Blogs[]));
+
   }
-  getBlog(slug: any){
-    return this.http.get(this.Url+'blogs/'+slug).pipe(map((data: any) => data.body as Blogs));;
+
+  getBlog(slug: any) {
+    return this.http.get(this.Url + 'blogs/' + slug).pipe(map((data: any) => data.body as Blogs));
   }
 }

@@ -9,8 +9,12 @@ import {Services} from '../../Models/services';
   styleUrls: ['./popular-destination.component.css']
 })
 export class PopularDestinationComponent implements OnInit {
-  constructor(private resizeServiceService: ResizeServiceService,private services: ServicesService, private cdr:ChangeDetectorRef) {
+
+  constructor(private resizeServiceService: ResizeServiceService,
+              private services: ServicesService,
+              private cdr: ChangeDetectorRef) {
   }
+
   public Services: Services [] = [];
   numberofcells = 3;
 
@@ -21,15 +25,14 @@ export class PopularDestinationComponent implements OnInit {
 
 
   @HostListener('window:resize', ['$event'])
-
   // tslint:disable-next-line:typedef
   onResize(event: { target: { innerWidth: any; }; }) {
     this.numberofcells = this.resizeServiceService.checkWindowSize();
   }
+
   getServices() {
     this.services.getSevices().subscribe(data => {
       this.Services = data;
-      console.log(this.Services);
       this.cdr.markForCheck();
     });
   }
