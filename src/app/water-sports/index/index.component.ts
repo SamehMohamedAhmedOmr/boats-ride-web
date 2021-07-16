@@ -9,17 +9,19 @@ import {WaterSportService} from '../../../core/services/water-sport.service';
 })
 export class IndexComponent implements OnInit {
 
-  public waterSports : WaterSport [] = [];
-  constructor(private waterService:WaterSportService,private cdr:ChangeDetectorRef) { }
+  public waterSports: WaterSport [] = [];
+
+  constructor(private waterService: WaterSportService, private cdr: ChangeDetectorRef) {
+  }
 
   ngOnInit(): void {
     this.getWaterSports();
   }
-  getWaterSports(){
-    this.waterService.getWaterSports().subscribe(data =>{
+
+  getWaterSports() {
+    this.waterService.getWaterSports().subscribe(data => {
       this.waterSports = data;
-      console.log(this.waterSports);
       this.cdr.markForCheck();
-    })
+    });
   }
 }

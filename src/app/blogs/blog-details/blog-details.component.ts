@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {BlogsService} from '../../../core/services/blogs.service';
 
@@ -8,18 +8,20 @@ import {BlogsService} from '../../../core/services/blogs.service';
   styleUrls: ['./blog-details.component.css']
 })
 export class BlogDetailsComponent implements OnInit {
-  slug:any;
-  blog:any;
-  constructor(private route:ActivatedRoute,private blogservice:BlogsService) { }
+  slug: any;
+  blog: any;
+
+  constructor(private route: ActivatedRoute, private blogservice: BlogsService) {
+  }
 
   ngOnInit(): void {
-    this.slug=this.route.snapshot.params['slug'];
+    this.slug = this.route.snapshot.params['slug'];
     this.getBlog();
   }
-  getBlog(){
-    this.blogservice.getBlog(this.slug).subscribe(data=>{
-      this.blog=data;
-      console.log(this.blog);
+
+  getBlog() {
+    this.blogservice.getBlog(this.slug).subscribe(data => {
+      this.blog = data;
     })
   }
 }

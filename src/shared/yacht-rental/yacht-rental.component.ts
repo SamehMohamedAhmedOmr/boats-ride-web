@@ -9,8 +9,9 @@ import {Yacht} from '../../Models/yacht';
   styleUrls: ['./yacht-rental.component.css']
 })
 export class YachtRentalComponent implements OnInit {
-  public yachts : Yacht [] = [];
-  constructor(private resizeServiceService: ResizeServiceService,private yachtService:YachtService, private cdr:ChangeDetectorRef) {
+  public yachts: Yacht [] = [];
+
+  constructor(private resizeServiceService: ResizeServiceService, private yachtService: YachtService, private cdr: ChangeDetectorRef) {
   }
 
   numberofcells = 3;
@@ -28,11 +29,10 @@ export class YachtRentalComponent implements OnInit {
     this.numberofcells = this.resizeServiceService.checkWindowSize();
   }
 
-  getYachts(){
-    this.yachtService.getYachts().subscribe(data =>{
+  getYachts() {
+    this.yachtService.getYachts().subscribe(data => {
       this.yachts = data;
-      console.log(this.yachts);
       this.cdr.markForCheck();
-    })
+    });
   }
 }

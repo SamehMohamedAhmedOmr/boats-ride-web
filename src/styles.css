@@ -18584,7 +18584,7 @@ img.lazy-image.loaded{
   font-family: "fontello";
   font-size: 42px;
   font-weight: 400;
-  margin-bottom: -30px;
+  margin-bottom: -8px;
   margin-top: -3px;
   color: white;
 }
@@ -20417,3 +20417,8 @@ flip-container{perspective:1000;-moz-perspective:1000;-webkit-perspective:1000}.
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.object-fit-cover{
+  object-fit: cover !important;
+}

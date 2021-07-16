@@ -9,18 +9,20 @@ import {BlogsService} from '../../../core/services/blogs.service';
 })
 export class IndexComponent implements OnInit {
 
-  public blogs : Blogs [] = [];
-  constructor(private blogsService:BlogsService, private cdr:ChangeDetectorRef) { }
+  public blogs: Blogs [] = [];
+
+  constructor(private blogsService: BlogsService, private cdr: ChangeDetectorRef) {
+  }
 
   ngOnInit(): void {
     this.getBlogs();
   }
-  getBlogs(){
-    this.blogsService.getBlogs().subscribe(data =>{
-      this.blogs =data;
-      console.log(this.blogs);
+
+  getBlogs() {
+    this.blogsService.getBlogs().subscribe(data => {
+      this.blogs = data;
       this.cdr.markForCheck();
-    })
+    });
   }
 
 }

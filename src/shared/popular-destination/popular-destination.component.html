@@ -9,7 +9,7 @@
     </div>
 
     <!--Packages-->
-    <carousel *ngIf="Services.length" [margin]="20" [height]="600" [cellWidth]="400" [cellsToShow]="numberofcells"
+    <carousel *ngIf="Services.length" [margin]="20" [height]="500" [cellWidth]="400" [cellsToShow]="numberofcells"
               [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
       <div class="carousel-cell" *ngFor="let service of Services">
         <div class="popular-packages">
@@ -23,7 +23,7 @@
                 <div class="package-block service-block wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
                   <div class="inner-box clearfix">
                     <div class="image-box">
-                      <img src="{{service.image}}" alt="" title="" style="height: 300px; width: 400px">
+                      <img class="object-fit-cover" src="{{service.image}}" alt="" title="" style="height: 300px; width: 400px">
                       <div class="hover-box">
                         <div class="hover-link">
                           <a routerLink="/services/{{service.slug}}" class="default-link">
@@ -36,8 +36,10 @@
 
                     <div class="content-box">
                       <div class="content">
-                        <div class="package-title"><a href="#">{{service.name}}</a></div>
-                        <p style="font-weight: 400">{{service.description}}</p>
+                        <div class="package-title">
+                          <a routerLink="/services/{{service.slug}}">{{service.name}}</a>
+                        </div>
+                        <p style="font-weight: 400" [innerHTML]="service.description"></p>
                       </div>
                     </div>
                   </div>

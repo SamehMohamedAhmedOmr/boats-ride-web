@@ -15,7 +15,6 @@ export class ServicesService {
   }
 
   getSevices() :Observable<Services[]>{
-    console.log(this.Url);
     return this.http.get<Services[]>(this.Url+'services').pipe(map((data: any) => data.body as Services[]));;
   }
   getService(slug: any){

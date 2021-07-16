@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {BlogsService} from '../../core/services/blogs.service';
 import {Blogs} from '../../Models/blogs';
 
@@ -8,16 +8,18 @@ import {Blogs} from '../../Models/blogs';
   styleUrls: ['./blogs.component.css']
 })
 export class BlogsComponent implements OnInit {
-  public blogs : Blogs [] = [];
-  constructor(private blogsService:BlogsService) { }
+  public blogs: Blogs [] = [];
+
+  constructor(private blogsService: BlogsService) {
+  }
 
   ngOnInit(): void {
     this.getBlogs();
   }
-getBlogs(){
-    this.blogsService.getBlogs().subscribe(data =>{
-      this.blogs =data;
-      console.log(this.blogs);
+
+  getBlogs() {
+    this.blogsService.getBlogs().subscribe(data => {
+      this.blogs = data;
     })
-}
+  }
 }

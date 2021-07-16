@@ -10,9 +10,12 @@ import {WaterSportService} from '../../core/services/water-sport.service';
 })
 export class ServiceSectionComponent implements OnInit {
 
-  constructor(private resizeServiceService: ResizeServiceService,private waterService:WaterSportService,private cdr:ChangeDetectorRef) {
+  constructor(private resizeServiceService: ResizeServiceService,
+              private waterService: WaterSportService,
+              private cdr: ChangeDetectorRef) {
   }
-  public waterSports : WaterSport [] = [];
+
+  public waterSports: WaterSport [] = [];
   numberofcells = 3;
 
   ngOnInit(): void {
@@ -27,11 +30,11 @@ export class ServiceSectionComponent implements OnInit {
   onResize(event: { target: { innerWidth: any; }; }) {
     this.numberofcells = this.resizeServiceService.checkWindowSize();
   }
-  getWaterSports(){
-    this.waterService.getWaterSports().subscribe(data =>{
+
+  getWaterSports() {
+    this.waterService.getWaterSports().subscribe(data => {
       this.waterSports = data;
-      console.log(this.waterSports);
       this.cdr.markForCheck();
-    })
+    });
   }
 }

@@ -9,8 +9,8 @@
         <br><br><br>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="yacht-rent.html">Yacht</a></li>
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/yachts">Yacht</a></li>
             <li>Water Sport</li>
           </ul>
         </div>
@@ -74,7 +74,7 @@
                       <br>
                       <div class="info">
                         <ul class="clearfix">
-                          <div class="text">{{watersport.water_sport_description}}</div>
+                          <div class="text" [innerHTML]="watersport.water_sport_description"></div>
                         </ul>
                       </div>
                     </div>
@@ -91,7 +91,7 @@
                     <div class="links-box clearfix">
                       <div class="link">
                         <a routerLink="/water-sports/{{watersport.slug}}" class="theme-btn btn-style-two"><span class="btn-title">More Details</span></a>
-                        <a href="contact.html" class="theme-btn btn-style-two"><span class="btn-title">Book Now</span></a>
+                        <a routerLink="/yachts" class="theme-btn btn-style-two"><span class="btn-title">Book Now</span></a>
                       </div>
                       <div class="link">
                         <div class="info-btn-box">

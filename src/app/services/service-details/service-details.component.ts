@@ -11,7 +11,9 @@ export class ServiceDetailsComponent implements OnInit {
   slug: any;
   service: any;
 
-  constructor(private route: ActivatedRoute, private services: ServicesService ,private cdr:ChangeDetectorRef) {
+  constructor(private route: ActivatedRoute,
+              private services: ServicesService,
+              private cdr: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
@@ -22,7 +24,6 @@ export class ServiceDetailsComponent implements OnInit {
   getService() {
     this.services.getService(this.slug).subscribe(data => {
       this.service = data;
-      console.log(this.service);
       this.cdr.markForCheck();
     });
   }
