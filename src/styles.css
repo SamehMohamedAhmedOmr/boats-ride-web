@@ -997,11 +997,9 @@ img{
 }
 .overlay22{
   background-color: rgba(0,0,0,.3);
-  height: 650px;
+  height: 480px;
   z-index:200;
-  padding: 80px;
   width: 100%;
-
 }
 
 .main-menu .navigation > li:last-child{
@@ -20459,4 +20457,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   margin-left: 15px;
 }
 
+.inner-banner-height{
+  height: 480px !important;
+}
+
+
+.inner-banner-height-title{
+  margin-bottom: 5rem!important;
+  margin-top: 5rem!important;
+}
 
