@@ -8,6 +8,16 @@
       <h2>Additional <strong>Services</strong></h2>
     </div>
 
+    <div class="item" *ngIf="!Services.length">
+      <ngx-skeleton-loader count="3" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '300px',
+            width: '33%',
+            'border-radius': '10px'
+            }">
+      </ngx-skeleton-loader>
+    </div>
+
+
     <!--Packages-->
     <carousel *ngIf="Services.length" [margin]="20" [height]="500" [cellWidth]="400" [cellsToShow]="numberofcells"
               [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">

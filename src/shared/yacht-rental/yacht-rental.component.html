@@ -17,6 +17,16 @@
     <!--Rental Block-->
     <div class="rentals-row">
       <div class="auto-container  ">
+
+        <div class="item" *ngIf="!yachts.length">
+          <ngx-skeleton-loader count="3" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '300px',
+            width: '33%',
+            'border-radius': '10px'
+            }">
+          </ngx-skeleton-loader>
+        </div>
+
         <carousel *ngIf="yachts.length" [margin]="20" [height]="600" [cellWidth]="400" [cellsToShow]="numberofcells"
                   [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
           <div class="carousel-cell" *ngFor="let yacht of yachts">

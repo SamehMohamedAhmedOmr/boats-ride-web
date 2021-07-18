@@ -1,11 +1,11 @@
 <!--Page Title-->
-<section class="page-banner">
+<section class="page-banner inner-banner-height">
   <div class="image-layer" style="background-image:url(./assets/images/background/banner-1.jpg);"></div>
 
   <div class="banner-inner">
     <div class="auto-container">
       <div class="inner-container clearfix">
-        <h1>Blogs</h1>
+        <h1 class="inner-banner-height-title">Blogs</h1>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
             <li><a routerLink="/">Home</a></li>
@@ -23,11 +23,11 @@
   <div class="auto-container">
     <div class="news-list">
       <div class="item" *ngIf="!blogs.length">
-        <ngx-skeleton-loader count="1" appearance="circle" [theme]="{
-    width: '1120px',
-    height: '300px',
-    'border-radius': '10px'
-  }">
+        <ngx-skeleton-loader count="2" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '700px',
+            width: '100%',
+            'border-radius': '10px'
+        }">
         </ngx-skeleton-loader>
       </div>
       <!--News Block-->

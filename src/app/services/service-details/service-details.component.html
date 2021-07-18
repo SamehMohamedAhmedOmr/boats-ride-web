@@ -1,10 +1,10 @@
 <!--Page Title-->
-<section class="page-banner">
+<section class="page-banner inner-banner-height" *ngIf="service">
   <div class="image-layer" style="background-image:url(../../../assets/images/background/banner-1.jpg);"></div>
   <div class="banner-inner">
     <div class="auto-container">
       <div class="inner-container clearfix">
-        <h1>{{service.name}}</h1>
+        <h1  class="inner-banner-height-title">{{service.name}}</h1>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
             <li><a href="../../../index.html">Home</a></li>
@@ -27,6 +27,14 @@
 </div>
 
 
+<div class="item" *ngIf="!service">
+  <ngx-skeleton-loader count="1" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '700px',
+            width: '100%',
+            'border-radius': '10px'
+            }">
+  </ngx-skeleton-loader>
+</div>
 
 <!--Yacht Tours Section-->
 <section class="yacht-tours-container alternate-bg-two">
@@ -34,8 +42,19 @@
 
     <div class="content-container">
       <div class="row clearfix">
+
+
+        <div class="item col-lg-8 col-md-12 col-sm-12" *ngIf="!service">
+          <ngx-skeleton-loader count="1" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '700px',
+            width: '100%',
+            'border-radius': '10px'
+            }">
+          </ngx-skeleton-loader>
+        </div>
+
         <!--Content Side-->
-        <div class="content-side col-lg-8 col-md-12 col-sm-12">
+        <div class="content-side col-lg-8 col-md-12 col-sm-12" *ngIf="service">
           <div class="content-inner">
             <!--Tour Details-->
             <div class="tour-details">
@@ -73,7 +92,7 @@
         </div>
 
         <!--Widgets Side-->
-        <div class="widgets-side col-lg-4 col-md-6 col-sm-12">
+        <div class="widgets-side col-lg-4 col-md-6 col-sm-12" *ngIf="service">
           <div class="widgets-content">
             <!--Widget-->
             <div class="tour-widget single-booking-widget">
@@ -86,7 +105,7 @@
 
                     <div class="estimate-table">
                       <ul>
-                        <li class="totals clearfix"><span class="ttle">Price:</span> <span class="dtl">AED {{service.price}} / Hour</span></li>
+                        <li class="totals clearfix"><span class="ttle">Price:</span> <span class="dtl">AED {{service?.price}} / Hour</span></li>
                       </ul>
                     </div>
                     <br>
@@ -122,6 +141,15 @@
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="item col-lg-4 col-md-6 col-sm-12" *ngIf="!service">
+          <ngx-skeleton-loader count="1" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '700px',
+            width: '100%',
+            'border-radius': '10px'
+            }">
+          </ngx-skeleton-loader>
         </div>
 
       </div>

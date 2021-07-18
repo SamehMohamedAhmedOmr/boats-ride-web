@@ -12,6 +12,16 @@
     </div>
   </div>
   <div class="auto-container">
+
+    <div class="item" *ngIf="!waterSports.length">
+      <ngx-skeleton-loader count="3" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '300px',
+            width: '33%',
+            'border-radius': '10px'
+            }">
+      </ngx-skeleton-loader>
+    </div>
+
     <carousel *ngIf="waterSports.length" [margin]="20" [height]="480" [cellWidth]="400" [cellsToShow]="numberofcells"
               [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
       <div class="carousel-cell" *ngFor="let watersport of waterSports">

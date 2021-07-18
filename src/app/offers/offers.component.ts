@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {OffersService} from '../../core/services/offers.service';
 import {Offer} from '../../Models/offer';
 
@@ -10,7 +10,8 @@ import {Offer} from '../../Models/offer';
 export class OffersComponent implements OnInit {
   public offers: Offer [] = [];
 
-  constructor(private offerService: OffersService) {
+  constructor(private offerService: OffersService,
+              private cdr: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
@@ -20,6 +21,7 @@ export class OffersComponent implements OnInit {
   getOffers() {
     this.offerService.getOffers().subscribe(data => {
       this.offers = data;
+      this.cdr.markForCheck();
     });
   }
 }

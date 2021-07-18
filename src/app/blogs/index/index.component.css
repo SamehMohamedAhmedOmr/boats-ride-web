@@ -1,0 +1,4 @@
+.object-fit-cover{
+  max-height: initial !important;
+  height: 300px !important;
+}
