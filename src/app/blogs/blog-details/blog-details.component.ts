@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {BlogsService} from '../../../core/services/blogs.service';
 
@@ -11,7 +11,9 @@ export class BlogDetailsComponent implements OnInit {
   slug: any;
   blog: any;
 
-  constructor(private route: ActivatedRoute, private blogservice: BlogsService) {
+  constructor(private route: ActivatedRoute,
+              private cdr: ChangeDetectorRef,
+              private blogservice: BlogsService) {
   }
 
   ngOnInit(): void {
@@ -22,6 +24,7 @@ export class BlogDetailsComponent implements OnInit {
   getBlog() {
     this.blogservice.getBlog(this.slug).subscribe(data => {
       this.blog = data;
+      this.cdr.markForCheck();
     })
   }
 }

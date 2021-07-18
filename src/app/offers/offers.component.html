@@ -19,15 +19,17 @@
 <!--Services Section-->
 <section class="services-section-two">
   <div class="auto-container">
+
+    <div class="item" *ngIf="!offers.length">
+      <ngx-skeleton-loader count="3" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '300px',
+            width: '33%',
+            'border-radius': '10px'
+            }">
+      </ngx-skeleton-loader>
+    </div>
+
     <div class="row clearfix">
-      <div class="item" *ngIf="!offers.length">
-        <ngx-skeleton-loader count="3" appearance="circle" [theme]="{
-    width: '400px',
-    height: '490px',
-    'border-radius': '10px'
-  }">
-        </ngx-skeleton-loader>
-      </div>
       <!--Service Block-->
       <div *ngFor="let offer of offers"
            class="service-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms"
@@ -40,11 +42,15 @@
             <div class="title-box">
               <div class="inner">
                 <div class="subtitle">Top landmarks & amazing</div>
-                <h4><a href="yacht-rent-buy.html">{{offer.title}}</a></h4>
+                <h4>
+                  <a>{{offer.title}}</a>
+                </h4>
               </div>
             </div>
             <div class="text" [innerHTML]="offer.description"></div>
-            <div class="link-box"><a href="yacht-rent-buy.html">Read More</a></div>
+            <div class="link-box">
+              <a>Read More</a>
+            </div>
           </div>
         </div>
       </div>
@@ -226,7 +232,7 @@
         system.
       </div>
       <div class="link-box">
-        <a href="yacht-tour-1.html" class="theme-btn btn-style-five">
+        <a routerLink="/yachts" class="theme-btn btn-style-five">
           <div class="btn-title">Start Today</div>
         </a>
       </div>

@@ -23,11 +23,11 @@
   <div class="auto-container">
     <div class="news-list">
       <div class="item" *ngIf="!blogs.length">
-        <ngx-skeleton-loader count="1" appearance="circle" [theme]="{
-    width: '1120px',
-    height: '300px',
-    'border-radius': '10px'
-  }">
+        <ngx-skeleton-loader count="2" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '700px',
+            width: '100%',
+            'border-radius': '10px'
+        }">
         </ngx-skeleton-loader>
       </div>
       <!--News Block-->

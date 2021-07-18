@@ -11,7 +11,8 @@ export class IndexComponent implements OnInit {
 
   public Services: Services [] = [];
 
-  constructor(private services: ServicesService, private cdr: ChangeDetectorRef) {
+  constructor(private services: ServicesService,
+              private cdr: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {

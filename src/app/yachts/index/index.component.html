@@ -22,14 +22,17 @@
     <p style="text-align:center;font-size:18px"><span style="color:#5f727f">Our luxury yachts will take you in several of the city’s sights, including Palm Jumeirah, the sail-shaped Burj Al Arab, Jumeirah Beach, World Island, Dubai Canal, Dubai Creek ... </span></p>
     <div class="separator"></div>
   </div>
-  <div class="item d-flex justify-content-center" *ngIf="!yachts.length">
-    <ngx-skeleton-loader count="3" appearance="circle" [theme]="{
-    width: '450px',
-    height: '450px',
-    'border-radius': '10px'
-  }">
-    </ngx-skeleton-loader>
+  <div class="auto-container">
+    <div class="item" *ngIf="!yachts.length">
+      <ngx-skeleton-loader count="3" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '300px',
+            width: '33%',
+            'border-radius': '10px'
+            }">
+      </ngx-skeleton-loader>
+    </div>
   </div>
+
 </div>
 
 <!--Rent / Buy Section-->
@@ -40,11 +43,7 @@
 
     <div class="results-row">
       <div class="row clearfix">
-        <!--Rental Block-->
 
-        <!--Rental Block-->
-
-        <!--Rental Block-->
         <div class="rental-block mix all russia india service-block col-lg-4 col-md-6 col-sm-12"
              *ngFor="let yacht of yachts">
           <div class="inner-box">
