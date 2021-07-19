@@ -1,7 +1,13 @@
-<h2 mat-dialog-title>I
-  Book A Yacht
-</h2>
-<mat-dialog-content class="mat-typography">
+<div class="modal-header">
+  <h3 class="modal-title font-weight-bold">
+    Book A Yacht
+  </h3>
+  <button type="button" class="close" (click)="onNoClick()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<mat-dialog-content>
   <!--Loader-->
   <div class="example-container m-auto" *ngIf="isLoadingResults">
     <div class="example-loading-shade mt-5 mb-5">
@@ -9,14 +15,75 @@
     </div>
   </div>
 
-  <div *ngIf="isLoadingResults">
+  <div *ngIf="!isLoadingResults" class="my-4">
     <form [formGroup]="form">
 
+      <div class="row">
+        <div class="col-md-6">
+
+          <div class="input-group mb-3" aria-label="name">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="name">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Name"
+                   formControlName="name"
+                   aria-label="Name" aria-describedby="name">
+          </div>
+
+
+          <div class="input-group mb-3" aria-label="email">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="email">@</span>
+            </div>
+            <input type="email" class="form-control" placeholder="Email"
+                   formControlName="email"
+                   aria-label="Email" aria-describedby="email">
+          </div>
+
+          <div class="input-group mb-3" aria-label="phone">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="phone">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="phone"
+                   formControlName="name"
+                   aria-label="phone" aria-describedby="Phone">
+          </div>
+
+          <div class="input-group" aria-label="yacht">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="yacht">@</span>
+            </div>
+            <select class="custom-select" formControlName="yacht">
+              <option [value]="null">
+                Yachts
+              </option>
+              <option [value]="yacht.id" *ngFor="let yacht of data.yachts">
+                {{ yacht.name }}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group h-100">
+          <textarea class="form-control h-100"
+                    placeholder="Message"
+                    formControlName="message"
+                    rows="3">
+          </textarea>
+          </div>
+        </div>
+      </div>
+
     </form>
+
   </div>
 
 </mat-dialog-content>
-<mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" >Install</button>
+
+<mat-dialog-actions>
+  <div class="modal-footer w-100 d-flex justify-content-center">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button (click)="submitForm()" >Install</button>
+  </div>
 </mat-dialog-actions>

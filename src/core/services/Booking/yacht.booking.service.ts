@@ -3,7 +3,7 @@ import {Injectable} from '@angular/core';
 import {environment} from "../../../environments/environment";
 import {Observable} from "rxjs";
 import {map} from "rxjs/operators";
-import {YachtBookingModel} from "../../../Models/yachts/yacht.booking.model";
+import {YachtBookingModel} from "../../../Models/Booking/yacht.booking.model";
 import {YachtBookingSerializer} from "../../Serializers/Booking/yacht.booking.serializer";
 
 

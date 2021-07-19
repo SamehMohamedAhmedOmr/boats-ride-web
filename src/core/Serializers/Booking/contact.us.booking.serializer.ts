@@ -1,10 +1,10 @@
 import {BaseSerializer} from '../Base/Base.serializer';
 import {Serializer} from '../Base/Serializer';
-import {YachtBookingModel} from "../../../Models/Booking/yacht.booking.model";
+import {ContactUsBookingModel} from "../../../Models/Booking/contact.us.booking.model";
 
-export class YachtBookingSerializer extends BaseSerializer implements Serializer {
+export class ContactUsBookingSerializer extends BaseSerializer implements Serializer {
 
-	fromJson(json: any): YachtBookingModel {
+	fromJson(json: any): ContactUsBookingModel {
 		return this.adapt(json.body);
 	}
 
@@ -12,12 +12,11 @@ export class YachtBookingSerializer extends BaseSerializer implements Serializer
 		return this.adaptList(json.body, json.pagination);
 	}
 
-	toJson(model: YachtBookingModel): any {
+	toJson(model: ContactUsBookingModel): any {
     return {
       'name': model.name,
       'email': model.email,
       'phone': model.phone,
-      'yacht_id': model.yacht,
       'message': model.message,
     };
 	}
@@ -27,8 +26,8 @@ export class YachtBookingSerializer extends BaseSerializer implements Serializer
     return null;
 	}
 
-	public adapt(item: any): YachtBookingModel {
-    return new YachtBookingModel(item.id);
+	public adapt(item: any): ContactUsBookingModel {
+    return new ContactUsBookingModel(item.id);
 	}
 
 	status(status: any): any {

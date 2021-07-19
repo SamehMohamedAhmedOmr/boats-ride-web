@@ -4,7 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {YachtService} from '../../../core/services/yacht.service';
 import {Yacht} from "../../../Models/yacht";
 import {YachtBookingFormComponent} from "../../../shared/yacht-booking-form/yacht-booking-form.component";
-import {MatDialog} from "@angular/material/dialog";
+import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-yacht-details',
@@ -15,6 +15,7 @@ export class YachtDetailsComponent implements OnInit {
   slug: any;
   // @ts-ignore
   yacht: Yacht;
+  yachts_list!:Yacht[];
   showNavigationArrows = true;
   showNavigationIndicators = false;
 
@@ -30,6 +31,7 @@ export class YachtDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.slug = this.route.snapshot.params['slug'];
     this.getYacht();
+    this.getYachts();
   }
 
   getYacht() {
@@ -39,10 +41,21 @@ export class YachtDetailsComponent implements OnInit {
     });
   }
 
-  openBooking() {
-    this.dialog.open(YachtBookingFormComponent, {
-      width: '40rem',
-      data: [],
+  getYachts() {
+    this.yachtServie.getYachts().subscribe(data => {
+      this.yachts_list = data;
+      this.cdr.markForCheck();
     });
+  }
+
+  openBooking() {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.panelClass = 'full-screen-modal';
+    dialogConfig.width  = '100vw';
+    dialogConfig.data = {
+      yachts: this.yachts_list
+    };
+
+    this.dialog.open(YachtBookingFormComponent, dialogConfig);
   }
 }

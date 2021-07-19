@@ -1,4 +1,5 @@
 export interface Yacht {
+  id:number,
   slug:string,
   name:string,
   what_is_included:string,
