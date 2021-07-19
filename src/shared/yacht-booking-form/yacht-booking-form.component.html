@@ -16,61 +16,107 @@
   </div>
 
   <div *ngIf="!isLoadingResults" class="my-4">
-    <form [formGroup]="form">
+
+    <app-success-booking *ngIf="is_submit"></app-success-booking>
+
+    <form [formGroup]="form" *ngIf="!is_submit">
 
       <div class="row">
         <div class="col-md-6">
 
-          <div class="input-group mb-3" aria-label="name">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="name">@</span>
+          <div aria-label="name" class="mb-3">
+            <div class="input-group" aria-label="name">
+              <div class="input-group-prepend">
+              <span class="input-group-text" id="name">
+                <i class="far fa-user"></i>
+              </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Name"
+                     formControlName="name"
+                     aria-label="Name" aria-describedby="name">
             </div>
-            <input type="text" class="form-control" placeholder="Name"
-                   formControlName="name"
-                   aria-label="Name" aria-describedby="name">
+            <div class="d-block">
+              <mat-error *ngIf="isControlHasError('name','required')" class="mb-2">
+                <strong>{{ 'Name is required'}}</strong>
+              </mat-error>
+            </div>
           </div>
 
-
-          <div class="input-group mb-3" aria-label="email">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="email">@</span>
+          <div aria-label="email" class="mb-3">
+            <div class="input-group mb-3" aria-label="email">
+              <div class="input-group-prepend">
+              <span class="input-group-text" id="email">
+                <i class="far fa-envelope"></i>
+              </span>
+              </div>
+              <input type="email" class="form-control" placeholder="Email"
+                     formControlName="email"
+                     aria-label="Email" aria-describedby="email">
             </div>
-            <input type="email" class="form-control" placeholder="Email"
-                   formControlName="email"
-                   aria-label="Email" aria-describedby="email">
+            <div class="d-block">
+              <mat-error *ngIf="isControlHasError('email','required')" class="mb-2">
+                <strong>{{ 'Email is required'}}</strong>
+              </mat-error>
+            </div>
           </div>
 
-          <div class="input-group mb-3" aria-label="phone">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="phone">@</span>
+          <div aria-label="phone" class="mb-3">
+            <div class="input-group mb-3" aria-label="phone">
+              <div class="input-group-prepend">
+              <span class="input-group-text" id="phone">
+                <i class="fas fa-phone-alt"></i>
+              </span>
+              </div>
+              <input type="text" class="form-control" placeholder="phone"
+                     formControlName="phone"
+                     aria-label="phone" aria-describedby="Phone">
             </div>
-            <input type="text" class="form-control" placeholder="phone"
-                   formControlName="name"
-                   aria-label="phone" aria-describedby="Phone">
+            <div class="d-block">
+              <mat-error *ngIf="isControlHasError('phone','required')" class="mb-2">
+                <strong>{{ 'Phone is required'}}</strong>
+              </mat-error>
+            </div>
           </div>
 
-          <div class="input-group" aria-label="yacht">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="yacht">@</span>
+          <div aria-label="yacht">
+            <div class="input-group" aria-label="yacht">
+              <div class="input-group-prepend">
+              <span class="input-group-text" id="yacht">
+                <i class="fas fa-anchor"></i>
+              </span>
+              </div>
+              <select class="custom-select" formControlName="yacht">
+                <option [value]="null" disabled>
+                  Yachts
+                </option>
+                <option [value]="yacht.id" *ngFor="let yacht of data.yachts">
+                  {{ yacht.name }}
+                </option>
+              </select>
             </div>
-            <select class="custom-select" formControlName="yacht">
-              <option [value]="null">
-                Yachts
-              </option>
-              <option [value]="yacht.id" *ngFor="let yacht of data.yachts">
-                {{ yacht.name }}
-              </option>
-            </select>
+            <div class="d-block">
+              <mat-error *ngIf="isControlHasError('yacht','required')" class="mb-2">
+                <strong>{{ 'Yacht is required'}}</strong>
+              </mat-error>
+            </div>
           </div>
+
         </div>
 
         <div class="col-md-6">
-          <div class="form-group h-100">
-          <textarea class="form-control h-100"
-                    placeholder="Message"
-                    formControlName="message"
-                    rows="3">
-          </textarea>
+          <div aria-label="yacht" class="h-100">
+            <div class="form-group h-100">
+              <textarea class="form-control h-100"
+                        placeholder="Message"
+                        formControlName="message"
+                        rows="3">
+              </textarea>
+              <div class="d-block">
+                <mat-error *ngIf="isControlHasError('message','required')" class="mb-2">
+                  <strong>{{ 'Message is required'}}</strong>
+                </mat-error>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -81,9 +127,13 @@
 
 </mat-dialog-content>
 
-<mat-dialog-actions>
+<mat-dialog-actions *ngIf="!is_submit">
   <div class="modal-footer w-100 d-flex justify-content-center">
-    <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-button (click)="submitForm()" >Install</button>
+    <button mat-raised-button
+            color="accent"
+            class="text-uppercase"
+            (click)="submitForm()">
+      Book Now
+    </button>
   </div>
 </mat-dialog-actions>

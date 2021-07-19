@@ -18,6 +18,7 @@ export class YachtBookingFormComponent implements OnInit {
   // @ts-ignore
   form: FormGroup;
   isLoadingResults: any = true;
+  is_submit: boolean = false;
 
   constructor(public dialogRef: MatDialogRef<YachtBookingFormComponent>,
               @Inject(MAT_DIALOG_DATA)
@@ -51,6 +52,10 @@ export class YachtBookingFormComponent implements OnInit {
     this.cdr.markForCheck();
   }
 
+  isControlHasError(controlName: string, validationType: string): boolean {
+    return this.formErrorService.isControlHasError(this.form, controlName, validationType);
+  }
+
   submitForm() {
     const controls = this.form.controls;
     /** showing Errors  */
@@ -73,10 +78,8 @@ export class YachtBookingFormComponent implements OnInit {
     this.service.create(model).subscribe((resp: unknown) => {
       this.form.reset();
       this.isLoadingResults = false;
-      // this.authNoticeService.setNotice(this.translateService.instant('COMMON.Added_successfully',
-      //   {name : this.content_name}),
-      //   'success');
-      // this.router.navigate(['../'], {relativeTo: this.route}).then();
+      this.is_submit = true;
+      this.cdr.markForCheck();
     }, (handler: any) => {
       this.authNoticeService.setNotice(this.helper.showingErrors(handler.error), 'danger');
       this.isLoadingResults = false;

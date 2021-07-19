@@ -14,6 +14,8 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {MatButtonModule} from "@angular/material/button";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {ReactiveFormsModule} from "@angular/forms";
+import { SuccessBookingComponent } from './success-booking/success-booking.component';
+import {MatInputModule} from "@angular/material/input";
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     YachtBookingFormComponent,
     WaterSportBookingFormComponent,
     ContactFormComponent,
+    SuccessBookingComponent,
   ],
   imports: [
     CommonModule,
@@ -34,7 +37,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     MatDialogModule,
     MatButtonModule,
     MatProgressSpinnerModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatInputModule
   ],
   exports: [
     YachtRentalComponent,
