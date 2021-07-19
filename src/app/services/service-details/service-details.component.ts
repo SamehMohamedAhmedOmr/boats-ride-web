@@ -1,6 +1,7 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {ServicesService} from '../../../core/services/services.service';
+import {Services} from "../../../Models/services";
 
 @Component({
   selector: 'app-service-details',
@@ -9,7 +10,7 @@ import {ServicesService} from '../../../core/services/services.service';
 })
 export class ServiceDetailsComponent implements OnInit {
   slug: any;
-  service: any;
+  service!: Services;
 
   constructor(private route: ActivatedRoute,
               private services: ServicesService,

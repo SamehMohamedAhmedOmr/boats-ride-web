@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>I
+  Book A Yacht
+</h2>
+<mat-dialog-content class="mat-typography">
+  <!--Loader-->
+  <div class="example-container m-auto" *ngIf="isLoadingResults">
+    <div class="example-loading-shade mt-5 mb-5">
+      <mat-spinner diameter="50" *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+  </div>
+
+  <div *ngIf="isLoadingResults">
+    <form [formGroup]="form">
+
+    </form>
+  </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" >Install</button>
+</mat-dialog-actions>

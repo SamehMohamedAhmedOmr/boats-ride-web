@@ -3,6 +3,8 @@ import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 import {ActivatedRoute} from '@angular/router';
 import {YachtService} from '../../../core/services/yacht.service';
 import {Yacht} from "../../../Models/yacht";
+import {YachtBookingFormComponent} from "../../../shared/yacht-booking-form/yacht-booking-form.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-yacht-details',
@@ -19,8 +21,8 @@ export class YachtDetailsComponent implements OnInit {
   constructor(config: NgbCarouselConfig,
               private route: ActivatedRoute,
               private yachtServie: YachtService,
+              public dialog: MatDialog,
               private cdr: ChangeDetectorRef) {
-    // customize default values of carousels used by this component tree
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;
   }
@@ -34,6 +36,13 @@ export class YachtDetailsComponent implements OnInit {
     this.yachtServie.getYacht(this.slug).subscribe(data => {
       this.yacht = data;
       this.cdr.markForCheck();
+    });
+  }
+
+  openBooking() {
+    this.dialog.open(YachtBookingFormComponent, {
+      width: '40rem',
+      data: [],
     });
   }
 }
