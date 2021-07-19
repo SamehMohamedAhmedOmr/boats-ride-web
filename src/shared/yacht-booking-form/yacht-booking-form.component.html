@@ -127,7 +127,7 @@
 
 </mat-dialog-content>
 
-<mat-dialog-actions *ngIf="!is_submit">
+<mat-dialog-actions *ngIf="!is_submit && !isLoadingResults">
   <div class="modal-footer w-100 d-flex justify-content-center">
     <button mat-raised-button
             color="accent"
