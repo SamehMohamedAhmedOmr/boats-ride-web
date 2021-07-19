@@ -1,0 +1,139 @@
+<div class="modal-header">
+  <h3 class="modal-title font-weight-bold">
+    Book A Water Sport
+  </h3>
+  <button type="button" class="close" (click)="onNoClick()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<mat-dialog-content>
+  <!--Loader-->
+  <div class="example-container m-auto" *ngIf="isLoadingResults">
+    <div class="example-loading-shade mt-5 mb-5">
+      <mat-spinner diameter="50" *ngIf="isLoadingResults"></mat-spinner>
+    </div>
+  </div>
+
+  <div *ngIf="!isLoadingResults" class="my-4">
+
+    <app-success-booking *ngIf="is_submit"></app-success-booking>
+
+    <form [formGroup]="form" *ngIf="!is_submit">
+
+      <div class="row">
+        <div class="col-md-6">
+
+          <div aria-label="name" class="mb-3">
+            <div class="input-group" aria-label="name">
+              <div class="input-group-prepend">
+              <span class="input-group-text" id="name">
+                <i class="far fa-user"></i>
+              </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Name"
+                     formControlName="name"
+                     aria-label="Name" aria-describedby="name">
+            </div>
+            <div class="d-block">
+              <mat-error *ngIf="isControlHasError('name','required')" class="mb-2">
+                <strong>{{ 'Name is required'}}</strong>
+              </mat-error>
+            </div>
+          </div>
+
+          <div aria-label="email" class="mb-3">
+            <div class="input-group mb-3" aria-label="email">
+              <div class="input-group-prepend">
+              <span class="input-group-text" id="email">
+                <i class="far fa-envelope"></i>
+              </span>
+              </div>
+              <input type="email" class="form-control" placeholder="Email"
+                     formControlName="email"
+                     aria-label="Email" aria-describedby="email">
+            </div>
+            <div class="d-block">
+              <mat-error *ngIf="isControlHasError('email','required')" class="mb-2">
+                <strong>{{ 'Email is required'}}</strong>
+              </mat-error>
+            </div>
+          </div>
+
+          <div aria-label="phone" class="mb-3">
+            <div class="input-group mb-3" aria-label="phone">
+              <div class="input-group-prepend">
+              <span class="input-group-text" id="phone">
+                <i class="fas fa-phone-alt"></i>
+              </span>
+              </div>
+              <input type="text" class="form-control" placeholder="phone"
+                     formControlName="phone"
+                     aria-label="phone" aria-describedby="Phone">
+            </div>
+            <div class="d-block">
+              <mat-error *ngIf="isControlHasError('phone','required')" class="mb-2">
+                <strong>{{ 'Phone is required'}}</strong>
+              </mat-error>
+            </div>
+          </div>
+
+          <div aria-label="water_sport">
+            <div class="input-group" aria-label="water_sport">
+              <div class="input-group-prepend">
+              <span class="input-group-text" id="water_sport">
+                <i class="fas fa-anchor"></i>
+              </span>
+              </div>
+              <select class="custom-select" formControlName="water_sport">
+                <option [value]="null" disabled>
+                  Water Sport
+                </option>
+                <option [value]="waterSport.id" *ngFor="let waterSport of data.water_sports">
+                  {{ waterSport.name }}
+                </option>
+              </select>
+            </div>
+            <div class="d-block">
+              <mat-error *ngIf="isControlHasError('water_sport','required')" class="mb-2">
+                <strong>{{ 'Water Sport is required'}}</strong>
+              </mat-error>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-6">
+          <div aria-label="yacht" class="h-100">
+            <div class="form-group h-100">
+              <textarea class="form-control h-100"
+                        placeholder="Message"
+                        formControlName="message"
+                        rows="3">
+              </textarea>
+              <div class="d-block">
+                <mat-error *ngIf="isControlHasError('message','required')" class="mb-2">
+                  <strong>{{ 'Message is required'}}</strong>
+                </mat-error>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions *ngIf="!is_submit && !isLoadingResults">
+  <div class="modal-footer w-100 d-flex justify-content-center">
+    <button mat-raised-button
+            color="accent"
+            class="text-uppercase"
+            (click)="submitForm()">
+      Book Now
+    </button>
+  </div>
+</mat-dialog-actions>

@@ -97,7 +97,7 @@
         <div class="widget-inner">
           <br>
           <div class="default-form main-booking-form">
-            <form method="post" action="http://boatsride/contact.html">
+            <div>
               <h5>Price Details</h5>
               <br>
 
@@ -110,10 +110,14 @@
               <div class="info"><span class="icon flaticon-wall-clock"></span> Reservations: 24 / 7</div>
               <br>
               <div class="form-group">
-                <button type="submit" class="theme-btn"><span class="btn-title">Book Now</span></button>
+                <button type="button"
+                        (click)="openBooking()"
+                        class="theme-btn">
+                  <span class="btn-title">Book Now</span>
+                </button>
               </div>
 
-            </form>
+            </div>
             <div class="instruction">Do you need suggestion pls contact our expert team.</div>
           </div>
         </div>
