@@ -59,5 +59,10 @@ export interface Yacht {
       slug:string,
       image:string
     }
-  ]
+  ],
+  seo: {
+    title:string,
+    description:string,
+    keywords:[]
+  },
 }

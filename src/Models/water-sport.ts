@@ -18,5 +18,10 @@ export interface WaterSport {
   location:string,
   images: [{
     image:string
-  }]
+  }],
+  seo: {
+    title:string,
+    description:string,
+    keywords:[]
+  },
 }

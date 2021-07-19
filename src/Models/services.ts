@@ -4,5 +4,10 @@ export interface Services {
   description: string,
   price:number,
   slug:string,
-  image: string
+  image: string,
+  seo: {
+    title:string,
+    description:string,
+    keywords:[]
+  },
 }

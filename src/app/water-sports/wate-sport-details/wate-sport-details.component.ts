@@ -4,6 +4,11 @@ import {WaterSportService} from '../../../core/services/water-sport.service';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {WaterSport} from "../../../Models/water-sport";
 import {WaterSportBookingFormComponent} from "../../../shared/water-sport-booking-form/water-sport-booking-form.component";
+import {MetaTagService} from "../../../core/services/Helpers/meta-tag.service";
+
+declare global {
+  interface Window { dataLayer: any[]; }
+}
 
 @Component({
   selector: 'app-wate-sport-details',
@@ -17,11 +22,13 @@ export class WateSportDetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private cdr: ChangeDetectorRef,
+              private metaService: MetaTagService,
               public dialog: MatDialog,
               private WaterSportSevice: WaterSportService) {
   }
 
   ngOnInit(): void {
+    window.dataLayer = [];
     this.slug = this.route.snapshot.params['slug'];
     this.getWaterSport();
     this.getWaterSports();
@@ -30,6 +37,7 @@ export class WateSportDetailsComponent implements OnInit {
   getWaterSport() {
     this.WaterSportSevice.getWaterSport(this.slug).subscribe(data => {
       this.watersport = data;
+      this.updateMetaTags();
       this.cdr.markForCheck();
     })
   }
@@ -51,4 +59,26 @@ export class WateSportDetailsComponent implements OnInit {
 
     this.dialog.open(WaterSportBookingFormComponent, dialogConfig);
   }
+
+  private updateMetaTags() {
+    window.dataLayer = [];
+    let first_image = this.watersport?.images?.length ?  this.watersport?.images[0].image : '';
+    // @ts-ignore
+    this.metaService.updateTags(this.watersport?.seo?.title + ' | Boats-Ride', this.watersport?.seo?.description, first_image);
+    window.dataLayer.push({ ecommerce: null });
+    window.dataLayer.push({
+      'event': 'details',
+      'ecommerce': {
+        'currencyCode': 'AED',
+        'detail': {
+          'products': [{
+            name: this.watersport.title ? this.watersport.title : '',
+            id: this.watersport.id ? this.watersport.id : '',
+            price: this.watersport.selling_per_hour ? this.watersport.selling_per_hour : '',
+          }]
+        }
+      }
+    });
+  }
+
 }
