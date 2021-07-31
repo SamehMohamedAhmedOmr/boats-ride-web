@@ -3,12 +3,16 @@
   <!-- Header Top -->
   <div class="header-top header-top-three">
     <div class="auto-container">
-      <div class="inner clearfix">
-        <div class="top-left clearfix">
+      <div class="inner clearfix d-flex justify-content-between">
+        <div class="clearfix">
           <div class="language">
             <ul class="clearfix">
-              <li class="active"><a (click)="switchLanguage('en')">En</a></li>
-              <li><a (click)="switchLanguage('ar')">Ar</a></li>
+              <li [class.active] = "lang == 'en'">
+                <a (click)="switchLanguage('en')">En</a>
+              </li>
+              <li [class.active] = "lang == 'ar'">
+                <a (click)="switchLanguage('ar')">Ar</a>
+              </li>
             </ul>
           </div>
           <div class="social-links">
@@ -17,7 +21,6 @@
               <li><a href="#"><span class="fab fa-instagram"></span></a></li>
               <li><a href="#"><span class="fab fa-twitter"></span></a></li>
               <li><a href="#"><span class="fab fa-youtube"></span></a></li>
-
             </ul>
           </div>
         </div>
@@ -27,8 +30,6 @@
           <span class="txt">Speak to Tour Planner :
             <a href="tel:+971524918686">+971 52 491 8686</a>
             <span class="icon fa fa-clock" style="padding-left: 5px"></span>Week Days: 09:00am to 03:00am  </span>
-
-
         </div>
       </div>
     </div>

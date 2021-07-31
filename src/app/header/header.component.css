@@ -11,3 +11,7 @@
   margin-right: 8px;
   padding-left: 5px;
 }
+
+.lang-switch li {
+  cursor: pointer;
+}

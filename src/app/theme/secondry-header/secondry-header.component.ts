@@ -8,12 +8,16 @@ import {LanguageService} from '../../../core/services/language-services.service'
   styleUrls: ['./secondry-header.component.css']
 })
 export class SecondryHeaderComponent implements OnInit {
-@Input() public drawer: any;
-  constructor( private router: Router,
-               private langservice: LanguageService) { }
+  @Input() public drawer: any;
+  lang:any;
+  constructor(private router: Router,
+              private langservice: LanguageService) {
+  }
 
   ngOnInit(): void {
+    this.lang = localStorage.getItem('lang');
   }
+
   switchLanguage(lang: string) {
     localStorage.setItem('lang', lang);
     this.router

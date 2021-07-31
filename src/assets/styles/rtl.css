@@ -1,88 +1,115 @@
-.direction-left{
-  direction: ltr!important;
+*, :after, :before {
+  box-sizing: border-box;
+  direction: rtl;
 }
-.floating{
-  float: right!important;
+
+.direction-left {
+  direction: ltr !important;
 }
+
+.floating {
+  float: right !important;
+}
+
 .yacht-rental-section .title-row .filter-box {
-float: right!important;
+  float: right !important;
 }
-.service-block .lower-content .icon-box{
-  left: 30px!important;
-  right: unset!important;
+
+.service-block .lower-content .icon-box {
+  left: 30px !important;
+  right: unset !important;
 }
-.page-banner .page-nav{
-  right: 0!important;
-  left: unset!important;
+
+.page-banner .page-nav {
+  right: 0 !important;
+  left: unset !important;
 }
-.news-block-five .other-info{
-  right:-90px!important;
+
+.news-block-five .other-info {
+  right: -90px !important;
 }
-.news-block-five .content-column .inner{
-  padding-right: 30px!important;
-  padding-left: unset!important;
+
+.news-block-five .content-column .inner {
+  padding-right: 30px !important;
+  padding-left: unset !important;
 }
-.news-block-five .meta-info li .icon{
-  padding-left: 5px!important;
-  padding-right: unset!important;
+
+.news-block-five .meta-info li .icon {
+  padding-left: 5px !important;
+  padding-right: unset !important;
 }
-.news-block-five .meta-info{
-  display: flex!important;
+
+.news-block-five .meta-info {
+  display: flex !important;
 }
-.process-container .process-block .inner-box:after{
-  display: none!important;
+
+.process-container .process-block .inner-box:after {
+  display: none !important;
 }
+
 .services-section-three .upper-row .image-layer {
-  left: -70px!important;
+  left: -70px !important;
   right: 50% !important;
 }
-.list-style-two li{
-  padding-right: 30px!important;
-  padding-left: unset!important;
+
+.list-style-two li {
+  padding-right: 30px !important;
+  padding-left: unset !important;
 }
-.list-style-two li .icon{
-  right: 0!important;
+
+.list-style-two li .icon {
+  right: 0 !important;
   left: unset;
 }
-.testimonial-block .content .image{
-  right: 0!important;
-  left: unset!important;
+
+.testimonial-block .content .image {
+  right: 0 !important;
+  left: unset !important;
 }
+
 @media (min-width: 992px) {
-  .testimonial-block .rating{
-    left: -36px!important;
-    right: unset!important;
+  .testimonial-block .rating {
+    left: -36px !important;
+    right: unset !important;
   }
-  .testimonial-block .content .info{
-    padding-right:100px!important;
+
+  .testimonial-block .content .info {
+    padding-right: 100px !important;
   }
-  .activity-block-two .content{
-    right: 40px!important;
-    left: unset!important;
+
+  .activity-block-two .content {
+    right: 40px !important;
+    left: unset !important;
   }
-  .header-top-three .contact-text{
-    float: right!important;
-    display: flex!important;
+
+  .header-top-three .contact-text {
+    display: flex !important;
   }
-  .header-top-three .contact-text .icon{
-    padding-left:5px!important;
+
+  .header-top-three .contact-text .icon {
+    padding-left: 5px !important;
   }
-  .sidebar-page-container .sidebar:before{
-    right: 0!important;
-    left: unset!important;
+
+  .sidebar-page-container .sidebar:before {
+    right: 0 !important;
+    left: unset !important;
   }
-  .comments-area .comment-box .author-thumb{
-    right: 0!important;
-    left: unset!important;
+
+  .comments-area .comment-box .author-thumb {
+    right: 0 !important;
+    left: unset !important;
   }
-  .comments-area .comment-box .info{
+
+  .comments-area .comment-box .info {
     padding-right: 100px;
   }
-  .comments-area .comment-box .text{
+
+  .comments-area .comment-box .text {
     padding-right: 100px;
   }
 }
-@media only screen and (max-width: 1139px){
+
+@media only screen and (max-width: 1139px) {
   .about-section-two .content-inner .video-link {
     position: relative;
     right: 0;
@@ -91,8 +118,9 @@ float: right!important;
   }
 
 }
-.max-nav-toggler{
-  padding-right: 35px!important;
+
+.max-nav-toggler {
+  padding-right: 35px !important;
 }
 
 @media only screen and (max-width: 599px) {
@@ -103,43 +131,125 @@ float: right!important;
     right: 0;
     bottom: 0;
     margin-bottom: 20px;
-    text-align: right!important;
+    text-align: right !important;
   }
 }
-.main-booking-form .estimate-table .totals{
-  display: flex!important;
-}
-.main-booking-form .estimate-table .totals .dtl{
-  padding-right: 5px!important;
+
+.main-booking-form .estimate-table .totals {
+  display: flex !important;
 }
 
-.news-post-details .post-tags{
-  display: flex!important;
+.main-booking-form .estimate-table .totals .dtl {
+  padding-right: 5px !important;
 }
-.news-post-details .post-tags .tag-title{
-  padding-left: 5px!important;
+
+.news-post-details .post-tags {
+  display: flex !important;
 }
-.news-block-six .meta-info{
-  display: flex!important;
+
+.news-post-details .post-tags .tag-title {
+  padding-left: 5px !important;
 }
-.news-block-six .meta-info li .icon{
-  padding-left: 5px!important;
-  padding-right: unset!important;
+
+.news-block-six .meta-info {
+  display: flex !important;
 }
-.sidebar-page-container .blog-sidebar{
-  padding-right: 30px!important;
-  padding-left: unset!important;
+
+.news-block-six .meta-info li .icon {
+  padding-left: 5px !important;
+  padding-right: unset !important;
 }
-.news-post-details .styled-list li:before{
-  right:-20px!important;
-  left: unset!important;
+
+.sidebar-page-container .blog-sidebar {
+  padding-right: 30px !important;
+  padding-left: unset !important;
 }
-.displaying{
+
+.news-post-details .styled-list li:before {
+  right: -20px !important;
+  left: unset !important;
+}
+
+.displaying {
   display: flex;
 }
-.pad_info{
-  padding-left: 5px!important;
+
+.pad_info {
+  padding-left: 5px !important;
 }
-.default-form .form-group .field-label{
-  float: right!important;
+
+.default-form .form-group .field-label {
+  float: right !important;
 }
+
+
+.bread-crumb {
+  display: flex !important;
+}
+
+
+.page-banner .bread-crumb li {
+  position: relative;
+  float: left;
+  font-size: 13px;
+  line-height: 24px;
+  color: #ffffff;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: default;
+  padding-left: 0;
+  margin-left: 0;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+
+.page-banner .bread-crumb li:before {
+  content: "";
+}
+
+.page-banner .bread-crumb li:not(:last-of-type):after {
+  font-size: 10px;
+  color: #ffffff;
+  font-family: 'Flaticon';
+  content: "\f10f";
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: inline-block;
+}
+
+.main-footer .widget-title:before{
+  right: 0;
+}
+
+
+.hidden-bar-wrapper {
+  height: 100%;
+  padding: 30px 30px 5px 30px !important;
+}
+
+.sec-title-two .separator{
+  right: 120px;
+}
+
+.sec-title-two.centered .separator{
+  right: 47%;
+}
+
+.header-style-one .logo-desktop{
+  right: 0;
+}
+
+.main-header .header-top .top-left{
+  float: right;
+}
+
+
+.main-header .header-top .top-right{
+  float: left;
+}
+
+.navigation.clearfix{
+  display: flex;
+}
+

@@ -111,5 +111,23 @@
   "luxser": "Luxury Yacht Services",
   "t20": "Idea of denouncing pleasure & praising pain was born we will give you a complete account of the system.",
   "starttoday": "Start Today",
-  "rec": "RECOMMENDED"
+  "rec": "RECOMMENDED",
+  "form": {
+    "book_water_sport": "Book A Water Sport",
+    "book_yacht" : "Book A Yacht",
+    "name" : "name",
+    "email" : "email",
+    "phone" : "phone",
+    "message" : "message",
+    "name_required" : "Name is required",
+    "email_required" : "email is required",
+    "phone_required" : "phone is required",
+    "message_required" : "message is required",
+    "yacht": "yacht",
+    "yacht_required" : "yacht is required",
+    "water_sport": "water sport",
+    "water_sport_required" : "water sport is required",
+    "thanks" : "Thank you for Enquiring with us",
+    "call_you": "One of our best representatives will get in touch with you shortly"
+  }
 }

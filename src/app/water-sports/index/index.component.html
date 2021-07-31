@@ -6,15 +6,15 @@
         <h1 class="inner-banner-height-title">{{'waterSport'|translate}} </h1>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
-            <li>
+            <li class="breadcrumb-item">
               <a routerLink="/">{{'home'|translate}}</a>
             </li>
-            <li>
+            <li class="breadcrumb-item">
               <a routerLink="/yachts">
                 {{'yachts'|translate}}
               </a>
             </li>
-            <li>
+            <li class="breadcrumb-item">
               {{'waterSport'|translate}}
             </li>
           </ul>
@@ -97,15 +97,14 @@
                     <!--                    </div>-->
                     <div class="links-box clearfix">
                       <div class="link">
-                        <<<<<<< HEAD
-                        <a routerLink="/water-sports/{{watersport.slug}}" class="theme-btn btn-style-two"><span
-                          class="btn-title">{{'moredetails'|translate}}</span></a>
-                        <!--                        <a href="contact.html" class="theme-btn btn-style-two"><span class="btn-title">Book Now</span></a>-->
-                        =======
-                        <a routerLink="/water-sports/{{watersport.slug}}" class="theme-btn btn-style-two"><span
-                          class="btn-title">More Details</span></a>
-                        <a routerLink="/yachts" class="theme-btn btn-style-two"><span class="btn-title">Book Now</span></a>
-                        >>>>>>> development
+                        <a routerLink="/water-sports/{{watersport.slug}}"
+                           class="theme-btn btn-style-two">
+                          <span class="btn-title">{{'moredetails'|translate}}</span>
+                        </a>
+                        <a routerLink="/water-sports/{{watersport.slug}}"
+                           class="theme-btn btn-style-two">
+                          <span class="btn-title">{{'booknow'|translate}}</span>
+                        </a>
                       </div>
                       <div class="link">
                         <div class="info-btn-box">
@@ -133,7 +132,7 @@
         </div>
 
         <!--Widgets Side-->
-        <div class="widgets-side col-lg-4 col-md-6 col-sm-12">
+        <div class="widgets-side col-lg-4 col-md-12 col-sm-12">
           <div class="widgets-content">
             <!--Widget-->
             <div class="tour-widget recommended-widget carousel-widget">

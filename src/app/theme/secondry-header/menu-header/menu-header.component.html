@@ -4,32 +4,61 @@
       <a routerLink="/" title="Sailing - Water Sports HTML Template">
         <img src="assets/images/logo-three.png"
              alt="Sailing - Water Sports HTML Template"
-             title="Sailing - Water Sports HTML Template"  style="height: 50px">
+             title="Sailing - Water Sports HTML Template" style="height: 50px">
       </a>
     </div>
   </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <i class="fas fa-bars"></i>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navigation clearfix navbar-nav mr-auto">
-      <li class="sub-menu"><a [routerLink]="''">{{'home'|translate}}</a></li>
-      <li class="sub-menu"><a [routerLink]="'/about'">{{'about'|translate}}</a></li>
-      <li class="sub-menu"><a [routerLink]="'/yachts'">{{'yachtRent'|translate}}</a>
+  <div class="collapse navbar-collapse d justify-content-between" id="navbarSupportedContent">
+    <ul class="navigation clearfix navbar-nav "
+        [class.ml-auto]="lang == 'ar'"
+        [class.mr-auto]="lang == 'en'">
+      <li class="sub-menu">
+        <a (click)="toggleNavOnClick()" [routerLink]="''">{{'home'|translate}}</a>
       </li>
-      <li class="sub-menu"><a [routerLink]="'/water-sports'">{{'waterSport'|translate}}</a>
-      <li class="sub-menu"><a [routerLink]="'/fishing-trip'">{{'finishingTrip'|translate}}</a>
+
+      <li class="sub-menu">
+        <a (click)="toggleNavOnClick()" [routerLink]="'/about'">{{'about'|translate}}</a>
       </li>
-      <li class="sub-menu"><a [routerLink]="'/destination'">{{'destination'|translate}}</a>
+
+      <li class="sub-menu">
+        <a (click)="toggleNavOnClick()" [routerLink]="'/yachts'">{{'yachtRent'|translate}}</a>
       </li>
-      <li class="sub-menu"><a [routerLink]="'/blogs'">{{'blog'|translate}}</a>
+
+      <li class="sub-menu">
+        <a (click)="toggleNavOnClick()" [routerLink]="'/water-sports'">{{'waterSport'|translate}}</a>
       </li>
-      <li class="sub-menu"><a [routerLink]="'/offers'">{{'offer'|translate}}</a></li>
-      <li class="sub-menu"><a [routerLink]="'/services'">{{'service'|translate}}</a></li>
-      <li class="sub-menu"><a [routerLink]="'/contact'">{{'contact'|translate}}</a></li>
+
+      <li class="sub-menu">
+        <a (click)="toggleNavOnClick()" [routerLink]="'/fishing-trip'">{{'finishingTrip'|translate}}</a>
+      </li>
+
+      <li class="sub-menu">
+        <a (click)="toggleNavOnClick()" [routerLink]="'/destination'">{{'destination'|translate}}</a>
+      </li>
+
+      <li class="sub-menu">
+        <a (click)="toggleNavOnClick()" [routerLink]="'/blogs'">{{'blog'|translate}}</a>
+      </li>
+
+      <li class="sub-menu">
+        <a (click)="toggleNavOnClick()" [routerLink]="'/offers'">{{'offer'|translate}}</a>
+      </li>
+
+      <li class="sub-menu">
+        <a (click)="toggleNavOnClick()" [routerLink]="'/services'">{{'service'|translate}}</a>
+      </li>
+
+      <li class="sub-menu">
+        <a (click)="toggleNavOnClick()" [routerLink]="'/contact'">{{'contact'|translate}}</a>
+      </li>
+
     </ul>
-    <div class="header-upper d-md-block d-none" >
+    <div class="header-upper d-md-block d-none">
       <div class="max-nav-toggler">
         <button class="theme-btn toggle-btn" (click)="drawer.open()"><span class="flaticon-menu-5"></span></button>
       </div>

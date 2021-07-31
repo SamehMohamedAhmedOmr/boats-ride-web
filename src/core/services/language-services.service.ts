@@ -8,7 +8,7 @@ import {TranslationService} from './translation.service';
 })
 export class LanguageService {
 
-  constructor(@Inject(DOCUMENT) private document: Document, private trlanslation: TranslationService) {
+  constructor(@Inject(DOCUMENT) private document: Document, private translationService: TranslationService) {
   }
   loadStyle() {
     const lang = localStorage.getItem('lang');
@@ -19,13 +19,13 @@ export class LanguageService {
       this.document.documentElement.lang = 'ar';
       this.document.documentElement.style.direction = 'rtl';
       styleName = 'assets/styles/rtl.css';
-      this.trlanslation.setLanguage('ar');
+      this.translationService.setLanguage('ar');
     } else {
       this.document.dir = 'ltr';
       this.document.documentElement.lang = 'en';
       this.document.documentElement.style.direction = 'ltr';
       styleName = 'assets/styles/ltr.css';
-      this.trlanslation.setLanguage('en');
+      this.translationService.setLanguage('en');
     }
     const head = this.document.getElementsByTagName('head')[0];
 

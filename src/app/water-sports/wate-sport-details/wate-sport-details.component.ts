@@ -72,7 +72,7 @@ export class WateSportDetailsComponent implements OnInit {
         'currencyCode': 'AED',
         'detail': {
           'products': [{
-            name: this.watersport.title ? this.watersport.title : '',
+            name: this.watersport.name ? this.watersport.name : '',
             id: this.watersport.id ? this.watersport.id : '',
             price: this.watersport.selling_per_hour ? this.watersport.selling_per_hour : '',
           }]
