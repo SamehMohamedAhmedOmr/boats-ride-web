@@ -1,16 +1,16 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {LanguageService} from '../../../core/services/language-services.service';
 
 @Component({
-  selector: 'app-secondry-header',
-  templateUrl: './secondry-header.component.html',
-  styleUrls: ['./secondry-header.component.css']
+  selector: 'app-mobile-header',
+  templateUrl: './mobile-header.component.html',
+  styleUrls: ['./mobile-header.component.css']
 })
-export class SecondryHeaderComponent implements OnInit {
-@Input() public drawer: any;
-  constructor( private router: Router,
-               private langservice: LanguageService) { }
+export class MobileHeaderComponent implements OnInit {
+
+  constructor(private router: Router,
+              private langservice: LanguageService) { }
 
   ngOnInit(): void {
   }

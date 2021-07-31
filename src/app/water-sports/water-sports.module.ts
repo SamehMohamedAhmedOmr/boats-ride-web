@@ -10,6 +10,7 @@ import {SharedModule} from '../../shared/shared.module';
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
 import { VoucherComponent } from './voucher/voucher.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { VoucherComponent } from './voucher/voucher.component';
         IvyCarouselModule,
         SharedModule,
         NgbCarouselModule,
-        NgxSkeletonLoaderModule
+        NgxSkeletonLoaderModule,
+        TranslateModule
     ]
 })
 export class WaterSportsModule { }

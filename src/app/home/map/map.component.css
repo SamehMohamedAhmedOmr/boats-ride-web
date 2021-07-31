@@ -351,3 +351,10 @@
 .item-deal .title-lead {
   color: #FF9800
 }
+
+
+.map-section{
+  background-color: #113F6D;
+  background-size: cover;
+  position: relative;
+}

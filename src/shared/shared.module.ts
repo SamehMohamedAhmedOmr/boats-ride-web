@@ -6,6 +6,7 @@ import {ServiceSectionComponent} from './service-section/service-section.compone
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import {DestinationComponent} from './destination/destination.component';
 import {RouterModule} from '@angular/router';
+import {TranslateModule} from '@ngx-translate/core';
 import {NgxSkeletonLoaderModule} from "ngx-skeleton-loader";
 import {YachtBookingFormComponent} from './yacht-booking-form/yacht-booking-form.component';
 import {WaterSportBookingFormComponent} from './water-sport-booking-form/water-sport-booking-form.component';
@@ -14,7 +15,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {MatButtonModule} from "@angular/material/button";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {ReactiveFormsModule} from "@angular/forms";
-import { SuccessBookingComponent } from './success-booking/success-booking.component';
+import {SuccessBookingComponent} from './success-booking/success-booking.component';
 import {MatInputModule} from "@angular/material/input";
 
 
@@ -38,8 +39,10 @@ import {MatInputModule} from "@angular/material/input";
     MatButtonModule,
     MatProgressSpinnerModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    TranslateModule
   ],
+
   exports: [
     YachtRentalComponent,
     ServiceSectionComponent,
@@ -49,11 +52,12 @@ import {MatInputModule} from "@angular/material/input";
     WaterSportBookingFormComponent,
     ContactFormComponent,
   ],
-  entryComponents:[
+  entryComponents: [
     YachtBookingFormComponent,
     WaterSportBookingFormComponent,
     ContactFormComponent,
   ]
 })
+
 export class SharedModule {
 }

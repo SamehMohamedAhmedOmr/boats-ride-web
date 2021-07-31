@@ -6,8 +6,8 @@
       <div class="title-col col-xl-4 col-lg-12 col-md-12 col-sm-12">
         <div class="inner">
           <div class="title-box">
-            <h2><span>Book</span> Now</h2>
-            <div class="subtitle">Largest Yachts selection for booking in dubai</div>
+            <h2><span>{{'book'|translate}}</span> {{'now'|translate}}</h2>
+            <div class="subtitle">{{'largetsyacht'|translate}}</div>
           </div>
         </div>
       </div>
@@ -23,7 +23,7 @@
                   <div class="field-inner">
                     <div class="field-icon"><span class="flaticon-maps-and-flags"></span></div>
                     <select class="custom-select-box" name="field-name">
-                      <option>Offers</option>
+                      <option>{{'offers'|translate}}</option>
                       <option>Rental Yacht</option>
                       <option>Water Sport </option>
                       <option>Fishing Trip </option>
@@ -35,7 +35,7 @@
                 <div class="form-group col-lg-4 col-md-6 col-sm-12">
                   <div class="field-inner">
                     <div class="field-icon"><span class="flaticon-calendar"></span></div>
-                    <input type="text" class="datetime-picker" name="field-name" placeholder="Date & Time" required="" value="" >
+                    <input type="text" class="datetime-picker" name="field-name" placeholder="{{'dateandtime'|translate}}" required="" value="" >
                   </div>
                 </div>
 
@@ -43,7 +43,7 @@
                   <div class="field-inner">
                     <div class="field-icon"><span class="flaticon-stopwatch"></span></div>
                     <select class="custom-select-box" name="field-name">
-                      <option>Duration</option>
+                      <option>{{'duration'|translate}}</option>
                       <option>01 Hour</option>
                       <option>02 Hours</option>
                       <option>03 Hours</option>
@@ -58,7 +58,7 @@
                   <div class="field-inner">
                     <div class="field-icon"><span class="flaticon-user-3"></span></div>
                     <select class="custom-select-box" name="field-name">
-                      <option>No. of guests</option>
+                      <option>{{'guestno'|translate}}</option>
                       <option>01 - 05 People</option>
                       <option>05 - 10 People</option>
                       <option>10 - 15 People</option>
@@ -71,7 +71,11 @@
 
 
                 <div class="form-group col-lg-4 col-md-6 col-sm-12">
-                  <button type="submit"  routerLink="/yachts" class="theme-btn btn-style-three"><span class="btn-title">Book Now</span></button>
+                  <button type="submit"
+                          routerLink="/yachts"
+                          class="theme-btn btn-style-three">
+                    <span class="btn-title">{{'booknow'|translate}}</span>
+                  </button>
                 </div>
               </div>
             </form>

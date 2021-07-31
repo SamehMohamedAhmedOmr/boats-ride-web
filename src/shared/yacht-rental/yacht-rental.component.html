@@ -1,10 +1,10 @@
 <!--yacht Rental Section-->
-<section class="yacht-rental-section">
+<section class="yacht-rental-section direction-left">
   <div class="auto-container">
     <div class="title-row clearfix">
-      <div class="sec-title-two light with-border">
-        <div class="upper-text">With Boats Ride Try the Ultimate Experience</div>
-        <h2>Luxury Yacht <strong>Rental</strong></h2>
+      <div class="sec-title-two light with-border floating">
+        <div class="upper-text">{{'luxarytopic'|translate}}</div>
+        <h2><strong>{{'luxary'|translate}}</strong></h2>
         <div class="separator"></div>
       </div>
       <div class="filter-box">
@@ -16,7 +16,7 @@
 
     <!--Rental Block-->
     <div class="rentals-row">
-      <div class="auto-container  ">
+      <div class="auto-container">
 
         <div class="item" *ngIf="!yachts.length">
           <ngx-skeleton-loader count="3" appearance="circle" class="d-flex justify-content-between" [theme]="{
@@ -50,9 +50,11 @@
                   <div class="more-link-box">
                     <a routerLink="/yachts/{{yacht.slug}}" class="theme-btn">View Details</a>
                   </div>
+
                   <h4>
                     <a routerLink="/yachts/{{yacht.slug}}">{{yacht.name}}</a>
                   </h4>
+
                 </div>
                 <div class="price">
                   <div style="display: inline-block"><small>From</small>
@@ -104,8 +106,9 @@
       </div>
 
     </div>
-    <div class="bottom-text">Boats Ride Offers Luxury Yachts In Dubai With Best Price.
-      <a href="yacht-rent.html">View All Our Yachts</a>
+    <div class="bottom-text">
+      {{'luxarcytopic2'|translate}}
+      <a [routerLink]="'/yachts'">{{'viewyachts'|translate}}</a>
     </div>
   </div>
 

@@ -1,11 +1,11 @@
-<section class="destinations-two">
+<section class="destinations-two direction-left">
 
   <div class="map-layer" style="background-image: url(./assets/images/background/map-image.png);"></div>
 
   <div class="auto-container">
     <div class="sec-title centered">
 <!--      <div class="upper-text">What are you dreaming of?</div>-->
-      <h2>Additional <strong>Services</strong></h2>
+      <h2><strong>{{'addService'|translate}}</strong></h2>
     </div>
 
     <div class="item" *ngIf="!Services.length">
@@ -38,7 +38,7 @@
                         <div class="hover-link">
                           <a routerLink="/services/{{service.slug}}" class="default-link">
                             <span class="icon flaticon-logout"></span>
-                            <span class="link-text">Check Service</span>
+                            <span class="link-text">{{'checkservice'|translate}}</span>
                           </a>
                         </div>
                       </div>
@@ -47,9 +47,13 @@
                     <div class="content-box">
                       <div class="content">
                         <div class="package-title">
-                          <a routerLink="/services/{{service.slug}}">{{service.name}}</a>
+                          <a routerLink="/services/{{service.slug}}">
+                            {{service.name}}
+                          </a>
                         </div>
-                        <p style="font-weight: 400" [innerHTML]="service.description"></p>
+                        <p style="font-weight: 400"
+                           [innerHTML]="service.description">
+                        </p>
                       </div>
                     </div>
                   </div>

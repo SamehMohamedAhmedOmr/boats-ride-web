@@ -1,3 +1,15 @@
+<div class="tap-top top-cls" (click)="gotoTop()" *ngIf="isShow">
+  <div>
+    <i class="fa fa-angle-double-up"></i>
+  </div>
+</div>
+<div class="tap-top-whatsapp top-cls">
+  <a href="https://api.whatsapp.com/send/?phone=97152491868&text&app_absent=0" target="_blank" style="color: white!important;">
+    <div style="font-size: 30px">
+      <i class="fab fa-whatsapp"></i>
+    </div>
+  </a>
+</div>
 <footer class="main-footer footer-style-two">
   <div class="outer-container">
     <!--Widgets Section-->
@@ -9,15 +21,15 @@
           <div class="left-image"><img src="../../../assets/images/resource/footer-image.png" alt="" title=""></div>
           <div class="offer-carousel-box">
             <!--Carousel-->
-            <ngb-carousel [interval]="3000" [pauseOnHover]="true"
-                          [wrap]="true" [showNavigationArrows]="showNavigationArrows"
+            <ngb-carousel [interval]="3000" [pauseOnHover]="true" [wrap]="true"
+                           [showNavigationArrows]="showNavigationArrows"
                           [showNavigationIndicators]="showNavigationIndicators">
               <ng-template ngbSlide>
                 <div class="offer-block">
                   <div class="inner-box">
                     <div class="icon-box"><span class="flaticon-yacht-facing-right"></span></div>
-                    <h4>We Provide <br>Some Best Offers</h4>
-                    <div class="subtitle">For Newly Married Couples</div>
+                    <h4>{{'weprovide'|translate}} <br>{{'bestoffers'|translate}}</h4>
+                    <div class="subtitle">{{'newmarry'|translate}}</div>
                     <div class="offer-price">
                       <span class="percent">40<em>%</em></span>
                       <span class="txt">Offer</span>
@@ -32,8 +44,8 @@
                 <div class="offer-block">
                   <div class="inner-box">
                     <div class="icon-box"><span class="flaticon-yacht-facing-right"></span></div>
-                    <h4>We Provide <br>Some Best Offers</h4>
-                    <div class="subtitle">For Newly Married Couples</div>
+                    <h4>{{'weprovide'|translate}} <br>{{'bestoffers'|translate}}</h4>
+                    <div class="subtitle">{{'newmarry'|translate}}</div>
                     <div class="offer-price">
                       <span class="percent">40<em>%</em></span>
                       <span class="txt">Offer</span>
@@ -48,14 +60,17 @@
                 <div class="offer-block">
                   <div class="inner-box">
                     <div class="icon-box"><span class="flaticon-yacht-facing-right"></span></div>
-                    <h4>We Provide <br>Some Best Offers</h4>
-                    <div class="subtitle">For Newly Married Couples</div>
+                    <h4>{{'weprovide'|translate}} <br>{{'bestoffers'|translate}}</h4>
+                    <div class="subtitle">{{'newmarry'|translate}}</div>
                     <div class="offer-price">
                       <span class="percent">40<em>%</em></span>
-                      <span class="txt">Offer</span>
+                      <span class="txt">{{'offer'|translate}}</span>
                     </div>
                     <div class="links-box clearfix">
-                      <a routerLink="/yachts" class="theme-btn btn-style-one"><div class="btn-title">Book Now</div></a>
+                      <a routerLink="/yachts"
+                         class="theme-btn btn-style-one">
+                        <div class="btn-title">{{'booknow'|translate}}</div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -70,7 +85,7 @@
               <div class="footer-widget info-widget">
                 <div class="widget-content">
                   <div class="widget-title">
-                    <h4>Contact Details</h4>
+                    <h4>{{'contact'|translate}}</h4>
                   </div>
                   <div class="info">
                     <ul>
@@ -104,25 +119,25 @@
               <div class="footer-widget links-widget">
                 <div class="widget-content">
                   <div class="widget-title">
-                    <h4>What We Do</h4>
+                    <h4>{{'whatwedo'|translate}}</h4>
                   </div>
                   <div class="row clearfix">
                     <div class="col-lg-6 col-md-6 col-sm-12">
                       <ul class="links">
-                        <li><a [routerLink]="'/'">Home</a></li>
-                        <li><a [routerLink]="'/about'">About Us</a></li>
-                        <li><a [routerLink]="'/blogs'">Blog</a></li>
-                        <li><a [routerLink]="'/contact'">Contact</a></li>
-                        <li><a [routerLink]="'/destination'">Destination</a></li>
-                        <li><a [routerLink]="'/offers'">Offers</a></li>
+                        <li><a [routerLink]="'/'">{{'home'|translate}}</a></li>
+                        <li><a [routerLink]="'/about'">{{'about'|translate}}</a></li>
+                        <li><a [routerLink]="'/blogs'">{{'blog'|translate}}</a></li>
+                        <li><a [routerLink]="'/contact'">{{'contact'|translate}}</a></li>
+                        <li><a [routerLink]="'/destination'">{{'destination'|translate}}</a></li>
+                        <li><a [routerLink]="'/offers'">{{'offer'|translate}}</a></li>
                       </ul>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                       <ul class="links">
-                        <li><a [routerLink]="'/yachts'">Yacht Rent</a></li>
-                        <li><a [routerLink]="'/water-sports'">Water Sports</a></li>
-                        <li><a [routerLink]="'/fishing-trip'">Fishing Tips</a></li>
-                        <li><a [routerLink]="'/services'">Services</a></li>
+                        <li><a [routerLink]="'/yachts'">{{'yachtRent'|translate}}</a></li>
+                        <li><a [routerLink]="'/water-sports'">{{'waterSport'|translate}}</a></li>
+                        <li><a [routerLink]="'/fishing-trip'">{{'finishingTrip'|translate}}</a></li>
+                        <li><a [routerLink]="'/services'">{{'service'|translate}}</a></li>
                       </ul>
                     </div>
                   </div>

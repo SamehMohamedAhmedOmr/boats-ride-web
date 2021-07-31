@@ -15,6 +15,8 @@ import {FishingSectionComponent} from './fishing-section/fishing-section.compone
 import {SharedModule} from '../../shared/shared.module';
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
+import {ThemeModule} from '../theme/theme.module';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 @NgModule({
@@ -31,13 +33,15 @@ import {IvyCarouselModule} from 'angular-responsive-carousel';
     NewsComponent,
     FishingSectionComponent
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    SharedModule,
-    NgbCarouselModule,
-    IvyCarouselModule
-  ]
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        SharedModule,
+        NgbCarouselModule,
+        IvyCarouselModule,
+        ThemeModule,
+        TranslateModule
+    ]
 })
 export class HomeModule {
 }
