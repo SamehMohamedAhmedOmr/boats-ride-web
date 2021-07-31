@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { OffersRoutingModule } from './offers-routing.module';
 import {OffersComponent} from './offers.component';
 import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
     imports: [
         CommonModule,
         OffersRoutingModule,
-        NgxSkeletonLoaderModule
+        NgxSkeletonLoaderModule,
+        TranslateModule
     ]
 })
 export class OffersModule { }

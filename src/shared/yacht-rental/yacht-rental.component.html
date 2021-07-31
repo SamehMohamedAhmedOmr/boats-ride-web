@@ -1,10 +1,10 @@
 <!--yacht Rental Section-->
-<section class="yacht-rental-section">
+<section class="yacht-rental-section direction-left">
   <div class="auto-container">
     <div class="title-row clearfix">
-      <div class="sec-title-two light with-border">
-        <div class="upper-text">With Boats Ride Try the Ultimate Experience</div>
-        <h2>Luxury Yacht <strong>Rental</strong></h2>
+      <div class="sec-title-two light with-border floating">
+        <div class="upper-text">{{'luxarytopic'|translate}}</div>
+        <h2><strong>{{'luxary'|translate}}</strong></h2>
         <div class="separator"></div>
       </div>
       <div class="filter-box">
@@ -16,7 +16,7 @@
 
     <!--Rental Block-->
     <div class="rentals-row">
-      <div class="auto-container  ">
+      <div class="auto-container ">
         <carousel *ngIf="yachts.length" [margin]="20" [height]="600" [cellWidth]="400" [cellsToShow]="numberofcells"
                   [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
           <div class="carousel-cell" *ngFor="let yacht of yachts">
@@ -26,10 +26,10 @@
 
                   <figure class="image">
 
-                    <a href="majesty-yachr-48-feet.html">
+                    <a routerLink="/yachts/{{yacht.slug}}">
                       <div class="offer-info"><span>{{yacht.size}} FT</span></div>
 
-                      <img src="{{yacht.images[0].image}}" alt="" title=""></a>
+                      <img src="{{yacht.images[0].image}}" style="height: 220px" alt="" title=""></a>
                   </figure>
                   <div class="price-box">
                     <div class="price"> {{yacht.selling_per_hour}} AED </div>
@@ -43,7 +43,7 @@
                   <div class="more-link-box">
                     <a routerLink="/yachts/{{yacht.slug}}" class="theme-btn">View Details</a>
                   </div>
-                  <h4><a href="majesty-yachr-48-feet.html">{{yacht.name}}</a></h4>
+                  <h4><a routerLink="/yachts/{{yacht.slug}}">{{yacht.name}}</a></h4>
                 </div>
                 <div class="price">
                   <div style="display: inline-block"><small>From</small>  <del class="price-old">AED {{yacht.selling_per_hour}}/hr</del></div>
@@ -69,7 +69,7 @@
       </div>
 
     </div>
-    <div class="bottom-text">Boats Ride  Offers Luxury  Yachts In Dubai With  Best Price. <a href="yacht-rent.html">View All Our Yachts</a></div>
+    <div class="bottom-text">{{'luxarcytopic2'|translate}} <a [routerLink]="'/yachts'">{{'viewyachts'|translate}}</a></div>
   </div>
 
 </section>

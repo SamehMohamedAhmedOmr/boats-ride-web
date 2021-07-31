@@ -8,6 +8,7 @@ import {ServicesComponent} from './services.component';
 import {ServiceDetailsComponent} from './service-details/service-details.component';
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
         ServicesRoutingModule,
         SharedModule,
         NgbCarouselModule,
-        NgxSkeletonLoaderModule
+        NgxSkeletonLoaderModule,
+        TranslateModule
     ]
 })
 export class ServicesModule {

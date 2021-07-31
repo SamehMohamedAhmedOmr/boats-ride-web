@@ -5,13 +5,12 @@
     <div class="auto-container">
       <div class="inner-container clearfix">
         <br><br><br><br><br><br>
-        <h1>Water Sport </h1>
+        <h1>{{'waterSport'|translate}} </h1>
         <br><br><br>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="yacht-rent.html">Yacht</a></li>
-            <li>Water Sport</li>
+            <li><a href="index.html">{{'home'|translate}}</a></li>
+            <li>{{'waterSport'|translate}}</li>
           </ul>
         </div>
       </div>
@@ -20,7 +19,7 @@
 </section>
 <section class="yacht-tours-container">
   <div class="auto-container">
-    <div class="main-title"><h3>WATER SPORT</h3></div>
+    <div class="main-title"><h3>{{'waterSport'|translate}}</h3></div>
     <div class="default-form yacht-search-form">
       <form method="post" action="http://st.ourhtmldemo.com/new/sailing-demo/yacht-tour-single.html">
         <div class="row clearfix">
@@ -37,14 +36,14 @@
             <div class="lower-filter-row clearfix">
               <div class="results-count">
               </div>
-              <div class="view-modes clearfix">
-                <div class="mode">
-                  <a href="water-sport.html" class="active"><span class="flaticon-menu-3"></span></a>
-                </div>
-                <div class="mode">
-                  <a href="water-sport2.html"><span class="flaticon-shape"></span></a>
-                </div>
-              </div>
+<!--              <div class="view-modes clearfix">-->
+<!--                <div class="mode">-->
+<!--                  <a href="water-sport.html" class="active"><span class="flaticon-menu-3"></span></a>-->
+<!--                </div>-->
+<!--                <div class="mode">-->
+<!--                  <a href="water-sport2.html"><span class="flaticon-shape"></span></a>-->
+<!--                </div>-->
+<!--              </div>-->
               <!--Filter-->
 
 
@@ -78,20 +77,20 @@
                         </ul>
                       </div>
                     </div>
-                    <div class="ratings">
-                      <div class="rate-text"><strong>4.0</strong> <a href="#">[101 Reviews]</a></div>
-                      <div class="rate">
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star empty-star"></span>
-                      </div>
-                    </div>
+<!--                    <div class="ratings">-->
+<!--                      <div class="rate-text"><strong>4.0</strong> <a href="#">[101 Reviews]</a></div>-->
+<!--                      <div class="rate">-->
+<!--                        <span class="fa fa-star"></span>-->
+<!--                        <span class="fa fa-star"></span>-->
+<!--                        <span class="fa fa-star"></span>-->
+<!--                        <span class="fa fa-star"></span>-->
+<!--                        <span class="fa fa-star empty-star"></span>-->
+<!--                      </div>-->
+<!--                    </div>-->
                     <div class="links-box clearfix">
                       <div class="link">
-                        <a routerLink="/water-sports/{{watersport.slug}}" class="theme-btn btn-style-two"><span class="btn-title">More Details</span></a>
-                        <a href="contact.html" class="theme-btn btn-style-two"><span class="btn-title">Book Now</span></a>
+                        <a routerLink="/water-sports/{{watersport.slug}}" class="theme-btn btn-style-two"><span class="btn-title">{{'moredetails'|translate}}</span></a>
+<!--                        <a href="contact.html" class="theme-btn btn-style-two"><span class="btn-title">Book Now</span></a>-->
                       </div>
                       <div class="link">
                         <div class="info-btn-box">
@@ -124,7 +123,7 @@
             <!--Widget-->
             <div class="tour-widget recommended-widget carousel-widget">
               <div class="widget-inner">
-                <div class="tour-widget-title"><h4>Recommended</h4></div>
+                <div class="tour-widget-title"><h4>{{'rec'|translate}}</h4></div>
                 <carousel [margin]="20" [height]="300" [cellWidth]="300" [cellsToShow]="1" [arrows]="false"
                           [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
                   <div class="carousel-cell">
@@ -280,7 +279,6 @@
             <!--Widget-->
             <div class="tour-widget advisor-widget carousel-widget">
               <div class="widget-inner">
-                <div class="tour-widget-title"><h4>Tour Advisors</h4></div>
                 <div class="advisor-carousel single-item-carousel owl-theme owl-carousel">
                   <!--Advisor Block-->
                   <div class="advisor-block">
@@ -315,26 +313,26 @@
     <div class="inner">
       <div class="image-layer" style="background-image:url(./assets/images/background/image-12.jpg);"></div>
       <div class="title">
-        <h4>Subscribe to our newsletter</h4>
-        <div class="subtitle">Subscribe & Get Updates in Your Inbox </div>
+        <h4>{{'newsub'|translate}}</h4>
+        <div class="subtitle">{{'newssubtopic'|translate}}</div>
       </div>
       <div class="default-form subscribe-form-two">
         <form method="post" action="http://st.ourhtmldemo.com/new/sailing-demo/contact.html">
           <div class="row clearfix">
             <div class="form-group col-lg-4 col-md-6 col-sm-12">
               <div class="field-inner">
-                <input type="text" name="field-name" placeholder="Your Name" required="" value="">
+                <input type="text" name="field-name" placeholder="{{'yourname'|translate}}" required="" value="">
               </div>
             </div>
 
             <div class="form-group col-lg-4 col-md-6 col-sm-12">
               <div class="field-inner">
-                <input type="email" name="field-name" placeholder="Email Address" required="" value="">
+                <input type="email" name="field-name" placeholder="{{'email'|translate}}" required="" value="">
               </div>
             </div>
 
             <div class="form-group col-lg-4 col-md-12 col-sm-12">
-              <button type="submit" class="theme-btn btn-style-three"><span class="btn-title">Subscribe Now</span></button>
+              <button type="submit" class="theme-btn btn-style-three"><span class="btn-title">{{'subnow'|translate}}</span></button>
             </div>
           </div>
         </form>

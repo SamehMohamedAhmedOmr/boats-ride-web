@@ -6,6 +6,7 @@ import {ServiceSectionComponent} from './service-section/service-section.compone
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import {DestinationComponent} from './destination/destination.component';
 import {RouterModule} from '@angular/router';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {RouterModule} from '@angular/router';
     imports: [
         CommonModule,
         IvyCarouselModule,
-        RouterModule
+        RouterModule,
+        TranslateModule
     ],
   exports: [
     YachtRentalComponent,

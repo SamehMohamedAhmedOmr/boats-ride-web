@@ -9,21 +9,25 @@ import { MenuHeaderComponent } from './secondry-header/menu-header/menu-header.c
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import { MobileHeaderComponent } from './mobile-header/mobile-header.component';
+import { MobileMenuComponent } from './mobile-header/mobile-menu/mobile-menu.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 @NgModule({
-  declarations: [SecondryFooterComponent, SecondryHeaderComponent,FooterComponent, MenuHeaderComponent],
-  imports: [
-    CommonModule,
-    NgbCarouselModule,
-    RouterModule,
-    MatSidenavModule,
-    MatFormFieldModule,
-    MatSelectModule
-  ],
-  exports:[
-    SecondryFooterComponent, SecondryHeaderComponent,FooterComponent
-  ]
+  declarations: [SecondryFooterComponent, SecondryHeaderComponent,FooterComponent, MenuHeaderComponent, MobileHeaderComponent, MobileMenuComponent],
+    imports: [
+        CommonModule,
+        NgbCarouselModule,
+        RouterModule,
+        MatSidenavModule,
+        MatFormFieldModule,
+        MatSelectModule,
+        TranslateModule
+    ],
+    exports: [
+        SecondryFooterComponent, SecondryHeaderComponent, FooterComponent, MobileHeaderComponent
+    ]
 })
 export class ThemeModule {
 }

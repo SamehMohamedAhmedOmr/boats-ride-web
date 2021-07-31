@@ -7,8 +7,8 @@
         <h1>{{watersport.name}}</h1>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
-            <li><a href="../../../index.html">Home</a></li>
-            <li><a href="yacht-rent.html">Yacht</a></li>
+            <li><a [routerLink]="''">{{'home'|translate}}</a></li>
+            <li><a href="">{{'yacht'|translate}}</a></li>
             <li>{{watersport.name}}</li>
           </ul>
         </div>
@@ -81,23 +81,22 @@
                 <br>
                 <div class="default-form main-booking-form">
                   <form method="post" action="http://boatsride/contact.html">
-                    <h5>Price Details</h5>
+                    <h5>{{'price'|translate}}</h5>
                     <br>
 
                     <div class="estimate-table">
                       <ul>
-                        <li class="totals clearfix"><span class="ttle">Price:</span> <span class="dtl">AED {{watersport.selling_per_hour}} / Hour</span></li>
+                        <li class="totals clearfix"><span class="ttle">{{'price'|translate}}:</span> <span class="dtl">{{'ead'|translate}} {{watersport.selling_per_hour}} / {{'hour'|translate}}</span></li>
                       </ul>
                     </div>
                     <br>
-                    <div class="info"><span class="icon flaticon-wall-clock"></span> Reservations: 24 / 7</div>
+                    <div class="info displaying"><span class="icon flaticon-wall-clock pad_info"></span> {{'reservation'|translate}}: 24 / 7</div>
                     <br>
                     <div class="form-group">
-                      <button type="submit" class="theme-btn"><span class="btn-title">Book Now</span></button>
+                      <button type="submit" class="theme-btn"><span class="btn-title">{{'booknow'|translate}}</span></button>
                     </div>
 
                   </form>
-                  <div class="instruction">Do you need suggestion pls contact our expert team.</div>
                 </div>
               </div>
 

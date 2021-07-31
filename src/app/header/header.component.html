@@ -1,4 +1,4 @@
-<header class="main-header header-style-one fixed-header">
+<header class="main-header header-style-one fixed-header d-none d-lg-block d-xl-block">
   <div class="logo-desktop" style="background: url('./assets/images/logo-container.png') left top no-repeat">
     <div class="logo"><a href="index.html" title="Boats Ride - Rental Luxury Yacht In Dubai">
       <img src="assets/images/logoooo.png" alt="Boats Ride - Rental Luxury Yacht In Dubai" title="Boats Ride -Rental Yacht In Dubai "></a></div>
@@ -23,7 +23,10 @@
           <!--Top Search-->
           <div class="info">
             <ul class="clearfix">
-              <li><img src="assets/images/img3.png" style="
+              <li (click)="switchLanguage('en')"><img  src="assets/images/download.png" style="padding-left: 5px;
+    width: 25px;
+    height: 20px;  margin-right: 8px;">English  </li>
+              <li (click)="switchLanguage('ar')"><img src="assets/images/img3.png" style="padding-left: 5px;
     width: 20px;
     height: 20px;  margin-right: 8px;">Arabic  </li>
             </ul>
@@ -60,16 +63,16 @@
               <nav class="main-menu navbar-expand-md navbar-light">
                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                   <ul class="navigation clearfix">
-                    <li class="sub-menu"><a routerLink="">Home</a></li>
-                    <li class="sub-menu"><a routerLink="about">About</a></li>
-                    <li class="sub-menu"><a routerLink="yachts">Yacht Rent</a></li>
-                    <li class="sub-menu"><a routerLink="water-sports">Water Sports</a>
-                    <li class="sub-menu"><a routerLink="fishing-trip">Fishing Trip</a></li>
-                    <li class="sub-menu"><a routerLink="services">Services</a></li>
-                    <li class="sub-menu"><a routerLink="blogs">Blogs</a></li>
-                    <li class="sub-menu"><a routerLink="destination">Destinations</a></li>
-                    <li><a routerLink="offers">Offers</a></li>
-                    <li><a routerLink="contact">Contact</a></li>
+                    <li class="sub-menu"><a routerLink="">{{'home'|translate}}</a></li>
+                    <li class="sub-menu"><a routerLink="about">{{'about'|translate}}</a></li>
+                    <li class="sub-menu"><a routerLink="yachts">{{'yachtRent'|translate}}</a></li>
+                    <li class="sub-menu"><a routerLink="water-sports">{{'waterSport'|translate}}</a>
+                    <li class="sub-menu"><a routerLink="fishing-trip">{{'finishingTrip'|translate}}</a></li>
+                    <li class="sub-menu"><a routerLink="services">{{'service'|translate}}</a></li>
+                    <li class="sub-menu"><a routerLink="blogs">{{'blog'|translate}}</a></li>
+                    <li class="sub-menu"><a routerLink="destination">{{'destination'|translate}}</a></li>
+                    <li><a routerLink="offers">{{'offer'|translate}}</a></li>
+                    <li><a routerLink="contact">{{'contact'|translate}}</a></li>
                   </ul>
                 </div>
               </nav>
@@ -78,7 +81,7 @@
             <div class="other-links clearfix">
               <!--Book Btn-->
               <div class="book-btn">
-                <a href="yacht-rent-buy-single.html" class="theme-btn btn-style-one"><div class="btn-title">Book Now</div></a>
+                <a href="yacht-rent-buy-single.html" class="theme-btn btn-style-one"><div class="btn-title">{{'booknow'|translate}}</div></a>
               </div>
               <!--Social Links-->
               <div class="social-links social-links-one">
