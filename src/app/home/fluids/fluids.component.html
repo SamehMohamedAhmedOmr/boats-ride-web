@@ -1,7 +1,7 @@
 <!--Fluid Section-->
 <section class="fluid-section">
-  <div class="image-layer left-layer" style="background-image: url(./assets/images/background/image-6.jpg);"></div>
-  <div class="image-layer right-layer" style="background-image: url(./assets/images/background/image-7.jpg);"></div>
+  <div class="image-layer left-layer" style="background-image: url('./assets/images/background/image-6.jpg');"></div>
+  <div class="image-layer right-layer" style="background-image: url('./assets/images/background/image-7.jpg');"></div>
   <div class="shapes">
     <div class="shape one"></div>
     <div class="shape two"></div>
@@ -15,7 +15,10 @@
           <div class="subtitle">{{'bestprice'|translate}} </div>
           <h2>{{'pricetopic'|translate}}</h2>
           <div class="link-box">
-            <a href="yacht-rent.html" class="theme-btn btn-style-two"><div class="btn-title">{{'yachtbooking'|translate}}</div></a>
+            <a routerLink="/yachts"
+               class="theme-btn btn-style-two">
+              <div class="btn-title">{{'yachtbooking'|translate}}</div>
+            </a>
           </div>
         </div>
       </div>
@@ -28,7 +31,10 @@
           <div class="subtitle">{{'news'|translate}}</div>
           <h2>{{'newstopic1'|translate}} <br>{{'newstopic2'|translate}}</h2>
           <div class="link-box">
-            <a href="contact.html" class="theme-btn btn-style-two"><div class="btn-title">{{'subscribe'|translate}}</div></a>
+            <a routerLink="/contact"
+               class="theme-btn btn-style-two">
+              <div class="btn-title">{{'subscribe'|translate}}</div>
+            </a>
           </div>
         </div>
       </div>

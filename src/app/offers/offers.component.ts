@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {OffersService} from '../../core/services/offers.service';
 import {Offer} from '../../Models/offer';
 
@@ -8,16 +8,20 @@ import {Offer} from '../../Models/offer';
   styleUrls: ['./offers.component.css']
 })
 export class OffersComponent implements OnInit {
-  public offers : Offer [] = [];
-  constructor(private offerService:OffersService) { }
+  public offers: Offer [] = [];
+
+  constructor(private offerService: OffersService,
+              private cdr: ChangeDetectorRef) {
+  }
 
   ngOnInit(): void {
     this.getOffers();
   }
-getOffers(){
-    this.offerService.getOffers().subscribe(data=>{
+
+  getOffers() {
+    this.offerService.getOffers().subscribe(data => {
       this.offers = data;
-      console.log(this.offers);
-    })
-}
+      this.cdr.markForCheck();
+    });
+  }
 }

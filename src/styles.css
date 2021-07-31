@@ -910,7 +910,7 @@ img{
   to {
 
     opacity: 1;
-    line-height: 25px;
+    line-height: 99px;
   }
 }
 
@@ -997,11 +997,9 @@ img{
 }
 .overlay22{
   background-color: rgba(0,0,0,.3);
-  height: 650px;
+  height: 480px;
   z-index:200;
-  padding: 80px;
   width: 100%;
-
 }
 
 .main-menu .navigation > li:last-child{
@@ -18584,7 +18582,7 @@ img.lazy-image.loaded{
   font-family: "fontello";
   font-size: 42px;
   font-weight: 400;
-  margin-bottom: -30px;
+  margin-bottom: -8px;
   margin-top: -3px;
   color: white;
 }
@@ -20417,3 +20415,59 @@ flip-container{perspective:1000;-moz-perspective:1000;-webkit-perspective:1000}.
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.object-fit-cover{
+  object-fit: cover !important;
+  max-height: 215px !important;
+}
+
+
+.carousel-control-next, .carousel-control-prev {
+  position: absolute;
+  top: 50% !important;
+  bottom: 50% !important;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 15%;
+  color: #fff;
+  text-align: center;
+  opacity: .5;
+}
+
+.separator::after, .separator::before {
+  content: "";
+  position: absolute;
+  border-bottom: 1px solid #ddd;
+  top: 12px;
+  width: 100px;
+}
+
+.separator::before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.separator::after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.inner-banner-height{
+  height: 480px !important;
+}
+
+
+.inner-banner-height-title{
+  margin-bottom: 5rem!important;
+  margin-top: 5rem!important;
+}
+
+
+.cdk-global-scrollblock{
+  top: 0!important;
+}

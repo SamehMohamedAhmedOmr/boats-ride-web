@@ -1,22 +1,30 @@
-
-<section class="page-banner">
+<section class="page-banner inner-banner-height">
   <div class="image-layer" style="background-image:url(./assets/images/resource/511.jpg);"></div>
   <div class="banner-inner">
     <div class="auto-container">
       <div class="inner-container clearfix">
-        <br><br><br><br><br><br>
-        <h1>{{'waterSport'|translate}} </h1>
-        <br><br><br>
+        <h1 class="inner-banner-height-title">{{'waterSport'|translate}} </h1>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
-            <li><a href="index.html">{{'home'|translate}}</a></li>
-            <li>{{'waterSport'|translate}}</li>
+            <li>
+              <a routerLink="/">{{'home'|translate}}</a>
+            </li>
+            <li>
+              <a routerLink="/yachts">
+                {{'yachts'|translate}}
+              </a>
+            </li>
+            <li>
+              {{'waterSport'|translate}}
+            </li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+
 <section class="yacht-tours-container">
   <div class="auto-container">
     <div class="main-title"><h3>{{'waterSport'|translate}}</h3></div>
@@ -36,14 +44,14 @@
             <div class="lower-filter-row clearfix">
               <div class="results-count">
               </div>
-<!--              <div class="view-modes clearfix">-->
-<!--                <div class="mode">-->
-<!--                  <a href="water-sport.html" class="active"><span class="flaticon-menu-3"></span></a>-->
-<!--                </div>-->
-<!--                <div class="mode">-->
-<!--                  <a href="water-sport2.html"><span class="flaticon-shape"></span></a>-->
-<!--                </div>-->
-<!--              </div>-->
+              <!--              <div class="view-modes clearfix">-->
+              <!--                <div class="mode">-->
+              <!--                  <a href="water-sport.html" class="active"><span class="flaticon-menu-3"></span></a>-->
+              <!--                </div>-->
+              <!--                <div class="mode">-->
+              <!--                  <a href="water-sport2.html"><span class="flaticon-shape"></span></a>-->
+              <!--                </div>-->
+              <!--              </div>-->
               <!--Filter-->
 
 
@@ -52,10 +60,10 @@
             <div class="results-row">
               <div class="item" *ngIf="!waterSports.length">
                 <ngx-skeleton-loader count="1" appearance="circle" [theme]="{
-    width: '740px',
-    height: '310px',
-    'border-radius': '10px'
-  }">
+                  width: '740px',
+                  height: '310px',
+                  'border-radius': '10px'
+                }">
                 </ngx-skeleton-loader>
               </div>
               <!--Activity Block-->
@@ -73,24 +81,31 @@
                       <br>
                       <div class="info">
                         <ul class="clearfix">
-                          <div class="text">{{watersport.water_sport_description}}</div>
+                          <div class="text" [innerHTML]="watersport.water_sport_description"></div>
                         </ul>
                       </div>
                     </div>
-<!--                    <div class="ratings">-->
-<!--                      <div class="rate-text"><strong>4.0</strong> <a href="#">[101 Reviews]</a></div>-->
-<!--                      <div class="rate">-->
-<!--                        <span class="fa fa-star"></span>-->
-<!--                        <span class="fa fa-star"></span>-->
-<!--                        <span class="fa fa-star"></span>-->
-<!--                        <span class="fa fa-star"></span>-->
-<!--                        <span class="fa fa-star empty-star"></span>-->
-<!--                      </div>-->
-<!--                    </div>-->
+                    <!--                    <div class="ratings">-->
+                    <!--                      <div class="rate-text"><strong>4.0</strong> <a href="#">[101 Reviews]</a></div>-->
+                    <!--                      <div class="rate">-->
+                    <!--                        <span class="fa fa-star"></span>-->
+                    <!--                        <span class="fa fa-star"></span>-->
+                    <!--                        <span class="fa fa-star"></span>-->
+                    <!--                        <span class="fa fa-star"></span>-->
+                    <!--                        <span class="fa fa-star empty-star"></span>-->
+                    <!--                      </div>-->
+                    <!--                    </div>-->
                     <div class="links-box clearfix">
                       <div class="link">
-                        <a routerLink="/water-sports/{{watersport.slug}}" class="theme-btn btn-style-two"><span class="btn-title">{{'moredetails'|translate}}</span></a>
-<!--                        <a href="contact.html" class="theme-btn btn-style-two"><span class="btn-title">Book Now</span></a>-->
+                        <<<<<<< HEAD
+                        <a routerLink="/water-sports/{{watersport.slug}}" class="theme-btn btn-style-two"><span
+                          class="btn-title">{{'moredetails'|translate}}</span></a>
+                        <!--                        <a href="contact.html" class="theme-btn btn-style-two"><span class="btn-title">Book Now</span></a>-->
+                        =======
+                        <a routerLink="/water-sports/{{watersport.slug}}" class="theme-btn btn-style-two"><span
+                          class="btn-title">More Details</span></a>
+                        <a routerLink="/yachts" class="theme-btn btn-style-two"><span class="btn-title">Book Now</span></a>
+                        >>>>>>> development
                       </div>
                       <div class="link">
                         <div class="info-btn-box">
@@ -136,7 +151,8 @@
                           </div>
                         </div>
                         <div class="image-box">
-                          <a href="yacht-tour-single.html"><img src="assets/images/resource/31 - Copy.jpeg" alt="" title=""></a>
+                          <a href="yacht-tour-single.html"><img src="assets/images/resource/31 - Copy.jpeg" alt=""
+                                                                title=""></a>
                         </div>
                         <div class="content">
                           <h4><a href="yacht-tour-single.html">Dinner Cruise </a></h4>
@@ -158,7 +174,8 @@
                           </div>
                         </div>
                         <div class="image-box">
-                          <a href="yacht-tour-single.html"><img src="assets/images/resource/31 - Copy.jpeg" alt="" title=""></a>
+                          <a href="yacht-tour-single.html"><img src="assets/images/resource/31 - Copy.jpeg" alt=""
+                                                                title=""></a>
                         </div>
                         <div class="content">
                           <h4><a href="yacht-tour-single.html">Dinner Cruise </a></h4>
@@ -187,7 +204,8 @@
                       <div class="inner-box">
                         <div class="image-box">
                           <figure class="image">
-                            <a href="yacht-tour-single.html"><img src="assets/images/resource/23.jpg" alt="" title=""></a>
+                            <a href="yacht-tour-single.html"><img src="assets/images/resource/23.jpg" alt=""
+                                                                  title=""></a>
                           </figure>
                         </div>
                         <div class="caption-box">
@@ -332,7 +350,8 @@
             </div>
 
             <div class="form-group col-lg-4 col-md-12 col-sm-12">
-              <button type="submit" class="theme-btn btn-style-three"><span class="btn-title">{{'subnow'|translate}}</span></button>
+              <button type="submit" class="theme-btn btn-style-three"><span
+                class="btn-title">{{'subnow'|translate}}</span></button>
             </div>
           </div>
         </form>

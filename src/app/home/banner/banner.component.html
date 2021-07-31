@@ -1,31 +1,38 @@
 <!-- Banner Section -->
 
+<ngb-carousel *ngIf="images" [wrap]="true"
+              [interval]="4000"
+              [pauseOnHover]="true"
+              [showNavigationArrows]="showNavigationArrows"
+              [showNavigationIndicators]="showNavigationIndicators">
+  <ng-template ngbSlide *ngFor="let image of images">
+    <div style="position: relative">
+      <div class="picsum-img-wrapper">
+        <img [src]="image" alt="Random slide" width="100%" style="height: 100vh!important;">
+      </div>
+      <div class="content-box">
+        <div class="overlay2">
 
-<ngb-carousel *ngIf="images" [wrap]="true" [interval]="4000" [pauseOnHover]="true"
-              [showNavigationArrows]="showNavigationArrows" [showNavigationIndicators]="showNavigationIndicators">
-<ng-template ngbSlide *ngFor="let image of images">
-  <div style="position: relative">
-    <div class="picsum-img-wrapper">
-      <img [src]="image" alt="Random slide" width="100%" style="height: 100vh!important;">
-    </div>
-    <div class="content-box">
-      <div class="overlay2">
+          <div class="content clearfix">
+            <div class="inner">
 
-        <div class="content clearfix">
-          <div class="inner">
-
-            <p class="headerText slide-up" style="color: white">Sailing Tour</p>
-            <p class="headerText" style="color: white;animation: slide-down 4s;">in Dubai</p>
-            <div class="text" style="font-size: 16px;color: white;padding-bottom: 10px;">Let us make your holyday unforgettable and super relaxing with our 5-stars sailing tours and well-prepared Yachts.</div>
-            <div class="links-box clearfix">
-              <a href="yacht-rent.html" class="theme-btn btn-style-two"><div class="btn-title">Book Now</div></a>
+              <p class="headerText slide-up" style="color: white">Sailing Tour</p>
+              <p class="headerText" style="color: white;animation: slide-down 4s;">in Dubai</p>
+              <div class="text" style="font-size: 16px;color: white;padding-bottom: 10px;">
+                Let us make your holyday unforgettable and super relaxing with our 5-stars sailing tours and
+                well-prepared Yachts.
+              </div>
+              <div class="links-box clearfix">
+                <a routerLink="/yachts" class="theme-btn btn-style-two">
+                  <div class="btn-title">Book Now</div>
+                </a>
+              </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</ng-template>
+  </ng-template>
 </ngb-carousel>
 

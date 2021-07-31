@@ -1,4 +1,5 @@
 export interface Yacht {
+  id:number,
   slug:string,
   name:string,
   what_is_included:string,
@@ -58,5 +59,10 @@ export interface Yacht {
       slug:string,
       image:string
     }
-  ]
+  ],
+  seo: {
+    title:string,
+    description:string,
+    keywords:[]
+  },
 }

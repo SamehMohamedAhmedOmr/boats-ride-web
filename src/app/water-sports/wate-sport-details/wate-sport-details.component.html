@@ -1,14 +1,19 @@
 <!--Page Title-->
-<section class="page-banner">
+<section class="page-banner inner-banner-height" *ngIf="watersport">
   <div class="image-layer" style="background-image:url(../../../assets/images/background/banner-1.jpg);"></div>
   <div class="banner-inner">
     <div class="auto-container">
       <div class="inner-container clearfix">
-        <h1>{{watersport.name}}</h1>
+        <h1 class="inner-banner-height-title">{{watersport.name}}</h1>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
-            <li><a [routerLink]="''">{{'home'|translate}}</a></li>
-            <li><a href="">{{'yacht'|translate}}</a></li>
+            <li>
+              <a [routerLink]="'/'">{{'home'|translate}}</a>
+            </li>
+            <li>
+              <a routerLink="/water-sports">{{'waterSport'|translate}}</a>
+            </li>
+
             <li>{{watersport.name}}</li>
           </ul>
         </div>
@@ -16,6 +21,16 @@
     </div>
   </div>
 </section>
+
+<div class="item" *ngIf="!watersport">
+  <ngx-skeleton-loader count="1" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '700px',
+            width: '100%',
+            'border-radius': '10px'
+            }">
+  </ngx-skeleton-loader>
+</div>
+
 
 <div class="info-pop">
   <div class="auto-container">
@@ -27,15 +42,24 @@
 </div>
 
 
-
 <!--Yacht Tours Section-->
 <section class="yacht-tours-container alternate-bg-two">
   <div class="auto-container">
 
     <div class="content-container">
       <div class="row clearfix">
+
+        <div class="item col-lg-8 col-md-12 col-sm-12" *ngIf="!watersport">
+          <ngx-skeleton-loader count="1" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '700px',
+            width: '100%',
+            'border-radius': '10px'
+            }">
+          </ngx-skeleton-loader>
+        </div>
+
         <!--Content Side-->
-        <div class="content-side col-lg-8 col-md-12 col-sm-12">
+        <div class="content-side col-lg-8 col-md-12 col-sm-12" *ngIf="watersport">
           <div class="content-inner">
             <!--Tour Details-->
             <div class="tour-details">
@@ -47,28 +71,37 @@
 
               <div class="tour-widget recommended-widget carousel-widget">
                 <div class="widget-inner">
-                  <ngb-carousel  [wrap]="true" [interval]="2500" [pauseOnHover]="true"
-                                 [showNavigationArrows]="false" [showNavigationIndicators]="true">
+                  <ngb-carousel [wrap]="true" [interval]="2500" [pauseOnHover]="true"
+                                [showNavigationArrows]="false" [showNavigationIndicators]="true">
                     <ng-template ngbSlide *ngFor="let image of watersport.images">
                       <div class="recommend-block">
                         <div class="inner">
                           <div class="image-box">
-                            <a href="yacht-tour-single.html"><img src="{{image.image}}" alt="" title=""></a>
+                            <a><img src="{{image.image}}" alt="" title=""></a>
                           </div>
                         </div>
                       </div>
                     </ng-template>
                   </ngb-carousel>
                 </div>
-
               </div>
 
               <div class="text-block">
-                <h4></h4>
-                <p> {{watersport.water_sport_description}}</p>
+                <h4>Description</h4>
+                <p [innerHTML]="watersport.water_sport_description"></p>
               </div>
-            </div>
 
+              <div class="text-block">
+                <h4>What to Expect</h4>
+                <p [innerHTML]="watersport.what_to_expect_description"></p>
+              </div>
+
+              <div class="text-block">
+                <h4>Routes</h4>
+                <p [innerHTML]="watersport.routes"></p>
+              </div>
+
+            </div>
           </div>
         </div>
 
@@ -80,23 +113,33 @@
               <div class="widget-inner">
                 <br>
                 <div class="default-form main-booking-form">
-                  <form method="post" action="http://boatsride/contact.html">
-                    <h5>{{'price'|translate}}</h5>
-                    <br>
+                  <h5>{{'price'|translate}}</h5>
 
-                    <div class="estimate-table">
-                      <ul>
-                        <li class="totals clearfix"><span class="ttle">{{'price'|translate}}:</span> <span class="dtl">{{'ead'|translate}} {{watersport.selling_per_hour}} / {{'hour'|translate}}</span></li>
-                      </ul>
-                    </div>
-                    <br>
-                    <div class="info displaying"><span class="icon flaticon-wall-clock pad_info"></span> {{'reservation'|translate}}: 24 / 7</div>
-                    <br>
-                    <div class="form-group">
-                      <button type="submit" class="theme-btn"><span class="btn-title">{{'booknow'|translate}}</span></button>
-                    </div>
+                  <div class="estimate-table">
+                    <ul>
+                      <li class="totals clearfix">
+                        <span class="ttle">{{'price'|translate}}:</span>
+                        <span class="dtl">
+                            {{'ead'|translate}} {{watersport.selling_per_hour}} / {{'hour'|translate}}
+                          </span>
+                      </li>
+                    </ul>
+                  </div>
 
-                  </form>
+                  <br>
+                  <div class="info displaying">
+                    <span class="icon flaticon-wall-clock pad_info"></span>{{'reservation'|translate}}: 24 / 7
+                  </div>
+                  <br>
+                  <div class="form-group">
+                    <button type="button"
+                            (click)="openBooking()"
+                            class="theme-btn">
+                      <span class="btn-title">{{'booknow'|translate}}</span>
+                    </button>
+                  </div>
+
+                  <div class="instruction">Do you need suggestion pls contact our expert team.</div>
                 </div>
               </div>
 
@@ -112,7 +155,9 @@
                       <div class="lower-box clearfix">
                         <div class="lower-content">
                           <h4><a href="#">Mohammed Sahraoui</a></h4>
-                          <div class="info"><span class="icon flaticon-assistance"></span>+971 52 491 8686  [24/Hours]</div>
+                          <div class="info">
+                            <span class="icon flaticon-assistance"></span>+971 52 491 8686 [24/Hours]
+                          </div>
                         </div>
                       </div>
                     </div>

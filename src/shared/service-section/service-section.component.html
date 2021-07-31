@@ -12,7 +12,17 @@
     </div>
   </div>
   <div class="auto-container">
-    <carousel *ngIf="waterSports.length" [margin]="20" [height]="600" [cellWidth]="400" [cellsToShow]="numberofcells"
+
+    <div class="item" *ngIf="!waterSports.length">
+      <ngx-skeleton-loader count="3" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '300px',
+            width: '33%',
+            'border-radius': '10px'
+            }">
+      </ngx-skeleton-loader>
+    </div>
+
+    <carousel *ngIf="waterSports.length" [margin]="20" [height]="480" [cellWidth]="400" [cellsToShow]="numberofcells"
               [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
       <div class="carousel-cell" *ngFor="let watersport of waterSports">
         <div class="service-block">
@@ -25,7 +35,7 @@
 
                 <div class="img-wrap flip-container">
                   <div>
-                    <img *ngIf="watersport.images[0].image" src="{{watersport.images[0].image}}" class="front">
+                    <img *ngIf="watersport.images[0].image" src="{{watersport.images[0].image}}" class="front object-fit-cover">
 <!--                    <img *ngIf="watersport.images[1].image" src="{{watersport.images[1].image}}" class="back">-->
                   </div>
                 </div> <!-- img-wrap.// -->
@@ -37,7 +47,9 @@
             <div class="lower-box">
               <div class="lower-content">
                 <div class="icon-box"><span class="flaticon-surf-sea"></span></div>
-                <h4><a href="">{{watersport.name}}</a></h4>
+                <h4>
+                  <a routerLink="/water-sports/{{watersport.slug}}">{{watersport.name}}</a>
+                </h4>
                 <div class="link-box">
                   <a routerLink="/water-sports/{{watersport.slug}}" class="default-link">
                     <span class="icon flaticon-logout"></span> <span class="link-text">{{'readmore'|translate}}</span>

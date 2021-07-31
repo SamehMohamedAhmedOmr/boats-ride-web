@@ -1,14 +1,18 @@
-
-<section class="page-banner">
+<section class="page-banner inner-banner-height">
   <div class="image-layer" style="background-image:url(./assets/images/background/banner-1.jpg);"></div>
 
   <div class="banner-inner">
     <div class="auto-container">
       <div class="inner-container clearfix">
-        <h1>{{'offer'|translate}}</h1>
+        <h1 class="inner-banner-height-title">
+          {{'offer'|translate}}
+        </h1>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
-            <li><a href="index.html">{{'home'|translate}}</a></li>
+            <li>
+              <a routerLink="/">
+                {{'home'|translate}}</a>
+            </li>
             <li>{{'offer'|translate}}</li>
           </ul>
         </div>
@@ -20,31 +24,38 @@
 <!--Services Section-->
 <section class="services-section-two">
   <div class="auto-container">
+
+    <div class="item" *ngIf="!offers.length">
+      <ngx-skeleton-loader count="3" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '300px',
+            width: '33%',
+            'border-radius': '10px'
+            }">
+      </ngx-skeleton-loader>
+    </div>
+
     <div class="row clearfix">
-      <div class="item" *ngIf="!offers.length">
-        <ngx-skeleton-loader count="3" appearance="circle" [theme]="{
-    width: '400px',
-    height: '490px',
-    'border-radius': '10px'
-  }">
-        </ngx-skeleton-loader>
-      </div>
       <!--Service Block-->
       <div *ngFor="let offer of offers"
-        class="service-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+           class="service-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms"
+           data-wow-duration="1500ms">
         <div class="inner-box">
           <div class="image" style="height: 300px">
-            <img src="{{offer.image}}" alt="" title="">
+            <img src="{{offer.image}}" alt="" title="" class="object-fit-cover h-100">
           </div>
           <div class="lower-box">
             <div class="title-box">
               <div class="inner">
                 <div class="subtitle">Top landmarks & amazing</div>
-                <h4><a href="yacht-rent-buy.html">{{offer.title}}</a></h4>
+                <h4>
+                  <a>{{offer.title}}</a>
+                </h4>
               </div>
             </div>
             <div class="text">{{offer.description}}</div>
-            <div class="link-box"><a href="">{{'readmore'|translate}}</a></div>
+            <div class="link-box">
+              <a>{{'readmore'|translate}}</a>
+            </div>
           </div>
         </div>
       </div>
@@ -54,7 +65,7 @@
 </section>
 
 <!--Services Section Three-->
-<section class="services-section-three">
+<section class="services-section-three overflow-hidden">
   <div class="main-image-layer" style="background-image:url(./assets/images/background/image-13.jpg);"></div>
 
   <div class="upper-row">
@@ -67,7 +78,7 @@
           <div class="inner">
             <div class="sec-title">
               <h2>{{'specialsev'|translate}}</h2>
-<!--              <div class="lower-text">We are aim to offer 100% satisfaction services</div>-->
+              <!--              <div class="lower-text">We are aim to offer 100% satisfaction services</div>-->
             </div>
             <div class="text">{{'t17'|translate}}</div>
             <div class="info">
@@ -86,8 +97,10 @@
                 <div class="inner-box">
                   <div class="icon-box"><span class="flaticon-guitar"></span></div>
                   <h4>Party <br>Celebrations</h4>
-                  <div class="text">Give you a complete account of the system, and expound the actual teachings the some great explorer.</div>
-                  <div class="link-box"><a href="yacht-tour-single.html">Book For PArties</a></div>
+                  <div class="text">Give you a complete account of the system, and expound the actual teachings the some
+                    great explorer.
+                  </div>
+                  <div class="link-box"><a routerLink="/yachts">Book For PArties</a></div>
                 </div>
               </div>
               <!--Featured Block-->
@@ -95,8 +108,10 @@
                 <div class="inner-box">
                   <div class="icon-box"><span class="flaticon-meeting"></span></div>
                   <h4>Corporate <br>Meetings & Events</h4>
-                  <div class="text">Desires to obtain pain of itself, because it is pain, but occur toil and pain can procure him fault with a pleasure.</div>
-                  <div class="link-box"><a href="yacht-tour-single.html">Book For Meetings</a></div>
+                  <div class="text">Desires to obtain pain of itself, because it is pain, but occur toil and pain can
+                    procure him fault with a pleasure.
+                  </div>
+                  <div class="link-box"><a routerLink="/yachts">Book For Meetings</a></div>
                 </div>
               </div>
               <!--Featured Block-->
@@ -104,8 +119,10 @@
                 <div class="inner-box">
                   <div class="icon-box"><span class="flaticon-guitar"></span></div>
                   <h4>Party <br>Celebrations</h4>
-                  <div class="text">Give you a complete account of the system, and expound the actual teachings the some great explorer.</div>
-                  <div class="link-box"><a href="yacht-tour-single.html">Book For PArties</a></div>
+                  <div class="text">Give you a complete account of the system, and expound the actual teachings the some
+                    great explorer.
+                  </div>
+                  <div class="link-box"><a routerLink="/yachts">Book For PArties</a></div>
                 </div>
               </div>
               <!--Featured Block-->
@@ -113,8 +130,10 @@
                 <div class="inner-box">
                   <div class="icon-box"><span class="flaticon-meeting"></span></div>
                   <h4>Corporate <br>Meetings & Events</h4>
-                  <div class="text">Desires to obtain pain of itself, because it is pain, but occur toil and pain can procure him fault with a pleasure.</div>
-                  <div class="link-box"><a href="yacht-tour-single.html">Book For Meetings</a></div>
+                  <div class="text">Desires to obtain pain of itself, because it is pain, but occur toil and pain can
+                    procure him fault with a pleasure.
+                  </div>
+                  <div class="link-box"><a routerLink="/yachts">Book For Meetings</a></div>
                 </div>
               </div>
               <!--Featured Block-->
@@ -122,8 +141,10 @@
                 <div class="inner-box">
                   <div class="icon-box"><span class="flaticon-guitar"></span></div>
                   <h4>Party <br>Celebrations</h4>
-                  <div class="text">Give you a complete account of the system, and expound the actual teachings the some great explorer.</div>
-                  <div class="link-box"><a href="yacht-tour-single.html">Book For PArties</a></div>
+                  <div class="text">Give you a complete account of the system, and expound the actual teachings the some
+                    great explorer.
+                  </div>
+                  <div class="link-box"><a routerLink="/yachts">Book For PArties</a></div>
                 </div>
               </div>
               <!--Featured Block-->
@@ -131,8 +152,10 @@
                 <div class="inner-box">
                   <div class="icon-box"><span class="flaticon-meeting"></span></div>
                   <h4>Corporate <br>Meetings & Events</h4>
-                  <div class="text">Desires to obtain pain of itself, because it is pain, but occur toil and pain can procure him fault with a pleasure.</div>
-                  <div class="link-box"><a href="yacht-tour-single.html">Book For Meetings</a></div>
+                  <div class="text">Desires to obtain pain of itself, because it is pain, but occur toil and pain can
+                    procure him fault with a pleasure.
+                  </div>
+                  <div class="link-box"><a routerLink="/yachts">Book For Meetings</a></div>
                 </div>
               </div>
             </div>
@@ -206,7 +229,10 @@
       </div>
       <div class="text">{{'t20'|translate}}</div>
       <div class="link-box">
-        <a href="yacht-tour-1.html" class="theme-btn btn-style-five"><div class="btn-title">{{'starttoday'|translate}}</div></a>
+        <a routerLink="/yachts"
+           class="theme-btn btn-style-five">
+          <div class="btn-title">{{'starttoday'|translate}}</div>
+        </a>
       </div>
     </div>
   </div>

@@ -1,33 +1,20 @@
+<section class="page-banner inner-banner-height">
 
-<section class="page-banner">
-
-  <div class="image-layer" style="background-image:url(./assets/images/background/banner-1.jpg);">
-
-  </div>
+  <div class="image-layer" style="background-image:url('./assets/images/background/banner-1.jpg');"></div>
 
   <div class="banner-inner">
-
-
-
     <div class="auto-container">
       <div class="inner-container clearfix">
-
-        <br><br><br><br><br><br>
-        <h1>{{'about'|translate}} </h1>
-        <br><br><br>
+        <h1 class="inner-banner-height-title">{{'about'|translate}} </h1>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
-            <li><a [routerLink]="''">{{'home'|translate}}</a></li>
+            <li><a [routerLink]="'/'">{{'home'|translate}}</a></li>
             <li>{{'about'|translate}}</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-
-
-
-
 </section>
 
 <!--Welcome Section-->
@@ -60,9 +47,6 @@
       <div class="testimonial-carousel-three owl-theme owl-carousel">
 
 
-
-
-
       </div>
     </div>
 
@@ -80,7 +64,7 @@
       <div class="content-inner">
         <h2>“{{'t5'|translate}} <br>{{'t6'|translate}} <br> {{'t7'|translate}}.”</h2>
         <div class="info">
-          <div class="name">Mohamed Sahraoui </div>
+          <div class="name">Mohamed Sahraoui</div>
           <div class="designation">CEO &amp; Founder</div>
         </div>
         <div class="signature">
@@ -91,6 +75,7 @@
 
   </div>
 </section>
+
 <!--&lt;!&ndash;Services Section Three&ndash;&gt;-->
 <!--<section class="services-section-three">-->
 <!--  <div class="main-image-layer" style="background-image:url(./assets/images/background/image-13.jpg);"></div>-->
@@ -255,6 +240,7 @@
           <div class="content">
             <h4>{{'safety'|translate}}</h4>
             <div class="text">{{'topic2'|translate}}</div>
+
             <div class="link-box">
 
             </div>
@@ -273,6 +259,7 @@
           <div class="content">
             <h4>{{'value'|translate}}</h4>
             <div class="text">{{'topic3'|translate}} </div>
+
             <div class="link-box">
 
             </div>
@@ -399,6 +386,7 @@
 <!--  </div>-->
 <!--</section>-->
 
+
 <!--Subscribe Section-->
 <section class="subscribe-section style-two wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
   <div class="auto-container">
@@ -423,7 +411,10 @@
             </div>
 
             <div class="form-group col-lg-4 col-md-12 col-sm-12">
-              <button type="submit" class="theme-btn btn-style-three"><span class="btn-title">{{'subnow'|translate}}</span></button>
+              <button type="submit"
+                      class="theme-btn btn-style-three">
+                <span class="btn-title">{{'subnow'|translate}}</span>
+              </button>
             </div>
           </div>
         </form>

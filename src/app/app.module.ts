@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -12,13 +12,14 @@ import {CommonInterceptor} from './common.interceptor';
 import {SharedModule} from '../shared/shared.module';
 import {HomeModule} from './home/home.module';
 import {ThemeModule} from './theme/theme.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
 import {NgxUiLoaderConfig, NgxUiLoaderModule} from 'ngx-ui-loader';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {HeaderComponent} from './header/header.component';
 import {LanguageService} from '../core/services/language-services.service';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   "bgsColor": "red",
   "bgsOpacity": 0.4,
@@ -27,7 +28,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   "blur": 0,
   "delay": 0,
   "fastFadeOut": true,
-  "fgsColor": "rgba(40, 40, 40, 0.8)",
+  "fgsColor": "rgba(245, 246, 250, 1)",
   "fgsPosition": "center-center",
   "fgsSize": 20,
   "gap": 24,
@@ -36,7 +37,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   "logoUrl": "assets/images/preloader.svg",
   "masterLoaderId": "master",
   "overlayBorderRadius": "0",
-  "overlayColor": "rgba(40, 40, 40, 0.8)",
+  "overlayColor": "rgba(245, 246, 250, 1)",
   "pbColor": "red",
   "pbDirection": "ltr",
   "pbThickness": 3,
@@ -47,6 +48,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   "maxTime": -1,
   "minTime": 300
 };
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,12 +85,12 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     {provide: HTTP_INTERCEPTORS, useClass: CommonInterceptor, multi: true},
     LanguageService
   ],
-  exports: [
-  ],
+  exports: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
 }
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }

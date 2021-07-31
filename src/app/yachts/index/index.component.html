@@ -1,19 +1,27 @@
 
-<section class="page-banner">
+<section class="page-banner inner-banner-height mb-5">
   <div class="image-layer" style="background-image:url(./assets/images/resource/509.jpg);"></div>
 
   <div class="banner-inner">
     <div class="auto-container">
       <div class="inner-container clearfix">
-        <br><br><br><br><br><br>
-        <h1>{{'yachtRent'|translate}}</h1>
-        <br><br><br>
+        <h1 class="inner-banner-height-title">{{'yachtRent'|translate}}</h1>
+        <div class="page-nav">
+          <ul class="bread-crumb clearfix">
+            <li>
+              <a routerLink="/">{{'home'|translate}}</a>
+            </li>
+            <li>
+              {{'yachts'|translate}}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-
 </section>
-<br><br>
+
+
 <!--Welcome Section-->
 <div class="title-row clearfix">
   <div class="sec-title-two centered with-border">
@@ -22,14 +30,17 @@
     <p style="text-align:center;font-size:18px"><span style="color:#5f727f">{{'luxuarytopic3'|translate}}</span></p>
     <div class="separator"></div>
   </div>
-  <div class="item d-flex justify-content-center" *ngIf="!yachts.length">
-    <ngx-skeleton-loader count="3" appearance="circle" [theme]="{
-    width: '450px',
-    height: '450px',
-    'border-radius': '10px'
-  }">
-    </ngx-skeleton-loader>
+  <div class="auto-container">
+    <div class="item" *ngIf="!yachts.length">
+      <ngx-skeleton-loader count="3" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '300px',
+            width: '33%',
+            'border-radius': '10px'
+            }">
+      </ngx-skeleton-loader>
+    </div>
   </div>
+
 </div>
 
 <!--Rent / Buy Section-->
@@ -40,11 +51,7 @@
 
     <div class="results-row">
       <div class="row clearfix">
-        <!--Rental Block-->
 
-        <!--Rental Block-->
-
-        <!--Rental Block-->
         <div class="rental-block mix all russia india service-block col-lg-4 col-md-6 col-sm-12"
              *ngFor="let yacht of yachts">
           <div class="inner-box">
@@ -52,16 +59,14 @@
 
               <figure class="image">
 
-                <a href="majesty-yachr-48-feet.html">
+                <a routerLink="/yachts/{{yacht.slug}}">
                   <div class="offer-info"><span>{{yacht.horse_Power}} FT</span></div>
 
-                  <img src="{{yacht.images[0].image}}" alt="" title=""></a>
+                  <img class="object-fit-cover" src="{{yacht.images[0].image}}" alt="" title=""></a>
               </figure>
               <div class="price-box">
                 <div class="price"> {{yacht.services[0].price}} AED </div>
                 <div class="cycle">PAR / H</div>
-
-
               </div>
 
             </div>
@@ -69,7 +74,7 @@
               <div class="more-link-box">
                 <a routerLink="/yachts/{{yacht.slug}}" class="theme-btn">View Details</a>
               </div>
-              <h4><a href="majesty-yachr-48-feet.html">{{yacht.name}}</a></h4>
+              <h4><a routerLink="/yachts/{{yacht.slug}}">{{yacht.name}}</a></h4>
             </div>
             <div class="meta-info">
               <ul class="clearfix" style="margin-bottom: unset!important;">

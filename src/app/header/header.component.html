@@ -1,7 +1,13 @@
 <header class="main-header header-style-one fixed-header d-none d-lg-block d-xl-block">
-  <div class="logo-desktop" style="background: url('./assets/images/logo-container.png') left top no-repeat">
-    <div class="logo"><a href="index.html" title="Boats Ride - Rental Luxury Yacht In Dubai">
-      <img src="assets/images/logoooo.png" alt="Boats Ride - Rental Luxury Yacht In Dubai" title="Boats Ride -Rental Yacht In Dubai "></a></div>
+  <div class="logo-desktop"
+       style="background: url('./assets/images/logo-container.png') left top no-repeat">
+    <div class="logo">
+      <a routerLink="/" title="Boats Ride - Rental Luxury Yacht In Dubai">
+        <img src="assets/images/logoooo.png"
+             alt="Boats Ride - Rental Luxury Yacht In Dubai"
+             title="Boats Ride -Rental Yacht In Dubai ">
+      </a>
+    </div>
   </div>
   <!-- Header Top -->
   <div class="header-top header-top-one">
@@ -10,33 +16,38 @@
         <div class="top-left clearfix">
           <!--Info-->
           <div class="info">
-            <ul class="clearfix">
-              <li class="phone"><a href="tel:+971524918686"><span class="icon fa fa-phone-alt"></span>+971 52 491 8686</a></li>
-              <li class="email"><a href="mailto:info@botsride.com"><span class="icon fa fa-envelope"></span> info@boatsride.com</a></li>
+            <ul class="clearfix mb-0">
+              <li class="phone">
+                <a href="tel:+971524918686">
+                  <span class="icon fas fa-phone-alt"></span>+971 52 491 8686
+                </a>
+              </li>
+              <li class="email">
+                <a href="mailto:info@botsride.com">
+                  <span class="icon fa fa-envelope"></span>info@boatsride.com
+                </a>
+              </li>
             </ul>
           </div>
 
-          <div class="top-text"><span class="icon flaticon-surf-1"></span> Water Sports Activities, Experience The Thrill!.</div>
+          <div class="top-text">
+            <span class="icon flaticon-surf-1"></span> Water Sports Activities, Experience The Thrill!.
+          </div>
         </div>
 
         <div class="top-right clearfix">
           <!--Top Search-->
           <div class="info">
             <ul class="clearfix">
-              <li (click)="switchLanguage('en')"><img  src="assets/images/download.png" style="padding-left: 5px;
-    width: 25px;
-    height: 20px;  margin-right: 8px;">English  </li>
-              <li (click)="switchLanguage('ar')"><img src="assets/images/img3.png" style="padding-left: 5px;
-    width: 20px;
-    height: 20px;  margin-right: 8px;">Arabic  </li>
+              <li (click)="switchLanguage('en')">
+                <img src="assets/images/download.png" class="english">English
+              </li>
+
+              <li (click)="switchLanguage('ar')">
+                <img src="assets/images/img3.png" class="arabic"> Arabic
+              </li>
             </ul>
           </div>
-<!--          <div class="my-account">-->
-<!--            <ul class="clearfix">-->
-<!--              <li><a href="#"><span class="icon flaticon-password"></span> Login</a></li>-->
-<!--              <li><a href="#"><span class="icon flaticon-user-2"></span> Signup</a></li>-->
-<!--            </ul>-->
-<!--          </div>-->
         </div>
       </div>
     </div>
@@ -52,12 +63,14 @@
 
           <!--Logo-->
           <div class="logo-box">
-            <div class="logo"><a href="index.html" title="Sailing - Water Sports HTML Template"><img src="assets/images/logo-two.png" alt="Sailing - Water Sports HTML Template" title="Sailing - Water Sports HTML Template"></a></div>
+            <div class="logo"><a href="index.html" title="Sailing - Water Sports HTML Template"><img
+              src="assets/images/logo-two.png" alt="Sailing - Water Sports HTML Template"
+              title="Sailing - Water Sports HTML Template"></a></div>
           </div>
           <div class="nav-content clearfix">
             <div class="nav-outer clearfix">
               <!--Mobile Navigation Toggler-->
-              <div  class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
+              <div class="mobile-nav-toggler"><span class="icon flaticon-menu-1"></span></div>
 
               <!-- Main Menu -->
               <nav class="main-menu navbar-expand-md navbar-light">
@@ -81,7 +94,10 @@
             <div class="other-links clearfix">
               <!--Book Btn-->
               <div class="book-btn">
-                <a href="yacht-rent-buy-single.html" class="theme-btn btn-style-one"><div class="btn-title">{{'booknow'|translate}}</div></a>
+                <a routerLink="/yachts"
+                   class="theme-btn btn-style-one">
+                  <div class="btn-title">{{'booknow'|translate}}</div>
+                </a>
               </div>
               <!--Social Links-->
               <div class="social-links social-links-one">
@@ -93,7 +109,8 @@
               </div>
               <!--Nav Toggler-->
               <div class="max-nav-toggler">
-                <button (click)="drawer.open()" class="theme-btn toggle-btn"><span class="flaticon-circled"></span></button>
+                <button (click)="drawer.open()" class="theme-btn toggle-btn"><span class="flaticon-circled"></span>
+                </button>
               </div>
             </div>
 
@@ -104,60 +121,5 @@
     </div>
 
   </div>
-  <!--End Header Upper-->
 
-<!--  &lt;!&ndash; Sticky Header  &ndash;&gt;-->
-<!--  <div class="sticky-header animated slideInDown">-->
-<!--    <div class="auto-container clearfix" style="margin: unset!important;max-width: 1200px!important;">-->
-<!--      &lt;!&ndash;Logo&ndash;&gt;-->
-<!--      <div class="logo pull-left">-->
-<!--        <a href="index.html" title=""><img src="assets/images/sticky-logo.png" alt="" title=""></a>-->
-<!--      </div>-->
-<!--      &lt;!&ndash;Right Col&ndash;&gt;-->
-<!--      <div class="pull-right clearfix">-->
-<!--        &lt;!&ndash; Main Menu &ndash;&gt;<nav class="main-menu clearfix">-->
-<!--        <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">-->
-<!--          <ul class="navigation clearfix">-->
-<!--            <li class="sub-menu"><a routerLink="">Home</a></li>-->
-<!--            <li class="sub-menu"><a routerLink="about">About</a></li>-->
-<!--            <li class="sub-menu"><a routerLink="yachts">Yacht Rent</a></li>-->
-<!--            <li class="sub-menu"><a routerLink="watersports">Water Sports</a>-->
-<!--            <li class="sub-menu"><a routerLink="fishing-trip">Fishing Trip</a></li>-->
-<!--            <li class="sub-menu"><a routerLink="services">Services</a></li>-->
-<!--            <li class="sub-menu"><a routerLink="blogs">Blogs</a></li>-->
-<!--            <li class="sub-menu"><a routerLink="destination">Destinations</a></li>-->
-<!--            <li><a routerLink="offers">Offers</a></li>-->
-<!--            <li><a routerLink="contact">Contact</a></li>-->
-<!--          </ul>-->
-<!--        </div>-->
-<!--      </nav>-->
-
-<!--        &lt;!&ndash;Book Btn&ndash;&gt;-->
-<!--        <div class="booking-link">-->
-<!--          <a href="yacht-rent-buy-single.html" class="theme-btn btn-style-one"><div class="btn-title">Book Now</div></a>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>&lt;!&ndash; End Sticky Menu &ndash;&gt;-->
-
-  <!-- Mobile Menu  -->
-<!--  <div class="mobile-menu">-->
-<!--    <div class="menu-backdrop"></div>-->
-<!--    <div class="close-btn"><span class="icon flaticon-targeting-cross"></span></div>-->
-
-<!--    <nav class="menu-box">-->
-<!--      <div class="nav-logo"><a href="index.html"><img src="assets/images/nav-logo.png" alt="" title=""></a></div>-->
-<!--      <div class="menu-outer">&lt;!&ndash;Here Menu Will Come Automatically Via Javascript / Same Menu as in Header&ndash;&gt;</div>-->
-<!--      &lt;!&ndash;Social Links&ndash;&gt;-->
-<!--      <div class="social-links">-->
-<!--        <ul class="clearfix">-->
-<!--          <li><a href="#"><span class="fab fa-twitter"></span></a></li>-->
-<!--          <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>-->
-<!--          <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>-->
-<!--          <li><a href="#"><span class="fab fa-instagram"></span></a></li>-->
-<!--          <li><a href="#"><span class="fab fa-youtube"></span></a></li>-->
-<!--        </ul>-->
-<!--      </div>-->
-<!--    </nav>-->
-<!--  </div>&lt;!&ndash; End Mobile Menu &ndash;&gt;-->
 </header>

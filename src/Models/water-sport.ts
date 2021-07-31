@@ -1,4 +1,5 @@
 export interface WaterSport {
+  id:number,
   name:string,
   water_sport_description:string,
   what_to_expect_description:string,
@@ -17,5 +18,10 @@ export interface WaterSport {
   location:string,
   images: [{
     image:string
-  }]
+  }],
+  seo: {
+    title:string,
+    description:string,
+    keywords:[]
+  },
 }

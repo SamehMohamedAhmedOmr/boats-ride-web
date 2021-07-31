@@ -11,7 +11,8 @@ export class IndexComponent implements OnInit {
 
   public Services: Services [] = [];
 
-  constructor(private services: ServicesService, private cdr:ChangeDetectorRef) {
+  constructor(private services: ServicesService,
+              private cdr: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
@@ -21,7 +22,6 @@ export class IndexComponent implements OnInit {
   getServices() {
     this.services.getSevices().subscribe(data => {
       this.Services = data;
-      console.log(this.Services);
       this.cdr.markForCheck();
     });
   }

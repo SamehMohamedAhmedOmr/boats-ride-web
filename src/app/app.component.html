@@ -73,14 +73,14 @@
           <button (click)="drawer.close()"><span class="flaticon-letter-x"></span></button>
         </div>
         <div class="logo">
-          <a href="index.html"><img src="assets/images/logo-two.png" alt="" /></a>
+          <a [routerLink]="'/'"><img src="assets/images/logo-two.png" alt="" /></a>
         </div>
         <div class="content-box">
           <h3>{{'getintouch'|translate}}</h3>
           <div class="text">{{'t8'|translate}}</div>
           <a [routerLink]="'/yachts'" class="theme-btn btn-style-two"><div class="btn-title">{{'booknow'|translate}}</div></a>
         </div>
-        <div class="contact-info">
+        <div class="contact-info mt-5">
           <h2 style="color: white">{{'contact'|translate}}</h2>
           <ul class="list-style-two">
             <li><span class="icon"><i class="fas fa-map-marker-alt"></i></span>King Salman Bin Abdulaziz Al Saud St - Dubai Marina - Dubai, UAE.</li>

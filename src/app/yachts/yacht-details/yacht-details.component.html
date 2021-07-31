@@ -1,10 +1,15 @@
+<div class="item" *ngIf="!yacht">
+  <ngx-skeleton-loader count="2" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '700px',
+            width: '100%',
+            'border-radius': '10px'
+            }">
+  </ngx-skeleton-loader>
+</div>
 
 <section class="yacht-details" *ngIf="yacht">
   <div class="auto-container">
 
-
-
-    <br><br>
     <div class="main-image-box">
       <figure class="image" >
         <img src="{{yacht.images[0].image}}" alt="" title="">
@@ -29,12 +34,16 @@
           <div class="tour-widget recommended-widget carousel-widget">
             <div class="widget-inner">
               <ngb-carousel  [wrap]="true" [interval]="2500" [pauseOnHover]="true"
+                            style="height: 460px;"
                             [showNavigationArrows]="false" [showNavigationIndicators]="true">
                 <ng-template ngbSlide *ngFor="let yachts of yacht.images">
                   <div class="recommend-block">
                     <div class="inner">
                       <div class="image-box">
-                        <a href="yacht-tour-single.html"><img src="{{yachts.image}}" alt="" title=""></a>
+                        <a><img class="object-fit-cover"
+                                style="height: 450px !important; max-height: 450px !important;"
+                                src="{{yachts.image}}"
+                                alt="" title=""></a>
                       </div>
                     </div>
                   </div>
@@ -43,30 +52,20 @@
             </div>
 
           </div>
-          <div class="text-block">
-            <h4>About Yacht</h4>
-            <p>With a length of {{yacht.horse_Power}} feet the yacht has a wide beam which gives the boat huge space and more volume. The yacht has the capacity to cater up to {{yacht.passenger_capacity}} people in pure comfort. For added convenience, The yacht comes with a fully equipped kitchen..</p>
-            <p>The yacht has huge sundeck provides an astonishing view of the scenic beauty. The state of the art satellite system keeps you connected no matter wherever you are. The Tv and the latest music system as well as DVD not only provides entertainment but also makes the guests feel at home. The yacht has {{yacht.size}} bedrooms are fully furnished for added comfort.</p>
-            <h4 class="title-detail"><span>DESTINATIONS</span></h4>
-            <p>We recommend at least 03 to 04 hours of cruising. Cruise along Dubai's beautiful coastal waters and see the most stunning landmarks including:</p>
-            <h4 class="title-detail"><span>IMPORTANT INFORMATION</span></h4>
-            <table class="table table-bordered">
-              <tr>
-                <td> Duration:	</td>
-                <td> Minimum reservation should be of  2 Hours (recommended to reserve 4 hours or more) </td>
-              </tr>
-              <tr>
-                <td> Days of operation: </td>
-                <td> 7 days a week </td>
-              </tr>
-              <tr>
-                <td> Age constraint: </td>
-                <td> No age limit </td>
-              </tr>
-            </table>
+          <div class="text-block mb-3">
+            <h4>What is include</h4>
+            <p [innerHTML]="yacht.what_is_included"></p>
           </div>
 
+          <div class="text-block mb-3">
+            <h4>Facilities</h4>
+            <p [innerHTML]="yacht.facilities"></p>
+          </div>
 
+          <div class="text-block mb-3">
+            <h4>What Expect</h4>
+            <p [innerHTML]="yacht.what_expect_description"></p>
+          </div>
 
 
         </div>
@@ -98,7 +97,7 @@
         <div class="widget-inner">
           <br>
           <div class="default-form main-booking-form">
-            <form method="post" action="http://boatsride/contact.html">
+            <div>
               <h5>Price Details</h5>
               <br>
 
@@ -111,10 +110,14 @@
               <div class="info"><span class="icon flaticon-wall-clock"></span> Reservations: 24 / 7</div>
               <br>
               <div class="form-group">
-                <button type="submit" class="theme-btn"><span class="btn-title">Book Now</span></button>
+                <button type="button"
+                        (click)="openBooking()"
+                        class="theme-btn">
+                  <span class="btn-title">Book Now</span>
+                </button>
               </div>
 
-            </form>
+            </div>
             <div class="instruction">Do you need suggestion pls contact our expert team.</div>
           </div>
         </div>
