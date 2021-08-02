@@ -42,11 +42,11 @@
           <div class="info">
             <ul class="clearfix mb-0 lang-switch">
               <li (click)="switchLanguage('en')">
-                <img src="assets/images/download.png" class="english">English
+                <img src="assets/images/download.png" class="english">{{'en'|translate}}
               </li>
 
               <li (click)="switchLanguage('ar')">
-                <img src="assets/images/img3.png" class="arabic"> Arabic
+                <img src="assets/images/img3.png" class="arabic"> {{'ar'|translate}}
               </li>
             </ul>
           </div>
@@ -79,15 +79,15 @@
                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                   <ul class="navigation clearfix">
                     <li class="sub-menu"><a routerLink="">{{'home'|translate}}</a></li>
-                    <li class="sub-menu"><a routerLink="about">{{'about'|translate}}</a></li>
                     <li class="sub-menu"><a routerLink="yachts">{{'yachtRent'|translate}}</a></li>
                     <li class="sub-menu"><a routerLink="water-sports">{{'waterSport'|translate}}</a>
                     <li class="sub-menu"><a routerLink="fishing-trip">{{'finishingTrip'|translate}}</a></li>
                     <li class="sub-menu"><a routerLink="services">{{'service'|translate}}</a></li>
-                    <li class="sub-menu"><a routerLink="blogs">{{'blog'|translate}}</a></li>
-                    <li class="sub-menu"><a routerLink="destination">{{'destination'|translate}}</a></li>
                     <li><a routerLink="offers">{{'offer'|translate}}</a></li>
+                    <li class="sub-menu"><a routerLink="destination">{{'destination'|translate}}</a></li>
+                    <li class="sub-menu"><a routerLink="blogs">{{'blog'|translate}}</a></li>
                     <li><a routerLink="contact">{{'contact'|translate}}</a></li>
+                    <li class="sub-menu"><a routerLink="about">{{'about'|translate}}</a></li>
                   </ul>
                 </div>
               </nav>

@@ -1,7 +1,7 @@
-*, :after, :before {
-  box-sizing: border-box;
-  direction: rtl;
-}
+/**, :after, :before {*/
+/*  box-sizing: border-box;*/
+/*  direction: rtl;*/
+/*}*/
 
 .direction-left {
   direction: ltr !important;
@@ -253,3 +253,6 @@
   display: flex;
 }
 
+.yacht-details .specs-column .title-box{
+  display: flex;
+}

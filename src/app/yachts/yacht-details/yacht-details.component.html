@@ -78,19 +78,19 @@
             <h4>Majesty Ruby {{yacht.horse_Power}} FEET</h4>
           </div>
           <div class="features-list">
-            <ul class="list-features">
-              <li> <span class="icon-wrap"><img src="../../../assets/images/icons/long.png"></span> {{yacht.horse_Power}} Feet</li>
-              <li> <span class="icon-wrap"><img src="../../../assets/images/icons/people.png"></span> Max {{yacht.passenger_capacity}} people </li>
-              <li> <span class="icon-wrap"><img src="../../../assets/images/icons/bed.png"></span> Beds {{yacht.size}}</li>
-              <li *ngIf="yacht.safety_equipment==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/safety.png"></span> Safety Equipment</li>
-              <li *ngIf="yacht.soft_drinks_refreshments==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/drink.png"></span> Soft drinks &amp; Refreshments</li>
-              <li *ngIf="yacht.ice_tea_water==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/tea.png"></span> Ice tea/ Water</li>
-              <li *ngIf="yacht.DVD_player==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/dvd.png"></span> DVD Player</li>
-              <li *ngIf="yacht.spacious_saloon==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/Sofa.png"></span> Spacious Saloon</li>
-              <li *ngIf="yacht.BBQ_grill_equipment==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/BBQ.png"></span> BBQ Grill Equipment</li>
-              <li *ngIf="yacht.bathroom_amenities==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/shower.png"></span> Bathroom Amenities</li>
-              <li *ngIf="yacht.LED_screen_tv==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/TV.png"></span> LED Screen TV</li>
-              <li *ngIf="yacht.sunbathing_on_the_foredeck==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/Sun.png"></span> Sunbathing on the Foredeck</li>
+            <ul class="list-features row">
+              <li class="col-sm-12 col-md-6"> <span class="icon-wrap"><img src="../../../assets/images/icons/long.png"></span> {{yacht.horse_Power}} Feet</li>
+              <li class="col-sm-12 col-md-6"> <span class="icon-wrap"><img src="../../../assets/images/icons/people.png"></span> Max {{yacht.passenger_capacity}} people </li>
+              <li class=" col-sm-12 col-md-6"> <span class="icon-wrap"><img src="../../../assets/images/icons/bed.png"></span> Beds {{yacht.size}}</li>
+              <li class="col-sm-12 col-md-6" *ngIf="yacht.safety_equipment==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/safety.png"></span> Safety Equipment</li>
+              <li class= "col-sm-12 col-md-6" *ngIf="yacht.soft_drinks_refreshments==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/drink.png"></span> Soft drinks &amp; Refreshments</li>
+              <li class="col-sm-12 col-md-6" *ngIf="yacht.ice_tea_water==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/tea.png"></span> Ice tea/ Water</li>
+              <li class=" col-sm-12 col-md-6" *ngIf="yacht.DVD_player==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/dvd.png"></span> DVD Player</li>
+              <li class=" col-sm-12 col-md-6" *ngIf="yacht.spacious_saloon==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/Sofa.png"></span> Spacious Saloon</li>
+              <li class="col-sm-12 col-md-6" *ngIf="yacht.BBQ_grill_equipment==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/BBQ.png"></span> BBQ Grill Equipment</li>
+              <li  class="col-sm-12 col-md-6" *ngIf="yacht.bathroom_amenities==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/shower.png"></span> Bathroom Amenities</li>
+              <li class="col-sm-12 col-md-6" *ngIf="yacht.LED_screen_tv==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/TV.png"></span> LED Screen TV</li>
+              <li class="col-sm-12  col-md-6" *ngIf="yacht.sunbathing_on_the_foredeck==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/Sun.png"></span> Sunbathing on the Foredeck</li>
             </ul>
           </div>
         </div>
@@ -101,10 +101,20 @@
               <h5>Price Details</h5>
               <br>
 
-              <div class="estimate-table">
+              <div class="estimate-table" *ngIf="!yacht.yacht_special_price">
                 <ul>
                   <li class="totals clearfix"><span class="ttle">{{'price'|translate}}:</span> <span class="dtl">{{'ead'|translate}} {{yacht.selling_per_hour}} / {{'hour'|translate}}</span></li>
                 </ul>
+              </div>
+              <div class="price" style="padding-left: 0px!important;" *ngIf="yacht.yacht_special_price">
+                <div style="display: inline-block">
+                  <del class="price-old">AED {{yacht.selling_per_hour}}/hr</del>
+                </div>
+                <div style="display: inline-block; margin-left: 10px;" data-toggle="tooltip" data-html="true" title=""
+                     data-original-title="Summer Offer">
+                    <span class="blink" style="color: red;font-size: 15px;border-radius: 5px;font-weight: bolder;"><i
+                      class="fa fa-info-circle"></i> AED {{yacht.yacht_special_price}}</span>
+                </div>
               </div>
               <br>
               <div class="info"><span class="icon flaticon-wall-clock"></span> Reservations: 24 / 7</div>
@@ -282,7 +292,8 @@
             <div class="text"><span>E</span>stablished in 1984 power choiceand when nothing prevents being able like best management to foresee the pain and trouble that are bound to ensue  weakness of will, which is the same as saying through shrinking.</div>
             <div class="link-box">
               <a href="about.html" class="default-link">
-                <span class="icon flaticon-logout"></span> <span class="link-text">More About Us</span>
+                <span class="icon flaticon-logout"></span> <span class="link-text"><a class="link-text" style="color: black"
+                                                                                      [routerLink]="'/about'">More About Us</a></span>
               </a>
             </div>
           </div>

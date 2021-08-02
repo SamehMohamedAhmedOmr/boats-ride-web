@@ -115,7 +115,7 @@
                 <div class="default-form main-booking-form">
                   <h5>{{'price'|translate}}</h5>
 
-                  <div class="estimate-table">
+                  <div class="estimate-table" *ngIf="!watersport.special_price">
                     <ul>
                       <li class="totals clearfix">
                         <span class="ttle">{{'price'|translate}}:</span>
@@ -125,7 +125,16 @@
                       </li>
                     </ul>
                   </div>
-
+                  <div class="price" style="padding-left: 0px!important;" *ngIf="watersport.special_price">
+                    <div style="display: inline-block">
+                      <del class="price-old">AED {{watersport?.selling_per_hour}}/hr</del>
+                    </div>
+                    <div style="display: inline-block; margin-left: 10px;" data-toggle="tooltip" data-html="true" title=""
+                         data-original-title="Summer Offer">
+                    <span class="blink" style="color: red;font-size: 15px;border-radius: 5px;font-weight: bolder;"><i
+                      class="fa fa-info-circle"></i> AED {{watersport.special_price}}</span>
+                    </div>
+                  </div>
                   <br>
                   <div class="info displaying">
                     <span class="icon flaticon-wall-clock pad_info"></span>{{'reservation'|translate}}: 24 / 7

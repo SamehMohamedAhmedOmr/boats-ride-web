@@ -20,11 +20,6 @@
       <li class="sub-menu">
         <a (click)="toggleNavOnClick()" [routerLink]="''">{{'home'|translate}}</a>
       </li>
-
-      <li class="sub-menu">
-        <a (click)="toggleNavOnClick()" [routerLink]="'/about'">{{'about'|translate}}</a>
-      </li>
-
       <li class="sub-menu">
         <a (click)="toggleNavOnClick()" [routerLink]="'/yachts'">{{'yachtRent'|translate}}</a>
       </li>
@@ -38,6 +33,14 @@
       </li>
 
       <li class="sub-menu">
+        <a (click)="toggleNavOnClick()" [routerLink]="'/services'">{{'service'|translate}}</a>
+      </li>
+
+      <li class="sub-menu">
+        <a (click)="toggleNavOnClick()" [routerLink]="'/offers'">{{'offer'|translate}}</a>
+      </li>
+
+      <li class="sub-menu">
         <a (click)="toggleNavOnClick()" [routerLink]="'/destination'">{{'destination'|translate}}</a>
       </li>
 
@@ -46,16 +49,13 @@
       </li>
 
       <li class="sub-menu">
-        <a (click)="toggleNavOnClick()" [routerLink]="'/offers'">{{'offer'|translate}}</a>
-      </li>
-
-      <li class="sub-menu">
-        <a (click)="toggleNavOnClick()" [routerLink]="'/services'">{{'service'|translate}}</a>
-      </li>
-
-      <li class="sub-menu">
         <a (click)="toggleNavOnClick()" [routerLink]="'/contact'">{{'contact'|translate}}</a>
       </li>
+
+      <li class="sub-menu">
+        <a (click)="toggleNavOnClick()" [routerLink]="'/about'">{{'about'|translate}}</a>
+      </li>
+
 
     </ul>
     <div class="header-upper d-md-block d-none">
