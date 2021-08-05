@@ -10,7 +10,7 @@ import {Yacht} from '../../Models/yacht';
 })
 export class YachtRentalComponent implements OnInit {
   public yachts: Yacht [] = [];
-
+  lang = localStorage.getItem('lang');
   constructor(private resizeServiceService: ResizeServiceService, private yachtService: YachtService, private cdr: ChangeDetectorRef) {
   }
 

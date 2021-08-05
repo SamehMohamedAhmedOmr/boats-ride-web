@@ -98,7 +98,7 @@
           <br>
           <div class="default-form main-booking-form">
             <div>
-              <h5>Price Details</h5>
+              <h5>{{'price'|translate}}</h5>
               <br>
 
               <div class="estimate-table" *ngIf="!yacht.yacht_special_price">
@@ -107,17 +107,17 @@
                 </ul>
               </div>
               <div class="price" style="padding-left: 0px!important;" *ngIf="yacht.yacht_special_price">
-                <div style="display: inline-block">
-                  <del class="price-old">AED {{yacht.selling_per_hour}}/hr</del>
+                <div style="display: inline-block;padding-left: 5px">
+                  <del class="price-old">{{'ead'|translate}} {{yacht.selling_per_hour}}/{{'hour'|translate}}</del>
                 </div>
                 <div style="display: inline-block; margin-left: 10px;" data-toggle="tooltip" data-html="true" title=""
                      data-original-title="Summer Offer">
                     <span class="blink" style="color: red;font-size: 15px;border-radius: 5px;font-weight: bolder;"><i
-                      class="fa fa-info-circle"></i> AED {{yacht.yacht_special_price}}</span>
+                      class="fa fa-info-circle"></i> {{'ead'|translate}} {{yacht.yacht_special_price}}</span>
                 </div>
               </div>
               <br>
-              <div class="info"><span class="icon flaticon-wall-clock"></span> Reservations: 24 / 7</div>
+              <div class="info"><span class="icon flaticon-wall-clock"></span> {{'reservationr'|translate}}</div>
               <br>
               <div class="form-group">
                 <button type="button"
@@ -130,7 +130,7 @@
               </div>
 
             </div>
-            <div class="instruction">Do you need suggestion pls contact our expert team.</div>
+<!--            <div class="instruction">Do you need suggestion pls contact our expert team.</div>-->
           </div>
         </div>
       </div>
@@ -204,61 +204,61 @@
 
 </section>
 
-<!--Similar-->
-<section class="similar-yachts">
-  <div class="auto-container">
-    <div class="upper-title">
-      <h4>Similar Yachts</h4>
-    </div>
-    <div class="row clearfix">
-      <!--Rental Block-->
-      <div class="rental-block col-lg-4 col-md-6 col-sm-12">
-        <div class="inner-box">
-          <div class="image-box">
+<!--&lt;!&ndash;Similar&ndash;&gt;-->
+<!--<section class="similar-yachts">-->
+<!--  <div class="auto-container">-->
+<!--    <div class="upper-title">-->
+<!--      <h4>Similar Yachts</h4>-->
+<!--    </div>-->
+<!--    <div class="row clearfix">-->
+<!--      &lt;!&ndash;Rental Block&ndash;&gt;-->
+<!--      <div class="rental-block col-lg-4 col-md-6 col-sm-12">-->
+<!--        <div class="inner-box">-->
+<!--          <div class="image-box">-->
 
-            <figure class="image">
+<!--            <figure class="image">-->
 
-              <a href="majesty-yachr-48-feet.html">
-                <div class="offer-info"><span>48 FT</span></div>
+<!--              <a href="majesty-yachr-48-feet.html">-->
+<!--                <div class="offer-info"><span>48 FT</span></div>-->
 
-                <img src="../../../assets/images/resource/6.jpg" alt="" title=""></a>
-            </figure>
-            <div class="price-box">
-              <div class="price"> 600 AED </div>
-              <div class="cycle">PAR / H</div>
+<!--                <img src="../../../assets/images/resource/6.jpg" alt="" title=""></a>-->
+<!--            </figure>-->
+<!--            <div class="price-box">-->
+<!--              <div class="price"> 600 AED </div>-->
+<!--              <div class="cycle">PAR / H</div>-->
 
 
-            </div>
+<!--            </div>-->
 
-          </div>
-          <div class="title-box">
-            <div class="more-link-box">
-              <a href="majesty-yachr-48-feet.html" class="theme-btn">View Details</a>
-            </div>
-            <h4><a href="majesty-yachr-48-feet.html">Majesty Yacht</a></h4>
-          </div>
-          <div class="price">
-            <div style="display: inline-block"><small>From</small>  <del class="price-old">AED 799/hr</del></div>
-            <div style="display: inline-block; margin-left: 10px;" data-toggle="tooltip" data-html="true" title="" data-original-title="Summer Offer">
-              <span class="blink" style="color: red;font-size: 15px;border-radius: 5px;font-weight: bolder;"><i class="fa fa-info-circle"></i> AED 600</span>
-            </div>
-            <small class="label label-warning pull-right" style="color: #fff;">VAT INCLUDE</small>
-          </div>
-          <div class="meta-info">
-            <ul class="clearfix" style="margin-bottom: unset!important;">
-              <li><a href="#"><img src="../../../assets/images/icons/captain.png" style="width: unset!important;" > Captain: 01</a></li>
-              <li><a href="#"><img src="../../../assets/images/icons/crew.png" style="width: unset!important;">Crew : 01</a></li>
-            </ul>
-            <ul class="clearfix">
-              <li><a href="#"><img src="../../../assets/images/icons/users.png" style="width: unset!important;"> Peaple : 12</a></li>
-              <li><a href="#"><img src="../../../assets/images/icons/beds.png" style="width: unset!important;"> Beds : 02</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-</section>
+<!--          </div>-->
+<!--          <div class="title-box">-->
+<!--            <div class="more-link-box">-->
+<!--              <a href="majesty-yachr-48-feet.html" class="theme-btn">View Details</a>-->
+<!--            </div>-->
+<!--            <h4><a href="majesty-yachr-48-feet.html">Majesty Yacht</a></h4>-->
+<!--          </div>-->
+<!--          <div class="price">-->
+<!--            <div style="display: inline-block"><small>From</small>  <del class="price-old">AED 799/hr</del></div>-->
+<!--            <div style="display: inline-block; margin-left: 10px;" data-toggle="tooltip" data-html="true" title="" data-original-title="Summer Offer">-->
+<!--              <span class="blink" style="color: red;font-size: 15px;border-radius: 5px;font-weight: bolder;"><i class="fa fa-info-circle"></i> AED 600</span>-->
+<!--            </div>-->
+<!--            <small class="label label-warning pull-right" style="color: #fff;">VAT INCLUDE</small>-->
+<!--          </div>-->
+<!--          <div class="meta-info">-->
+<!--            <ul class="clearfix" style="margin-bottom: unset!important;">-->
+<!--              <li><a href="#"><img src="../../../assets/images/icons/captain.png" style="width: unset!important;" > Captain: 01</a></li>-->
+<!--              <li><a href="#"><img src="../../../assets/images/icons/crew.png" style="width: unset!important;">Crew : 01</a></li>-->
+<!--            </ul>-->
+<!--            <ul class="clearfix">-->
+<!--              <li><a href="#"><img src="../../../assets/images/icons/users.png" style="width: unset!important;"> Peaple : 12</a></li>-->
+<!--              <li><a href="#"><img src="../../../assets/images/icons/beds.png" style="width: unset!important;"> Beds : 02</a></li>-->
+<!--            </ul>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--</section>-->
 
 
 <!--About Section-->
@@ -274,8 +274,8 @@
             </div>
             <div class="content">
               <div class="sec-title">
-                <div class="upper-text">Welcome to</div>
-                <h3>Boats Ride! <br>Best Water Sports Agency in Dubai.</h3>
+                <div class="upper-text">{{'welcometo'|translate}}</div>
+                <h3>{{'boatride'|translate}}! <br>{{'agency'|translate}}</h3>
               </div>
               <div class="video-link">
                 <div class="video-thumb">
@@ -283,17 +283,18 @@
                   <a href="https://www.youtube.com/watch?v=UHWwQtNqtmk" class="overlink lightbox-image"><span class="icon flaticon-media-play-symbol"></span></a>
                 </div>
                 <div class="video-title">
-                  <a href="https://www.youtube.com/watch?v=UHWwQtNqtmk" class="lightbox-image">Watch <br>Our Intro Video!</a>
+                  <a href="https://www.youtube.com/watch?v=UHWwQtNqtmk" class="lightbox-image">{{'watchintro'|translate}}</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="lower-content">
-            <div class="text"><span>E</span>stablished in 1984 power choiceand when nothing prevents being able like best management to foresee the pain and trouble that are bound to ensue  weakness of will, which is the same as saying through shrinking.</div>
+            <div *ngIf="lang == 'en'" class="text"><span>E</span>stablished in 1984 power choiceand when nothing prevents being able like best management to foresee the pain and trouble that are bound to ensue  weakness of will, which is the same as saying through shrinking.</div>
+            <div *ngIf="lang == 'ar'"  class="text">تأسس عام 1984 لاختيار السلطة وعندما لا شيء يمنع أن تكون قادرًا مثل أفضل إدارة على التنبؤ بالألم والمتاعب التي لا بد أن تؤدي إلى ضعف الإرادة ، وهو نفس القول من خلال الانكماش.</div>
             <div class="link-box">
               <a href="about.html" class="default-link">
                 <span class="icon flaticon-logout"></span> <span class="link-text"><a class="link-text" style="color: black"
-                                                                                      [routerLink]="'/about'">More About Us</a></span>
+                                                                                      [routerLink]="'/about'">{{'about'|translate}}</a></span>
               </a>
             </div>
           </div>
@@ -305,31 +306,31 @@
         <div class="inner">
           <br><br><br><br><br>
           <div class="book-form-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-            <div class="title"><h4>Book For Activities</h4></div>
+            <div class="title"><h4>{{'booknow'|translate}}</h4></div>
             <div class="default-form booking-form">
               <form method="post" action="http://st.ourhtmldemo.com/new/sailing-demo/contact.html">
                 <div class="row clearfix">
                   <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                    <div class="field-label">Your Name</div>
+                    <div class="field-label">{{'yourname'|translate}}</div>
                     <div class="field-inner">
                       <input type="text" name="field-name" placeholder="" required="" value="">
                     </div>
                   </div>
 
                   <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                    <div class="field-label">Phone Number</div>
+                    <div class="field-label">{{'phone'|translate}}</div>
                     <div class="field-inner">
                       <input type="text" name="field-name" placeholder="" required="" value="">
                     </div>
                   </div>
                   <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                    <div class="field-label">Date</div>
+                    <div class="field-label">{{'date'|translate}}</div>
                     <div class="field-inner">
                       <input class="datepicker" type="text" name="text" placeholder="" autocomplete="off" required>
                     </div>
                   </div>
                   <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                    <div class="field-label">No.of Person</div>
+                    <div class="field-label">{{'noofpersons'|translate}}</div>
                     <div class="field-inner">
                       <div class="quantity-spinner">
                         <div class="inner-box clearfix">
@@ -342,7 +343,7 @@
                   </div>
 
                   <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                    <div class="field-label">Activity</div>
+                    <div class="field-label">{{'activity'|translate}}</div>
                     <div class="field-inner">
                       <select class="custom-select-box" name="field-name">
                         <option>Yacht Rent</option>
@@ -353,7 +354,7 @@
                   </div>
 
                   <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                    <button type="submit" class="theme-btn btn-style-three"><span class="btn-title">Start Booking</span></button>
+                    <button type="submit" class="theme-btn btn-style-three"><span class="btn-title">{{'booknow'|translate}}</span></button>
                   </div>
                 </div>
               </form>

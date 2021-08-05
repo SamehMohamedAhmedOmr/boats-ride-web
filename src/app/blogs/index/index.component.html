@@ -5,11 +5,11 @@
   <div class="banner-inner">
     <div class="auto-container">
       <div class="inner-container clearfix">
-        <h1 class="inner-banner-height-title">Blogs</h1>
+        <h1 class="inner-banner-height-title">{{'blog'|translate}}</h1>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
-            <li><a routerLink="/">Home</a></li>
-            <li>Blog</li>
+            <li><a routerLink="/">{{'home'|translate}}</a></li>
+            <li>{{'blog'|translate}}</li>
           </ul>
         </div>
       </div>
@@ -45,10 +45,10 @@
                 <div class="content">
                   <div class="meta-info">
                     <ul class="clearfix">
-                      <li>
-                        <span class="icon fa fa-folder-open"></span>
-                        <a>Boats Ride</a>
-                      </li>
+<!--                      <li>-->
+<!--                        <span class="icon fa fa-folder-open"></span>-->
+<!--                        <a>Boats Ride</a>-->
+<!--                      </li>-->
                       <li>
                         <span class="icon fa fa-user"></span>
                         <a>By {{blog.author}}</a>
@@ -62,13 +62,13 @@
                   <div class="link-box">
                     <a routerLink="/blogs/{{blog.slug}}">
                       <span class="icon flaticon-logout"></span>
-                      <span class="link-text">Continue Reading</span>
+                      <span class="link-text">{{'continueread'|translate}}</span>
                     </a>
                   </div>
 
                 </div>
                 <div class="other-info">
-                  <div class="post-date"><span class="day">10</span><span class="month">Nov</span></div>
+<!--                  <div class="post-date"><span class="day">10</span><span class="month">Nov</span></div>-->
                   <div class="add-to-fav">
                     <a href="#"><span class="icon flaticon-heart"></span></a>
                   </div>

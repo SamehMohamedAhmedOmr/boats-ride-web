@@ -5,6 +5,7 @@ export interface Offer {
   valid_date:string,
   is_active:boolean,
   image:string,
+  slug:string,
   seo: {
     title:string,
     description:string,

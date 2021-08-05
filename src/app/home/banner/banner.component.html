@@ -8,7 +8,7 @@
   <ng-template ngbSlide *ngFor="let image of images">
     <div style="position: relative">
       <div class="picsum-img-wrapper">
-        <img [src]="image" alt="Random slide" width="100%" style="height: 600px!important;">
+        <img [src]="image.url" alt="Random slide" width="100%" style="height: 600px!important;">
       </div>
       <div class="content-box">
         <div class="overlay2">
@@ -16,15 +16,16 @@
           <div class="content clearfix">
             <div class="inner">
 
-              <p class="headerText slide-up" style="color: white">Sailing Tour</p>
-              <p class="headerText" style="color: white;animation: slide-down 4s;">in Dubai</p>
-              <div class="text" style="font-size: 16px;color: white;padding-bottom: 10px;">
-                Let us make your holyday unforgettable and super relaxing with our 5-stars sailing tours and
-                well-prepared Yachts.
-              </div>
+              <p *ngIf="lang == 'en'" class="headerText slide-up" style="color: white">{{image.titleEn}}</p>
+              <p *ngIf="lang == 'ar'" class="headerText slide-up" style="color: white">{{image.titleAr}}</p>
+<!--              <p class="headerText" style="color: white;animation: slide-down 4s;">in Dubai</p>-->
+<!--              <div class="text" style="font-size: 16px;color: white;padding-bottom: 10px;">-->
+<!--                Let us make your holyday unforgettable and super relaxing with our 5-stars sailing tours and-->
+<!--                well-prepared Yachts.-->
+<!--              </div>-->
               <div class="links-box clearfix">
-                <a routerLink="/yachts" class="theme-btn btn-style-two">
-                  <div class="btn-title">Book Now</div>
+                <a routerLink="{{image.navigate}}" class="theme-btn btn-style-two">
+                  <div class="btn-title">{{'booknow'|translate}}</div>
                 </a>
               </div>
             </div>

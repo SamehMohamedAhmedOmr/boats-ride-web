@@ -23,7 +23,7 @@ export class YachtDetailsComponent implements OnInit {
   yachts_list!:Yacht[];
   showNavigationArrows = true;
   showNavigationIndicators = false;
-
+  lang = localStorage.getItem('lang');
   constructor(config: NgbCarouselConfig,
               private route: ActivatedRoute,
               private yachtServie: YachtService,

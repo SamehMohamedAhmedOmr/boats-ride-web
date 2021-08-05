@@ -35,8 +35,8 @@
 <div class="info-pop">
   <div class="auto-container">
     <div class="inner">
-      <div class="text">Our tour bookings are filling fastly, Book Your’s Now</div>
-      <div class="close-btn"><span class="flaticon-letter-x"></span></div>
+      <div class="text">{{'outtour'|translate}}</div>
+<!--      <div class="close-btn"><span class="flaticon-letter-x"></span></div>-->
     </div>
   </div>
 </div>
@@ -126,13 +126,13 @@
                     </ul>
                   </div>
                   <div class="price" style="padding-left: 0px!important;" *ngIf="watersport.special_price">
-                    <div style="display: inline-block">
-                      <del class="price-old">AED {{watersport?.selling_per_hour}}/hr</del>
+                    <div style="display: inline-block;padding-left: 5px">
+                      <del class="price-old">{{'ead'|translate}} {{watersport?.selling_per_hour}}/{{'hour'|translate}}</del>
                     </div>
                     <div style="display: inline-block; margin-left: 10px;" data-toggle="tooltip" data-html="true" title=""
                          data-original-title="Summer Offer">
                     <span class="blink" style="color: red;font-size: 15px;border-radius: 5px;font-weight: bolder;"><i
-                      class="fa fa-info-circle"></i> AED {{watersport.special_price}}</span>
+                      class="fa fa-info-circle"></i> {{'ead'|translate}} {{watersport.special_price}}</span>
                     </div>
                   </div>
                   <br>
@@ -148,7 +148,7 @@
                     </button>
                   </div>
 
-                  <div class="instruction">Do you need suggestion pls contact our expert team.</div>
+<!--                  <div class="instruction">Do you need suggestion pls contact our expert team.</div>-->
                 </div>
               </div>
 

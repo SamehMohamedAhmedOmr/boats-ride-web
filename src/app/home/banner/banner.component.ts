@@ -6,11 +6,18 @@ import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./banner.component.css']
 })
 export class BannerComponent implements OnInit {
-
+  lang = localStorage.getItem('lang');
   showNavigationArrows = true;
   showNavigationIndicators = false;
-  images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/500`);
-
+  // images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  images = [
+    {url:"assets/Banners/fishing-01.jpg",titleEn:"Fishing Trip",navigate:'/fishing-trip',titleAr:"رحلات صيد السمك"},
+    {url:"assets/Banners/services-01-01.jpg",titleEn:"Services",navigate:'/services',titleAr:"الخدمات"},
+    {url:"assets/Banners/watersports-01.jpg",titleEn:"Water Sports",navigate:'/water-sports',titleAr:"العاب الماء"},
+    {url:"assets/Banners/watersports-01-01.jpg",titleEn:"Offers",navigate:'/offers',titleAr:"عروض"},
+    {url:"assets/Banners/yacht.jpg",titleEn:"Yacht Rental",navigate:'/yachts',titleAr:"تأجير اليخوت"},
+    {url:"assets/Banners/services-01.jpg",titleEn:"Destination",navigate:'/destination',titleAr:"وجهة"}
+  ];
   constructor(config: NgbCarouselConfig) {
     // customize default values of carousels used by this component tree
     config.showNavigationArrows = true;

@@ -65,25 +65,25 @@
                   <img class="object-fit-cover" src="{{yacht.images[0].image}}" alt="" title=""></a>
               </figure>
               <div class="price-box">
-                <div class="price"> {{yacht.services[0].price}} AED </div>
+                <div class="price"> {{yacht.services[0].price}} {{'ead'|translate}} </div>
                 <div class="cycle">PAR / H</div>
               </div>
 
             </div>
             <div class="title-box">
               <div class="more-link-box">
-                <a routerLink="/yachts/{{yacht.slug}}" class="theme-btn">View Details</a>
+                <a routerLink="/yachts/{{yacht.slug}}" class="theme-btn">{{'viewdetails'|translate}}</a>
               </div>
               <h4><a routerLink="/yachts/{{yacht.slug}}">{{yacht.name}}</a></h4>
             </div>
             <div class="meta-info">
               <ul class="clearfix" style="margin-bottom: unset!important;">
-                <li><a href="#"><img src="assets/images/icons/captain.png" style="width: unset!important;" > Captain: {{yacht.no_of_captain}}</a></li>
-                <li><a href="#"><img src="assets/images/icons/crew.png"  style="width: unset!important;">Crew: {{yacht.crew_members}}</a></li>
+                <li><a href="#"><img src="assets/images/icons/captain.png" style="width: unset!important;" > {{'captain'|translate}}: {{yacht.no_of_captain}}</a></li>
+                <li><a href="#"><img src="assets/images/icons/crew.png"  style="width: unset!important;">{{'crew'|translate}}: {{yacht.crew_members}}</a></li>
               </ul>
               <ul class="clearfix">
-                <li><a href="#"><img src="assets/images/icons/users.png" style="width: unset!important;"> People: {{yacht.passenger_capacity}}</a></li>
-                <li><a href="#"><img src="assets/images/icons/beds.png" style="width: unset!important;"> Beds: {{yacht.size}} </a></li>
+                <li><a href="#"><img src="assets/images/icons/users.png" style="width: unset!important;"> {{'people'|translate}}: {{yacht.passenger_capacity}}</a></li>
+                <li><a href="#"><img src="assets/images/icons/beds.png" style="width: unset!important;"> {{'beds'|translate}}: {{yacht.size}} </a></li>
               </ul>
             </div>
           </div>
