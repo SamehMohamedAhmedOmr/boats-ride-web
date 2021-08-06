@@ -1,26 +1,31 @@
 <div class="page-wrapper">
-
-
   <section class="comming-soon" style="background-image:url(./assets/images/background/image-15.jpg)">
     <div class="outer-container">
       <div class="content">
         <div class="content-inner">
           <div class="auto-container">
             <div class="logo-box">
-              <div class="logo"><a href="index.html" title="Sailing - Water Sports HTML Template"><img src="./assets/images/logo-two.png" alt="Sailing - Water Sports HTML Template" title="Sailing - Water Sports HTML Template"></a></div>
+              <div class="logo">
+                <a title="Sailing - Water Sports HTML Template">
+                  <img src="./assets/images/logo-two.png" alt="Sailing - Water Sports HTML Template"
+                       title="Sailing - Water Sports HTML Template">
+                </a>
+              </div>
             </div>
-            <h1>Coming Soon</h1>
+            <h1>
+              {{ 'coming_soon' | translate | titlecase }}
+            </h1>
             <div class="time-counter"><div class="time-countdown clearfix" data-countdown="2021/2/07"></div></div>
-            <div class="links-box clearfix">
+            <div class="links-box clearfix d-none">
               <a [routerLink]="'/contact'" class="theme-btn btn-style-two"><div class="btn-title">Contact Us</div></a>
               <a routerLink="" class="theme-btn btn-style-three"><div class="btn-title">Back to Home</div></a>
             </div>
             <div class="social-links">
               <ul class="clearfix">
-                <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                <li><a href="#"><span class="fab fa-youtube"></span></a></li>
-                <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                <li><a href=""><span class="fab fa-facebook-f"></span></a></li>
+                <li><a href=""><span class="fab fa-twitter"></span></a></li>
+                <li><a href=""><span class="fab fa-youtube"></span></a></li>
+                <li><a href=""><span class="fab fa-instagram"></span></a></li>
               </ul>
             </div>
           </div>

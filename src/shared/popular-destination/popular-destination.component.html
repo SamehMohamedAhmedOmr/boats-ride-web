@@ -8,7 +8,7 @@
       <h2><strong>{{'addService'|translate}}</strong></h2>
     </div>
 
-    <div class="item" *ngIf="!Services.length">
+    <div class="item" *ngIf="is_loading">
       <ngx-skeleton-loader count="3" appearance="circle" class="d-flex justify-content-between" [theme]="{
             height: '300px',
             width: '33%',

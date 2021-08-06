@@ -10,6 +10,7 @@ import {BlogsService} from '../../../core/services/blogs.service';
 export class IndexComponent implements OnInit {
 
   public blogs: Blogs [] = [];
+  is_loading:boolean = true;
 
   constructor(private blogsService: BlogsService, private cdr: ChangeDetectorRef) {
   }
@@ -21,6 +22,7 @@ export class IndexComponent implements OnInit {
   getBlogs() {
     this.blogsService.getBlogs().subscribe(data => {
       this.blogs = data;
+      this.is_loading = false;
       this.cdr.markForCheck();
     });
   }

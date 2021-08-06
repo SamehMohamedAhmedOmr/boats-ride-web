@@ -22,7 +22,7 @@
 <section class="news-section-three">
   <div class="auto-container">
     <div class="news-list">
-      <div class="item" *ngIf="!blogs.length">
+      <div class="item" *ngIf="is_loading">
         <ngx-skeleton-loader count="2" appearance="circle" class="d-flex justify-content-between" [theme]="{
             height: '700px',
             width: '100%',

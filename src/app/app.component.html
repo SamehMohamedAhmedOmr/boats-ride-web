@@ -64,7 +64,11 @@
 
 </head>
 <ngx-ui-loader></ngx-ui-loader>
-<mat-drawer-container class="example-container" [hasBackdrop]="false">
+
+<mat-drawer-container class="example-container"
+                      *ngIf="settings?.enable_coming_soon"
+                      [hasBackdrop]="false">
+
   <mat-drawer #drawer [mode]="'over'"  [position]="'end'">
     <section>
       <!-- Hidden Bar Wrapper -->
@@ -138,4 +142,8 @@
     <router-outlet></router-outlet>
     <app-footer></app-footer>
   </mat-drawer-content>
+
 </mat-drawer-container>
+
+
+<app-coming-soon *ngIf="!settings?.enable_coming_soon"></app-coming-soon>

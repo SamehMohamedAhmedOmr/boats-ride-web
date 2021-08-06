@@ -10,6 +10,8 @@ import {Services} from '../../Models/services';
 })
 export class PopularDestinationComponent implements OnInit {
 
+  is_loading:boolean = true;
+
   constructor(private resizeServiceService: ResizeServiceService,
               private services: ServicesService,
               private cdr: ChangeDetectorRef) {
@@ -33,6 +35,7 @@ export class PopularDestinationComponent implements OnInit {
   getServices() {
     this.services.getSevices().subscribe(data => {
       this.Services = data;
+      this.is_loading = false;
       this.cdr.markForCheck();
     });
   }
