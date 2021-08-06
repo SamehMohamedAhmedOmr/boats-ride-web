@@ -28,7 +28,8 @@
         <div class="contact-text">
           <span class="icon flaticon-assistance"></span>
           <span class="txt">{{'speak'|translate}} :
-            <a href="tel:+971524918686">+971 52 491 8686</a>
+            <a *ngIf="lang == 'en'" href="tel:+971524918686">+971 52 491 8686</a>
+             <a *ngIf="lang == 'ar'" href="tel:+971524918686">8686 491 52 971+</a>
             <span class="icon fa fa-clock" style="padding-left: 5px"></span>{{'weakdays'|translate}}: 09:00am to 03:00am  </span>
         </div>
       </div>
