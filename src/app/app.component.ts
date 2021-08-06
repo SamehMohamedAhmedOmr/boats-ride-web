@@ -4,6 +4,8 @@ import {ToggleHeaderService} from '../core/services/Helpers/toggle.header.servic
 import {LangChangeEvent, TranslateService} from '@ngx-translate/core';
 import {LocalStorage} from '../core/services/localStorage';
 import {LanguageService} from '../core/services/language-services.service';
+import {SettingsService} from "../core/services/settings.service";
+import {Settings} from "../Models/settings";
 
 @Component({
   selector: 'app-root',
@@ -12,7 +14,12 @@ import {LanguageService} from '../core/services/language-services.service';
 })
 export class AppComponent implements OnInit {
 
-  constructor(private ngxService: NgxUiLoaderService, private toggleHeader: ToggleHeaderService,
+  // @ts-ignore
+  settings:Settings;
+
+  constructor(private ngxService: NgxUiLoaderService,
+              private toggleHeader: ToggleHeaderService,
+              private settingsService:SettingsService,
               private translate: TranslateService,
               private cdr: ChangeDetectorRef,
               private localStorage: LocalStorage,
@@ -36,6 +43,7 @@ export class AppComponent implements OnInit {
   isHome: boolean = false;
 
   ngOnInit() {
+    this.settingSubscribe();
     this.getLanguage();
     this.langservice.loadStyle();
     this.subscribeHeader();
@@ -67,4 +75,12 @@ export class AppComponent implements OnInit {
   useLanguage(language: string) {
     this.translate.use(language);
   }
+
+
+  settingSubscribe(){
+    this.settingsService.get().subscribe(value => {
+      this.settings = value;
+    });
+  }
+
 }

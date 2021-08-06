@@ -15,8 +15,8 @@ export class SettingsService {
   constructor(private http: HttpClient) {
   }
 
-  get(): Observable<Settings[]> {
-    return this.http.get<Settings[]>(this.Url + 'settings')
-      .pipe(map((data: any) => data.body as Settings[]));
+  get(): Observable<Settings> {
+    return this.http.get<Settings>(this.Url + 'settings')
+      .pipe(map((data: any) => data.body as Settings));
   }
 }
