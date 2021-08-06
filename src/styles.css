@@ -1008,7 +1008,7 @@ img {
     height: 900px;
     z-index: 200;
     padding: 80px;
-    padding-top: 150px;
+    padding-top: 160px;
     width: 100%;
     top: 0%;
   }
@@ -1041,7 +1041,7 @@ img {
     height: 900px;
     z-index: 200;
     padding: 80px;
-    padding-top: 50px;
+    padding-top: 170px;
     width: 100%;
     top: 0%;
 
@@ -1063,7 +1063,7 @@ img {
     height: 900px;
     z-index: 200;
     padding: 80px;
-    padding-top: 230px;
+    padding-top: 250px;
     width: 100%;
     top: 0%;
 
@@ -19048,7 +19048,6 @@ img.lazy-image.loaded {
     overflow: hidden;
     min-height: 0;
     padding-bottom: 30px;
-    background: #d5ae82;
     margin-bottom: 50px;
   }
 
