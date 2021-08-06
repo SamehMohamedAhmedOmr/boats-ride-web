@@ -17,6 +17,7 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {ReactiveFormsModule} from "@angular/forms";
 import {SuccessBookingComponent} from './success-booking/success-booking.component';
 import {MatInputModule} from "@angular/material/input";
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import {MatInputModule} from "@angular/material/input";
     WaterSportBookingFormComponent,
     ContactFormComponent,
     SuccessBookingComponent,
+    ComingSoonComponent,
   ],
   imports: [
     CommonModule,
@@ -51,6 +53,7 @@ import {MatInputModule} from "@angular/material/input";
     YachtBookingFormComponent,
     WaterSportBookingFormComponent,
     ContactFormComponent,
+    ComingSoonComponent,
   ],
   entryComponents: [
     YachtBookingFormComponent,

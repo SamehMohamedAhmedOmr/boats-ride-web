@@ -16,7 +16,7 @@
       </figure>
       <div class="caption-box">
         <h2>{{yacht.name}}</h2>
-        <div class="info">{{yacht.horse_Power}} FEET</div>
+        <div class="info">{{yacht.horse_Power}} {{'feet'|translate}}</div>
       </div>
     </div>
     <div class="basic-info clearfix">
@@ -53,17 +53,17 @@
 
           </div>
           <div class="text-block mb-3">
-            <h4>What is include</h4>
+            <h4>{{'whatinclude'|translate}}</h4>
             <p [innerHTML]="yacht.what_is_included"></p>
           </div>
 
           <div class="text-block mb-3">
-            <h4>Facilities</h4>
+            <h4>{{'fac'|translate}}</h4>
             <p [innerHTML]="yacht.facilities"></p>
           </div>
 
           <div class="text-block mb-3">
-            <h4>What Expect</h4>
+            <h4>{{'whatexpect'|translate}}</h4>
             <p [innerHTML]="yacht.what_expect_description"></p>
           </div>
 
@@ -75,22 +75,22 @@
       <div class="specs-column col-xl-5 col-lg-6 col-md-12 cl-sm-12">
         <div class="inner">
           <div class="title-box clearfix">
-            <h4>Majesty Ruby {{yacht.horse_Power}} FEET</h4>
+            <h4>{{yacht.name}} {{yacht.horse_Power}} {{'feet'|translate}}</h4>
           </div>
           <div class="features-list">
             <ul class="list-features row">
-              <li class="col-sm-12 col-md-6"> <span class="icon-wrap"><img src="../../../assets/images/icons/long.png"></span> {{yacht.horse_Power}} Feet</li>
-              <li class="col-sm-12 col-md-6"> <span class="icon-wrap"><img src="../../../assets/images/icons/people.png"></span> Max {{yacht.passenger_capacity}} people </li>
-              <li class=" col-sm-12 col-md-6"> <span class="icon-wrap"><img src="../../../assets/images/icons/bed.png"></span> Beds {{yacht.size}}</li>
-              <li class="col-sm-12 col-md-6" *ngIf="yacht.safety_equipment==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/safety.png"></span> Safety Equipment</li>
-              <li class= "col-sm-12 col-md-6" *ngIf="yacht.soft_drinks_refreshments==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/drink.png"></span> Soft drinks &amp; Refreshments</li>
-              <li class="col-sm-12 col-md-6" *ngIf="yacht.ice_tea_water==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/tea.png"></span> Ice tea/ Water</li>
-              <li class=" col-sm-12 col-md-6" *ngIf="yacht.DVD_player==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/dvd.png"></span> DVD Player</li>
-              <li class=" col-sm-12 col-md-6" *ngIf="yacht.spacious_saloon==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/Sofa.png"></span> Spacious Saloon</li>
-              <li class="col-sm-12 col-md-6" *ngIf="yacht.BBQ_grill_equipment==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/BBQ.png"></span> BBQ Grill Equipment</li>
-              <li  class="col-sm-12 col-md-6" *ngIf="yacht.bathroom_amenities==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/shower.png"></span> Bathroom Amenities</li>
-              <li class="col-sm-12 col-md-6" *ngIf="yacht.LED_screen_tv==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/TV.png"></span> LED Screen TV</li>
-              <li class="col-sm-12  col-md-6" *ngIf="yacht.sunbathing_on_the_foredeck==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/Sun.png"></span> Sunbathing on the Foredeck</li>
+              <li class="col-sm-12 col-md-6"> <span class="icon-wrap"><img src="../../../assets/images/icons/long.png"></span> {{yacht.horse_Power}} {{'feet'|translate}}</li>
+              <li class="col-sm-12 col-md-6"> <span class="icon-wrap"><img src="../../../assets/images/icons/people.png"></span> {{'max'|translate}}: {{yacht.passenger_capacity}} {{'people'|translate}} </li>
+              <li class=" col-sm-12 col-md-6"> <span class="icon-wrap"><img src="../../../assets/images/icons/bed.png"></span> {{'beds'|translate}}: {{yacht.size}}</li>
+              <li class="col-sm-12 col-md-6" *ngIf="yacht.safety_equipment==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/safety.png"></span> {{'t43'|translate}}</li>
+              <li class= "col-sm-12 col-md-6" *ngIf="yacht.soft_drinks_refreshments==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/drink.png"></span> {{'t44'|translate}}</li>
+              <li class="col-sm-12 col-md-6" *ngIf="yacht.ice_tea_water==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/tea.png"></span> {{'t45'|translate}}</li>
+              <li class=" col-sm-12 col-md-6" *ngIf="yacht.DVD_player==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/dvd.png"></span> {{'t46'|translate}}</li>
+              <li class=" col-sm-12 col-md-6" *ngIf="yacht.spacious_saloon==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/Sofa.png"></span> {{'t47'|translate}}</li>
+              <li class="col-sm-12 col-md-6" *ngIf="yacht.BBQ_grill_equipment==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/BBQ.png"></span> {{'t48'|translate}}</li>
+              <li  class="col-sm-12 col-md-6" *ngIf="yacht.bathroom_amenities==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/shower.png"></span> {{'t49'|translate}}</li>
+              <li class="col-sm-12 col-md-6" *ngIf="yacht.LED_screen_tv==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/TV.png"></span> {{'t50'|translate}}</li>
+              <li class="col-sm-12  col-md-6" *ngIf="yacht.sunbathing_on_the_foredeck==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/Sun.png"></span> {{'t51'|translate}}</li>
             </ul>
           </div>
         </div>
@@ -266,7 +266,7 @@
   <div class="auto-container">
     <div class="row clearfix">
       <!--Left Column-->
-      <div class="left-col col-lg-7 col-md-12 col-sm-12">
+      <div class="left-col col-lg-12 col-md-12 col-sm-12">
         <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
           <div class="upper-row clearfix">
             <div class="image-box">
@@ -290,7 +290,7 @@
           </div>
           <div class="lower-content">
             <div *ngIf="lang == 'en'" class="text"><span>E</span>stablished in 1984 power choiceand when nothing prevents being able like best management to foresee the pain and trouble that are bound to ensue  weakness of will, which is the same as saying through shrinking.</div>
-            <div *ngIf="lang == 'ar'"  class="text">تأسس عام 1984 لاختيار السلطة وعندما لا شيء يمنع أن تكون قادرًا مثل أفضل إدارة على التنبؤ بالألم والمتاعب التي لا بد أن تؤدي إلى ضعف الإرادة ، وهو نفس القول من خلال الانكماش.</div>
+            <div *ngIf="lang == 'ar'" style="margin-bottom: 5px">تأسس عام 1984 لاختيار السلطة وعندما لا شيء يمنع أن تكون قادرًا مثل أفضل إدارة على التنبؤ بالألم والمتاعب التي لا بد أن تؤدي إلى ضعف الإرادة ، وهو نفس القول من خلال الانكماش.</div>
             <div class="link-box">
               <a href="about.html" class="default-link">
                 <span class="icon flaticon-logout"></span> <span class="link-text"><a class="link-text" style="color: black"
@@ -302,66 +302,66 @@
       </div>
       <br><br><br><br>
       <!--Right Column-->
-      <div class="right-col col-lg-5 col-md-12 col-sm-12">
-        <div class="inner">
-          <br><br><br><br><br>
-          <div class="book-form-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-            <div class="title"><h4>{{'booknow'|translate}}</h4></div>
-            <div class="default-form booking-form">
-              <form method="post" action="http://st.ourhtmldemo.com/new/sailing-demo/contact.html">
-                <div class="row clearfix">
-                  <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                    <div class="field-label">{{'yourname'|translate}}</div>
-                    <div class="field-inner">
-                      <input type="text" name="field-name" placeholder="" required="" value="">
-                    </div>
-                  </div>
+<!--      <div class="right-col col-lg-5 col-md-12 col-sm-12">-->
+<!--        <div class="inner">-->
+<!--          <br><br><br><br><br>-->
+<!--          <div class="book-form-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">-->
+<!--            <div class="title"><h4>{{'booknow'|translate}}</h4></div>-->
+<!--            <div class="default-form booking-form">-->
+<!--              <form method="post" action="http://st.ourhtmldemo.com/new/sailing-demo/contact.html">-->
+<!--                <div class="row clearfix">-->
+<!--                  <div class="form-group col-lg-12 col-md-12 col-sm-12">-->
+<!--                    <div class="field-label">{{'yourname'|translate}}</div>-->
+<!--                    <div class="field-inner">-->
+<!--                      <input type="text" name="field-name" placeholder="" required="" value="">-->
+<!--                    </div>-->
+<!--                  </div>-->
 
-                  <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                    <div class="field-label">{{'phone'|translate}}</div>
-                    <div class="field-inner">
-                      <input type="text" name="field-name" placeholder="" required="" value="">
-                    </div>
-                  </div>
-                  <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                    <div class="field-label">{{'date'|translate}}</div>
-                    <div class="field-inner">
-                      <input class="datepicker" type="text" name="text" placeholder="" autocomplete="off" required>
-                    </div>
-                  </div>
-                  <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                    <div class="field-label">{{'noofpersons'|translate}}</div>
-                    <div class="field-inner">
-                      <div class="quantity-spinner">
-                        <div class="inner-box clearfix">
-                          <button type="button" class="minus">-</button>
-                          <input type="text" name="product" value="1" class="prod_qty">
-                          <button type="button" class="plus">+</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+<!--                  <div class="form-group col-lg-12 col-md-12 col-sm-12">-->
+<!--                    <div class="field-label">{{'phone'|translate}}</div>-->
+<!--                    <div class="field-inner">-->
+<!--                      <input type="text" name="field-name" placeholder="" required="" value="">-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="form-group col-lg-6 col-md-6 col-sm-12">-->
+<!--                    <div class="field-label">{{'date'|translate}}</div>-->
+<!--                    <div class="field-inner">-->
+<!--                      <input class="datepicker" type="text" name="text" placeholder="" autocomplete="off" required>-->
+<!--                    </div>-->
+<!--                  </div>-->
+<!--                  <div class="form-group col-lg-6 col-md-6 col-sm-12">-->
+<!--                    <div class="field-label">{{'noofpersons'|translate}}</div>-->
+<!--                    <div class="field-inner">-->
+<!--                      <div class="quantity-spinner">-->
+<!--                        <div class="inner-box clearfix">-->
+<!--                          <button type="button" class="minus">-</button>-->
+<!--                          <input type="text" name="product" value="1" class="prod_qty">-->
+<!--                          <button type="button" class="plus">+</button>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </div>-->
 
-                  <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                    <div class="field-label">{{'activity'|translate}}</div>
-                    <div class="field-inner">
-                      <select class="custom-select-box" name="field-name">
-                        <option>Yacht Rent</option>
-                        <option>Water Sport</option>
-                        <option>Fishing Trip</option>
-                      </select>
-                    </div>
-                  </div>
+<!--                  <div class="form-group col-lg-12 col-md-12 col-sm-12">-->
+<!--                    <div class="field-label">{{'activity'|translate}}</div>-->
+<!--                    <div class="field-inner">-->
+<!--                      <select class="custom-select-box" name="field-name">-->
+<!--                        <option>Yacht Rent</option>-->
+<!--                        <option>Water Sport</option>-->
+<!--                        <option>Fishing Trip</option>-->
+<!--                      </select>-->
+<!--                    </div>-->
+<!--                  </div>-->
 
-                  <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                    <button type="submit" class="theme-btn btn-style-three"><span class="btn-title">{{'booknow'|translate}}</span></button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+<!--                  <div class="form-group col-lg-12 col-md-12 col-sm-12">-->
+<!--                    <button type="submit" class="theme-btn btn-style-three"><span class="btn-title">{{'booknow'|translate}}</span></button>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </form>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
 
     </div>
   </div>
