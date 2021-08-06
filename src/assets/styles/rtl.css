@@ -256,3 +256,9 @@
 .yacht-details .specs-column .title-box{
   display: flex;
 }
+.mat-dialog-content{
+  direction: rtl;
+}
+.modal-header{
+  direction: rtl;
+}
