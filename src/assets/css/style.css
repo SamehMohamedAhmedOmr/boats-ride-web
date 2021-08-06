@@ -283,7 +283,7 @@ figure{
 	-webkit-transition:all 0.3s ease;
 	-ms-transition:all 0.3s ease;
 	-o-transition:all 0.3s ease;
-	margin-left: 20px;
+	/*margin-left: 20px;*/
 }
 
 .btn-style-one:hover .btn-title{

@@ -7,8 +7,8 @@
         <h1  class="inner-banner-height-title">{{service.name}}</h1>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
-            <li><a href="../../../index.html">Home</a></li>
-            <li><a href="yacht-rent.html">Yacht</a></li>
+            <li><a href="../../../index.html">{{'home'|translate}}</a></li>
+            <li><a href="yacht-rent.html">{{'yachts'|translate}}</a></li>
             <li>{{service.name}}</li>
           </ul>
         </div>
@@ -20,8 +20,8 @@
 <div class="info-pop">
   <div class="auto-container">
     <div class="inner">
-      <div class="text">Our tour bookings are filling fastly, Book Your’s Now</div>
-      <div class="close-btn"><span class="flaticon-letter-x"></span></div>
+      <div class="text">{{'outtour'|translate}}</div>
+<!--      <div class="close-btn"><span class="flaticon-letter-x"></span></div>-->
     </div>
   </div>
 </div>
@@ -100,29 +100,28 @@
                 <br>
                 <div class="default-form main-booking-form">
                   <div >
-                    <h5>Price Details</h5>
+                    <h5>{{'price'|translate}}</h5>
                     <br>
 
                     <div class="estimate-table">
                       <ul>
                         <li class="totals clearfix">
-                          <span class="ttle">Price:</span> <span class="dtl">AED {{service?.price}} / Hour</span>
+                          <span class="ttle">{{'price'|translate}}:</span> <span class="dtl">{{'ead'|translate}} {{service?.price}} / {{'hour'|translate}}</span>
                         </li>
                       </ul>
                     </div>
                     <br>
-                    <div class="info"><span class="icon flaticon-wall-clock"></span> Reservations: 24 / 7</div>
+                    <div class="info"><span class="icon flaticon-wall-clock"></span> {{'reservation'|translate}}: 24 / 7</div>
                     <br>
                     <div class="form-group">
                       <button type="button"
                               routerLink="/yachts"
                               class="theme-btn">
-                        <span class="btn-title">Book Now</span>
+                        <span class="btn-title">{{'booknow'|translate}}</span>
                       </button>
                     </div>
 
                   </div>
-                  <div class="instruction">Do you need suggestion pls contact our expert team.</div>
                 </div>
               </div>
 
