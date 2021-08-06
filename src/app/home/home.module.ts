@@ -17,6 +17,10 @@ import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 import {IvyCarouselModule} from 'angular-responsive-carousel';
 import {ThemeModule} from '../theme/theme.module';
 import {TranslateModule} from '@ngx-translate/core';
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatInputModule} from "@angular/material/input";
 
 
 @NgModule({
@@ -33,15 +37,19 @@ import {TranslateModule} from '@ngx-translate/core';
     NewsComponent,
     FishingSectionComponent
   ],
-    imports: [
-        CommonModule,
-        HomeRoutingModule,
-        SharedModule,
-        NgbCarouselModule,
-        IvyCarouselModule,
-        ThemeModule,
-        TranslateModule
-    ]
+  imports: [
+    CommonModule,
+    HomeRoutingModule,
+    SharedModule,
+    NgbCarouselModule,
+    IvyCarouselModule,
+    ThemeModule,
+    TranslateModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule
+  ]
 })
 export class HomeModule {
 }

@@ -256,9 +256,22 @@
 .yacht-details .specs-column .title-box{
   display: flex;
 }
+
+mat-datepicker-content{
+  direction:  rtl !important;
+}
+
+.booking-section .booking-form .form-group .field-icon{
+  left: 30px !important;
+}
+
+.booking-section .booking-form .form-group .date-icon {
+  left: 20px !important;
+}
 .mat-dialog-content{
   direction: rtl;
 }
 .modal-header{
   direction: rtl;
 }
+

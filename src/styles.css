@@ -1006,14 +1006,21 @@ img {
     height: 900px;
     z-index: 200;
     padding: 80px;
-    padding-top: 40px;
+    padding-top: 150px;
     width: 100%;
     top: 0%;
+  }
 
+  .carousel-dots {
+    display: none !important;
   }
 
   .headerText {
     font-size: 40px !important;
+  }
+
+  .logo{
+    padding: 0 !important;
   }
 
   .carousel-inner {
@@ -1054,7 +1061,7 @@ img {
     height: 900px;
     z-index: 200;
     padding: 80px;
-    padding-top: 95px;
+    padding-top: 230px;
     width: 100%;
     top: 0%;
 
@@ -2926,6 +2933,7 @@ img.lazy-image.loaded {
 }
 
 .default-form .form-group input[type="text"],
+.default-form .form-group input[type="date"],
 .default-form .form-group input[type="email"],
 .default-form .form-group input[type="password"],
 .default-form .form-group input[type="tel"],
@@ -6716,7 +6724,6 @@ img.lazy-image.loaded {
   width: 100%;
   text-align: center;
   display: block;
-  margin-top: 10px;
 }
 
 .booking-section .booking-form .range-box {
@@ -6779,12 +6786,13 @@ img.lazy-image.loaded {
 
 .booking-section .booking-form .form-group .field-icon {
   position: absolute;
-  left: 25px;
+  left: 16px;
   top: 11px;
   line-height: 28px;
   color: #868da5;
   display: block;
   font-size: 16px;
+  z-index: 999;
 }
 
 /***
@@ -20949,4 +20957,26 @@ body {
 .modal-header .close {
   margin: 0 !important;
   padding: 0 !important;
+}
+
+
+@media (max-width: 767.98px) {
+  .carousel-arrows{
+    display: none !important;
+  }
+}
+
+
+.date-icon{
+  top:6px !important;;
+  color: #ffff !important;
+}
+
+
+mat-datepicker-toggle{
+  color: #ffff !important;
+}
+
+.date-icon {
+  left: 20px !important;
 }
