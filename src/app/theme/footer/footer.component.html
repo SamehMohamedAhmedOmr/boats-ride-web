@@ -63,10 +63,16 @@
                             {{'boatride'|translate}} <br> {{'addressboat'|translate}}
                         </span>
                       </li>
-                      <li>
+                      <li *ngIf="lang == 'en'">
                         <span class="icon fas fa-phone-alt"></span>
                         <span>
                           {{'callus'|translate}}: <a href="tel:+971524918686">+971 52 491 8686</a>
+                        </span>
+                      </li>
+                      <li *ngIf="lang == 'ar'">
+                        <span class="icon fas fa-phone-alt"></span>
+                        <span>
+                          {{'callus'|translate}}: <a href="tel:+971524918686">8686 491 52 971+</a>
                         </span>
                       </li>
                       <li>

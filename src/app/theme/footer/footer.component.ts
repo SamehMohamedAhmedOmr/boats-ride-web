@@ -12,7 +12,7 @@ export class FooterComponent implements OnInit {
   showNavigationIndicators = false;
   isShow: boolean | undefined;
   topPosToStartShowing = 100;
-
+  lang = localStorage.getItem('lang');
   @HostListener('window:scroll')
   checkScroll() {
 
