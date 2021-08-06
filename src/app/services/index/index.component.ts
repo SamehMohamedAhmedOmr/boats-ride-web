@@ -10,6 +10,7 @@ import {Services} from '../../../Models/services';
 export class IndexComponent implements OnInit {
 
   public Services: Services [] = [];
+  is_loading:boolean = true;
 
   constructor(private services: ServicesService,
               private cdr: ChangeDetectorRef) {
@@ -22,6 +23,7 @@ export class IndexComponent implements OnInit {
   getServices() {
     this.services.getSevices().subscribe(data => {
       this.Services = data;
+      this.is_loading = false;
       this.cdr.markForCheck();
     });
   }

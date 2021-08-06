@@ -10,6 +10,7 @@ import {YachtService} from '../../../core/services/yacht.service';
 export class IndexComponent implements OnInit {
 
   public yachts: Yacht [] = [];
+  is_loading:boolean = true;
 
   constructor(private yachtService: YachtService, private cdr: ChangeDetectorRef) {
   }
@@ -21,6 +22,7 @@ export class IndexComponent implements OnInit {
   getYachts() {
     this.yachtService.getYachts().subscribe(data => {
       this.yachts = data;
+      this.is_loading = false;
       this.cdr.markForCheck();
     });
   }

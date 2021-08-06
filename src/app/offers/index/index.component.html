@@ -25,7 +25,7 @@
 <section class="services-section-two">
   <div class="auto-container">
 
-    <div class="item" *ngIf="!offers.length">
+    <div class="item" *ngIf="is_loading">
       <ngx-skeleton-loader count="3" appearance="circle" class="d-flex justify-content-between" [theme]="{
             height: '300px',
             width: '33%',

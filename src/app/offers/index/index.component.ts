@@ -10,6 +10,7 @@ import {OffersService} from '../../../core/services/offers.service';
 export class IndexComponent implements OnInit {
 
   public offers: Offer [] = [];
+  is_loading:boolean = true;
 
   constructor(private offerService: OffersService,
               private cdr: ChangeDetectorRef) {
@@ -22,6 +23,7 @@ export class IndexComponent implements OnInit {
   getOffers() {
     this.offerService.getOffers().subscribe(data => {
       this.offers = data;
+      this.is_loading = false;
       this.cdr.markForCheck();
     });
   }

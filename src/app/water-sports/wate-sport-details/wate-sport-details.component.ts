@@ -17,7 +17,8 @@ declare global {
 })
 export class WateSportDetailsComponent implements OnInit {
   slug: any;
-  watersport: any;
+  // @ts-ignore
+  water_sport: WaterSport = null;
   water_sports_list!:WaterSport[];
 
   constructor(private route: ActivatedRoute,
@@ -36,7 +37,7 @@ export class WateSportDetailsComponent implements OnInit {
 
   getWaterSport() {
     this.WaterSportSevice.getWaterSport(this.slug).subscribe(data => {
-      this.watersport = data;
+      this.water_sport = data;
       this.updateMetaTags();
       this.cdr.markForCheck();
     })
@@ -62,9 +63,9 @@ export class WateSportDetailsComponent implements OnInit {
 
   private updateMetaTags() {
     window.dataLayer = [];
-    let first_image = this.watersport?.images?.length ?  this.watersport?.images[0].image : '';
+    let first_image = this.water_sport?.images?.length ?  this.water_sport?.images[0].image : '';
     // @ts-ignore
-    this.metaService.updateTags(this.watersport?.seo?.title + ' | Boats-Ride', this.watersport?.seo?.description, first_image);
+    this.metaService.updateTags(this.water_sport?.seo?.title + ' | Boats-Ride', this.water_sport?.seo?.description, first_image);
     window.dataLayer.push({ ecommerce: null });
     window.dataLayer.push({
       'event': 'details',
@@ -72,9 +73,9 @@ export class WateSportDetailsComponent implements OnInit {
         'currencyCode': 'AED',
         'detail': {
           'products': [{
-            name: this.watersport.name ? this.watersport.name : '',
-            id: this.watersport.id ? this.watersport.id : '',
-            price: this.watersport.selling_per_hour ? this.watersport.selling_per_hour : '',
+            name: this.water_sport.name ? this.water_sport.name : '',
+            id: this.water_sport.id ? this.water_sport.id : '',
+            price: this.water_sport.selling_per_hour ? this.water_sport.selling_per_hour : '',
           }]
         }
       }

@@ -11,7 +11,12 @@ import {Yacht} from '../../Models/yacht';
 export class YachtRentalComponent implements OnInit {
   public yachts: Yacht [] = [];
   lang = localStorage.getItem('lang');
-  constructor(private resizeServiceService: ResizeServiceService, private yachtService: YachtService, private cdr: ChangeDetectorRef) {
+
+  is_loading:boolean = true;
+
+  constructor(private resizeServiceService: ResizeServiceService,
+              private yachtService: YachtService,
+              private cdr: ChangeDetectorRef) {
   }
 
   numberofcells = 3;
@@ -32,6 +37,7 @@ export class YachtRentalComponent implements OnInit {
   getYachts() {
     this.yachtService.getYachts().subscribe(data => {
       this.yachts = data;
+      this.is_loading = false;
       this.cdr.markForCheck();
     });
   }

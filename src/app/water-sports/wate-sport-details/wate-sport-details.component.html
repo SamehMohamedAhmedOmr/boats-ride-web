@@ -1,10 +1,10 @@
 <!--Page Title-->
-<section class="page-banner inner-banner-height" *ngIf="watersport">
+<section class="page-banner inner-banner-height" *ngIf="water_sport">
   <div class="image-layer" style="background-image:url(../../../assets/images/background/banner-1.jpg);"></div>
   <div class="banner-inner">
     <div class="auto-container">
       <div class="inner-container clearfix">
-        <h1 class="inner-banner-height-title">{{watersport.name}}</h1>
+        <h1 class="inner-banner-height-title">{{water_sport.name}}</h1>
         <div class="page-nav">
           <ul class="bread-crumb clearfix">
             <li>
@@ -14,7 +14,7 @@
               <a routerLink="/water-sports">{{'waterSport'|translate}}</a>
             </li>
 
-            <li>{{watersport.name}}</li>
+            <li>{{water_sport.name}}</li>
           </ul>
         </div>
       </div>
@@ -22,7 +22,7 @@
   </div>
 </section>
 
-<div class="item" *ngIf="!watersport">
+<div class="item" *ngIf="!water_sport">
   <ngx-skeleton-loader count="1" appearance="circle" class="d-flex justify-content-between" [theme]="{
             height: '700px',
             width: '100%',
@@ -49,7 +49,7 @@
     <div class="content-container">
       <div class="row clearfix">
 
-        <div class="item col-lg-8 col-md-12 col-sm-12" *ngIf="!watersport">
+        <div class="item col-lg-8 col-md-12 col-sm-12" *ngIf="!water_sport">
           <ngx-skeleton-loader count="1" appearance="circle" class="d-flex justify-content-between" [theme]="{
             height: '700px',
             width: '100%',
@@ -59,7 +59,7 @@
         </div>
 
         <!--Content Side-->
-        <div class="content-side col-lg-8 col-md-12 col-sm-12" *ngIf="watersport">
+        <div class="content-side col-lg-8 col-md-12 col-sm-12" *ngIf="water_sport">
           <div class="content-inner">
             <!--Tour Details-->
             <div class="tour-details">
@@ -73,7 +73,7 @@
                 <div class="widget-inner">
                   <ngb-carousel [wrap]="true" [interval]="2500" [pauseOnHover]="true"
                                 [showNavigationArrows]="false" [showNavigationIndicators]="true">
-                    <ng-template ngbSlide *ngFor="let image of watersport.images">
+                    <ng-template ngbSlide *ngFor="let image of water_sport.images">
                       <div class="recommend-block">
                         <div class="inner">
                           <div class="image-box">
@@ -88,17 +88,17 @@
 
               <div class="text-block">
                 <h4>{{'desc'|translate}}</h4>
-                <p [innerHTML]="watersport.water_sport_description"></p>
+                <p [innerHTML]="water_sport.water_sport_description"></p>
               </div>
 
               <div class="text-block">
                 <h4>{{'whatexpect'|translate}}</h4>
-                <p [innerHTML]="watersport.what_to_expect_description"></p>
+                <p [innerHTML]="water_sport.what_to_expect_description"></p>
               </div>
 
               <div class="text-block">
                 <h4>{{'routes'|translate}}</h4>
-                <p [innerHTML]="watersport.routes"></p>
+                <p [innerHTML]="water_sport.routes"></p>
               </div>
 
             </div>
@@ -115,24 +115,24 @@
                 <div class="default-form main-booking-form">
                   <h5>{{'price'|translate}}</h5>
 
-                  <div class="estimate-table" *ngIf="!watersport.special_price">
+                  <div class="estimate-table" *ngIf="!water_sport.special_price">
                     <ul>
                       <li class="totals clearfix">
                         <span class="ttle">{{'price'|translate}}:</span>
                         <span class="dtl">
-                            {{'ead'|translate}} {{watersport?.selling_per_hour}} / {{'hour'|translate}}
+                            {{'ead'|translate}} {{water_sport?.selling_per_hour}} / {{'hour'|translate}}
                           </span>
                       </li>
                     </ul>
                   </div>
-                  <div class="price" style="padding-left: 0px!important;" *ngIf="watersport.special_price">
+                  <div class="price" style="padding-left: 0px!important;" *ngIf="water_sport?.special_price">
                     <div style="display: inline-block;padding-left: 5px">
-                      <del class="price-old">{{'ead'|translate}} {{watersport?.selling_per_hour}}/{{'hour'|translate}}</del>
+                      <del class="price-old">{{'ead'|translate}} {{water_sport?.selling_per_hour}}/{{'hour'|translate}}</del>
                     </div>
                     <div style="display: inline-block; margin-left: 10px;" data-toggle="tooltip" data-html="true" title=""
                          data-original-title="Summer Offer">
                     <span class="blink" style="color: red;font-size: 15px;border-radius: 5px;font-weight: bolder;"><i
-                      class="fa fa-info-circle"></i> {{'ead'|translate}} {{watersport.special_price}}</span>
+                      class="fa fa-info-circle"></i> {{'ead'|translate}} {{water_sport.special_price}}</span>
                     </div>
                   </div>
                   <br>

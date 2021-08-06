@@ -10,6 +10,8 @@ import {WaterSportService} from '../../core/services/water-sport.service';
 })
 export class ServiceSectionComponent implements OnInit {
 
+  is_loading:boolean = true;
+
   constructor(private resizeServiceService: ResizeServiceService,
               private waterService: WaterSportService,
               private cdr: ChangeDetectorRef) {
@@ -34,6 +36,7 @@ export class ServiceSectionComponent implements OnInit {
   getWaterSports() {
     this.waterService.getWaterSports().subscribe(data => {
       this.waterSports = data;
+      this.is_loading = false;
       this.cdr.markForCheck();
     });
   }

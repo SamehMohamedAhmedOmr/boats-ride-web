@@ -10,6 +10,7 @@ import {WaterSportService} from '../../../core/services/water-sport.service';
 export class IndexComponent implements OnInit {
 
   public waterSports: WaterSport [] = [];
+  is_loading:boolean = true;
 
   constructor(private waterService: WaterSportService, private cdr: ChangeDetectorRef) {
   }
@@ -21,6 +22,7 @@ export class IndexComponent implements OnInit {
   getWaterSports() {
     this.waterService.getWaterSports().subscribe(data => {
       this.waterSports = data;
+      this.is_loading = false;
       this.cdr.markForCheck();
     });
   }
