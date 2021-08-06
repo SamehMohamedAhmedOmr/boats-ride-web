@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {NgxUiLoaderService} from "ngx-ui-loader";
 import {ToggleHeaderService} from '../core/services/Helpers/toggle.header.service';
 import {LangChangeEvent, TranslateService} from '@ngx-translate/core';
@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
 
   constructor(private ngxService: NgxUiLoaderService, private toggleHeader: ToggleHeaderService,
               private translate: TranslateService,
+              private cdr: ChangeDetectorRef,
               private localStorage: LocalStorage,
               private langservice: LanguageService,) {
     this.translate.setDefaultLang('en');
@@ -48,7 +49,9 @@ export class AppComponent implements OnInit {
   subscribeHeader() {
     this.toggleHeader.currentHeader.subscribe(data => {
       this.isHome = data;
-    })
+      this.cdr.markForCheck();
+      this.cdr.detectChanges();
+    });
   }
 
   getLanguage() {

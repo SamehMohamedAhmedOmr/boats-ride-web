@@ -34,8 +34,14 @@
 
                 <div class="form-group col-lg-4 col-md-6 col-sm-12">
                   <div class="field-inner">
-                    <div class="field-icon"><span class="flaticon-calendar"></span></div>
-                    <input type="text" class="datetime-picker" name="field-name" placeholder="{{'dateandtime'|translate}}" required="" value="" >
+                    <div class="field-icon date-icon">
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                    </div>
+                    <input type="text" class="datetime-picker" name="field-name"
+                           (click)="picker.open()"
+                           matInput [matDatepicker]="picker"
+                           placeholder="{{'dateandtime'|translate}}" required="" value="" >
                   </div>
                 </div>
 
