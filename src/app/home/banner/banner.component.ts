@@ -14,7 +14,7 @@ export class BannerComponent implements OnInit {
     {url:"assets/Banners/fishing-01.jpg",titleEn:"Fishing Trip",navigate:'/fishing-trip',titleAr:"رحلات صيد السمك"},
     {url:"assets/Banners/services-01-01.jpg",titleEn:"Services",navigate:'/services',titleAr:"الخدمات"},
     {url:"assets/Banners/watersports-01.jpg",titleEn:"Water Sports",navigate:'/water-sports',titleAr:"العاب الماء"},
-    {url:"assets/Banners/watersports-01-01.jpg",titleEn:"Offers",navigate:'/offers',titleAr:"عروض"},
+    {url:"../../../assets/images/background/banner-1.jpg",titleEn:"Offers",navigate:'/offers',titleAr:"عروض"},
     {url:"assets/Banners/yacht.jpg",titleEn:"Yacht Rental",navigate:'/yachts',titleAr:"تأجير اليخوت"},
     {url:"assets/Banners/services-01.jpg",titleEn:"Destination",navigate:'/destination',titleAr:"وجهة"}
   ];
