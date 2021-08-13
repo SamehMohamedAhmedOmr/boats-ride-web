@@ -113,6 +113,9 @@ body {
   overflow-x: hidden;
 }
 
+.mat-drawer-content{
+  background-color: #ffffff;
+}
 /**
  * Owl Carousel v2.3.4
  * Copyright 2013-2018 David Deutsch
@@ -4476,10 +4479,6 @@ img.lazy-image.loaded {
 .service-block .inner-box:hover .lower-content .icon-box {
   background: #be1935;
   color: #ffffff;
-}
-
-.flaticon-surf-sea:before {
-  display: none !important;
 }
 
 .service-block .lower-content .cat {

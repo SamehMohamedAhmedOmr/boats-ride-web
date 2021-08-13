@@ -21,6 +21,8 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatInputModule} from "@angular/material/input";
+import { RentalYachtDubaiComponent } from './feature-reserve/rental-yacht-dubai/rental-yacht-dubai.component';
+import {NgxSkeletonLoaderModule} from "ngx-skeleton-loader";
 
 
 @NgModule({
@@ -35,21 +37,23 @@ import {MatInputModule} from "@angular/material/input";
     TestmoinailsComponent,
     FluidsComponent,
     NewsComponent,
-    FishingSectionComponent
+    FishingSectionComponent,
+    RentalYachtDubaiComponent
   ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    SharedModule,
-    NgbCarouselModule,
-    IvyCarouselModule,
-    ThemeModule,
-    TranslateModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    MatFormFieldModule,
-    MatInputModule
-  ]
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        SharedModule,
+        NgbCarouselModule,
+        IvyCarouselModule,
+        ThemeModule,
+        TranslateModule,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        MatFormFieldModule,
+        MatInputModule,
+        NgxSkeletonLoaderModule
+    ]
 })
 export class HomeModule {
 }

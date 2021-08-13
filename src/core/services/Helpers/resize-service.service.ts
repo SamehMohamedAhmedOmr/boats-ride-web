@@ -5,9 +5,8 @@ import {Injectable} from '@angular/core';
 })
 export class ResizeServiceService {
 
-  checkWindowSize() {
+  checkWindowSize(numberofcells:number = 3) {
     const size = window.innerWidth;
-    let numberofcells = 3;
     if (size <= 991.98) {
       numberofcells = 1;
     }

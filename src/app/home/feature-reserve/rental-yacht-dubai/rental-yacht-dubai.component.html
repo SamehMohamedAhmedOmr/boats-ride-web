@@ -1,0 +1,86 @@
+<!--Destinations Section-->
+<section class="destinations-section mb-4">
+  <div class="auto-container">
+    <div class="title-row clearfix">
+      <div class="sec-title-two centered with-border">
+        <h2>
+          <span>{{ 'RENTAL' | translate }}</span>
+          <strong>
+            {{ 'YACHT_DUBAI' | translate }}
+          </strong>
+        </h2>
+        <p style="text-align:center;font-size:18px">
+          <span style="color:#5f727f">
+            {{ 'rental_yacht_dubai_text' | translate }}
+          </span>
+        </p>
+        <div class="separator"></div>
+      </div>
+    </div>
+
+    <div class="item" *ngIf="is_loading">
+      <ngx-skeleton-loader count="3" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '300px',
+            width: '33%',
+            'border-radius': '10px'
+            }">
+      </ngx-skeleton-loader>
+    </div>
+
+    <carousel *ngIf="Services.length" [margin]="20" [height]="330" [cellWidth]="400" [cellsToShow]="numberofcells"
+              [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100" style="direction: ltr !important;'">
+      <div class="carousel-cell" *ngFor="let service of Services">
+        <div class="destination-block wow fadeInLeft" data-wow-delay="0ms"
+             data-wow-duration="1500ms">
+          <div class="inner-box">
+            <div class="image-box">
+              <figure class="image mb-0">
+                <a [routerLink]="'/services/' + service.slug">
+                  <img class="object-fit-cover" src="{{service.image}}" alt="" title="" style="height: 300px;">
+                </a>
+              </figure>
+              <div class="caption-box">
+                <div class="count">24 / 7</div>
+              </div>
+              <div class="hover-box">
+                <div class="hover-inner">
+                  <div class="hover-content">
+                    <h5 class="title force-rtl">
+                      {{ '24_Hours_7_Days' | translate }}
+                    </h5>
+                    <div class="link-box">
+                      <a [routerLink]="'/services'" class="theme-btn btn-style-two">
+                        <div class="btn-title">
+                          {{ 'view_all_services' | translate }}
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="title-box">
+              <h4>
+                <a [routerLink]="'/services/' + service.slug">
+                  {{ service.name }}
+                </a>
+              </h4>
+            </div>
+            <div class="meta-info">
+            </div>
+          </div>
+        </div>
+      </div>
+    </carousel>
+
+
+    <div class="see-all mb-5 mt-4">
+      <a [routerLink]="'/services'" class="default-link">
+        <span class="icon flaticon-logout"></span>
+        <span class="link-text">
+          {{ 'view_all_services' | translate }}
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
