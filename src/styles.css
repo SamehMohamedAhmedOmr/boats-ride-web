@@ -109,7 +109,7 @@ body {
   background: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
   overflow-x: hidden;
 }
 
@@ -384,8 +384,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   margin: 0px 0px 15px;
   background: none;
-  line-height: 1.25em;
-  font-family: 'Playfair Display', cursive;
+  line-height: 1.25em !important;
+  font-family: 'Playfair Display', cursive !important;
 }
 
 h1 {
@@ -413,7 +413,7 @@ h6 {
 }
 
 input, select, button {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 textarea {
@@ -469,11 +469,29 @@ p {
 }
 
 .carousel-dots {
-  background-color: lightgray !important;
+  background-color: #eaeaea !important;
   width: fit-content !important;
   left: 47% !important;
   bottom: 3% !important;
 }
+
+.carousel-dot {
+  background-color: #D6D6D6 !important;
+  border: 2px solid #D6D6D6 !important;
+  width: 10px !important;
+  height: 10px !important;
+  margin: 5px 7px !important;
+  -webkit-backface-visibility: visible !important;
+  transition: opacity 200ms ease !important;
+  border-radius: 30px !important;
+  margin-bottom: 0 !important;
+}
+
+.carousel-dot-active {
+  background-color: #869791 !important;
+  border: 2px solid #869791 !important;
+}
+
 
 ul, li {
   list-style: none;
@@ -1394,7 +1412,7 @@ img {
   position: relative;
   float: left;
   margin-left: 80px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   line-height: 30px;
   padding: 10px 0px;
   font-style: italic;
@@ -3068,7 +3086,7 @@ img.lazy-image.loaded {
   height: 52px;
   padding: 10px 25px;
   line-height: 30px;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
   color: #222222;
   border-radius: 0px;
   background-color: #ffffff;
@@ -3105,7 +3123,7 @@ img.lazy-image.loaded {
 
 .ui-widget.ui-widget-content {
   border: 1px solid #e0e0e0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 .ui-menu .ui-menu-item {
@@ -3648,7 +3666,7 @@ img.lazy-image.loaded {
   text-align: center;
   display: block;
   background: url('assets/images/icons/discount-icon.png') center center no-repeat;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-size: 18px;
   font-weight: 700;
 }
@@ -3763,7 +3781,7 @@ img.lazy-image.loaded {
   width: 55px;
   text-align: right;
   counter-reset: slides-num;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
 }
 
 .banner-three .banner-carousel .owl-dots .owl-dot {
@@ -4209,7 +4227,7 @@ img.lazy-image.loaded {
 .about-section .left-col .lower-content .text:first-letter {
   color: #061138;
   float: left;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-size: 48px;
   line-height: 0.8em;
   margin: 0px 10px 5px 0px;
@@ -4812,7 +4830,7 @@ img.lazy-image.loaded {
 .activity-block .links-box .unit {
   display: block;
   color: #061138;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-style: italic;
   text-transform: uppercase;
   font-weight: 500;
@@ -5481,7 +5499,7 @@ img.lazy-image.loaded {
   color: #75808f;
   font-size: 17px;
   line-height: 1.7em;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
 }
 
 .testimonial-block .rating {
@@ -5617,7 +5635,7 @@ img.lazy-image.loaded {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
 }
 
 .news-block .image-box .post-date .day {
@@ -5787,7 +5805,7 @@ img.lazy-image.loaded {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   z-index: 1;
 }
 
@@ -6098,7 +6116,7 @@ img.lazy-image.loaded {
 }
 
 .subscribe-form .form-group input {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-style: italic;
   padding-left: 20px;
 }
@@ -6216,7 +6234,7 @@ img.lazy-image.loaded {
 
 .main-footer .links-widget .links li a:before {
   content: "+";
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   position: absolute;
   left: 0;
   top: 0;
@@ -6523,7 +6541,7 @@ img.lazy-image.loaded {
   background: #ffffff;
   color: #061138;
   text-align: center;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   border-radius: 50%;
   margin: 0 auto 30px;
 }
@@ -7000,7 +7018,7 @@ img.lazy-image.loaded {
   position: relative;
   display: block;
   width: 100%;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
 }
 
 .selectable-list .dropdown-outer {
@@ -7139,7 +7157,7 @@ img.lazy-image.loaded {
   display: block;
   font-size: 15px;
   font-style: italic;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   padding-bottom: 5px;
   line-height: 30px;
   margin-bottom: 3px;
@@ -7295,11 +7313,16 @@ img.lazy-image.loaded {
   font-style: italic;
   text-transform: capitalize;
   color: #ffffff;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
 }
 
 .yacht-rental-section .bottom-text a {
-  color: #be1935;
+  color: white;
+  background-color: #be1935;
+  text-decoration: none;
+  padding: 7px;
+  border-radius: 10px;
+  margin-left: 10px;
 }
 
 .yacht-rental-section .bottom-text a:hover {
@@ -7414,7 +7437,7 @@ img.lazy-image.loaded {
   font-size: 72px;
   line-height: 1em;
   font-weight: 700;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   opacity: 0.12;
 }
 
@@ -7777,7 +7800,7 @@ img.lazy-image.loaded {
 .about-section-two .content-box .lower-row .name {
   position: relative;
   display: block;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-size: 20px;
   text-transform: capitalize;
   color: #061138;
@@ -8536,7 +8559,9 @@ img.lazy-image.loaded {
 
 .package-block .content-box {
   position: relative;
-  padding: 30px 30px;
+  background-color: #EFF3F6;
+  padding: 15px;
+  height: 180px;
 }
 
 .package-block .content-box .package-title {
@@ -8659,7 +8684,7 @@ img.lazy-image.loaded {
 .package-block .links-box .unit {
   display: block;
   color: #061138;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-style: italic;
   text-transform: uppercase;
   font-weight: 500;
@@ -9265,7 +9290,7 @@ img.lazy-image.loaded {
   font-size: 18px;
   font-weight: 700;
   font-style: italic;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
 }
 
 .destination-block-three .caption-box .title {
@@ -9463,7 +9488,7 @@ img.lazy-image.loaded {
   text-transform: uppercase;
   font-weight: 700;
   color: #ffffff;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-size: 72px;
   line-height: 1em;
   margin-bottom: 5px;
@@ -9474,7 +9499,7 @@ img.lazy-image.loaded {
   display: block;
   font-weight: 700;
   color: #be1935;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-size: 72px;
   line-height: 1.3em;
 }
@@ -9892,7 +9917,7 @@ img.lazy-image.loaded {
   color: #75808f;
   font-size: 20px;
   line-height: 1.5em;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-style: italic;
   margin-bottom: 40px;
 }
@@ -9943,7 +9968,7 @@ img.lazy-image.loaded {
   font-size: 16px;
   color: #061138;
   text-transform: capitalize;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   letter-spacing: 1px;
   opacity: 0;
   -webkit-transition: all 300ms ease;
@@ -9977,7 +10002,7 @@ img.lazy-image.loaded {
   font-size: 16px;
   color: #061138;
   text-transform: capitalize;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   letter-spacing: 1px;
   opacity: 0;
   -webkit-transition: all 300ms ease;
@@ -10105,7 +10130,7 @@ img.lazy-image.loaded {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   z-index: 1;
 }
 
@@ -10396,7 +10421,7 @@ img.lazy-image.loaded {
 }
 
 .subscribe-form-two form .form-group input {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-style: italic;
   line-height: 30px;
   padding: 14px 20px;
@@ -10571,7 +10596,7 @@ img.lazy-image.loaded {
 
 .footer-style-three .drop-link .link-btn .txt {
   position: relative;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-style: italic;
   display: inline-block;
   vertical-align: middle;
@@ -10675,7 +10700,7 @@ img.lazy-image.loaded {
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: #ffffff;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
@@ -10759,7 +10784,7 @@ img.lazy-image.loaded {
 
 .footer-style-three .useful-links .links-panel li a:before {
   content: "+";
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   position: absolute;
   left: 0;
   top: 0;
@@ -10981,7 +11006,7 @@ img.lazy-image.loaded {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   z-index: 1;
 }
 
@@ -11492,7 +11517,7 @@ img.lazy-image.loaded {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.10);
   z-index: 1;
 }
@@ -11727,7 +11752,7 @@ img.lazy-image.loaded {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
 }
 
 .news-block-six .image-box .post-date .day {
@@ -12065,7 +12090,7 @@ img.lazy-image.loaded {
 
 .styled-pagination {
   position: relative;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
 }
 
 .styled-pagination li {
@@ -12642,7 +12667,7 @@ img.lazy-image.loaded {
 .news-post-details .styled-list li strong {
   font-size: 18px;
   color: #061138;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-weight: 400;
 }
 
@@ -12705,7 +12730,7 @@ img.lazy-image.loaded {
 .news-post-details .post-tags .tag-title {
   position: relative;
   float: left;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-size: 18px;
   color: #061138;
   line-height: 36px;
@@ -12870,7 +12895,7 @@ img.lazy-image.loaded {
 
 .comments-area .comment-box .info {
   position: relative;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   margin-bottom: 10px;
 }
 
@@ -13049,7 +13074,7 @@ img.lazy-image.loaded {
   color: #7f8a99;
   font-size: 13px;
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 .gallery-block .title-box .category a {
@@ -13201,7 +13226,7 @@ img.lazy-image.loaded {
   color: #7f8a99;
   font-size: 13px;
   text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 .gallery-block-two .title-box .category a {
@@ -13885,7 +13910,7 @@ img.lazy-image.loaded {
   font-size: 36px;
   line-height: 48px;
   color: #7f8a99;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   opacity: 0;
   -webkit-transition: all 300ms ease;
   -moz-transition: all 300ms ease;
@@ -14071,7 +14096,7 @@ img.lazy-image.loaded {
 .about-section-three .content-outer .info .name {
   position: relative;
   display: block;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-size: 24px;
   text-transform: capitalize;
   color: #061138;
@@ -15142,7 +15167,7 @@ img.lazy-image.loaded {
 .contact-form .form-group input,
 .contact-form .form-group textarea,
 .contact-form .form-group .ui-selectmenu-button.ui-button {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-style: italic;
   padding-left: 20px;
 }
@@ -15213,7 +15238,7 @@ img.lazy-image.loaded {
   font-size: 15px;
   text-transform: capitalize;
   font-style: italic;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
 }
 
 .rent-buy-section .lower-filter-row .form-group .ui-button .ui-icon:before {
@@ -15599,7 +15624,7 @@ img.lazy-image.loaded {
 
 .yacht-details .basic-info .left-info .p-amount {
   position: relative;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-size: 24px;
   text-transform: uppercase;
   line-height: 30px;
@@ -16349,7 +16374,7 @@ img.lazy-image.loaded {
   padding: 11px 25px;
   text-transform: capitalize;
   font-style: italic;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
 }
 
 .yacht-tours-container .lower-filter-row .form-group .ui-button .ui-icon {
@@ -16476,7 +16501,7 @@ img.lazy-image.loaded {
   background: #be1935;
   font-size: 20px;
   font-weight: 700;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   border-radius: 50%;
 }
 
@@ -16608,7 +16633,7 @@ img.lazy-image.loaded {
 .activity-block-two .pricing .unit {
   display: block;
   color: #061138;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-style: italic;
   text-transform: uppercase;
   font-weight: 500;
@@ -16925,7 +16950,7 @@ img.lazy-image.loaded {
   display: block;
   line-height: 24px;
   color: #061138;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-style: italic;
   text-transform: uppercase;
   font-weight: 500;
@@ -17234,7 +17259,7 @@ img.lazy-image.loaded {
 .package-block-two .pricing .unit {
   display: block;
   color: #061138;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-style: italic;
   text-transform: uppercase;
   font-weight: 500;
@@ -17419,7 +17444,7 @@ img.lazy-image.loaded {
 .recommend-block .pricing .unit {
   display: block;
   color: #061138;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-style: italic;
   text-transform: uppercase;
   font-weight: 500;
@@ -17538,7 +17563,7 @@ img.lazy-image.loaded {
   color: #ffffff;
   font-size: 14px;
   font-weight: 700;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
 }
 
 .offers-widget .post .info {
@@ -17568,7 +17593,7 @@ img.lazy-image.loaded {
   color: #061138;
   line-height: 24px;
   font-style: italic;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
 }
 
 .offers-widget .post .price .original {
@@ -17755,7 +17780,7 @@ img.lazy-image.loaded {
 
 .reviews-widget .rev-text {
   position: relative;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-size: 16px;
   font-style: italic;
   line-height: 1.7em;
@@ -17881,7 +17906,7 @@ img.lazy-image.loaded {
 
 .single-booking-widget .upper-info .price-info .p-amount {
   position: relative;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-size: 24px;
   text-transform: uppercase;
   line-height: 28px;
@@ -18012,7 +18037,7 @@ img.lazy-image.loaded {
 .main-booking-form .estimate-table .totals .dtl {
   font-size: 18px;
   font-style: italic;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
 }
 
 .main-booking-form .instruction {
@@ -20980,4 +21005,15 @@ mat-datepicker-toggle{
 
 .date-icon {
   left: 20px !important;
+}
+
+h4{
+  font-size: 24px !important;
+}
+
+.new-price-container .yacht_special_price{
+  color: red;
+  font-size: 15px;
+  border-radius: 5px;
+  font-weight: bolder;
 }

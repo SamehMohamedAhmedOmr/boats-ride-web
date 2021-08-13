@@ -1,0 +1,68 @@
+<section class="destinations-two direction-left">
+
+  <div class="map-layer" style="background-image: url(./assets/images/background/map-image.png);"></div>
+
+  <div class="auto-container">
+    <div class="sec-title centered">
+      <!--      <div class="upper-text">What are you dreaming of?</div>-->
+      <h2><strong>{{'addService'|translate}}</strong></h2>
+    </div>
+
+    <div class="item" *ngIf="is_loading">
+      <ngx-skeleton-loader count="3" appearance="circle" class="d-flex justify-content-between" [theme]="{
+            height: '300px',
+            width: '33%',
+            'border-radius': '10px'
+            }">
+      </ngx-skeleton-loader>
+    </div>
+
+
+    <!--Packages-->
+    <carousel *ngIf="Services.length" [margin]="20" [height]="400" [cellWidth]="400" [cellsToShow]="numberofcells"
+              [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
+      <div class="carousel-cell" *ngFor="let service of Services">
+        <div class="popular-packages">
+          <div class="packages-box">
+            <div class="row clearfix">
+              <!--Package Block-->
+              <div class="auto-container">
+
+                <!--Services Carousel-->
+
+                <div class="package-block service-block wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                  <div class="inner-box clearfix">
+                    <div class="image-box">
+                      <img class="object-fit-cover" src="{{service.image}}" alt="" title="" style="height: 300px; width: 400px">
+                      <div class="hover-box">
+                        <div class="hover-link">
+                          <a routerLink="/services/{{service.slug}}" class="default-link">
+                            <span class="icon flaticon-logout"></span>
+                            <span class="link-text">{{'checkservice'|translate}}</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="content-box">
+                      <div class="content">
+                        <div class="package-title">
+                          <a routerLink="/services/{{service.slug}}">
+                            {{service.name}}
+                          </a>
+                        </div>
+                        <p style="font-weight: 400"
+                           [innerHTML]="service.description">
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </carousel>
+  </div>
+</section>

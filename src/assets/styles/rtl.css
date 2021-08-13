@@ -279,3 +279,24 @@ mat-datepicker-content{
 {
   font-style: normal!important;
 }
+
+
+.force-rtl{
+  direction: rtl !important;
+}
+
+.rental-div{
+  flex-direction: row-reverse !important;
+}
+
+.old-price-container, .new-price-container{
+  direction: rtl !important;
+}
+
+.yacht-list-meta-info{
+  direction: rtl !important;
+}
+
+.rental-block .meta-info li:last-child{
+  text-align: right;
+}

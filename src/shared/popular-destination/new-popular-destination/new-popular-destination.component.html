@@ -1,0 +1,32 @@
+<section class="destinations-two direction-left">
+
+  <div class="map-layer" style="background-image: url(./assets/images/background/map-image.png);"></div>
+
+  <div class="auto-container">
+    <div class="sec-title centered">
+      <div class="upper-text">
+       {{ 'Destinations_title' | translate }}
+      </div>
+      <h2 class="d-flex justify-content-center flex-row">
+        <span>{{ 'popular' | translate }}</span>
+        <strong class="mx-2"> {{ 'Destinations' | translate }}</strong>
+      </h2>
+    </div>
+
+
+
+    <!--Packages-->
+    <carousel [margin]="20" [height]="500" [cellWidth]="400" [cellsToShow]="numberofcells"
+              [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
+
+      <div class="carousel-cell" *ngFor="let destination of destinations">
+        <app-new-destination-cell [name]="destination.name"
+                                  [image]="destination.image"
+                                  [rate]="destination.rate"
+                                  [reviews]="destination.reviews">
+        </app-new-destination-cell>
+      </div>
+    </carousel>
+
+  </div>
+</section>

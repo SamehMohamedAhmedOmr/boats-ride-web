@@ -18,6 +18,9 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {SuccessBookingComponent} from './success-booking/success-booking.component';
 import {MatInputModule} from "@angular/material/input";
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { OldPopularDestinationComponent } from './popular-destination/old-popular-destination/old-popular-destination.component';
+import { NewPopularDestinationComponent } from './popular-destination/new-popular-destination/new-popular-destination.component';
+import { NewDestinationCellComponent } from './popular-destination/new-popular-destination/new-destination-cell/new-destination-cell.component';
 
 
 @NgModule({
@@ -31,6 +34,9 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
     ContactFormComponent,
     SuccessBookingComponent,
     ComingSoonComponent,
+    OldPopularDestinationComponent,
+    NewPopularDestinationComponent,
+    NewDestinationCellComponent,
   ],
   imports: [
     CommonModule,

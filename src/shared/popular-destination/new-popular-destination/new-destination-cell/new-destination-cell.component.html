@@ -1,0 +1,52 @@
+<div class="popular-packages">
+  <div class="packages-box">
+    <div class="row clearfix">
+      <div class="auto-container">
+
+        <div class="package-block service-block wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+          <div class="inner-box clearfix">
+            <div class="image-box pb-0">
+              <img src="{{image}}">
+              <div class="hover-box">
+                <div class="hover-link">
+                  <a  class="default-link">
+                    <span class="icon flaticon-logout"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-box">
+              <div class="content">
+                <div class="package-title">
+                  <a>
+                    {{ name | uppercase }}
+                  </a>
+                </div>
+                <div class="ratings clearfix">
+                  <div class="rate">
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                  </div>
+                  <div class="rate-text">
+                    <strong>{{rate}}</strong> <a>[{{reviews}} {{ 'Reviews' | translate}}]</a>
+                  </div>
+                </div>
+                <div class="info">
+                  <ul class="clearfix">
+                    <li><span class="icon flaticon-wall-clock"></span> {{ 'reservationr' | translate}}</li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

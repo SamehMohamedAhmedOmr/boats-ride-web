@@ -210,5 +210,15 @@
     "thanks" : "شكرا لك على الاستفسار معنا",
     "call_you": "سيتواصل معك أحد أفضل ممثلينا قريبًا"
   },
-  "coming_soon" : "قريبا"
+  "coming_soon" : "قريبا",
+  "ATLANTIS_THE_PALM": "أتلانتس النخلة",
+  "MARINA_SKYLINE" : "أفق مارينا",
+  "AIN_WHEEL" : "عين العجلة",
+  "HARBOUR" : "مرفأ",
+  "popular": "الشائعة",
+  "Destinations" : "الأماكن",
+  "Destinations_title" : "بماذا تحلم؟",
+  "Reviews": "تقييم",
+  "per_h": "في الساعة",
+  "ft": "قدم"
 }

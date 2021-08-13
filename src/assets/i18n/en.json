@@ -210,5 +210,17 @@
     "thanks" : "Thank you for Enquiring with us",
     "call_you": "One of our best representatives will get in touch with you shortly"
   },
-  "coming_soon" : "COMING SOON"
+  "coming_soon" : "COMING SOON",
+  "ATLANTIS_THE_PALM": "ATLANTIS THE PALM",
+  "MARINA_SKYLINE" : "MARINA SKYLINE",
+  "AIN_WHEEL" : "AIN WHEEL",
+  "HARBOUR": "HARBOUR",
+  "popular": "Popular",
+  "Destinations" : "Destinations",
+  "Destinations_title" : "What are you dreaming of?",
+  "Reviews": "Reviews",
+  "per_h": "PER / H",
+  "ft": "FT"
+
+
 }
