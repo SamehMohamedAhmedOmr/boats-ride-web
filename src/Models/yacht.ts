@@ -19,6 +19,7 @@ export interface Yacht {
   selling_per_hour:number,
   yacht_special_price:number,
   minimum_hours_booking:number,
+  beds:number,
   apply_vat:boolean,
   manufacturer:string,
   cruising_speed:number,

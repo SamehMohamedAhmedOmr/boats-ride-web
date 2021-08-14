@@ -57,16 +57,20 @@
           <div class="inner-box">
             <div class="image-box">
 
-              <figure class="image">
+              <figure class="image mb-0">
 
                 <a routerLink="/yachts/{{yacht.slug}}">
-                  <div class="offer-info"><span>{{yacht.horse_Power}} FT</span></div>
+                  <div class="offer-info force-rtl">
+                    <span>{{yacht.size}} {{ 'ft' | translate }}</span>
+                  </div>
 
                   <img class="object-fit-cover" src="{{yacht.images[0].image}}" alt="" title=""></a>
               </figure>
               <div class="price-box">
-                <div class="price"> {{yacht.services[0].price}} {{'ead'|translate}} </div>
-                <div class="cycle">PAR / H</div>
+                <div class="price old-price-container"> {{yacht.selling_per_hour}} {{'ead'|translate}}</div>
+                <div class="cycle">
+                  {{ 'per_h' | translate }}
+                </div>
               </div>
 
             </div>
@@ -76,6 +80,31 @@
               </div>
               <h4><a routerLink="/yachts/{{yacht.slug}}">{{yacht.name}}</a></h4>
             </div>
+
+            <div class="price align-items-center"
+                 [class.force-rtl] = "!yacht.apply_vat && lang == 'ar'"
+                 [class.d-flex]="yacht.apply_vat && lang == 'ar'"
+                 [class.rental-div]="!yacht.apply_vat && lang == 'ar'">
+              <div style="display: inline-block" class="old-price-container">
+                <small *ngIf="lang == 'en'">From:  </small>
+                <del class="price-old" *ngIf="lang == 'en'">{{'ead'|translate}} {{yacht.selling_per_hour}}/{{'hour'|translate}}</del>
+                <del class="price-old" *ngIf="lang == 'ar'"> {{yacht.selling_per_hour}} {{'ead'|translate}}/{{'hour'|translate}}</del>
+              </div>
+              <div *ngIf="yacht.yacht_special_price" style="display: inline-block; margin-left: 10px;"
+                   data-toggle="tooltip"
+                   data-html="true"
+                   title="" class="mx-2 new-price-container"
+                   data-original-title="Summer Offer">
+                    <span class="blink yacht_special_price" *ngIf="lang == 'en'">
+                      <i class="fa fa-info-circle"></i> {{'ead'|translate}} {{yacht.yacht_special_price}}
+                    </span>
+                <span class="blink yacht_special_price" *ngIf="lang == 'ar'">
+                      <i class="fa fa-info-circle"></i> {{yacht.yacht_special_price}} {{'ead'|translate}}
+                    </span>
+              </div>
+              <small *ngIf="yacht.apply_vat" class="label label-warning pull-right" style="color: #fff;">{{'vat'|translate}}</small>
+            </div>
+
             <div class="meta-info">
               <ul class="clearfix" style="margin-bottom: unset!important;">
                 <li><a href="#"><img src="assets/images/icons/captain.png" style="width: unset!important;" > {{'captain'|translate}}: {{yacht.no_of_captain}}</a></li>
@@ -83,7 +112,7 @@
               </ul>
               <ul class="clearfix">
                 <li><a href="#"><img src="assets/images/icons/users.png" style="width: unset!important;"> {{'people'|translate}}: {{yacht.passenger_capacity}}</a></li>
-                <li><a href="#"><img src="assets/images/icons/beds.png" style="width: unset!important;"> {{'beds'|translate}}: {{yacht.size}} </a></li>
+                <li><a href="#"><img src="assets/images/icons/beds.png" style="width: unset!important;"> {{'beds'|translate}}: {{yacht.beds}} </a></li>
               </ul>
             </div>
           </div>

@@ -11,6 +11,7 @@ export class IndexComponent implements OnInit {
 
   public yachts: Yacht [] = [];
   is_loading:boolean = true;
+  lang = localStorage.getItem('lang');
 
   constructor(private yachtService: YachtService, private cdr: ChangeDetectorRef) {
   }

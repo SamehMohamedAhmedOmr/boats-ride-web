@@ -4,3 +4,7 @@ a,a:hover{text-decoration:none;-webkit-transition:all .3s;transition:all .3s}
   width: unset!important;
 }
 
+
+.inner-box{
+  background-color: #EFF3F6!important;
+}

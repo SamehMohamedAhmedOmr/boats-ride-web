@@ -15672,8 +15672,8 @@ img.lazy-image.loaded {
 
 .yacht-details .content-column .inner {
   position: relative;
-  padding-right: 50px;
-  border-right: 1px solid rgba(0, 0, 0, 0.10);
+  /*padding-right: 50px;*/
+  /*border-right: 1px solid rgba(0, 0, 0, 0.10);*/
 }
 
 .yacht-details .content-column .text-block {
@@ -15767,7 +15767,7 @@ img.lazy-image.loaded {
 
 .yacht-details .specs-column .inner {
   position: relative;
-  padding-left: 30px;
+  /*padding-left: 30px;*/
 }
 
 .yacht-details .specs-column .title-box {
@@ -15824,7 +15824,7 @@ img.lazy-image.loaded {
   line-height: 26px;
   padding: 12px 20px;
   /*border: 1px solid rgba(0, 0, 0, 0.10);*/
-  margin-bottom: 19px;
+  /*margin-bottom: 19px;*/
 }
 /*.carousel-item{*/
 /*  height: 600px!important;*/
