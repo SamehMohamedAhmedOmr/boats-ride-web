@@ -1,10 +1,54 @@
-.blink{animation:blinker 1.5s linear infinite}@keyframes blinker{50%{opacity:0}}.list-bullet-wrap.w1-1 ul li{width:100%}.card-deal .img-sm,.card-deal .img-wrap{height:auto}.price .price-old::before{position:absolute;content:"";left:-3px;top:45%;right:3px;width:100%;border-top:3px solid;border-color:red;-webkit-transform:rotate(-17deg);-moz-transform:rotate(-17deg);-ms-transform:rotate(-17deg);-o-transform:rotate(-17deg);transform:rotate(-17deg)}.price .price-old{position:relative;text-decoration:none;display:inline-block}
-a,a:hover{text-decoration:none;-webkit-transition:all .3s;transition:all .3s}
-.carousel-cells .carousel-cell img, .carousel-cells .carousel-cell video{
-  width: unset!important;
+.blink {
+  animation: blinker 1.5s linear infinite
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0
+  }
+}
+
+.list-bullet-wrap.w1-1 ul li {
+  width: 100%
+}
+
+.card-deal .img-sm, .card-deal .img-wrap {
+  height: auto
+}
+
+.price .price-old::before {
+  position: absolute;
+  content: "";
+  left: -3px;
+  top: 45%;
+  right: 3px;
+  width: 100%;
+  border-top: 3px solid;
+  border-color: red;
+  -webkit-transform: rotate(-17deg);
+  -moz-transform: rotate(-17deg);
+  -ms-transform: rotate(-17deg);
+  -o-transform: rotate(-17deg);
+  transform: rotate(-17deg)
+}
+
+.price .price-old {
+  position: relative;
+  text-decoration: none;
+  display: inline-block
+}
+
+a, a:hover {
+  text-decoration: none;
+  -webkit-transition: all .3s;
+  transition: all .3s
+}
+
+.carousel-cells .carousel-cell img, .carousel-cells .carousel-cell video {
+  width: unset !important;
 }
 
 
-.inner-box{
-  background-color: #EFF3F6!important;
+.inner-box {
+  background-color: #EFF3F6 !important;
 }

@@ -47,7 +47,9 @@ export interface Yacht {
   sunbathing_on_the_foredeck:boolean,
   fishing_equipment:boolean,
   images: [{
-    image:string
+    id:number,
+    image:string,
+    thumbnail:string
   }],
   services: [
     {

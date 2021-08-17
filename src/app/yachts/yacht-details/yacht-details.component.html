@@ -31,27 +31,12 @@
     <div class="row clearfix">
       <div class="content-column col-xl-7 col-lg-6 col-md-12 cl-sm-12">
         <div class="inner">
-          <div class="tour-widget recommended-widget carousel-widget">
-            <div class="widget-inner">
-              <ngb-carousel  [wrap]="true" [interval]="2500" [pauseOnHover]="true"
-                            style="height: 460px;"
-                            [showNavigationArrows]="false" [showNavigationIndicators]="true">
-                <ng-template ngbSlide *ngFor="let yachts of yacht.images">
-                  <div class="recommend-block">
-                    <div class="inner">
-                      <div class="image-box">
-                        <a><img class="object-fit-cover"
-                                style="height: 450px !important; max-height: 450px !important;"
-                                src="{{yachts.image}}"
-                                alt="" title=""></a>
-                      </div>
-                    </div>
-                  </div>
-                </ng-template>
-              </ngb-carousel>
-            </div>
+          <ngx-gallery [options]="galleryOptions"
+                       [images]="galleryImages"
+                       style="height: 462px !important;"
+                       class="ngx-gallery d-block w-100 mb-4">
+          </ngx-gallery>
 
-          </div>
           <div class="text-block mb-3">
             <h4>{{'whatinclude'|translate}}</h4>
             <p [innerHTML]="yacht.what_is_included"></p>

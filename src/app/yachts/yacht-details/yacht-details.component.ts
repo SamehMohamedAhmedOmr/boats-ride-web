@@ -6,6 +6,7 @@ import {Yacht} from "../../../Models/yacht";
 import {YachtBookingFormComponent} from "../../../shared/yacht-booking-form/yacht-booking-form.component";
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {MetaTagService} from "../../../core/services/Helpers/meta-tag.service";
+import {NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions} from "@kolkov/ngx-gallery";
 
 declare global {
   interface Window { dataLayer: any[]; }
@@ -24,6 +25,10 @@ export class YachtDetailsComponent implements OnInit {
   showNavigationArrows = true;
   showNavigationIndicators = false;
   lang = localStorage.getItem('lang');
+
+  galleryOptions: NgxGalleryOptions[] = [];
+  galleryImages: NgxGalleryImage[] = [];
+
   constructor(config: NgbCarouselConfig,
               private route: ActivatedRoute,
               private yachtServie: YachtService,
@@ -43,9 +48,44 @@ export class YachtDetailsComponent implements OnInit {
   getYacht() {
     this.yachtServie.getYacht(this.slug).subscribe(data => {
       this.yacht = data;
+      this.prepareImages();
       this.updateMetaTags();
       this.cdr.markForCheck();
     });
+  }
+
+  prepareImages(){
+    this.galleryOptions = [
+      {
+        width: '600px',
+        height: '400px',
+        thumbnailsColumns: 4,
+        imageAnimation: NgxGalleryAnimation.Slide
+      },
+      {
+        breakpoint: 800,
+        width: '100%',
+        height: '600px',
+        imagePercent: 80,
+        thumbnailsPercent: 20,
+        thumbnailsMargin: 20,
+        thumbnailMargin: 20
+      },
+      {
+        breakpoint: 400,
+        preview: false
+      }
+    ];
+
+    this.yacht.images.forEach(image_object => {
+      this.galleryImages.push({
+        small: image_object.thumbnail,
+        medium: image_object.image,
+        big: image_object.image,
+      })
+    });
+
+    this.cdr.markForCheck();
   }
 
   getYachts() {

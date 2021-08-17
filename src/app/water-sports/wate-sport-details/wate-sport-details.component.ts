@@ -5,6 +5,7 @@ import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {WaterSport} from "../../../Models/water-sport";
 import {WaterSportBookingFormComponent} from "../../../shared/water-sport-booking-form/water-sport-booking-form.component";
 import {MetaTagService} from "../../../core/services/Helpers/meta-tag.service";
+import {NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions} from "@kolkov/ngx-gallery";
 
 declare global {
   interface Window { dataLayer: any[]; }
@@ -20,6 +21,9 @@ export class WateSportDetailsComponent implements OnInit {
   // @ts-ignore
   water_sport: WaterSport = null;
   water_sports_list!:WaterSport[];
+
+  galleryOptions: NgxGalleryOptions[] = [];
+  galleryImages: NgxGalleryImage[] = [];
 
   constructor(private route: ActivatedRoute,
               private cdr: ChangeDetectorRef,
@@ -38,6 +42,7 @@ export class WateSportDetailsComponent implements OnInit {
   getWaterSport() {
     this.WaterSportSevice.getWaterSport(this.slug).subscribe(data => {
       this.water_sport = data;
+      this.prepareImages();
       this.updateMetaTags();
       this.cdr.markForCheck();
     })
@@ -48,6 +53,40 @@ export class WateSportDetailsComponent implements OnInit {
       this.water_sports_list = data;
       this.cdr.markForCheck();
     });
+  }
+
+  prepareImages(){
+    this.galleryOptions = [
+      {
+        width: '600px',
+        height: '400px',
+        thumbnailsColumns: 4,
+        imageAnimation: NgxGalleryAnimation.Slide
+      },
+      {
+        breakpoint: 800,
+        width: '100%',
+        height: '600px',
+        imagePercent: 80,
+        thumbnailsPercent: 20,
+        thumbnailsMargin: 20,
+        thumbnailMargin: 20
+      },
+      {
+        breakpoint: 400,
+        preview: false
+      }
+    ];
+
+    this.water_sport.images.forEach(image_object => {
+      this.galleryImages.push({
+        small: image_object.thumbnail,
+        medium: image_object.image,
+        big: image_object.image,
+      })
+    });
+
+    this.cdr.markForCheck();
   }
 
   openBooking() {

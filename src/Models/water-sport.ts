@@ -17,7 +17,9 @@ export interface WaterSport {
   apply_vat:number,
   location:string,
   images: [{
-    image:string
+    id:number,
+    image:string,
+    thumbnail:string
   }],
   seo: {
     title:string,

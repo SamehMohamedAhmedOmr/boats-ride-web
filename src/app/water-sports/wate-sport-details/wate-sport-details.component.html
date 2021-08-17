@@ -62,29 +62,13 @@
         <div class="content-side col-lg-8 col-md-12 col-sm-12" *ngIf="water_sport">
           <div class="content-inner">
             <!--Tour Details-->
-            <div class="tour-details">
+            <div class="tour-details pt-0">
 
-              <div class="info-title clearfix">
-                <div class="left-info">
-                </div>
-              </div>
-
-              <div class="tour-widget recommended-widget carousel-widget">
-                <div class="widget-inner">
-                  <ngb-carousel [wrap]="true" [interval]="2500" [pauseOnHover]="true"
-                                [showNavigationArrows]="false" [showNavigationIndicators]="true">
-                    <ng-template ngbSlide *ngFor="let image of water_sport.images">
-                      <div class="recommend-block">
-                        <div class="inner">
-                          <div class="image-box">
-                            <a><img src="{{image.image}}" alt="" title=""></a>
-                          </div>
-                        </div>
-                      </div>
-                    </ng-template>
-                  </ngb-carousel>
-                </div>
-              </div>
+              <ngx-gallery [options]="galleryOptions"
+                           [images]="galleryImages"
+                           style="height: 462px !important;"
+                           class="ngx-gallery d-block w-100 mb-4">
+              </ngx-gallery>
 
               <div class="text-block">
                 <h4>{{'desc'|translate}}</h4>

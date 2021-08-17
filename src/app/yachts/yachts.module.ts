@@ -10,20 +10,22 @@ import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
 import {VoucherComponent} from './voucher/voucher.component';
 import {TranslateModule} from '@ngx-translate/core';
-import { DestinationsSpecificationComponent } from './yacht-details/destinations-specification/destinations-specification.component';
+import {DestinationsSpecificationComponent} from './yacht-details/destinations-specification/destinations-specification.component';
+import {NgxGalleryModule} from '@kolkov/ngx-gallery';
 
 
 @NgModule({
   declarations: [YachtsComponent, IndexComponent, YachtDetailsComponent, VoucherComponent, DestinationsSpecificationComponent],
 
-    imports: [
-        CommonModule,
-        YachtsRoutingModule,
-        SharedModule,
-        NgbCarouselModule,
-        NgxSkeletonLoaderModule,
-        TranslateModule,
-    ]
+  imports: [
+    CommonModule,
+    YachtsRoutingModule,
+    SharedModule,
+    NgbCarouselModule,
+    NgxSkeletonLoaderModule,
+    TranslateModule,
+    NgxGalleryModule,
+  ]
 })
 export class YachtsModule {
 }

@@ -10808,7 +10808,7 @@ img.lazy-image.loaded {
   position: relative;
   padding: 0;
   color: #ffffff;
-  background: #061138;
+  /*background: #061138;*/
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
