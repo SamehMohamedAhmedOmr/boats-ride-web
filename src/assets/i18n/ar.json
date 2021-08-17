@@ -225,5 +225,29 @@
   "ft": "قدم",
   "rental_yacht_dubai_text" : "ستأخذك يخوتنا الفاخرة في العديد من المعالم السياحية في المدينة ، بما في ذلك نخلة جميرا ، وبرج العرب على شكل شراع ، وشاطئ جميرا ، وجزيرة العالم ، وقناة دبي ، وخور دبي ...",
   "RENTAL" : "تأجير",
-  "YACHT_DUBAI" : "يخت دبي"
+  "YACHT_DUBAI" : "يخت دبي",
+  "DESTINATION_PLACES": {
+    "DUBAI_MARINA" : "دبي مارينا",
+    "JUMERIAH_BEACH_RESIDENCE" : "جميرا بيتش ريزيدنس",
+    "BLUEWATER_ISLAND" : "جزيرة بلوواتر",
+    "ONE_&_ONLY_THE_PALM" : "وان اند وان ذا بالم",
+    "ZABEEL_SARAY" : "زبيل سراي",
+    "Kempinski_hotel" : "فندق كمبينسكي",
+    "ATLANTIS_HOTEL" : "فندق أتلانتس",
+    "WALDORF_ASTORIA" : "والدورف أستوريا",
+    "RIXOS_THE_PALM" : "ريكسوس ذا بالم",
+    "JUMEIRAH_BEACH_HOTEL" : "فندق جميرا بيتش"
+  },
+  "SPECIFICATIONS": {
+    "SPECIFICATION" : "المواصفات",
+    "LENGTH" : "الطول",
+    "HEIGHT" : "الارتفاع",
+    "BEAM" : "الشعاع",
+    "YEAR" : "عام",
+    "CRUSING_SPEED" : "سرعة الانطلاق",
+    "MANUFACTURER" : "الشركة المصنعة",
+    "MODEL" : "الطراز",
+    "KNOTS" : "عقدة",
+    "Meter" : "متر"
+  }
 }

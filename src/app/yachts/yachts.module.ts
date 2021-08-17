@@ -10,10 +10,11 @@ import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
 import {VoucherComponent} from './voucher/voucher.component';
 import {TranslateModule} from '@ngx-translate/core';
+import { DestinationsSpecificationComponent } from './yacht-details/destinations-specification/destinations-specification.component';
 
 
 @NgModule({
-  declarations: [YachtsComponent, IndexComponent, YachtDetailsComponent, VoucherComponent],
+  declarations: [YachtsComponent, IndexComponent, YachtDetailsComponent, VoucherComponent, DestinationsSpecificationComponent],
 
     imports: [
         CommonModule,

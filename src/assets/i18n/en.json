@@ -225,6 +225,29 @@
   "ft": "FT",
   "rental_yacht_dubai_text" : "Our luxury yachts will take you in several of the city’s sights, including Palm Jumeirah, the sail-shaped Burj Al Arab, Jumeirah Beach, World Island, Dubai Canal, Dubai Creek ...",
   "RENTAL" : "RENTAL",
-  "YACHT_DUBAI" : "YACHT DUBAI"
-
+  "YACHT_DUBAI" : "YACHT DUBAI",
+  "DESTINATION_PLACES": {
+    "DUBAI_MARINA" : "DUBAI MARINA",
+    "JUMERIAH_BEACH_RESIDENCE" : "JUMERIAH BEACH RESIDENCE",
+    "BLUEWATER_ISLAND" : "BLUEWATER ISLAND",
+    "ONE_&_ONLY_THE_PALM" : "ONE & ONLY THE PALM",
+    "ZABEEL_SARAY" : "ZABEEL SARAY",
+    "Kempinski_hotel" : "Kempinski hotel",
+    "ATLANTIS_HOTEL" : "ATLANTIS HOTEL",
+    "WALDORF_ASTORIA" : "WALDORF ASTORIA",
+    "RIXOS_THE_PALM" : "RIXOS THE PALM",
+    "JUMEIRAH_BEACH_HOTEL" : "JUMEIRAH BEACH HOTEL"
+  },
+  "SPECIFICATIONS": {
+    "SPECIFICATION" : "Specification",
+    "LENGTH" : "Length",
+    "HEIGHT" : "Height",
+    "BEAM" : "Beam",
+    "YEAR" : "Year",
+    "CRUSING_SPEED" : "Crusing speed",
+    "MANUFACTURER" : "Manufacturer",
+    "MODEL" : "Model",
+    "KNOTS" : "Knots",
+    "Meter" : "m"
+  }
 }

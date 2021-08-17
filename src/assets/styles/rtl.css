@@ -300,3 +300,8 @@ mat-datepicker-content{
 .rental-block .meta-info li:last-child{
   text-align: right;
 }
+
+.title-detail span {
+  padding-left: 15px;
+  padding-right: 0 !important;
+}

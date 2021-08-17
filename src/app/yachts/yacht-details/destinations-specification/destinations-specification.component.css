@@ -1,0 +1,52 @@
+.title-detail:after {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 12px;
+  height: 4px;
+  content: "";
+  background: #11CCE9;
+}
+
+.title-detail span {
+  background-color: #fff;
+  display: inline-block;
+  z-index: 9;
+  padding-right: 15px;
+  position: relative;
+}
+
+.list-location li::before {
+  color: #be1935;
+  line-height: 20px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f3c5";
+  width: 18px;
+  height: 18px;
+  margin: 0 10px 0 0;
+  border-radius: 100%;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+.list-bullet li::before {
+  color: #be1935;
+  line-height: 20px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f111";
+  width: 18px;
+  height: 18px;
+  margin: 0 10px 0 0;
+  border-radius: 100%;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
