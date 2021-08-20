@@ -46,6 +46,8 @@ export interface Yacht {
   LED_screen_tv:boolean,
   sunbathing_on_the_foredeck:boolean,
   fishing_equipment:boolean,
+  model:number,
+  year:string,
   images: [{
     id:number,
     image:string,

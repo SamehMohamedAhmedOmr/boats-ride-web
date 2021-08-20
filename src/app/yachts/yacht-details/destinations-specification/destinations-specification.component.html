@@ -71,13 +71,13 @@
       : {{ yacht.cruising_speed }} {{ 'SPECIFICATIONS.KNOTS' | translate | titlecase }}
     </li>
     <li class="col-sm-6 mb-3">
-      {{ 'SPECIFICATIONS.YEAR' | translate | titlecase }}: 2013
+      {{ 'SPECIFICATIONS.YEAR' | translate | titlecase }}: {{ yacht.year }}
     </li>
     <li class="col-sm-6 mb-3">
       {{ 'SPECIFICATIONS.MANUFACTURER' | translate | titlecase }}: {{ yacht.manufacturer }}
     </li>
     <li class="col-sm-6 mb-3">
-      {{ 'SPECIFICATIONS.MODEL' | translate | titlecase }}: Majesty 56
+      {{ 'SPECIFICATIONS.MODEL' | translate | titlecase }}: {{ yacht.model }}
     </li>
   </ul>
 </section>
