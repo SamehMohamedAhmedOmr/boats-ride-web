@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeatureReserveComponent implements OnInit {
 
+  lang = localStorage.getItem('lang');
+
   constructor() { }
 
   ngOnInit(): void {

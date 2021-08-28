@@ -11,6 +11,7 @@ import {WaterSportService} from '../../core/services/water-sport.service';
 export class ServiceSectionComponent implements OnInit {
 
   is_loading:boolean = true;
+  lang = localStorage.getItem('lang');
 
   constructor(private resizeServiceService: ResizeServiceService,
               private waterService: WaterSportService,

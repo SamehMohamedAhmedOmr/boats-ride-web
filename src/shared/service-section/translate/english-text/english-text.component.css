@@ -1,0 +1,10 @@
+p {
+  text-align: center;
+  font-size: 18px;
+  color: #5f727f;
+}
+
+.dark-red{
+  color: red;
+  cursor: pointer;
+}

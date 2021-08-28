@@ -12,10 +12,12 @@ import {VoucherComponent} from './voucher/voucher.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {DestinationsSpecificationComponent} from './yacht-details/destinations-specification/destinations-specification.component';
 import {NgxGalleryModule} from '@kolkov/ngx-gallery';
+import { ArabicTextComponent } from './index/translate/arabic-text/arabic-text.component';
+import { EnglishTextComponent } from './index/translate/english-text/english-text.component';
 
 
 @NgModule({
-  declarations: [YachtsComponent, IndexComponent, YachtDetailsComponent, VoucherComponent, DestinationsSpecificationComponent],
+  declarations: [YachtsComponent, IndexComponent, YachtDetailsComponent, VoucherComponent, DestinationsSpecificationComponent, ArabicTextComponent, EnglishTextComponent],
 
   imports: [
     CommonModule,

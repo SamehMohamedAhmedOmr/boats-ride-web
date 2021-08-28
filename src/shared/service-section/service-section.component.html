@@ -6,7 +6,8 @@
       <div class="sec-title centered light with-border">
         <div class="upper-text">{{'whatwedo'|translate}}</div>
         <h2><strong>{{'thethrill'|translate}}</strong></h2>
-        <p style="text-align:center;font-size:18px"><span style="color:#5f727f">{{'luxuarytopic3'|translate}} </span></p>
+        <app-english-text *ngIf="lang == 'en'"></app-english-text>
+        <app-arabic-text *ngIf="lang == 'ar'"></app-arabic-text>
         <div class="separator"></div>
       </div>
     </div>

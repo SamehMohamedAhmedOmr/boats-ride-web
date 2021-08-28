@@ -26,8 +26,9 @@
 <div class="title-row clearfix">
   <div class="sec-title-two centered with-border">
     <div class="upper-text">{{'welcometo'|translate}} {{'boatride'|translate}}</div>
-    <h2><strong>{{'ouryachts'|translate}}</strong></h2>
-    <p style="text-align:center;font-size:18px"><span style="color:#5f727f">{{'luxuarytopic3'|translate}}</span></p>
+    <h2><strong>{{'YACHT_RENTAL_DUBAI'|translate}}</strong></h2>
+    <app-english-text *ngIf="lang == 'en'"></app-english-text>
+    <app-arabic-text *ngIf="lang == 'ar'"></app-arabic-text>
     <div class="separator"></div>
   </div>
   <div class="auto-container">

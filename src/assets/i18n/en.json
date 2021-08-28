@@ -45,12 +45,16 @@
   "luxary": "LUXURY YACHT RENTAL",
   "luxarcytopic2": "Boats Ride Offers Luxury Yachts In Dubai With Best Price.",
   "whatwedo": "WHAT WE DO FOR YOU",
-  "thethrill": "EXPERIENCE THE THRILL",
+  "thethrill": "YACHT CHARTER DUBAI",
   "luxuarytopic3": "Our luxury yachts will take you in several of the city’s sights, including Palm Jumeirah, the sail-shaped Burj Al Arab, Jumeirah Beach, World Island, Dubai Canal, Dubai Creek ...",
   "exp": "OUR EXPERIENCE",
   "abouttopic": "Largest Yachting Company Offers Yachts for Low Rental In Dubai.",
-  "abouttopic1": "Boats Ride it is Dubai's leading rental yachts charter company. We cater both to interested in hiring a boat together with a captain and optional crew. We present to you Dubai’s most unique yacht makes it easy for travellers to find the right boat by simplifying the selection and booking process.",
-  "abouttopic2": "At Boats Ride we are the proud owners of the highest quality yachts available in the UAE. We pride ourselves on delivering the most exclusive chartering experience, which is why we utilise fleet of impeccable . These yachts are some of the finest the market has to offer and have been hand-picked by the team to make sure they offer an unforgettable experience. Whether you’re after a yacht to share with your lover, or a superyacht that you can utilise with all of your friends to cruise dventure, we have something for you.",
+  "abouttopic1": "Boats Ride is Dubai's leading rental yacht charter company. We cater both interested in hiring a boat together with a captain and optional crew. We present to you Dubai’s most unique yacht that makes it easy for travelers to find the right boat by simplifying the selection and booking process.",
+  "abouttopic2": "At Boats Ride we are the proud owners of the highest quality yachts available in the UAE. We pride ourselves on delivering the most exclusive chartering experience, which is why we utilize a fleet of impeccable. These yachts are some of the finest the market has to offer and have been hand-picked by the team to make sure they offer an unforgettable experience. Whether you’re after a yacht to share with your lover or a superyacht that you can utilize with all of your friends to cruise adventure, we have something for you.",
+  "about_topic_3": "At Boats Ride we offer you a completely different and hassle-free experience. We make sure to fulfill all our customer's requirements and provide a five-star service. You can add many side services to your cruises that we provide at Boats Ride such as birthday parties, fishing trips, water games, weddings, and New Year's parties. Clients can also book their yacht cruise by calling us by phone. Payment can be made either online or in cash. Customers have a requirement to make credit card payments.",
+  "about_topic_4": "Find the best boat rental service in Dubai. Simple, easy, and secure.",
+  "about_topic_5" : "If you are looking for a good place to rent a boat, Dubai is the perfect place. With Boats Ride you can find over 30 different charters of yachts, boats, and water experiences.",
+  "about_topic_6" : "In addition, many boat owners also offer additional services such as lunch or dinner onboard, jet skis, sea kayaks, and other amenities to add extravaganza to your trip. We also help people book bridal showers, destination weddings, important birthdays, anniversaries, and honeymoon trips. In addition to yachts, we also offer motorboat rental services in Dubai and deep-sea fishing rental services. We can't wait to let you experience all that Dubai has to offer.",
   "luxuaryyacht": "Luxury Yachts",
   "safety": "Safety and Security",
   "value": "Value for Spending",
@@ -73,7 +77,7 @@
   "subscribe": "Subscribe Us",
   "viewyachts": "View All Yachts",
   "view_all_services" : "View All Services",
-  "abouttopics1": "Boats Ride is Dubai's leading rental yacht charter company. We cater both to interest in hiring a boat together with a captain and optional crew. We present to you Dubai’s most unique yacht makes it easy for travellers to find the right boat by simplifying the selection and booking process.",
+  "abouttopics1": "Boats Ride is Dubai's leading yacht rental company. We cater both to interest in boat rental together with a captain and optional crew. We present to you Dubai’s most unique luxury yacht that makes it easy for travellers to find the right boat charter by simplifying the selection and booking process.",
   "abouttopics2": "At Boats Ride we are the proud owners of the highest quality yachts available in the UAE. We pride ourselves on delivering the most exclusive chartering experience, which is why we utilize a fleet of impeccable. These yachts are some of the finest the market has to offer and have been hand-picked by the team to make sure they offer an unforgettable experience. Whether you’re after a yacht to share with your lover or a superyacht that you can utilize with all of your friends to cruise adventure, we have something for you.",
   "weprovide": "We Provide",
   "bestoffers": "Some Best Offers",
@@ -226,6 +230,8 @@
   "rental_yacht_dubai_text" : "Our luxury yachts will take you in several of the city’s sights, including Palm Jumeirah, the sail-shaped Burj Al Arab, Jumeirah Beach, World Island, Dubai Canal, Dubai Creek ...",
   "RENTAL" : "RENTAL",
   "YACHT_DUBAI" : "YACHT DUBAI",
+  "YACHT" : "YACHT",
+  "RENTAL_DUBAI" : "RENTAL DUBAI",
   "DESTINATION_PLACES": {
     "DUBAI_MARINA" : "DUBAI MARINA",
     "JUMERIAH_BEACH_RESIDENCE" : "JUMERIAH BEACH RESIDENCE",
@@ -249,5 +255,8 @@
     "MODEL" : "Model",
     "KNOTS" : "Knots",
     "Meter" : "m"
-  }
+  },
+  "CEO_FOUNDER" : "CEO & FOUNDER",
+  "Mohamed_Sahraoui" : "Mohamed Sahraoui",
+  "YACHT_RENTAL_DUBAI" : "YACHT RENTAL DUBAI\n"
 }

@@ -11,6 +11,7 @@ import {Services} from "../../../../Models/services";
 export class RentalYachtDubaiComponent implements OnInit {
 
   is_loading: boolean = true;
+  lang = localStorage.getItem('lang');
 
   constructor(private resizeServiceService: ResizeServiceService,
               private services: ServicesService,

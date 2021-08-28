@@ -4,16 +4,21 @@
     <div class="title-row clearfix">
       <div class="sec-title-two centered with-border">
         <h2>
-          <span>{{ 'RENTAL' | translate }}</span>
+          <span>{{ 'YACHT' | translate }}</span>
           <strong>
-            {{ 'YACHT_DUBAI' | translate }}
+            {{ 'RENTAL_DUBAI' | translate }}
           </strong>
         </h2>
-        <p style="text-align:center;font-size:18px">
-          <span style="color:#5f727f">
-            {{ 'rental_yacht_dubai_text' | translate }}
-          </span>
-        </p>
+
+        <app-english-text *ngIf="lang == 'en'"></app-english-text>
+        <app-arabic-text *ngIf="lang == 'ar'"></app-arabic-text>
+
+
+<!--        <p style="text-align:center;font-size:18px">-->
+<!--          <span style="color:#5f727f">-->
+<!--            {{ 'rental_yacht_dubai_text' | translate }}-->
+<!--          </span>-->
+<!--        </p>-->
         <div class="separator"></div>
       </div>
     </div>

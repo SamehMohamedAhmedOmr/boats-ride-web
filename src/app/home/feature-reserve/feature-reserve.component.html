@@ -4,8 +4,11 @@
   <div class="auto-container">
     <div class="sec-title-two centered with-border">
       <h2>{{'welcometo'|translate}}<strong>  {{'boatride'|translate}}</strong></h2>
-      <p class="b">{{'abouttopics1'|translate}}</p>
-      <p>{{'abouttopics2'|translate}}</p>
+
+      <app-feature-paragraph-english *ngIf="lang == 'en'"></app-feature-paragraph-english>
+
+      <app-feature-paragraph-arabic *ngIf="lang == 'ar'"></app-feature-paragraph-arabic>
+
     </div>
   </div>
 </section>

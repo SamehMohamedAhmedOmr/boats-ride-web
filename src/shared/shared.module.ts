@@ -21,6 +21,8 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { OldPopularDestinationComponent } from './popular-destination/old-popular-destination/old-popular-destination.component';
 import { NewPopularDestinationComponent } from './popular-destination/new-popular-destination/new-popular-destination.component';
 import { NewDestinationCellComponent } from './popular-destination/new-popular-destination/new-destination-cell/new-destination-cell.component';
+import { ArabicTextComponent } from './service-section/translate/arabic-text/arabic-text.component';
+import { EnglishTextComponent } from './service-section/translate/english-text/english-text.component';
 
 
 @NgModule({
@@ -37,6 +39,8 @@ import { NewDestinationCellComponent } from './popular-destination/new-popular-d
     OldPopularDestinationComponent,
     NewPopularDestinationComponent,
     NewDestinationCellComponent,
+    ArabicTextComponent,
+    EnglishTextComponent,
   ],
   imports: [
     CommonModule,

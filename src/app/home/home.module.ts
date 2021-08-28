@@ -23,6 +23,10 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatInputModule} from "@angular/material/input";
 import { RentalYachtDubaiComponent } from './feature-reserve/rental-yacht-dubai/rental-yacht-dubai.component';
 import {NgxSkeletonLoaderModule} from "ngx-skeleton-loader";
+import { FeatureParagraphArabicComponent } from './feature-reserve/translate/feature-paragraph-arabic/feature-paragraph-arabic.component';
+import { FeatureParagraphEnglishComponent } from './feature-reserve/translate/feature-paragraph-english/feature-paragraph-english.component';
+import { ArabicTextComponent } from './feature-reserve/rental-yacht-dubai/arabic-text/arabic-text.component';
+import { EnglishTextComponent } from './feature-reserve/rental-yacht-dubai/english-text/english-text.component';
 
 
 @NgModule({
@@ -38,7 +42,11 @@ import {NgxSkeletonLoaderModule} from "ngx-skeleton-loader";
     FluidsComponent,
     NewsComponent,
     FishingSectionComponent,
-    RentalYachtDubaiComponent
+    RentalYachtDubaiComponent,
+    FeatureParagraphArabicComponent,
+    FeatureParagraphEnglishComponent,
+    ArabicTextComponent,
+    EnglishTextComponent
   ],
     imports: [
         CommonModule,
