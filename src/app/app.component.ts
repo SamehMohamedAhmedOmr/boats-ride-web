@@ -43,15 +43,15 @@ export class AppComponent implements OnInit {
   isHome: boolean = false;
 
   ngOnInit() {
+    this.ngxService.start(); // start foreground spinner of the master loader with 'default' taskId
     this.settingSubscribe();
     this.getLanguage();
     this.langservice.loadStyle();
     this.subscribeHeader();
-    this.ngxService.start(); // start foreground spinner of the master loader with 'default' taskId
     // Stop the foreground loading after 5s
-    setTimeout(() => {
-      this.ngxService.stop(); // stop foreground spinner of the master loader with 'default' taskId
-    }, 3000);
+    // setTimeout(() => {
+    //   this.ngxService.stop(); // stop foreground spinner of the master loader with 'default' taskId
+    // }, 3000);
   }
 
   subscribeHeader() {
@@ -80,6 +80,8 @@ export class AppComponent implements OnInit {
   settingSubscribe(){
     this.settingsService.get().subscribe(value => {
       this.settings = value;
+      this.ngxService.stop(); // stop foreground spinner of the master loader with 'default' taskId
+      this.cdr.markForCheck();
     });
   }
 
