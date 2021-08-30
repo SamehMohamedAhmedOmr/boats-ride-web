@@ -11,7 +11,7 @@
   <div class="auto-container">
 
     <div class="main-image-box">
-      <figure class="image" >
+      <figure class="image">
         <img src="{{yacht.images[0].image}}" alt="" title="">
       </figure>
       <div class="caption-box">
@@ -33,26 +33,9 @@
         <div class="inner">
           <ngx-gallery [options]="galleryOptions"
                        [images]="galleryImages"
-                       style="height: 462px !important;"
+                       style="height: 500px !important;"
                        class="ngx-gallery d-block w-100 mb-4">
           </ngx-gallery>
-
-          <div class="text-block mb-3">
-            <h4>{{'whatinclude'|translate}}</h4>
-            <p [innerHTML]="yacht.what_is_included"></p>
-          </div>
-
-          <div class="text-block mb-3">
-            <h4>{{'fac'|translate}}</h4>
-            <p [innerHTML]="yacht.facilities"></p>
-          </div>
-
-          <div class="text-block mb-3">
-            <h4>{{'whatexpect'|translate}}</h4>
-            <p [innerHTML]="yacht.what_expect_description"></p>
-          </div>
-
-          <app-destinations-specification [yacht]="yacht"></app-destinations-specification>
         </div>
       </div>
 
@@ -69,18 +52,31 @@
                   <img src="../../../assets/images/icons/captain-cap.svg" style="width: 45px !important;">
                 </span> {{yacht.no_of_captain}} {{'captain'|translate}}
               </li>
-              <li class="col-6"> <span class="icon-wrap"><img src="../../../assets/images/icons/long.png"></span> {{yacht.size}} {{'feet'|translate}}</li>
-              <li class="col-6"> <span class="icon-wrap"><img src="../../../assets/images/icons/people.png"></span> {{'max'|translate}}: {{yacht.passenger_capacity}} {{'people'|translate}} </li>
-              <li class="col-6"> <span class="icon-wrap"><img src="../../../assets/images/icons/bed.png"></span> {{'beds'|translate}}: {{yacht.beds}}</li>
-              <li class="col-6" *ngIf="yacht.safety_equipment==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/safety.png"></span> {{'t43'|translate}}</li>
-              <li class="col-6" *ngIf="yacht.soft_drinks_refreshments==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/drink.png"></span> {{'t44'|translate}}</li>
-              <li class="col-6" *ngIf="yacht.ice_tea_water==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/tea.png"></span> {{'t45'|translate}}</li>
-              <li class="col-6" *ngIf="yacht.DVD_player==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/dvd.png"></span> {{'t46'|translate}}</li>
-              <li class="col-6" *ngIf="yacht.spacious_saloon==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/Sofa.png"></span> {{'t47'|translate}}</li>
-              <li class="col-6" *ngIf="yacht.BBQ_grill_equipment==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/BBQ.png"></span> {{'t48'|translate}}</li>
-              <li class="col-6" *ngIf="yacht.bathroom_amenities==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/shower.png"></span> {{'t49'|translate}}</li>
-              <li class="col-6" *ngIf="yacht.LED_screen_tv==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/TV.png"></span> {{'t50'|translate}}</li>
-              <li class="col-6" *ngIf="yacht.sunbathing_on_the_foredeck==true"> <span class="icon-wrap"><img src="../../../assets/images/icons/Sun.png"></span> {{'t51'|translate}}</li>
+              <li class="col-6"><span class="icon-wrap"><img
+                src="../../../assets/images/icons/long.png"></span> {{yacht.size}} {{'feet'|translate}}</li>
+              <li class="col-6"><span class="icon-wrap"><img
+                src="../../../assets/images/icons/people.png"></span> {{'max'|translate}}
+                : {{yacht.passenger_capacity}} {{'people'|translate}} </li>
+              <li class="col-6"><span class="icon-wrap"><img
+                src="../../../assets/images/icons/bed.png"></span> {{'beds'|translate}}: {{yacht.beds}}</li>
+              <li class="col-6" *ngIf="yacht.safety_equipment==true"><span class="icon-wrap"><img
+                src="../../../assets/images/icons/safety.png"></span> {{'t43'|translate}}</li>
+              <li class="col-6" *ngIf="yacht.soft_drinks_refreshments==true"><span class="icon-wrap"><img
+                src="../../../assets/images/icons/drink.png"></span> {{'t44'|translate}}</li>
+              <li class="col-6" *ngIf="yacht.ice_tea_water==true"><span class="icon-wrap"><img
+                src="../../../assets/images/icons/tea.png"></span> {{'t45'|translate}}</li>
+              <li class="col-6" *ngIf="yacht.DVD_player==true"><span class="icon-wrap"><img
+                src="../../../assets/images/icons/dvd.png"></span> {{'t46'|translate}}</li>
+              <li class="col-6" *ngIf="yacht.spacious_saloon==true"><span class="icon-wrap"><img
+                src="../../../assets/images/icons/Sofa.png"></span> {{'t47'|translate}}</li>
+              <li class="col-6" *ngIf="yacht.BBQ_grill_equipment==true"><span class="icon-wrap"><img
+                src="../../../assets/images/icons/BBQ.png"></span> {{'t48'|translate}}</li>
+              <li class="col-6" *ngIf="yacht.bathroom_amenities==true"><span class="icon-wrap"><img
+                src="../../../assets/images/icons/shower.png"></span> {{'t49'|translate}}</li>
+              <li class="col-6" *ngIf="yacht.LED_screen_tv==true"><span class="icon-wrap"><img
+                src="../../../assets/images/icons/TV.png"></span> {{'t50'|translate}}</li>
+              <li class="col-6" *ngIf="yacht.sunbathing_on_the_foredeck==true"><span class="icon-wrap"><img
+                src="../../../assets/images/icons/Sun.png"></span> {{'t51'|translate}}</li>
             </ul>
           </div>
         </div>
@@ -90,7 +86,8 @@
             <div>
               <div class="estimate-table" *ngIf="!yacht.yacht_special_price">
                 <ul>
-                  <li class="totals clearfix"><span class="ttle">{{'price'|translate}}:</span> <span class="dtl">{{'ead'|translate}} {{yacht.selling_per_hour}} / {{'hour'|translate}}</span></li>
+                  <li class="totals clearfix"><span class="ttle">{{'price'|translate}}:</span> <span
+                    class="dtl">{{'ead'|translate}} {{yacht.selling_per_hour}} / {{'hour'|translate}}</span></li>
                 </ul>
               </div>
               <div class="price" style="padding-left: 0px!important;" *ngIf="yacht.yacht_special_price">
@@ -117,17 +114,34 @@
               </div>
 
             </div>
-<!--            <div class="instruction">Do you need suggestion pls contact our expert team.</div>-->
+            <!--            <div class="instruction">Do you need suggestion pls contact our expert team.</div>-->
           </div>
         </div>
       </div>
 
+      <div class="col-12">
+        <div class="text-block mb-3">
+          <h4>{{'whatinclude'|translate}}</h4>
+          <p [innerHTML]="yacht.what_is_included"></p>
+        </div>
+
+        <div class="text-block mb-3">
+          <h4>{{'fac'|translate}}</h4>
+          <p [innerHTML]="yacht.facilities"></p>
+        </div>
+
+        <div class="text-block mb-3">
+          <h4>{{'whatexpect'|translate}}</h4>
+          <p [innerHTML]="yacht.what_expect_description"></p>
+        </div>
+
+        <app-destinations-specification [yacht]="yacht"></app-destinations-specification>
+      </div>
     </div>
 
   </div>
 </section>
 <!--<app-destination></app-destination>-->
-
 
 
 <!--Services Section Three-->
@@ -189,62 +203,6 @@
 
 </section>
 
-<!--&lt;!&ndash;Similar&ndash;&gt;-->
-<!--<section class="similar-yachts">-->
-<!--  <div class="auto-container">-->
-<!--    <div class="upper-title">-->
-<!--      <h4>Similar Yachts</h4>-->
-<!--    </div>-->
-<!--    <div class="row clearfix">-->
-<!--      &lt;!&ndash;Rental Block&ndash;&gt;-->
-<!--      <div class="rental-block col-lg-4 col-md-6 col-sm-12">-->
-<!--        <div class="inner-box">-->
-<!--          <div class="image-box">-->
-
-<!--            <figure class="image">-->
-
-<!--              <a href="majesty-yachr-48-feet.html">-->
-<!--                <div class="offer-info"><span>48 FT</span></div>-->
-
-<!--                <img src="../../../assets/images/resource/6.jpg" alt="" title=""></a>-->
-<!--            </figure>-->
-<!--            <div class="price-box">-->
-<!--              <div class="price"> 600 AED </div>-->
-<!--              <div class="cycle">PAR / H</div>-->
-
-
-<!--            </div>-->
-
-<!--          </div>-->
-<!--          <div class="title-box">-->
-<!--            <div class="more-link-box">-->
-<!--              <a href="majesty-yachr-48-feet.html" class="theme-btn">View Details</a>-->
-<!--            </div>-->
-<!--            <h4><a href="majesty-yachr-48-feet.html">Majesty Yacht</a></h4>-->
-<!--          </div>-->
-<!--          <div class="price">-->
-<!--            <div style="display: inline-block"><small>From</small>  <del class="price-old">AED 799/hr</del></div>-->
-<!--            <div style="display: inline-block; margin-left: 10px;" data-toggle="tooltip" data-html="true" title="" data-original-title="Summer Offer">-->
-<!--              <span class="blink" style="color: red;font-size: 15px;border-radius: 5px;font-weight: bolder;"><i class="fa fa-info-circle"></i> AED 600</span>-->
-<!--            </div>-->
-<!--            <small class="label label-warning pull-right" style="color: #fff;">VAT INCLUDE</small>-->
-<!--          </div>-->
-<!--          <div class="meta-info">-->
-<!--            <ul class="clearfix" style="margin-bottom: unset!important;">-->
-<!--              <li><a href="#"><img src="../../../assets/images/icons/captain.png" style="width: unset!important;" > Captain: 01</a></li>-->
-<!--              <li><a href="#"><img src="../../../assets/images/icons/crew.png" style="width: unset!important;">Crew : 01</a></li>-->
-<!--            </ul>-->
-<!--            <ul class="clearfix">-->
-<!--              <li><a href="#"><img src="../../../assets/images/icons/users.png" style="width: unset!important;"> Peaple : 12</a></li>-->
-<!--              <li><a href="#"><img src="../../../assets/images/icons/beds.png" style="width: unset!important;"> Beds : 02</a></li>-->
-<!--            </ul>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--</section>-->
-
 
 <!--About Section-->
 <section class="about-section">
@@ -264,155 +222,40 @@
               </div>
               <div class="video-link">
                 <div class="video-thumb">
-                  <figure class="image"><img src="../../../assets/images/resource/video-thumb-1.jpg" alt="" title=""></figure>
-                  <a href="https://www.youtube.com/watch?v=UHWwQtNqtmk" class="overlink lightbox-image"><span class="icon flaticon-media-play-symbol"></span></a>
+                  <figure class="image"><img src="../../../assets/images/resource/video-thumb-1.jpg" alt="" title="">
+                  </figure>
+                  <a href="https://www.youtube.com/watch?v=UHWwQtNqtmk" class="overlink lightbox-image"><span
+                    class="icon flaticon-media-play-symbol"></span></a>
                 </div>
                 <div class="video-title">
-                  <a href="https://www.youtube.com/watch?v=UHWwQtNqtmk" class="lightbox-image">{{'watchintro'|translate}}</a>
+                  <a href="https://www.youtube.com/watch?v=UHWwQtNqtmk"
+                     class="lightbox-image">{{'watchintro'|translate}}</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="lower-content">
-            <div *ngIf="lang == 'en'" class="text"><span>E</span>stablished in 1984 power choiceand when nothing prevents being able like best management to foresee the pain and trouble that are bound to ensue  weakness of will, which is the same as saying through shrinking.</div>
-            <div *ngIf="lang == 'ar'" style="margin-bottom: 5px">تأسس عام 1984 لاختيار السلطة وعندما لا شيء يمنع أن تكون قادرًا مثل أفضل إدارة على التنبؤ بالألم والمتاعب التي لا بد أن تؤدي إلى ضعف الإرادة ، وهو نفس القول من خلال الانكماش.</div>
+            <div *ngIf="lang == 'en'" class="text"><span>E</span>stablished in 1984 power choiceand when nothing
+              prevents being able like best management to foresee the pain and trouble that are bound to ensue weakness
+              of will, which is the same as saying through shrinking.
+            </div>
+            <div *ngIf="lang == 'ar'" style="margin-bottom: 5px">تأسس عام 1984 لاختيار السلطة وعندما لا شيء يمنع أن تكون
+              قادرًا مثل أفضل إدارة على التنبؤ بالألم والمتاعب التي لا بد أن تؤدي إلى ضعف الإرادة ، وهو نفس القول من
+              خلال الانكماش.
+            </div>
             <div class="link-box">
               <a href="about.html" class="default-link">
-                <span class="icon flaticon-logout"></span> <span class="link-text"><a class="link-text" style="color: black"
-                                                                                      [routerLink]="'/about'">{{'about'|translate}}</a></span>
+                <span class="icon flaticon-logout"></span>
+                <span class="link-text">
+                  <a class="link-text" style="color: black" [routerLink]="'/about'">{{'about'|translate}}</a>
+                </span>
               </a>
             </div>
           </div>
         </div>
       </div>
-      <br><br><br><br>
-      <!--Right Column-->
-<!--      <div class="right-col col-lg-5 col-md-12 col-sm-12">-->
-<!--        <div class="inner">-->
-<!--          <br><br><br><br><br>-->
-<!--          <div class="book-form-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">-->
-<!--            <div class="title"><h4>{{'booknow'|translate}}</h4></div>-->
-<!--            <div class="default-form booking-form">-->
-<!--              <form method="post" action="http://st.ourhtmldemo.com/new/sailing-demo/contact.html">-->
-<!--                <div class="row clearfix">-->
-<!--                  <div class="form-group col-lg-12 col-md-12 col-sm-12">-->
-<!--                    <div class="field-label">{{'yourname'|translate}}</div>-->
-<!--                    <div class="field-inner">-->
-<!--                      <input type="text" name="field-name" placeholder="" required="" value="">-->
-<!--                    </div>-->
-<!--                  </div>-->
-
-<!--                  <div class="form-group col-lg-12 col-md-12 col-sm-12">-->
-<!--                    <div class="field-label">{{'phone'|translate}}</div>-->
-<!--                    <div class="field-inner">-->
-<!--                      <input type="text" name="field-name" placeholder="" required="" value="">-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="form-group col-lg-6 col-md-6 col-sm-12">-->
-<!--                    <div class="field-label">{{'date'|translate}}</div>-->
-<!--                    <div class="field-inner">-->
-<!--                      <input class="datepicker" type="text" name="text" placeholder="" autocomplete="off" required>-->
-<!--                    </div>-->
-<!--                  </div>-->
-<!--                  <div class="form-group col-lg-6 col-md-6 col-sm-12">-->
-<!--                    <div class="field-label">{{'noofpersons'|translate}}</div>-->
-<!--                    <div class="field-inner">-->
-<!--                      <div class="quantity-spinner">-->
-<!--                        <div class="inner-box clearfix">-->
-<!--                          <button type="button" class="minus">-</button>-->
-<!--                          <input type="text" name="product" value="1" class="prod_qty">-->
-<!--                          <button type="button" class="plus">+</button>-->
-<!--                        </div>-->
-<!--                      </div>-->
-<!--                    </div>-->
-<!--                  </div>-->
-
-<!--                  <div class="form-group col-lg-12 col-md-12 col-sm-12">-->
-<!--                    <div class="field-label">{{'activity'|translate}}</div>-->
-<!--                    <div class="field-inner">-->
-<!--                      <select class="custom-select-box" name="field-name">-->
-<!--                        <option>Yacht Rent</option>-->
-<!--                        <option>Water Sport</option>-->
-<!--                        <option>Fishing Trip</option>-->
-<!--                      </select>-->
-<!--                    </div>-->
-<!--                  </div>-->
-
-<!--                  <div class="form-group col-lg-12 col-md-12 col-sm-12">-->
-<!--                    <button type="submit" class="theme-btn btn-style-three"><span class="btn-title">{{'booknow'|translate}}</span></button>-->
-<!--                  </div>-->
-<!--                </div>-->
-<!--              </form>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
 
     </div>
   </div>
 </section>
-
-
-<!--Team-->
-<!--<section class="team-section-two">-->
-<!--  <div class="auto-container">-->
-<!--    <div class="upper-title">-->
-<!--      <h4>Contact Our Team</h4>-->
-<!--    </div>-->
-<!--    <div class="row clearfix">-->
-<!--      &lt;!&ndash;Team Block&ndash;&gt;-->
-<!--      <div class="team-block-two col-lg-6 col-md-12 col-sm-12">-->
-<!--        <div class="inner-box">-->
-<!--          <div class="row clearfix">-->
-<!--            <div class="image-column col-lg-6 col-md-6 col-sm-12">-->
-<!--              <div class="image-box">-->
-<!--                <figure class="image">-->
-<!--                  <a href="#"><img src="../../../assets/images/resource/team-4.jpg" alt="" title=""></a>-->
-<!--                </figure>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="content-column col-lg-6 col-md-6 col-sm-12">-->
-<!--              <div class="inner">-->
-<!--                <div class="title">-->
-<!--                  <h4><a href="#">Mohammed Sahraoui</a></h4>-->
-<!--                  <div class="designation">CEO & FOUNDERr</div>-->
-<!--                </div>-->
-<!--                <ul class="info">-->
-<!--                  <li>Phone: +971 524918686</li>-->
-<!--                  <li>Email: mohamedsahraoui@boatsride.com</li>-->
-<!--                </ul>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      &lt;!&ndash;Team Block&ndash;&gt;-->
-<!--      <div class="team-block-two col-lg-6 col-md-12 col-sm-12">-->
-<!--        <div class="inner-box">-->
-<!--          <div class="row clearfix">-->
-<!--            <div class="image-column col-lg-6 col-md-6 col-sm-12">-->
-<!--              <div class="image-box">-->
-<!--                <figure class="image">-->
-<!--                  <a href="#"><img src="../../../assets/images/resource/team-5.jpg" alt="" title=""></a>-->
-<!--                </figure>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="content-column col-lg-6 col-md-6 col-sm-12">-->
-<!--              <div class="inner">-->
-<!--                <div class="title">-->
-<!--                  <h4><a href="#">Other Name </a></h4>-->
-<!--                  <div class="designation">Skipper</div>-->
-<!--                </div>-->
-<!--                <ul class="info">-->
-<!--                  <li>Phone: +971 56 415 7579</li>-->
-<!--                  <li>Email: fullname@boatsride.com</li>-->
-<!--                </ul>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
 

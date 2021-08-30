@@ -60,7 +60,7 @@ export class WateSportDetailsComponent implements OnInit {
       {
         width: '600px',
         height: '400px',
-        thumbnailsColumns: 4,
+        thumbnailsColumns: 6,
         imageAnimation: NgxGalleryAnimation.Slide
       },
       {
@@ -70,7 +70,7 @@ export class WateSportDetailsComponent implements OnInit {
         imagePercent: 80,
         thumbnailsPercent: 20,
         thumbnailsMargin: 20,
-        thumbnailMargin: 20
+        thumbnailMargin: 5
       },
       {
         breakpoint: 400,
