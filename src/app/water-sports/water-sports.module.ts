@@ -12,10 +12,13 @@ import {NgxSkeletonLoaderModule} from 'ngx-skeleton-loader';
 import { VoucherComponent } from './voucher/voucher.component';
 import {TranslateModule} from '@ngx-translate/core';
 import {NgxGalleryModule} from "@kolkov/ngx-gallery";
+import { RecommendedComponent } from './index/recommended/recommended.component';
+import { DestinationWidgetComponent } from './index/destination-widget/destination-widget.component';
+import { OffersWidgetComponent } from './index/offers-widget/offers-widget.component';
 
 
 @NgModule({
-  declarations: [IndexComponent,WaterSportsComponent,WateSportDetailsComponent, VoucherComponent],
+  declarations: [IndexComponent,WaterSportsComponent,WateSportDetailsComponent, VoucherComponent, RecommendedComponent, DestinationWidgetComponent, OffersWidgetComponent],
     imports: [
         CommonModule,
         WaterSportsRoutingModule,

@@ -7130,9 +7130,9 @@ img.lazy-image.loaded {
 .rental-block .price-box {
   position: absolute;
   right: 0;
-  top: 20px;
-  padding: 0px 15px 7px;
-  font-size: 12px;
+  top: 11px;
+  padding: 0px 5px 5px;
+  font-size: 10px;
   text-transform: uppercase;
   color: #ffffff;
   line-height: 24px;
@@ -7201,7 +7201,7 @@ img.lazy-image.loaded {
 .rental-block .title-box {
   position: relative;
   display: block;
-  padding: 22px 20px 20px;
+  padding: 10px 20px 10px;
   text-align: center;
 }
 
@@ -20926,7 +20926,7 @@ body {
 
 .object-fit-cover {
   object-fit: cover !important;
-  max-height: 215px !important;
+  max-height: 225px !important;
 }
 
 

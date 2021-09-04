@@ -27,6 +27,8 @@ import { FeatureParagraphArabicComponent } from './feature-reserve/translate/fea
 import { FeatureParagraphEnglishComponent } from './feature-reserve/translate/feature-paragraph-english/feature-paragraph-english.component';
 import { ArabicTextComponent } from './feature-reserve/rental-yacht-dubai/arabic-text/arabic-text.component';
 import { EnglishTextComponent } from './feature-reserve/rental-yacht-dubai/english-text/english-text.component';
+import { ServiceSliderComponent } from './feature-reserve/rental-yacht-dubai/service-slider/service-slider.component';
+import { ServicesBoxComponent } from './feature-reserve/rental-yacht-dubai/services-box/services-box.component';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import { EnglishTextComponent } from './feature-reserve/rental-yacht-dubai/engli
     FeatureParagraphArabicComponent,
     FeatureParagraphEnglishComponent,
     ArabicTextComponent,
-    EnglishTextComponent
+    EnglishTextComponent,
+    ServiceSliderComponent,
+    ServicesBoxComponent
   ],
     imports: [
         CommonModule,
