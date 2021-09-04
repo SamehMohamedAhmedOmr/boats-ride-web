@@ -61,7 +61,7 @@
                     <span>{{yacht.size}} {{ 'ft' | translate }}</span>
                   </div>
 
-                  <img class="object-fit-cover" src="{{ firstImage(yacht.images) }}" alt="" title=""></a>
+                  <img class="object-fit-cover" src="{{yacht.banner_image || firstImage(yacht.images) }}" alt="" title=""></a>
               </figure>
 
               <div class="price-box">

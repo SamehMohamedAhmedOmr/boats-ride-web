@@ -34,14 +34,15 @@
               <div class="inner-box">
                 <div class="image-box">
 
-                  <figure class="image mb-0">
+                  <figure class="image mb-0" style="background-color: transparent !important;">
                     <a routerLink="/yachts/{{yacht.slug}}">
                       <div class="offer-info force-rtl">
                         <span>{{yacht.size}} {{ 'ft' | translate }}</span>
                       </div>
 
-                      <img class="object-fit-cover" src="{{yacht.images[0].image}}" alt="" title=""></a>
+                      <img class="object-fit-cover" src="{{yacht.banner_image || yacht.images[0].image}}" alt="" title=""></a>
                   </figure>
+
                   <div class="price-box">
                     <div class="price old-price-container"> {{yacht.selling_per_hour}} {{'ead'|translate}}</div>
                     <div class="cycle">

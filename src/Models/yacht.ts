@@ -70,4 +70,5 @@ export interface Yacht {
     description:string,
     keywords:[]
   },
+  banner_image:string
 }

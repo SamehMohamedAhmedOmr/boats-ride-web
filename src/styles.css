@@ -20925,8 +20925,9 @@ body {
 
 
 .object-fit-cover {
+  height: 265px !important;
   object-fit: cover !important;
-  max-height: 225px !important;
+  max-height: 265px !important;
 }
 
 
