@@ -44,7 +44,7 @@
                   </figure>
 
                   <div class="price-box">
-                    <div class="price old-price-container"> {{yacht.selling_per_hour}} {{'ead'|translate}}</div>
+                    <div class="price old-price-container"> {{yacht.selling_per_hour}} {{'ead_price'|translate}}</div>
                     <div class="cycle">
                       {{ 'per_h' | translate }}
                     </div>
@@ -125,7 +125,7 @@
     </div>
     <div class="bottom-text">
       {{'luxarcytopic2'|translate}}
-      <a [routerLink]="'/yachts'">{{'viewyachts'|translate}}</a>
+      <a class="view_yachts" [routerLink]="'/yachts'">{{'viewyachts'|translate}}</a>
     </div>
   </div>
 

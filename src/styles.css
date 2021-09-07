@@ -4528,7 +4528,7 @@ img.lazy-image.loaded {
 }
 
 .price {
-  padding: 15px;
+  padding: 10px;
   border-top: 1px solid rgba(0, 0, 0, 0.10);
 }
 
@@ -21023,3 +21023,23 @@ h4{
   border: none !important;
   border-radius: 5px !important;
 }
+
+
+@media (max-width: 575.98px) {
+  .rentals-row .auto-container{
+
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .view_yachts{
+    display: block;
+    margin-top: 27px;
+  }
+
+  .rentals-row .auto-container .carousel-dots{
+    bottom: 0 !important;
+  }
+}
+
+
