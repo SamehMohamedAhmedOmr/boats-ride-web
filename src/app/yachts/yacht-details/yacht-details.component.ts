@@ -49,7 +49,7 @@ export class YachtDetailsComponent implements OnInit {
     this.yachtServie.getYacht(this.slug).subscribe(data => {
       this.yacht = data;
       this.prepareImages();
-      this.updateMetaTags();
+      this.updateMetaTags(data);
       this.cdr.markForCheck();
     });
   }
@@ -106,11 +106,11 @@ export class YachtDetailsComponent implements OnInit {
     this.dialog.open(YachtBookingFormComponent, dialogConfig);
   }
 
-  private updateMetaTags() {
+  private updateMetaTags(yacht:Yacht) {
     window.dataLayer = [];
-    let first_image = this.yacht?.images?.length ?  this.yacht?.images[0].image : '';
+    let first_image = yacht?.images?.length ?  yacht?.images[0].image : '';
     // @ts-ignore
-    this.metaService.updateTags(this.yacht?.seo?.title + ' | Boats-Ride', this.yacht?.seo?.description, first_image);
+    this.metaService.updateTags(yacht?.seo?.title + ' | Boats-Ride', yacht?.seo?.description, first_image);
     window.dataLayer.push({ ecommerce: null });
     window.dataLayer.push({
       'event': 'details',
@@ -118,9 +118,9 @@ export class YachtDetailsComponent implements OnInit {
         'currencyCode': 'AED',
         'detail': {
           'products': [{
-            name: this.yacht.name ? this.yacht.name : '',
-            id: this.yacht.id ? this.yacht.id : '',
-            price: this.yacht.selling_per_hour ? this.yacht.selling_per_hour : '',
+            name: yacht.name ? yacht.name : '',
+            id: yacht.id ? yacht.id : '',
+            price: yacht.selling_per_hour ? yacht.selling_per_hour : '',
           }]
         }
       }
