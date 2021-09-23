@@ -1,1 +1,22 @@
-<p>index works!</p>
+<section class="page-banner inner-banner-height">
+
+  <div class="image-layer" style="background-image:url('./assets/images/background/banner-1.jpg');"></div>
+
+  <div class="banner-inner">
+    <div class="auto-container">
+      <div class="inner-container clearfix">
+        <h1 class="inner-banner-height-title">{{'terns_and_conditions'|translate}} </h1>
+        <div class="page-nav">
+          <ul class="bread-crumb clearfix">
+            <li><a [routerLink]="'/'">{{'home'|translate}}</a></li>
+            <li>{{'terns_and_conditions'|translate}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-index-en *ngIf="lang == 'en'"></app-index-en>
+
+<app-index-ar *ngIf="lang == 'ar'"></app-index-ar>
