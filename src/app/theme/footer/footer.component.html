@@ -149,7 +149,9 @@
       <div class="auto-container">
         <div class="inner clearfix">
           <div class="copyright">{{'right'|translate}}.</div>
-          <div class="bottom-links"><a href="#">{{'term'|translate}}</a> & <a href="#">{{'privacy'|translate}}</a></div>
+          <div class="bottom-links">
+            <a [routerLink]="'terms-and-conditions'">{{'term'|translate}}</a> & <a [routerLink]="'policy-and-policy'">{{'privacy'|translate}}</a>
+          </div>
         </div>
       </div>
     </div>

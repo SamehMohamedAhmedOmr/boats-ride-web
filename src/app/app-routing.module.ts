@@ -53,6 +53,16 @@ const routes: Routes = [
       .then(m => m.BlogsModule)
   },
   {
+    path: 'terms-and-conditions', // <= Page URL ,
+    loadChildren: () => import('./terms-and-conditions/terms-and-conditions.module')
+      .then(m => m.TermsAndConditionsModule)
+  },
+  {
+    path: 'policy-and-policy', // <= Page URL ,
+    loadChildren: () => import('./privacy-and-policy/privacy-and-policy.module')
+      .then(m => m.PrivacyAndPolicyModule)
+  },
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full'
