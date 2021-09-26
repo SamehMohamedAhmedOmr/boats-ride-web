@@ -104,7 +104,7 @@ export class WateSportDetailsComponent implements OnInit {
     window.dataLayer = [];
     let first_image = this.water_sport?.images?.length ?  this.water_sport?.images[0].image : '';
     // @ts-ignore
-    this.metaService.updateTags(this.water_sport?.seo?.title + ' | Boats-Ride', this.water_sport?.seo?.description, first_image);
+    this.metaService.updateTags(this.water_sport?.seo?.title, this.water_sport?.seo?.description, first_image);
     window.dataLayer.push({ ecommerce: null });
     window.dataLayer.push({
       'event': 'details',

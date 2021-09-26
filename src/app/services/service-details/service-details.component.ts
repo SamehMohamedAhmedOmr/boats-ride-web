@@ -39,7 +39,7 @@ export class ServiceDetailsComponent implements OnInit {
   private updateMetaTags() {
     window.dataLayer = [];
     // @ts-ignore
-    this.metaService.updateTags(this.service?.seo?.title + ' | Boats-Ride', this.service?.seo?.description, this.service?.image);
+    this.metaService.updateTags(this.service?.seo?.title , this.service?.seo?.description, this.service?.image);
     window.dataLayer.push({ ecommerce: null });
     window.dataLayer.push({
       'event': 'details',

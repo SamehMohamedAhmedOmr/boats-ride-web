@@ -5,9 +5,9 @@ import { Meta, Title } from '@angular/platform-browser';
   providedIn: 'root'
 })
 export class MetaTagService {
-  private headTitle = 'Boats-Ride';
+  private headTitle = 'Boats Ride - Yacht Rental Dubai Marina | Yacht Charter Dubai | Boats Rental Dubai Marina | www.boatsride.com';
   private description = 'Yacht Rental Dubai Marina | Yacht Charter Dubai | Boats Rental Dubai Marina';
-  private image = '../assets/images/logoooo.png';
+  private image = 'https://boatsride.com/logo.png';
   private keywords = 'Yacht Rental Dubai Marina, Yacht Charter Dubai, Boats Rental Dubai Marina';
 
   constructor(
@@ -20,7 +20,7 @@ export class MetaTagService {
       this.updateTitle(this.headTitle);
     } else {
       // @ts-ignore
-      this.updateTitle(title);
+      this.updateTitle(title + '| Boats-Ride');
     }
 
     if (!description) {
@@ -40,18 +40,18 @@ export class MetaTagService {
 
   private updateTitle(title:string) {
     this.titleService.setTitle(title);
-    this.metaService.updateTag({ property: 'og:title', content: title });
-    this.metaService.updateTag({ property: 'twitter:title', content: title });
+    this.metaService.updateTag({ property: 'og:title', content: title ? title : this.headTitle });
+    this.metaService.updateTag({ property: 'twitter:title', content: title ? title : this.headTitle });
   }
 
   private updateDescription(description:string) {
-    this.metaService.updateTag({ property: 'og:description', content: description });
-    this.metaService.updateTag({ property: 'twitter:description', content: description });
+    this.metaService.updateTag({ property: 'og:description', content: description ? description : this.description });
+    this.metaService.updateTag({ property: 'twitter:description', content: description ? description : this.description });
   }
 
   private updateImage(image:string) {
-    this.metaService.updateTag({ property: 'og:image', content: image });
-    this.metaService.updateTag({ property: 'twitter:image', content: image });
+    this.metaService.updateTag({ property: 'og:image', content: image ? image : this.image });
+    this.metaService.updateTag({ property: 'twitter:image', content: image ? image : this.image });
   }
 
   private updateUrl(url:string) {

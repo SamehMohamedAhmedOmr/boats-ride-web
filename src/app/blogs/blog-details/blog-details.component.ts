@@ -39,7 +39,7 @@ export class BlogDetailsComponent implements OnInit {
   private updateMetaTags() {
     window.dataLayer = [];
     // @ts-ignore
-    this.metaService.updateTags(this.blog?.seo?.title + ' | Boats-Ride', this.blog?.seo?.description, this.blog?.image);
+    this.metaService.updateTags(this.blog?.seo?.title, this.blog?.seo?.description, this.blog?.image);
     window.dataLayer.push({ ecommerce: null });
     window.dataLayer.push({
       'event': 'details',

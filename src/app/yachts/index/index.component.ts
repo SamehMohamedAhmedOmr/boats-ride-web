@@ -1,6 +1,7 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {Yacht} from '../../../Models/yacht';
 import {YachtService} from '../../../core/services/yacht.service';
+import {SeoService} from "../../../core/services/seo.service";
 
 @Component({
   selector: 'app-index',
@@ -13,16 +14,27 @@ export class IndexComponent implements OnInit {
   is_loading:boolean = true;
   lang = localStorage.getItem('lang');
 
-  constructor(private yachtService: YachtService, private cdr: ChangeDetectorRef) {
+  constructor(private yachtService: YachtService,
+              private seoService:SeoService,
+              private cdr: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
+    this.getSeo();
     this.getYachts();
   }
 
   getYachts() {
     this.yachtService.getYachts().subscribe(data => {
       this.yachts = data;
+      this.is_loading = false;
+      this.cdr.markForCheck();
+    });
+  }
+
+  getSeo(){
+    this.seoService.Seo('yachts').subscribe(seo => {
+      this.seoService.updateMetaTags(seo);
       this.is_loading = false;
       this.cdr.markForCheck();
     });

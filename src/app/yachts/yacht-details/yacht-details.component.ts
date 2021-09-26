@@ -110,7 +110,7 @@ export class YachtDetailsComponent implements OnInit {
     window.dataLayer = [];
     let first_image = yacht?.images?.length ?  yacht?.images[0].image : '';
     // @ts-ignore
-    this.metaService.updateTags(yacht?.seo?.title + ' | Boats-Ride', yacht?.seo?.description, first_image);
+    this.metaService.updateTags(yacht?.seo?.title, yacht?.seo?.description, first_image);
     window.dataLayer.push({ ecommerce: null });
     window.dataLayer.push({
       'event': 'details',

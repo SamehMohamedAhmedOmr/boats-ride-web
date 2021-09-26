@@ -1,6 +1,7 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {Blogs} from '../../../Models/blogs';
 import {BlogsService} from '../../../core/services/blogs.service';
+import {SeoService} from "../../../core/services/seo.service";
 
 @Component({
   selector: 'app-index',
@@ -12,10 +13,13 @@ export class IndexComponent implements OnInit {
   public blogs: Blogs [] = [];
   is_loading:boolean = true;
 
-  constructor(private blogsService: BlogsService, private cdr: ChangeDetectorRef) {
+  constructor(private blogsService: BlogsService,
+              private seoService:SeoService,
+              private cdr: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
+    this.getSeo();
     this.getBlogs();
   }
 
@@ -27,4 +31,11 @@ export class IndexComponent implements OnInit {
     });
   }
 
+  getSeo(){
+    this.seoService.Seo('blogs').subscribe(seo => {
+      this.seoService.updateMetaTags(seo);
+      this.is_loading = false;
+      this.cdr.markForCheck();
+    });
+  }
 }
