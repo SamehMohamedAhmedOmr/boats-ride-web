@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1632693354017,
+  "timestamp": 1632875837430,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -22,7 +22,7 @@
         "/9.4021bb4d7611bfb950d3.js",
         "/favicon.ico",
         "/index.html",
-        "/main.fd6976ee0fa88d66f213.js",
+        "/main.f06707bf9f98d53d5e2b.js",
         "/manifest.webmanifest",
         "/polyfills.1108a855321f613b37d3.js",
         "/runtime.fb99977e32f12f2fdc0f.js",
@@ -1191,8 +1191,8 @@
     "/assets/fonts/themify9f24.ttf": "5bb1fe69452a484566a81076af7567728fe7e43b",
     "/assets/fonts/themify9f24.woff": "9394f35bd2addd24666b79bfc36d4f9d247cb01d",
     "/assets/fonts/themifyd41d.eot": "df12a0942cf1933f0915fe3d910fa2379f092d83",
-    "/assets/i18n/ar.json": "b644fa5941c0c1a2848b3afa6b56116e259f1a93",
-    "/assets/i18n/en.json": "c70a6ee734fd1360cedfd109a255cda8a3e5c1cf",
+    "/assets/i18n/ar.json": "8acfba6d1bac54689f0e14a4cf38e8de02aa12d7",
+    "/assets/i18n/en.json": "dab72321c662f0c04a1cf9923f0c95ef50901a94",
     "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -2135,8 +2135,8 @@
     "/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg": "98a8aa5cf7d62c2eff5f07ede8d844b874ef06ed",
     "/fontawesome-webfont.f691f37e57f04c152e23.woff": "28b782240b3e76db824e12c02754a9731a167527",
     "/image-bg.d4c803c93946985ceafe.svg": "72b59f76a8c9c35a3bf2a4139e5c3b27fc16c308",
-    "/index.html": "47141dee41b1d97f5af324db5d9abba1ebca87e9",
-    "/main.fd6976ee0fa88d66f213.js": "3efb9e8d06bf60383bb2e11d37e70eabd742150e",
+    "/index.html": "e28f256b656e0cec5c2e473d94dbd9f3c2ea3715",
+    "/main.f06707bf9f98d53d5e2b.js": "c2e5d967c7c1113d6c6369de68e8a98ec3359568",
     "/manifest.webmanifest": "05f60aa8fdc17ba57d3a97521b96146dc3cab16b",
     "/polyfills.1108a855321f613b37d3.js": "ee8f3e297277217240bedbd5ac098b799aa5365f",
     "/preloader.4761ee97d8d0c5d1e99f.svg": "7130c2bb9ff5f1ec95e8a2011a07a0a13232ae84",
