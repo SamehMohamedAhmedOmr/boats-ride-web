@@ -41,4 +41,11 @@ export class YachtRentalComponent implements OnInit {
       this.cdr.markForCheck();
     });
   }
+
+  firstImage(images: any){
+    // @ts-ignore
+    let target = images.find((value, index) => index == 0);
+    // @ts-ignore
+    return target?.image;
+  }
 }
