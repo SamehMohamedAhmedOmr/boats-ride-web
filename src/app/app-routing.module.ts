@@ -73,7 +73,7 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, {
     initialNavigation: 'enabled',
     scrollPositionRestoration: 'top',
-    useHash: true
+ //   useHash: true
   })],
   exports: [RouterModule]
 })
