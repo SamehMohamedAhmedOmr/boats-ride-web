@@ -2,6 +2,7 @@ import {ChangeDetectorRef, Component, HostListener, OnInit} from '@angular/core'
 import {ResizeServiceService} from '../../core/services/Helpers/resize-service.service';
 import {WaterSport} from '../../Models/water-sport';
 import {WaterSportService} from '../../core/services/water-sport.service';
+import {LocalStorageService} from "../../core/services/localStorage.service";
 
 @Component({
   selector: 'app-service-section',
@@ -11,10 +12,11 @@ import {WaterSportService} from '../../core/services/water-sport.service';
 export class ServiceSectionComponent implements OnInit {
 
   is_loading:boolean = true;
-  lang = localStorage.getItem('lang');
+  lang:string | null = 'en';
 
   constructor(private resizeServiceService: ResizeServiceService,
               private waterService: WaterSportService,
+              private localStorageService: LocalStorageService,
               private cdr: ChangeDetectorRef) {
   }
 
@@ -22,6 +24,7 @@ export class ServiceSectionComponent implements OnInit {
   numberofcells = 3;
 
   ngOnInit(): void {
+    this.lang = this.localStorageService.getItem('lang');
     this.numberofcells = this.resizeServiceService.checkWindowSize();
     this.getWaterSports();
   }

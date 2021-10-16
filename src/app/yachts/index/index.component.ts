@@ -2,6 +2,7 @@ import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {Yacht} from '../../../Models/yacht';
 import {YachtService} from '../../../core/services/yacht.service';
 import {SeoService} from "../../../core/services/seo.service";
+import {LocalStorageService} from "../../../core/services/localStorage.service";
 
 @Component({
   selector: 'app-index',
@@ -12,14 +13,16 @@ export class IndexComponent implements OnInit {
 
   public yachts: Yacht [] = [];
   is_loading:boolean = true;
-  lang = localStorage.getItem('lang');
+  lang:string | null = 'en';
 
   constructor(private yachtService: YachtService,
               private seoService:SeoService,
+              private localStorageService: LocalStorageService,
               private cdr: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
+    this.lang = this.localStorageService.getItem('lang');
     this.getSeo();
     this.getYachts();
   }

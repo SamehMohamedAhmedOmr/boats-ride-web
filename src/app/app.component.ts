@@ -1,13 +1,15 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
 import {NgxUiLoaderService} from "ngx-ui-loader";
 import {ToggleHeaderService} from '../core/services/Helpers/toggle.header.service';
 import {LangChangeEvent, TranslateService} from '@ngx-translate/core';
-import {LocalStorage} from '../core/services/localStorage';
 import {LanguageService} from '../core/services/language-services.service';
 import {SettingsService} from "../core/services/settings.service";
 import {Settings} from "../Models/settings";
 import {LanguagesUrlService} from "../core/services/Helpers/languages.url.service";
 import {ActivatedRoute, Router} from "@angular/router";
+import {BehaviorSubject} from "rxjs";
+import {isPlatformBrowser} from "@angular/common";
+import {LocalStorageService} from "../core/services/localStorage.service";
 
 @Component({
   selector: 'app-root',
@@ -18,6 +20,7 @@ export class AppComponent implements OnInit {
 
   // @ts-ignore
   settings: Settings;
+  static isBrowser = new BehaviorSubject<boolean>(false);
 
   constructor(private ngxService: NgxUiLoaderService,
               private toggleHeader: ToggleHeaderService,
@@ -27,8 +30,11 @@ export class AppComponent implements OnInit {
               private router: Router,
               private route: ActivatedRoute,
               private cdr: ChangeDetectorRef,
-              private localStorage: LocalStorage,
+              @Inject(PLATFORM_ID) private platformId: any,
+              private localStorageService: LocalStorageService,
               private langservice: LanguageService) {
+
+    AppComponent.isBrowser.next(isPlatformBrowser(platformId));
 
     this.translate.setDefaultLang('en');
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
@@ -67,7 +73,7 @@ export class AppComponent implements OnInit {
   }
 
   getLanguage() {
-    if (this.localStorage.getLang() === 'ar') {
+    if (this.localStorageService.getItem('lang') === 'ar') {
       this.translate.setDefaultLang('ar');
       this.translate.use('ar');
       this.languagesUrlService.changeLang('ar');
@@ -97,7 +103,7 @@ export class AppComponent implements OnInit {
         let lang = params.lang;
         if (lang) {
           if (lang == 'ar') {
-            localStorage.setItem('lang', lang);
+            this.localStorageService.setItem('lang', lang);
             this.getLanguage();
             this.langservice.loadStyle();
           }

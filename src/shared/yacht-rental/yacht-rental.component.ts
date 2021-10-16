@@ -2,6 +2,7 @@ import {ChangeDetectorRef, Component, HostListener, OnInit} from '@angular/core'
 import {ResizeServiceService} from '../../core/services/Helpers/resize-service.service';
 import {YachtService} from '../../core/services/yacht.service';
 import {Yacht} from '../../Models/yacht';
+import {LocalStorageService} from "../../core/services/localStorage.service";
 
 @Component({
   selector: 'app-yacht-rental',
@@ -10,18 +11,20 @@ import {Yacht} from '../../Models/yacht';
 })
 export class YachtRentalComponent implements OnInit {
   public yachts: Yacht [] = [];
-  lang = localStorage.getItem('lang');
+  lang:string | null = 'en';
 
   is_loading:boolean = true;
 
   constructor(private resizeServiceService: ResizeServiceService,
               private yachtService: YachtService,
+              private localStorageService: LocalStorageService,
               private cdr: ChangeDetectorRef) {
   }
 
   numberofcells = 3;
 
   ngOnInit(): void {
+    this.lang = this.localStorageService.getItem('lang');
     this.numberofcells = this.resizeServiceService.checkWindowSize();
     this.getYachts();
   }

@@ -1,5 +1,6 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
+import {LocalStorageService} from "../../../core/services/localStorage.service";
 
 @Component({
   selector: 'app-footer',
@@ -12,7 +13,7 @@ export class FooterComponent implements OnInit {
   showNavigationIndicators = false;
   isShow: boolean | undefined;
   topPosToStartShowing = 100;
-  lang = localStorage.getItem('lang');
+  lang:string | null = 'en';
   @HostListener('window:scroll')
   checkScroll() {
 
@@ -28,12 +29,14 @@ export class FooterComponent implements OnInit {
       this.isShow = false;
     }
   }
-  constructor(config: NgbCarouselConfig) {
+  constructor(config: NgbCarouselConfig,
+              private localStorageService: LocalStorageService) {
     // customize default values of carousels used by this component tree
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;
   }
   ngOnInit(): void {
+    this.lang = this.localStorageService.getItem('lang');
   }
   gotoTop() {
     window.scroll({

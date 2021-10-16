@@ -1,5 +1,6 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {SeoService} from "../../../core/services/seo.service";
+import {LocalStorageService} from "../../../core/services/localStorage.service";
 
 @Component({
   selector: 'app-index',
@@ -8,13 +9,15 @@ import {SeoService} from "../../../core/services/seo.service";
 })
 export class IndexComponent implements OnInit {
 
-  lang = localStorage.getItem('lang');
+  lang:string | null = 'en';
 
   constructor(private seoService: SeoService,
+              private localStorageService: LocalStorageService,
               private cdr: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
+    this.lang = this.localStorageService.getItem('lang');
     this.getSeo();
   }
 
