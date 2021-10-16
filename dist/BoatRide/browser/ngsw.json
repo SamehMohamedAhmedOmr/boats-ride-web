@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1634365892346,
+  "timestamp": 1634366700462,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -2155,20 +2155,8 @@
   },
   "navigationUrls": [
     {
-      "positive": true,
+      "positive": false,
       "regex": "^\\/.*$"
-    },
-    {
-      "positive": false,
-      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
-    },
-    {
-      "positive": false,
-      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
-    },
-    {
-      "positive": false,
-      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
     }
   ]
 }

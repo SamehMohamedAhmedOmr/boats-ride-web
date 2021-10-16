@@ -1,5 +1,8 @@
 {
   "index": "/index.html",
+  "navigationUrls": [
+    "!/**"
+  ],
   "assetGroups": [
     {
       "name": "app",
