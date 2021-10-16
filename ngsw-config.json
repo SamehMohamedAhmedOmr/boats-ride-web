@@ -1,8 +1,5 @@
 {
   "index": "/index.html",
-  "navigationUrls": [
-    "!/**"
-  ],
   "assetGroups": [
     {
       "name": "app",
@@ -11,7 +8,6 @@
         "files": [
           "/favicon.ico",
           "/index.html",
-          "/manifest.webmanifest",
           "/*.css",
           "/*.js"
         ]
@@ -28,5 +24,32 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "backend",
+      "urls": [
+        "/backend/**"
+      ],
+      "cacheConfig": {
+        "maxSize": 100,
+        "maxAge": "3d",
+        "strategy": "freshness"
+      }
+    },
+    {
+      "name": "serverSideRenderedPages",
+      "urls": [
+        "/**"
+      ],
+      "cacheConfig": {
+        "maxSize": 100,
+        "maxAge": "3d",
+        "strategy": "freshness"
+      }
+    }
+  ],
+  "navigationUrls": [
+    "!/**"
   ]
 }
