@@ -47,6 +47,16 @@
         "maxAge": "3d",
         "strategy": "freshness"
       }
+    },
+    {
+      "name": "api",
+      "urls": ["http://boats-ride-backend.sameh.store/**"],
+      "cacheConfig": {
+        "maxSize": 30,
+        "maxAge": "1d",
+        "timeout": "30s",
+        "strategy": "freshness"
+      }
     }
   ],
   "navigationUrls": [
