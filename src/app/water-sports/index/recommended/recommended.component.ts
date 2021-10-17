@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
+import {isPlatformBrowser} from "@angular/common";
 
 @Component({
   selector: 'app-recommended',
@@ -7,7 +8,10 @@ import {Component, OnInit} from '@angular/core';
 })
 export class RecommendedComponent implements OnInit {
 
-  constructor() {
+  isBrowser: boolean = false;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: any) {
+    this.isBrowser = isPlatformBrowser(platformId);
   }
 
   ngOnInit(): void {

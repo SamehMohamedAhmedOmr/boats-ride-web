@@ -27,7 +27,7 @@
           </ngx-skeleton-loader>
         </div>
 
-        <carousel *ngIf="yachts.length" [margin]="20" [height]="600" [cellWidth]="400" [cellsToShow]="numberofcells"
+        <carousel *ngIf="yachts.length && isBrowser" [margin]="20" [height]="600" [cellWidth]="400" [cellsToShow]="numberofcells"
                   [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
           <div class="carousel-cell" *ngFor="let yacht of yachts">
             <div class="rental-block mix all russia india service-block">

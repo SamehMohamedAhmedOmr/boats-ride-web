@@ -1,5 +1,6 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener, Inject, OnInit, PLATFORM_ID} from '@angular/core';
 import {ResizeServiceService} from '../../../core/services/Helpers/resize-service.service';
+import {isPlatformBrowser} from "@angular/common";
 
 @Component({
   selector: 'app-testmoinails',
@@ -8,7 +9,9 @@ import {ResizeServiceService} from '../../../core/services/Helpers/resize-servic
 })
 export class TestmoinailsComponent implements OnInit {
 
-  constructor(private resizeServiceService: ResizeServiceService) {
+  isBrowser: boolean = false;
+  constructor(private resizeServiceService: ResizeServiceService, @Inject(PLATFORM_ID) private platformId: any) {
+    this.isBrowser = isPlatformBrowser(platformId);
   }
 
   numberofcells = 2;

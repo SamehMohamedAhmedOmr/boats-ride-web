@@ -1,8 +1,9 @@
-import {ChangeDetectorRef, Component, HostListener, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, HostListener, Inject, OnInit, PLATFORM_ID} from '@angular/core';
 import {ResizeServiceService} from '../../core/services/Helpers/resize-service.service';
 import {YachtService} from '../../core/services/yacht.service';
 import {Yacht} from '../../Models/yacht';
 import {LocalStorageService} from "../../core/services/localStorage.service";
+import {isPlatformBrowser} from "@angular/common";
 
 @Component({
   selector: 'app-yacht-rental',
@@ -14,11 +15,14 @@ export class YachtRentalComponent implements OnInit {
   lang:string | null = 'en';
 
   is_loading:boolean = true;
+  isBrowser: boolean = false;
 
   constructor(private resizeServiceService: ResizeServiceService,
               private yachtService: YachtService,
+              @Inject(PLATFORM_ID) private platformId: any,
               private localStorageService: LocalStorageService,
               private cdr: ChangeDetectorRef) {
+    this.isBrowser = isPlatformBrowser(platformId);
   }
 
   numberofcells = 3;
