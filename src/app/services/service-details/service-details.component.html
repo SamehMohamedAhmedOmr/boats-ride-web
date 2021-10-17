@@ -65,7 +65,7 @@
               </div>
 
               <div class="tour-widget recommended-widget carousel-widget">
-                <div class="widget-inner">
+                <div class="widget-inner" *ngIf="isBrowser">
                   <ngb-carousel  [wrap]="true" [interval]="2500" [pauseOnHover]="true"
                                  [showNavigationArrows]="false" [showNavigationIndicators]="true">
                     <ng-template ngbSlide>

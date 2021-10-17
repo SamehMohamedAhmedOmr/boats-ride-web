@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 // Tranlsation
 import { TranslateService } from '@ngx-translate/core';
+import {LocalStorageService} from "./localStorage.service";
 //import { locale as enLang } from './../../../assets/i18n/en.json';
 //import { locale as arLang } from './../../../assets/i18n/ar.json';
 export interface Locale {
@@ -20,8 +21,10 @@ export class TranslationService {
    * Service Constructor
    *
    * @param translate: TranslateService
+   * @param localStorageService
    */
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService,
+              private localStorageService: LocalStorageService) {
     // add new langIds to the list
     //this.loadTranslations(enLang , arLang);
     this.translate.setDefaultLang('en');
@@ -57,7 +60,7 @@ export class TranslationService {
     if (lang) {
       this.translate.use(this.translate.getDefaultLang());
       this.translate.use(lang);
-      localStorage.setItem('lang', lang);
+      this.localStorageService.setItem('lang', lang);
     }
   }
 
@@ -65,6 +68,6 @@ export class TranslationService {
    * Returns selected language
    */
   getSelectedLanguage(): any {
-    return localStorage.getItem('lang') || this.translate.getDefaultLang();
+    return this.localStorageService.getItem('lang') || this.translate.getDefaultLang();
   }
 }

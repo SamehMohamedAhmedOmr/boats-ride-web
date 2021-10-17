@@ -1,6 +1,7 @@
 import {Inject, Injectable} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
 import {TranslationService} from './translation.service';
+import {LocalStorageService} from "./localStorage.service";
 
 
 @Injectable({
@@ -8,10 +9,12 @@ import {TranslationService} from './translation.service';
 })
 export class LanguageService {
 
-  constructor(@Inject(DOCUMENT) private document: Document, private translationService: TranslationService) {
+  constructor(@Inject(DOCUMENT) private document: Document,
+              private localStorageService: LocalStorageService,
+              private translationService: TranslationService) {
   }
   loadStyle() {
-    const lang = localStorage.getItem('lang');
+    const lang = this.localStorageService.getItem('lang');
     let styleName = '';
     // tslint:disable-next-line:triple-equals
     if (lang == 'ar') {

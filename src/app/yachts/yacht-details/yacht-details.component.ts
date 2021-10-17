@@ -7,6 +7,7 @@ import {YachtBookingFormComponent} from "../../../shared/yacht-booking-form/yach
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {MetaTagService} from "../../../core/services/Helpers/meta-tag.service";
 import {NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions} from "@kolkov/ngx-gallery";
+import {LocalStorageService} from "../../../core/services/localStorage.service";
 
 declare global {
   interface Window { dataLayer: any[]; }
@@ -24,22 +25,25 @@ export class YachtDetailsComponent implements OnInit {
   yachts_list!:Yacht[];
   showNavigationArrows = true;
   showNavigationIndicators = false;
-  lang = localStorage.getItem('lang');
+  lang:string | null = 'en';
 
   galleryOptions: NgxGalleryOptions[] = [];
   galleryImages: NgxGalleryImage[] = [];
 
-  constructor(config: NgbCarouselConfig,
-              private route: ActivatedRoute,
+  constructor(private route: ActivatedRoute,
               private yachtServie: YachtService,
               private metaService: MetaTagService,
               public dialog: MatDialog,
+              private localStorageService: LocalStorageService,
               private cdr: ChangeDetectorRef) {
-    config.showNavigationArrows = true;
-    config.showNavigationIndicators = true;
+
   }
 
   ngOnInit(): void {
+    let config = new NgbCarouselConfig();
+    config.showNavigationArrows = true;
+    config.showNavigationIndicators = true;
+    this.lang = this.localStorageService.getItem('lang');
     this.slug = this.route.snapshot.params['slug'];
     this.getYacht();
     this.getYachts();

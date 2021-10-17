@@ -1,8 +1,9 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {ServicesService} from '../../../core/services/services.service';
 import {Services} from "../../../Models/services";
 import {MetaTagService} from "../../../core/services/Helpers/meta-tag.service";
+import {isPlatformBrowser} from "@angular/common";
 
 declare global {
   interface Window { dataLayer: any[]; }
@@ -16,11 +17,14 @@ declare global {
 export class ServiceDetailsComponent implements OnInit {
   slug: any;
   service!: Services;
+  isBrowser: boolean = false;
 
   constructor(private route: ActivatedRoute,
               private services: ServicesService,
+              @Inject(PLATFORM_ID) private platformId: any,
               private metaService: MetaTagService,
               private cdr: ChangeDetectorRef) {
+    this.isBrowser = isPlatformBrowser(platformId);
   }
 
   ngOnInit(): void {

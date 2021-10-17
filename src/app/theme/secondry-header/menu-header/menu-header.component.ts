@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {LocalStorageService} from "../../../../core/services/localStorage.service";
 
 @Component({
   selector: 'app-menu-header',
@@ -7,12 +8,12 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class MenuHeaderComponent implements OnInit {
   @Input() public drawer: any;
-  lang: any;
-  constructor() {
-    this.lang = localStorage.getItem('lang');
+  lang:string | null = 'en';
+  constructor(private localStorageService: LocalStorageService) {
   }
 
   ngOnInit(): void {
+    this.lang = this.localStorageService.getItem('lang');
   }
 
   toggleNavOnClick() {

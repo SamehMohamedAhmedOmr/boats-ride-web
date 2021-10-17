@@ -23,7 +23,7 @@
       </ngx-skeleton-loader>
     </div>
 
-    <carousel *ngIf="waterSports.length" [margin]="20" [height]="480" [cellWidth]="400" [cellsToShow]="numberofcells"
+    <carousel *ngIf="waterSports.length && isBrowser" [margin]="20" [height]="480" [cellWidth]="400" [cellsToShow]="numberofcells"
               [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
       <div class="carousel-cell" *ngFor="let watersport of waterSports">
         <div class="service-block">

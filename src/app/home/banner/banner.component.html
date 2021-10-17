@@ -1,6 +1,6 @@
 <!-- Banner Section -->
 
-<ngb-carousel *ngIf="images" [wrap]="true"
+<ngb-carousel *ngIf="images && isBrowser" [wrap]="true"
               [interval]="4000"
               [pauseOnHover]="true"
               [showNavigationArrows]="showNavigationArrows"
