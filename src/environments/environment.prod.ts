@@ -1,6 +1,6 @@
 
 export const environment = {
-  production: false,
+  production: true,
   apisVersion: "v1" ,
  //  baseUrl: 'http://boats-ride-backend.sameh.store',
   baseUrl: 'https://backend.boatsride.com',
