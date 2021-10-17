@@ -73,10 +73,10 @@ export function translateBrowserLoaderFactory(
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        // useFactory: HttpLoaderFactory,
-        // deps: [HttpClient],
-        useFactory: translateBrowserLoaderFactory,
-        deps: [HttpClient, TransferState],
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+        // useFactory: translateBrowserLoaderFactory,
+        // deps: [HttpClient, TransferState],
       }
     }),
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
