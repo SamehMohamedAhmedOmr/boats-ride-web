@@ -19,7 +19,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {HeaderComponent} from './header/header.component';
 import {LanguageService} from '../core/services/language-services.service';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {translateBrowserLoaderFactory} from "../core/services/translate-browser.loader";
+import {TranslateBrowserLoader} from "../core/services/translate-browser.loader";
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   "bgsColor": "red",
@@ -50,6 +50,13 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   "minTime": 300
 };
 
+export function translateBrowserLoaderFactory(
+  httpClient: HttpClient,
+  transferState: TransferState
+) {
+  return new TranslateBrowserLoader(httpClient, transferState);
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,8 +73,10 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
+        // useFactory: HttpLoaderFactory,
+        // deps: [HttpClient],
         useFactory: translateBrowserLoaderFactory,
-        deps: [HttpClient, TransferState]
+        deps: [HttpClient, TransferState],
       }
     }),
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),

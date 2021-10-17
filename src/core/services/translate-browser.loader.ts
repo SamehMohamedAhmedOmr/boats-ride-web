@@ -32,9 +32,4 @@ export class TranslateBrowserLoader implements TranslateLoader {
   }
 }
 
-export function translateBrowserLoaderFactory(
-  httpClient: HttpClient,
-  transferState: TransferState
-) {
-  return new TranslateBrowserLoader(httpClient, transferState);
-}
+

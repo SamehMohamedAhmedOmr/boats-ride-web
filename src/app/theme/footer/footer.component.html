@@ -19,7 +19,7 @@
           <div class="shape-1"></div>
           <div class="shape-2"></div>
           <div class="left-image"><img src="../../../assets/images/resource/footer-image.png" alt="" title=""></div>
-          <div class="offer-carousel-box">
+          <div class="offer-carousel-box" *ngIf="isBrowser">
             <!--Carousel-->
             <ngb-carousel [interval]="3000" [pauseOnHover]="true" [wrap]="true"
                            [showNavigationArrows]="showNavigationArrows"
