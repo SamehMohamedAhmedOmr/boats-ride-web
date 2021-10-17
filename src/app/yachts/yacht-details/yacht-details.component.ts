@@ -30,18 +30,19 @@ export class YachtDetailsComponent implements OnInit {
   galleryOptions: NgxGalleryOptions[] = [];
   galleryImages: NgxGalleryImage[] = [];
 
-  constructor(config: NgbCarouselConfig,
-              private route: ActivatedRoute,
+  constructor(private route: ActivatedRoute,
               private yachtServie: YachtService,
               private metaService: MetaTagService,
               public dialog: MatDialog,
               private localStorageService: LocalStorageService,
               private cdr: ChangeDetectorRef) {
-    config.showNavigationArrows = true;
-    config.showNavigationIndicators = true;
+
   }
 
   ngOnInit(): void {
+    let config = new NgbCarouselConfig();
+    config.showNavigationArrows = true;
+    config.showNavigationIndicators = true;
     this.lang = this.localStorageService.getItem('lang');
     this.slug = this.route.snapshot.params['slug'];
     this.getYacht();
