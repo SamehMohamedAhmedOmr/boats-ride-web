@@ -55,7 +55,8 @@
               <!--Activity Block-->
               <div class="activity-block-two" *ngFor="let services of Services">
                 <div class="inner-box clearfix" >
-                  <div class="image-layer" [style.background-image]="services.image"></div>
+                  <div class="image-layer"
+                       [ngStyle]="{'background-image':  'url(' + services.image + ')' }"></div>
 
                   <div class="image-box">
                     <a routerLink="/services/{{services.slug}}">
