@@ -13,12 +13,13 @@ import {DestinationsSpecificationComponent} from './yacht-details/destinations-s
 import {NgxGalleryModule} from '@kolkov/ngx-gallery';
 import {ArabicTextComponent} from './index/translate/arabic-text/arabic-text.component';
 import {EnglishTextComponent} from './index/translate/english-text/english-text.component';
+import { NewYearYachtsComponent } from './new-year-yachts/new-year-yachts.component';
 
 
 @NgModule({
   declarations: [
     YachtsComponent, IndexComponent, YachtDetailsComponent, VoucherComponent,
-    DestinationsSpecificationComponent, ArabicTextComponent, EnglishTextComponent
+    DestinationsSpecificationComponent, ArabicTextComponent, EnglishTextComponent, NewYearYachtsComponent
   ],
 
   imports: [

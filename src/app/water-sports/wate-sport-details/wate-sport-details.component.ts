@@ -59,7 +59,7 @@ export class WateSportDetailsComponent implements OnInit {
     this.galleryOptions = [
       {
         width: '600px',
-        height: '400px',
+        height: '500px',
         thumbnailsColumns: 6,
         imageAnimation: NgxGalleryAnimation.Slide
       },
