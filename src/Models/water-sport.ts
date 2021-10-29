@@ -26,4 +26,5 @@ export interface WaterSport {
     description:string,
     keywords:[]
   },
+  banner_image:string
 }

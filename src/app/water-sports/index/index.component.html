@@ -3,7 +3,7 @@
 <!--       style="background-image:url(./assets/Banners/watersports-01.jpg);background-position-y: 20%">-->
 <!--  </div>-->
   <div class="image-layer"
-       style="background-image:url(./assets/Banners/x1.jpeg);background-position-y: 20%">
+       style="background-image:url(./assets/Banners/water-sport-banner.jpg);background-position-y: 20%">
   </div>
 <!--  <div class="image-layer">-->
 <!--    <img  class="w-100 " src="./assets/Banners/x1.jpeg">-->
@@ -36,113 +36,112 @@
 <section class="yacht-tours-container">
   <div class="auto-container">
 <!--    <div class="main-title"><h3>{{'waterSport'|translate}}</h3></div>-->
-    <div class="default-form yacht-search-form">
+    <!-- <div class="default-form yacht-search-form">
       <form method="post" action="http://st.ourhtmldemo.com/new/sailing-demo/yacht-tour-single.html">
         <div class="row clearfix">
 
         </div>
       </form>
+    </div> -->
+
+    <div class="item" *ngIf="is_loading">
+      <ngx-skeleton-loader count="1" appearance="circle" [theme]="{
+        width: '740px',
+        height: '310px',
+        'border-radius': '10px'
+      }">
+      </ngx-skeleton-loader>
     </div>
-
-    <div class="content-container">
-      <div class="row clearfix">
-        <!--Content Side-->
-        <div class="content-side col-lg-8 col-md-12 col-sm-12">
-          <div class="content-inner">
-            <div class="lower-filter-row clearfix">
-              <div class="results-count">
-              </div>
-              <!--              <div class="view-modes clearfix">-->
-              <!--                <div class="mode">-->
-              <!--                  <a href="water-sport.html" class="active"><span class="flaticon-menu-3"></span></a>-->
-              <!--                </div>-->
-              <!--                <div class="mode">-->
-              <!--                  <a href="water-sport2.html"><span class="flaticon-shape"></span></a>-->
-              <!--                </div>-->
-              <!--              </div>-->
-              <!--Filter-->
-
-
-            </div>
-
-            <div class="results-row">
-              <div class="item" *ngIf="is_loading">
-                <ngx-skeleton-loader count="1" appearance="circle" [theme]="{
-                  width: '740px',
-                  height: '310px',
-                  'border-radius': '10px'
-                }">
-                </ngx-skeleton-loader>
-              </div>
-              <!--Activity Block-->
-              <div class="activity-block-two" *ngFor="let watersport of waterSports">
-                <div class="inner-box clearfix">
-                  <div class="image-layer"
-                       [ngStyle]="{'background-image':  'url(' + watersport.images[0].image + ')' }"></div>
-
-                  <div class="image-box">
-                    <a href="water-slide.html"><img src="{{watersport.images[0].image}}" alt="" title=""></a>
-                  </div>
-
-                  <div class="content-box">
-                    <div class="content">
-                      <h4><a href="water-slide.html">{{watersport.name}}</a></h4>
-                      <br>
-                    </div>
-                    <div class="links-box clearfix">
-                      <div class="link">
-                        <a routerLink="/water-sports/{{watersport.slug}}"
-                           class="theme-btn btn-style-two">
-                          <span class="btn-title">{{'moredetails'|translate}}</span>
-                        </a>
-                        <a routerLink="/water-sports/{{watersport.slug}}"
-                           class="theme-btn btn-style-two">
-                          <span class="btn-title">{{'booknow'|translate}}</span>
-                        </a>
-                      </div>
-                    </div>
+<div class="row clearfix">
+  <!-- new design for water sport --->
+  <section class="rent-buy-section">
+    <div class="auto-container">
+      <div class="results-row">
+        <div class="row clearfix">
+  
+          <div class="rental-block mix all russia india service-block col-lg-4 col-md-6 col-sm-12"
+               *ngFor="let watersport of waterSports">
+            <div class="inner-box">
+  
+              <div class="image-box" style="background-color: transparent !important;">
+                <figure class="image mb-0" style="background-color: transparent !important;">
+                  <a routerLink="/water-sports/{{watersport.slug}}">
+                    <img class="object-fit-cover" src="{{watersport.images[0].image}}" alt="" title=""></a>
+                </figure>
+  
+                <div class="price-box">
+                  <div class="price old-price-container"> {{watersport?.selling_per_hour}} {{'ead_price'|translate}}</div>
+                  <div class="cycle">
+                    {{ 'per_h' | translate }}
                   </div>
                 </div>
               </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!--Widgets Side-->
-        <div class="widgets-side col-lg-4 col-md-12 col-sm-12">
-          <div class="widgets-content">
-
-            <app-offers-widget></app-offers-widget>
-
-            <!--Widget-->
-            <div class="tour-widget advisor-widget carousel-widget">
-              <div class="widget-inner">
-                <div class="advisor-carousel single-item-carousel owl-theme owl-carousel">
-                  <!--Advisor Block-->
-                  <div class="advisor-block">
-                    <div class="inner-box">
-                      <div class="image-box">
-                        <a href="#"><img src="assets/images/resource/team-6.jpg" alt="" title=""></a>
-                      </div>
-                      <div class="lower-box clearfix">
-                        <div class="lower-content">
-                          <h4><a href="#">Hohammed Sahraoui</a></h4>
-                          <div class="info"><span class="tel:+971524918686"></span>+971 52 491 8686 [24/Hours]</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+  
+              <div class="title-box">
+                <div class="more-link-box">
+                  <a routerLink="/water-sports/{{watersport.slug}}" class="theme-btn">{{'viewdetails'|translate}}</a>
                 </div>
+                <h4><a routerLink="/water-sports/{{watersport.slug}}">{{watersport.name}}</a></h4>
+              </div>
+  
+              <div class="price align-items-center"
+                   [class.force-rtl] = "!watersport.apply_vat && lang == 'ar'"
+                   [class.d-flex]="watersport.apply_vat && lang == 'ar'"
+                   [class.rental-div]="!watersport.apply_vat && lang == 'ar'">
+                <div style="display: inline-block" class="old-price-container">
+                  <small *ngIf="lang == 'en'">From:  </small>
+                  <del class="price-old" *ngIf="lang == 'en'">{{'ead'|translate}} {{watersport?.selling_per_hour}}/{{'hour'|translate}}</del>
+                  <del class="price-old" *ngIf="lang == 'ar'"> {{watersport?.selling_per_hour}} {{'ead'|translate}}/{{'hour'|translate}}</del>
+                </div>
+                <div *ngIf="watersport?.special_price" style="display: inline-block; margin-left: 10px;"
+                     data-toggle="tooltip"
+                     data-html="true"
+                     title="" class="mx-2 new-price-container"
+                     data-original-title="Summer Offer">
+                      <span class="blink yacht_special_price" *ngIf="lang == 'en'">
+                        <i class="fa fa-info-circle"></i> {{'ead'|translate}} {{watersport?.special_price}}
+                      </span>
+                  <span class="blink yacht_special_price" *ngIf="lang == 'ar'">
+                        <i class="fa fa-info-circle"></i> {{watersport?.special_price}} {{'ead'|translate}}
+                      </span>
+                </div>
+                <small *ngIf="watersport?.apply_vat" class="label label-warning pull-right" style="color: #fff;">{{'vat'|translate}}</small>
+              </div>
+  
+              <div class="meta-info">
+                <!-- <ul class="clearfix" style="margin-bottom: unset!important;">
+                  <li><a><img src="assets/images/icons/captain.png" style="width: unset!important;" > {{'captain'|translate}}: {{yacht.no_of_captain}}</a></li>
+                  <li><a><img src="assets/images/icons/crew.png"  style="width: unset!important;">{{'crew'|translate}}: {{yacht.crew_members}}</a></li>
+                </ul>
+                <ul class="clearfix">
+                  <li><a><img src="assets/images/icons/users.png" style="width: unset!important;"> {{'people'|translate}}: {{yacht.passenger_capacity}}</a></li>
+                  <li><a><img src="assets/images/icons/beds.png" style="width: unset!important;"> {{'beds'|translate}}: {{yacht.beds}} </a></li>
+                </ul> -->
+                <button type="button" class="btn btn-round btn-block water-sport-more" routerLink="/water-sports/{{watersport.slug}}">{{'viewdetails'|translate}}</button>
 
               </div>
             </div>
-
           </div>
         </div>
+  
+        <!--Pagination-->
       </div>
-
     </div>
+  </section>
+
+  <!-- <div class="sec-title-two centered with-border">
+    <div class="upper-text">{{'welcometo'|translate}} {{'boatride'|translate}}</div>
+    <h2><strong>{{'waterSport'|translate}}</strong></h2>
+    <p class="mt-3">
+      Boats Ride provides luxury yacht charter services for Dubai, locals and tourists! We have a full fleet of yachts, ranging in length from 40ft to 116ft. Excellent service is of paramount importance, which is why we ensure that all staff and crews are carefully trained to meet standards of excellence. We are proud to provide our customers with the most memorable experience, always outdoing ourselves, making a lasting impression, and making each of our experiences a golden one.
+    </p>
+    <div class="separator"></div>
+  </div> -->
+
+</div>
+  <!-- end new deisgn for water sport-->
+
+
   </div>
 </section>
 <!--<app-yacht-rental></app-yacht-rental>-->
