@@ -1,6 +1,6 @@
 
 <section class="page-banner inner-banner-height mb-5">
-    <div class="image-layer" style="background-image:url(./assets/Banners/new/new-year-yachts-banner.jpg);"></div>
+    <div class="image-layer" style="background-image:url(./assets/Banners/new/New-Years-Eve-in-Dubai-Cover-2.jpeg);"></div>
   
     <div class="banner-inner">
       <div class="auto-container">
@@ -26,9 +26,24 @@
   <div class="title-row clearfix">
     <div class="sec-title-two centered with-border">
       <div class="upper-text">{{'welcometo'|translate}} {{'boatride'|translate}}</div>
-      <h2><strong>{{'YACHT_RENTAL_DUBAI'|translate}}</strong></h2>
-      <app-english-text *ngIf="lang == 'en'"></app-english-text>
-      <app-arabic-text *ngIf="lang == 'ar'"></app-arabic-text>
+      <h2><strong>{{'newYearTrips'|translate}}</strong></h2>
+    
+      <ng-container *ngIf="lang == 'en'">
+            <p class="mt-3">
+              Capture the Best Views of the New Year Eve Fire Works at the Palm and Burj Al Arab with 5 Star Service on Board
+            </p>
+            <p>
+              New Years Eve is the biggest event across the world, with billions of people counting down the seconds before midnight. Of course, the best aspect of New Years Eve is the excitement of being at a party with all of your close friends
+            </p>
+      </ng-container>     
+
+      <ng-container *ngIf="lang == 'ar'">
+        <p class="mt-3">        
+التقط أفضل المناظر الألعاب النارية ليلة رأس السنة الجديدة في النخلة وبرج العرب مع خدمة 5 نجوم على متن يخوت فاخرة!
+ليلة رأس السنة الجديدة هي أكبر حدث في جميع أنحاء العالم ، حيث يقوم المليارات من الأشخاص بالعد التنازلي للثواني قبل منتصف الليل. بالطبع ، أفضل جانب في ليلة رأس السنة الجديدة هو إثارة التواجد في حفلة مع جميع أصدقائك المقربين
+        </p>
+      </ng-container>     
+
       <div class="separator"></div>
     </div>
     <div class="auto-container">
