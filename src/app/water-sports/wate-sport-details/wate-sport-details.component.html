@@ -1,6 +1,6 @@
 <!--Page Title-->
 <section class="page-banner inner-banner-height" *ngIf="water_sport">
-  <div class="image-layer" style="background-image:url(../../../assets/images/background/banner-1.jpg);"></div>
+  <div class="image-layer" [style.background-image]="water_sport?.banner_image ? 'url(' + water_sport.banner_image + ')' : 'url(../../../assets/images/background/banner-1.jpg)' "></div>
   <div class="banner-inner">
     <div class="auto-container">
       <div class="inner-container clearfix">
@@ -99,7 +99,7 @@
                 <div class="default-form main-booking-form">
                   <h5>{{'price'|translate}}</h5>
 
-                  <div class="estimate-table" *ngIf="!water_sport.special_price">
+                  <div class="estimate-table" *ngIf="!water_sport?.special_price">
                     <ul>
                       <li class="totals clearfix">
                         <span class="ttle">{{'price'|translate}}:</span>

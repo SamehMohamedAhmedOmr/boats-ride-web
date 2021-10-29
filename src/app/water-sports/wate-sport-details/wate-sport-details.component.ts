@@ -42,6 +42,7 @@ export class WateSportDetailsComponent implements OnInit {
   getWaterSport() {
     this.WaterSportSevice.getWaterSport(this.slug).subscribe(data => {
       this.water_sport = data;
+      console.log(this.water_sport);
       this.prepareImages();
       this.updateMetaTags();
       this.cdr.markForCheck();
