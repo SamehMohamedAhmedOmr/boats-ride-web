@@ -14,7 +14,8 @@ export class NewYearYachtsComponent implements OnInit {
   public yachts: Yacht [] = [];
   is_loading:boolean = true;
   lang:string | null = 'en';
-  yachts_prices: {}[] = [];
+  yachts_prices: any;
+  new_year_yachts_slugs: any;
 
   constructor(private yachtService: YachtService,
               private seoService:SeoService,
@@ -26,6 +27,7 @@ export class NewYearYachtsComponent implements OnInit {
     this.lang = this.localStorageService.getItem('lang');
     this.getSeo();
     this.getYachts();
+    this.prepareNewYearPrices();
   }
 
   getYachts() {
@@ -145,13 +147,49 @@ prepareNewYearPrices(){
       slug: '90ft',
       price: 65000,
     },
-    
-    
-    
-    
-    
+    {
+      slug: 'boat-32ft',
+      price: 5000,
+    },
+    {
+      slug: 'boat-36ft',
+      price: 8000,
+    },
+    {
+      slug: 'dinner-cruise',
+      price: 1999,
+    },
     
   ];
+    let result: any[] = [];
+  
+    this.yachts_prices.forEach(function(element: any){
+    result.push(element.slug);  
+  });
+   
+  this.new_year_yachts_slugs  = result;
+   
 }  
+
+isValidYacht(slug: string){
+  return this.new_year_yachts_slugs.includes(slug);
+}
+
+getNewYearPrice(slug: string){
+  
+  let target = this.yachts_prices.find((value: any, index: any) => value.slug == slug);
+console.log(target, slug);
+  if(target){
+    return target.price;
+  }
+
+  return 0;
+}
+
+isSoldOut(slug: any){
+  let target = this.yachts_prices.find((value: any, index: any) => value.slug == slug);
+
+    return target?.solid_out;  
+}
 
 }

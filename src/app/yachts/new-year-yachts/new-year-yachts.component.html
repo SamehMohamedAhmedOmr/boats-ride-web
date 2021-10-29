@@ -52,7 +52,7 @@
   
           <div class="rental-block mix all russia india service-block col-lg-4 col-md-6 col-sm-12"
                *ngFor="let yacht of yachts">
-            <div class="inner-box">
+            <div class="inner-box" *ngIf="isValidYacht(yacht.slug)">
   
               <div class="image-box" style="background-color: transparent !important;">
                 <figure class="image mb-0" style="background-color: transparent !important;">
@@ -65,9 +65,9 @@
                 </figure>
   
                 <div class="price-box">
-                  <div class="price old-price-container"> {{yacht.selling_per_hour}} {{'ead_price'|translate}}</div>
+                  <div class="price old-price-container"> {{getNewYearPrice(yacht.slug)}} {{'ead_price'|translate}}</div>
                   <div class="cycle">
-                    {{ 'per_h' | translate }}
+                    {{ yacht.slug == 'dinner-cruise' ? ('per_person' | translate) : ('per_6h' | translate) }}
                   </div>
                 </div>
               </div>
@@ -88,19 +88,19 @@
                   <del class="price-old" *ngIf="lang == 'en'">{{'ead'|translate}} {{yacht.selling_per_hour}}/{{'hour'|translate}}</del>
                   <del class="price-old" *ngIf="lang == 'ar'"> {{yacht.selling_per_hour}} {{'ead'|translate}}/{{'hour'|translate}}</del>
                 </div> -->
-                <div *ngIf="yacht.yacht_special_price" style="display: inline-block; margin-left: 10px;"
+                <div style="display: inline-block; margin-left: 10px;"
                      data-toggle="tooltip"
                      data-html="true"
                      title="" class="mx-2 new-price-container"
                      data-original-title="Summer Offer">
                       <span class="blink yacht_special_price" *ngIf="lang == 'en'">
-                        <i class="fa fa-info-circle"></i> {{'ead'|translate}} {{yacht.yacht_special_price}}
+                        <i class="fa fa-info-circle"></i> {{'ead'|translate}} {{getNewYearPrice(yacht.slug)}}
                       </span>
                   <span class="blink yacht_special_price" *ngIf="lang == 'ar'">
-                        <i class="fa fa-info-circle"></i> {{yacht.yacht_special_price}} {{'ead'|translate}}
+                        <i class="fa fa-info-circle"></i> {{getNewYearPrice(yacht.slug)}} {{'ead'|translate}}
                       </span>
                 </div>
-                <small *ngIf="yacht.apply_vat" class="label label-warning pull-right" style="color: #fff;">{{'vat'|translate}}</small>
+                <small *ngIf="isSoldOut(yacht.slug)" class="label label-warning pull-right" style="color: #fff;">{{'soldOut'|translate}}</small>
               </div>
   
               <div class="meta-info">
@@ -115,9 +115,9 @@
               </div>
               <div class="meta-info yacht-more-container">
 
-                <button type="button" class="btn btn-round btn-block yacht-more"><i class="fas fa-phone-alt"></i> {{'callus'|translate}}</button>
-                <button type="button" class="btn btn-round btn-block yacht-more send-to-whatsapp">
-                    <i class="fab fa-whatsapp"></i> {{'whatsapp'|translate}}</button>
+                <a [href]="'tel:+971524918686'" class="btn btn-round btn-block yacht-more"><i class="fas fa-phone-alt"></i> {{'callus'|translate}}</a>
+                <a [href] = "'https://api.whatsapp.com/send/?phone=971545887084&text&app_absent=0'" class="btn btn-round btn-block yacht-more send-to-whatsapp" target = "_blank">
+                    <i class="fab fa-whatsapp"></i> {{'whatsapp'|translate}}</a>
 
               </div>
             </div>
