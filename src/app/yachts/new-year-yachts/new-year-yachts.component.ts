@@ -110,6 +110,7 @@ prepareNewYearPrices(){
     {
       slug: '72ft-vip-princess',
       solid_out: true,
+      price: 35000
     },
     {
       slug: 'majesty-ruby-75ft',
