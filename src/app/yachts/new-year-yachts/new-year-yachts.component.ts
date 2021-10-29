@@ -82,6 +82,7 @@ prepareNewYearPrices(){
     {
       slug: 'sunseeker-56ft',
       solid_out: true,
+      price: 25000
     },
     {
       slug: 'majesty-63ft',
