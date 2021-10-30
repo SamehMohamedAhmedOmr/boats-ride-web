@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "dev:ssr": "ng run BoatRide:serve-ssr",
     "serve:ssr": "node dist/BoatRide/server/main.js",
-    "build:ssr": "ng build --prod && ng run BoatRide:server:production",
+    "build:ssr": "ng build --prod --output-hashing=all && ng run BoatRide:server:production",
     "prerender": "ng run BoatRide:prerender",
     "serve": "pm2 restart dist/BoatRide/server/main.js",
     "start-server": "pm2 start dist/BoatRide/server/main.js",
