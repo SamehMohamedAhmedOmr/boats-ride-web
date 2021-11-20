@@ -35,9 +35,7 @@ export class SecondryHeaderComponent implements OnInit {
       this.langservice.loadStyle();
     } else{
       if (lang == 'ar'){
-        let host = document.location.host;
-        let host_ar = 'ar.' + host;
-        base_url = base_url.replace(host, host_ar);
+        base_url = 'https://ar.boatsride.com';
       }
       else{
         base_url = base_url.replace('ar.', '');
