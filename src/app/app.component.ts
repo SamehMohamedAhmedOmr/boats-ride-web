@@ -73,14 +73,18 @@ export class AppComponent implements OnInit {
   }
 
   getLanguage() {
-    if (this.localStorageService.getItem('lang') === 'ar') {
+    let base_url = document.location.origin;
+
+    if (base_url.includes('ar')) {
       this.translate.setDefaultLang('ar');
       this.translate.use('ar');
       this.languagesUrlService.changeLang('ar');
+      this.localStorageService.setItem('lang', 'ar');
     } else {
       this.translate.setDefaultLang('en');
       this.translate.use('en');
       this.languagesUrlService.changeLang('en');
+      this.localStorageService.setItem('lang', 'en');
     }
   }
 
