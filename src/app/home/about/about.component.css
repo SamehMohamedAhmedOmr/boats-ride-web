@@ -1,3 +1,7 @@
 section{
   overflow: hidden !important;
 }
+.dark-red{
+  color: red;
+  cursor: pointer;
+}
