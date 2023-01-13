@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+import {BrowserModule, TransferState} from '@angular/platform-browser';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
@@ -19,6 +19,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {HeaderComponent} from './header/header.component';
 import {LanguageService} from '../core/services/language-services.service';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateBrowserLoader} from "../core/services/translate-browser.loader";
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   "bgsColor": "red",
@@ -49,6 +50,13 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   "minTime": 300
 };
 
+export function translateBrowserLoaderFactory(
+  httpClient: HttpClient,
+  transferState: TransferState
+) {
+  return new TranslateBrowserLoader(httpClient, transferState);
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,13 +74,15 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
       loader: {
         provide: TranslateLoader,
         useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
+        deps: [HttpClient],
+        // useFactory: translateBrowserLoaderFactory,
+        // deps: [HttpClient, TransferState],
       }
     }),
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
     NgxSkeletonLoaderModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: environment.production,
+      enabled: true,
       // Register the ServiceWorker as soon as the app is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'

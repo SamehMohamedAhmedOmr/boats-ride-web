@@ -2,7 +2,7 @@
 <div class="tour-widget recommended-widget carousel-widget">
   <div class="widget-inner">
     <div class="tour-widget-title"><h4>{{'rec'|translate}}</h4></div>
-    <carousel [margin]="20" [height]="300" [cellWidth]="300" [cellsToShow]="1" [arrows]="false"
+    <carousel *ngIf="isBrowser" [margin]="20" [height]="300" [cellWidth]="300" [cellsToShow]="1" [arrows]="false"
               [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
       <div class="carousel-cell">
         <div class="recommend-block">

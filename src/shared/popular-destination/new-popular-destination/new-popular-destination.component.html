@@ -16,7 +16,7 @@
 
 
     <!--Packages-->
-    <carousel [margin]="20" [height]="500" [cellWidth]="400" [cellsToShow]="numberofcells"
+    <carousel *ngIf="isBrowser" [margin]="20" [height]="500" [cellWidth]="400" [cellsToShow]="numberofcells"
               [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
 
       <div class="carousel-cell" *ngFor="let destination of destinations">

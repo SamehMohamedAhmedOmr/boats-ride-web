@@ -1,6 +1,7 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, Inject, OnInit, PLATFORM_ID} from '@angular/core';
 import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 import {SeoService} from "../../core/services/seo.service";
+import {isPlatformBrowser} from "@angular/common";
 
 @Component({
   selector: 'app-fishing-trip',
@@ -13,14 +14,17 @@ export class FishingTripComponent implements OnInit {
   showNavigationIndicators = true;
   showNavigationArrows1 = true;
   showNavigationIndicators1 = false;
+  isBrowser: boolean = false;
 
 
   constructor(config: NgbCarouselConfig,
               private seoService: SeoService,
+              @Inject(PLATFORM_ID) private platformId: any,
               private cdr: ChangeDetectorRef) {
     // customize default values of carousels used by this component tree
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;
+    this.isBrowser = isPlatformBrowser(platformId);
   }
 
   ngOnInit(): void {

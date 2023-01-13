@@ -55,7 +55,8 @@
               <!--Activity Block-->
               <div class="activity-block-two" *ngFor="let services of Services">
                 <div class="inner-box clearfix" >
-                  <div class="image-layer" style="background-image:url({{services.image}});"></div>
+                  <div class="image-layer"
+                       [ngStyle]="{'background-image':  'url(' + services.image + ')' }"></div>
 
                   <div class="image-box">
                     <a routerLink="/services/{{services.slug}}">
@@ -90,7 +91,7 @@
                         <div class="link">
                           <a routerLink="/services/{{services.slug}}"
                              class="theme-btn btn-style-two"><span class="btn-title">{{'moredetails'|translate}}</span></a>
-                          <a routerLink="/yachts" class="theme-btn btn-style-two"><span class="btn-title">{{'booknow'|translate}}</span></a>
+                          <!-- <a routerLink="/yachts" class="theme-btn btn-style-two"><span class="btn-title">{{'booknow'|translate}}</span></a> -->
                         </div>
 <!--                        <div class="link">-->
 <!--                          <div class="info-btn-box">-->

@@ -103,7 +103,7 @@
     <app-secondry-header *ngIf="!isHome" [drawer]="drawer"></app-secondry-header>
     <app-header *ngIf="isHome" [drawer]="drawer"></app-header>
     <router-outlet></router-outlet>
-    <app-footer></app-footer>
+    <app-footer [settings]="settings"></app-footer>
   </mat-drawer-content>
 
 </mat-drawer-container>

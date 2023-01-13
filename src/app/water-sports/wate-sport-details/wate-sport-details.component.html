@@ -1,6 +1,6 @@
 <!--Page Title-->
 <section class="page-banner inner-banner-height" *ngIf="water_sport">
-  <div class="image-layer" style="background-image:url(../../../assets/images/background/banner-1.jpg);"></div>
+  <div class="image-layer" [style.background-image]="water_sport?.banner_image ? 'url(' + water_sport.banner_image + ')' : 'url(../../../assets/images/background/banner-1.jpg)' "></div>
   <div class="banner-inner">
     <div class="auto-container">
       <div class="inner-container clearfix">
@@ -99,7 +99,7 @@
                 <div class="default-form main-booking-form">
                   <h5>{{'price'|translate}}</h5>
 
-                  <div class="estimate-table" *ngIf="!water_sport.special_price">
+                  <div class="estimate-table" *ngIf="!water_sport?.special_price">
                     <ul>
                       <li class="totals clearfix">
                         <span class="ttle">{{'price'|translate}}:</span>
@@ -135,28 +135,7 @@
 <!--                  <div class="instruction">Do you need suggestion pls contact our expert team.</div>-->
                 </div>
               </div>
-
-              <!--Widget-->
-              <div class="tour-widget advisor-widget">
-                <div class="widget-inner">
-                  <!--Advisor Block-->
-                  <div class="advisor-block">
-                    <div class="inner-box">
-                      <div class="image-box">
-                        <a href="#"><img src="../../../assets/images/resource/team-6.jpg" alt="" title=""></a>
-                      </div>
-                      <div class="lower-box clearfix">
-                        <div class="lower-content">
-                          <h4><a href="#">Mohammed Sahraoui</a></h4>
-                          <div class="info">
-                            <span class="icon flaticon-assistance"></span>+971 52 491 8686 [24/Hours]
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>

@@ -65,7 +65,7 @@
               </div>
 
               <div class="tour-widget recommended-widget carousel-widget">
-                <div class="widget-inner">
+                <div class="widget-inner" *ngIf="isBrowser">
                   <ngb-carousel  [wrap]="true" [interval]="2500" [pauseOnHover]="true"
                                  [showNavigationArrows]="false" [showNavigationIndicators]="true">
                     <ng-template ngbSlide>
@@ -106,7 +106,7 @@
                     <div class="estimate-table">
                       <ul>
                         <li class="totals clearfix">
-                          <span class="ttle">{{'price'|translate}}:</span> <span class="dtl">{{'ead'|translate}} {{service?.price}} / {{'hour'|translate}}</span>
+                          <span class="ttle">{{'price'|translate}}:</span> <span class="dtl">{{'ead'|translate}} {{service?.price}} </span>
                         </li>
                       </ul>
                     </div>
@@ -114,36 +114,21 @@
                     <div class="info"><span class="icon flaticon-wall-clock"></span> {{'reservation'|translate}}: 24 / 7</div>
                     <br>
                     <div class="form-group">
-                      <button type="button"
-                              routerLink="/yachts"
+                      <a      [href] = "'tel:+971524918686'"
                               class="theme-btn">
-                        <span class="btn-title">{{'booknow'|translate}}</span>
-                      </button>
+                        <span class="btn-title">{{'callnow'|translate}}</span>
+                    </a>
+                    <a      [href] = "'https://api.whatsapp.com/send/?phone=971545887084&text&app_absent=0'"
+                              class="theme-btn send-to-whatsapp mt-2" target="_blank">
+                        <span class="btn-title">{{'whatsapp'|translate}}</span>
+                    </a>
                     </div>
 
                   </div>
                 </div>
               </div>
 
-              <!--Widget-->
-              <div class="tour-widget advisor-widget">
-                <div class="widget-inner">
-                  <!--Advisor Block-->
-                  <div class="advisor-block">
-                    <div class="inner-box">
-                      <div class="image-box">
-                        <a href="#"><img src="../../../assets/images/resource/team-6.jpg" alt="" title=""></a>
-                      </div>
-                      <div class="lower-box clearfix">
-                        <div class="lower-content">
-                          <h4><a href="#">Mohammed Sahraoui</a></h4>
-                          <div class="info"><span class="icon flaticon-assistance"></span>+971 52 491 8686  [24/Hours]</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+           
             </div>
           </div>
         </div>

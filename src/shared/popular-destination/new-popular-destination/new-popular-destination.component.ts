@@ -1,6 +1,7 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener, Inject, OnInit, PLATFORM_ID} from '@angular/core';
 import {ResizeServiceService} from "../../../core/services/Helpers/resize-service.service";
 import {TranslateService} from "@ngx-translate/core";
+import {isPlatformBrowser} from "@angular/common";
 
 @Component({
   selector: 'app-new-popular-destination',
@@ -17,8 +18,12 @@ export class NewPopularDestinationComponent implements OnInit {
     rate: number,
     reviews: number,
   }[] = [];
+  isBrowser: boolean = false;
 
-  constructor(private resizeServiceService: ResizeServiceService, private translateService:TranslateService) {
+  constructor(private resizeServiceService: ResizeServiceService,
+              @Inject(PLATFORM_ID) private platformId: any,
+              private translateService:TranslateService) {
+    this.isBrowser = isPlatformBrowser(platformId);
   }
 
   numberofcells = 3;

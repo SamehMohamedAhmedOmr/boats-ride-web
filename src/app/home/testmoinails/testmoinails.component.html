@@ -7,7 +7,7 @@
       <div class="separator"></div>
     </div>
   </div>
-  <div class="auto-container">
+  <div class="auto-container" *ngIf="isBrowser">
     <carousel [margin]="20" [height]="390" [cellWidth]="400" [cellsToShow]="numberofcells"
               [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
       <div class="carousel-cell">

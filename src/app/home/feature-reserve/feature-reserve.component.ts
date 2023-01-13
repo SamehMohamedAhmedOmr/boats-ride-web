@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LocalStorageService} from "../../../core/services/localStorage.service";
 
 @Component({
   selector: 'app-feature-reserve',
@@ -7,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeatureReserveComponent implements OnInit {
 
-  lang = localStorage.getItem('lang');
+  lang:string | null = 'en';
 
-  constructor() { }
+  constructor(private localStorageService: LocalStorageService) { }
 
   ngOnInit(): void {
+    this.lang = this.localStorageService.getItem('lang');
   }
 
 }

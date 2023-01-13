@@ -19,7 +19,7 @@
 
 
     <!--Packages-->
-    <carousel *ngIf="Services.length" [margin]="20" [height]="400" [cellWidth]="400" [cellsToShow]="numberofcells"
+    <carousel *ngIf="Services.length && isBrowser" [margin]="20" [height]="400" [cellWidth]="400" [cellsToShow]="numberofcells"
               [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
       <div class="carousel-cell" *ngFor="let service of Services">
         <div class="popular-packages">

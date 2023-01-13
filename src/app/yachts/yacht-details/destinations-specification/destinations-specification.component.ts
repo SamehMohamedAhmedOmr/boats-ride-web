@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Yacht} from "../../../../Models/yacht";
+import {LocalStorageService} from "../../../../core/services/localStorage.service";
 
 @Component({
   selector: 'app-destinations-specification',
@@ -10,12 +11,12 @@ export class DestinationsSpecificationComponent implements OnInit {
 
   // @ts-ignore
   @Input() yacht: Yacht;
-  lang = localStorage.getItem('lang');
+  lang:string | null = 'en';
 
-  constructor() {
-  }
+  constructor(private localStorageService: LocalStorageService) { }
 
   ngOnInit(): void {
+    this.lang = this.localStorageService.getItem('lang');
   }
 
 }

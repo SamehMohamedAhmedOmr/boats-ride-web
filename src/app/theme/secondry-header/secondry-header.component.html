@@ -8,10 +8,10 @@
           <div class="language">
             <ul class="clearfix">
               <li [class.active] = "lang == 'en'">
-                <a (click)="switchLanguage('en')">{{'enn'|translate}}</a>
+                <a (click)="switchLanguage('en')">English</a>
               </li>
               <li [class.active] = "lang == 'ar'">
-                <a (click)="switchLanguage('ar')">{{'arr'|translate}}</a>
+                <a (click)="switchLanguage('ar')">العربية</a>
               </li>
             </ul>
           </div>
@@ -28,8 +28,8 @@
         <div class="contact-text">
           <span class="icon flaticon-assistance"></span>
           <span class="txt">{{'speak'|translate}} :
-            <a *ngIf="lang == 'en'" href="tel:+971524918686">+971 52 491 8686</a>
-             <a *ngIf="lang == 'ar'" href="tel:+971524918686">8686 491 52 971+</a>
+            <a *ngIf="lang == 'en'" href="tel:+971524918686" class="btn new-call-btn">+971 52 491 8686</a>
+             <a *ngIf="lang == 'ar'" href="tel:+971524918686" class="btn new-call-btn">8686 491 52 971+</a>
             <span class="icon fa fa-clock" style="padding-left: 5px"></span>{{'weakdays'|translate}}: 09:00am to 03:00am  </span>
         </div>
       </div>

@@ -4,9 +4,17 @@
   </div>
 </div>
 <div class="tap-top-whatsapp top-cls">
-  <a href="https://api.whatsapp.com/send/?phone=971545887084&text&app_absent=0" target="_blank" style="color: white!important;">
+  <a [href]="'https://api.whatsapp.com/send/?phone='+settings?.whatsapp_number+'&text&app_absent=0'" target="_blank" style="color: white!important;">
     <div style="font-size: 30px">
       <i class="fab fa-whatsapp"></i>
+    </div>
+  </a>
+</div>
+
+<div class="tap-top-whatsapp top-cls top-call-us">
+  <a [href] = "'tel:+971524918686'" style="color: white!important;">
+    <div style="font-size: 25px">
+      <i class="fas fa-phone-alt"></i>
     </div>
   </a>
 </div>
@@ -19,7 +27,7 @@
           <div class="shape-1"></div>
           <div class="shape-2"></div>
           <div class="left-image"><img src="../../../assets/images/resource/footer-image.png" alt="" title=""></div>
-          <div class="offer-carousel-box">
+          <div class="offer-carousel-box" *ngIf="isBrowser">
             <!--Carousel-->
             <ngb-carousel [interval]="3000" [pauseOnHover]="true" [wrap]="true"
                            [showNavigationArrows]="showNavigationArrows"
@@ -104,6 +112,10 @@
                     </ul>
                   </div>
 
+                  <div class="social-links payments-img">
+                    <img src = "../../../assets/images/payments.png" />
+                   </div>
+
                 </div>
               </div>
             </div>
@@ -148,7 +160,10 @@
     <div class="footer-bottom">
       <div class="auto-container">
         <div class="inner clearfix">
-          <div class="copyright">{{'right'|translate}}.</div>
+          <div class="copyright">{{'right'|translate}}.
+            <br>
+            Owned by GOLD WATER YACHTS RENTAL LLC
+          </div>
           <div class="bottom-links">
             <a [routerLink]="'terms-and-conditions'">{{'term'|translate}}</a> & <a [routerLink]="'policy-and-policy'">{{'privacy'|translate}}</a>
           </div>

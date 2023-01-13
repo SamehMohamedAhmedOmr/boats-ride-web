@@ -1,0 +1,57 @@
+.blink {
+    animation: blinker 1.5s linear infinite
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0
+    }
+  }
+
+  .price .price-old::before {
+    position: absolute;
+    content: "";
+    left: -3px;
+    top: 45%;
+    right: 3px;
+    width: 100%;
+    border-top: 3px solid;
+    border-color: red;
+    -webkit-transform: rotate(-17deg);
+    -moz-transform: rotate(-17deg);
+    -ms-transform: rotate(-17deg);
+    -o-transform: rotate(-17deg);
+    transform: rotate(-17deg)
+  }
+
+  .price .price-old {
+    position: relative;
+    text-decoration: none;
+    display: inline-block
+  }
+  
+  
+.inner-box {
+    background-color: #EFF3F6 !important;
+  }
+
+  .water-sport-more{
+    /* background: #be1935;
+    border-color: #be1935; */
+    background: #ed1f43;
+    border-color: #ed1f43;
+    border-radius: 30px;
+    color: #ffffff;
+  }
+
+  .meta-info{
+      padding: 20px 10px 10px 10px;
+  }
+
+  .water-sport-more:hover {
+  
+}
+
+.auto-container{
+    padding: 0;
+}
