@@ -1,4 +1,4 @@
-import {Component, HostListener, Inject, OnInit, PLATFORM_ID} from '@angular/core';
+import {Component, HostListener, Inject, OnInit, PLATFORM_ID, Input} from '@angular/core';
 import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 import {LocalStorageService} from "../../../core/services/localStorage.service";
 import {isPlatformBrowser} from "@angular/common";
@@ -16,6 +16,8 @@ export class FooterComponent implements OnInit {
   topPosToStartShowing = 100;
   lang:string | null = 'en';
   isBrowser: boolean = false;
+
+  @Input() settings: any;
 
   @HostListener('window:scroll')
   checkScroll() {
