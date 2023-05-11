@@ -29,6 +29,7 @@ import { ArabicTextComponent } from './feature-reserve/rental-yacht-dubai/arabic
 import { EnglishTextComponent } from './feature-reserve/rental-yacht-dubai/english-text/english-text.component';
 import { ServiceSliderComponent } from './feature-reserve/rental-yacht-dubai/service-slider/service-slider.component';
 import { ServicesBoxComponent } from './feature-reserve/rental-yacht-dubai/services-box/services-box.component';
+import { YachtVideoComponent } from './yacht-video/yacht-video.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { ServicesBoxComponent } from './feature-reserve/rental-yacht-dubai/servi
     ArabicTextComponent,
     EnglishTextComponent,
     ServiceSliderComponent,
-    ServicesBoxComponent
+    ServicesBoxComponent,
+    YachtVideoComponent
   ],
     imports: [
         CommonModule,
