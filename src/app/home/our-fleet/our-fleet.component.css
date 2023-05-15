@@ -1,0 +1,6 @@
+.auto-container p span {
+    color:#5f727f;
+    font-size:15px;
+    text-decoration: underline;
+    cursor: pointer;
+}
