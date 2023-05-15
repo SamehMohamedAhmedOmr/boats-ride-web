@@ -31,6 +31,7 @@ import { ServiceSliderComponent } from './feature-reserve/rental-yacht-dubai/ser
 import { ServicesBoxComponent } from './feature-reserve/rental-yacht-dubai/services-box/services-box.component';
 import { YachtVideoComponent } from './yacht-video/yacht-video.component';
 import { FaqComponent } from './faq/faq.component';
+import { OurFleetComponent } from '../home/our-fleet/our-fleet.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { FaqComponent } from './faq/faq.component';
     ServiceSliderComponent,
     ServicesBoxComponent,
     YachtVideoComponent,
-    FaqComponent
+    FaqComponent,
+    OurFleetComponent
   ],
     imports: [
         CommonModule,
