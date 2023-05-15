@@ -14,12 +14,11 @@ export class BannerComponent implements OnInit {
   isBrowser: boolean = false;
   // images = [1055, 194, 368].map((n) => `https://picsum.photos/id/${n}/900/500`);
   images = [
-    {url:"assets/Banners/new/fishing.jpg",titleEn:"Fishing Trip",navigate:'/fishing-trip',titleAr:"رحلات صيد السمك"},
-    {url:"assets/Banners/new/services.png",titleEn:"Services",navigate:'/services',titleAr:"الخدمات"},
-    {url:"assets/Banners/new/water-sport.png",titleEn:"Water Sports",navigate:'/water-sports',titleAr:"العاب الماء"},
-    {url:"assets/Banners/new/offer.jpg",titleEn:"Offers",navigate:'/offers',titleAr:"عروض"},
-    {url:"assets/Banners/new/yachts-home.png",titleEn:"Yacht Rental",navigate:'/yachts',titleAr:"تأجير اليخوت"},
-    {url:"assets/Banners/new/destination.jpg",titleEn:"Destination",navigate:'/destination',titleAr:"وجهة"}
+    {url:"assets/Banners/new/yacht1.png",titleEn:"yacht rental dubai",navigate:'/yachts',titleAr:"تأجير اليخوت في دبي"},
+    {url:"assets/Banners/new/yacht2.png",titleEn:"yacht with slide",navigate:'/yachts/majesty-56ft',titleAr:"يخت مع الشريحة"},
+    {url:"assets/Banners/new/Jet car 2.png",titleEn:"Jet car dubai",navigate:'/yachts/luxury-jet-car',titleAr:"جت كار دبي"},
+    {url:"assets/Banners/new/yacht3.png",titleEn:"yacht with jacuzzi",navigate:'/yachts/azimut-with-jacuzzi-80ft',titleAr:"يخت مع جاكوزي"},
+    {url:"assets/Banners/new/yacht5.png",titleEn:"yacht birthday party",navigate:'/services/birthday-party',titleAr:"حفلة عيد ميلاد اليخت"}
   ];
   constructor(config: NgbCarouselConfig,
               @Inject(PLATFORM_ID) private platformId: any,
