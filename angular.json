@@ -151,7 +151,7 @@
           "builder": "@angular-devkit/build-angular:server",
           "options": {
             "outputPath": "dist/BoatRide/server",
-            "main": "server.ts",
+            "main": "src/main.server.ts",
             "tsConfig": "tsconfig.server.json"
           },
           "configurations": {
