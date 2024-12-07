@@ -1,8 +1,9 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Inject, PLATFORM_ID} from '@angular/core';
 import {Router} from '@angular/router';
 import {LanguageService} from '../../../core/services/language-services.service';
 import {LanguagesUrlService} from "../../../core/services/Helpers/languages.url.service";
 import {LocalStorageService} from "../../../core/services/localStorage.service";
+import {isPlatformBrowser} from "@angular/common";
 
 @Component({
   selector: 'app-secondry-header',
@@ -12,10 +13,14 @@ import {LocalStorageService} from "../../../core/services/localStorage.service";
 export class SecondryHeaderComponent implements OnInit {
   @Input() public drawer: any;
   lang:string | null = 'en';
+  isBrowser: boolean = false;
+
   constructor(private router: Router,
               private languagesUrlService:LanguagesUrlService,
               private localStorageService: LocalStorageService,
+              @Inject(PLATFORM_ID) private platformId: any,
               private langservice: LanguageService) {
+                this.isBrowser = isPlatformBrowser(platformId);
   }
 
   ngOnInit(): void {
