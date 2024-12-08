@@ -26,7 +26,7 @@ export class RentalYachtDubaiComponent implements OnInit {
   ngOnInit(): void {
     this.lang = this.localStorageService.getItem('lang');
     this.numberofcells = this.resizeServiceService.checkWindowSize(4);
-    this.getServices();
+    // this.getServices();
   }
 
 
