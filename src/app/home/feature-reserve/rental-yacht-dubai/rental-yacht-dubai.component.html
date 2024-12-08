@@ -13,22 +13,22 @@
         <app-english-text *ngIf="lang == 'en'"></app-english-text>
         <app-arabic-text *ngIf="lang == 'ar'"></app-arabic-text>
 
-        <div class="separator"></div>
+        <!-- <div class="separator"></div> -->
       </div>
     </div>
 
-    <div class="item" *ngIf="is_loading">
+    <!-- <div class="item" *ngIf="is_loading">
       <ngx-skeleton-loader count="3" appearance="circle" class="d-flex justify-content-between" [theme]="{
             height: '300px',
             width: '33%',
             'border-radius': '10px'
             }">
       </ngx-skeleton-loader>
-    </div>
+    </div> -->
 
 <!--    <app-service-slider [Services]="Services" [numberOfCell]="numberofcells"></app-service-slider>-->
 
-    <app-services-box [Services]="Services"></app-services-box>
+    <!-- <app-services-box [Services]="Services"></app-services-box>
 
     <div class="see-all mb-5 mt-4">
       <a [routerLink]="'/services'" class="default-link">
@@ -37,6 +37,6 @@
           {{ 'view_all_services' | translate }}
         </span>
       </a>
-    </div>
+    </div> -->
   </div>
 </section>
