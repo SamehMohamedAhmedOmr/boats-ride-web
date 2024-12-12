@@ -42,7 +42,7 @@ export class YachtRentalComponent implements OnInit {
   }
 
   getYachts() {
-    this.yachtService.getYachts().subscribe(data => {
+    this.yachtService.getYachtsForHome().subscribe(data => {
       this.yachts = data;
       this.is_loading = false;
       this.cdr.markForCheck();
