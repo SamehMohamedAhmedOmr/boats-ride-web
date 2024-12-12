@@ -28,4 +28,8 @@ export class YachtService {
     return this.http.get(this.Url + 'trips/voutcher-email-link/' + booking_number)
       .pipe(map((data: any) => data.body as Voucher));
   }
+
+  getYachtsForHome(): Observable<Yacht[]> {
+    return this.http.get<Yacht[]>(this.Url + 'yachts/latest-for-home').pipe(map((data: any) => data.body as Yacht[]));
+  }
 }
