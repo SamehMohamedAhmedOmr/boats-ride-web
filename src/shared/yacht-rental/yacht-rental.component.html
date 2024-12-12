@@ -28,7 +28,7 @@
         </div>
 
         <carousel *ngIf="yachts.length && isBrowser" [margin]="20" [height]="600" [cellWidth]="400" [cellsToShow]="numberofcells"
-                  [autoplay]="true" [dots]="true" [arrowsOutside]="true" [transitionDuration]="100">
+                  [autoplay]="true" [dots]="false" [arrowsOutside]="true" [transitionDuration]="100">
           <div class="carousel-cell" *ngFor="let yacht of yachts">
             <div class="rental-block mix all russia india service-block">
               <div class="inner-box">
@@ -124,7 +124,6 @@
 
     </div>
     <div class="bottom-text">
-      {{'luxarcytopic2'|translate}}
       <a class="view_yachts" [routerLink]="'/yachts'">{{'viewyachts'|translate}}</a>
     </div>
   </div>
