@@ -12,11 +12,21 @@ export class SettingsService {
 
   private Url = environment.url();
 
+  private sharedSettings: any;
+
   constructor(private http: HttpClient) {
   }
 
   get(): Observable<Settings> {
     return this.http.get<Settings>(this.Url + 'settings')
       .pipe(map((data: any) => data.body as Settings));
+  }
+
+  setSettings(settings: any) {
+    this.sharedSettings = settings;
+  }
+
+  getSettings() {
+    return this.sharedSettings;
   }
 }

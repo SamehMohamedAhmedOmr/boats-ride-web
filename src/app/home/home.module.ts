@@ -32,6 +32,7 @@ import { ServicesBoxComponent } from './feature-reserve/rental-yacht-dubai/servi
 import { YachtVideoComponent } from './yacht-video/yacht-video.component';
 import { FaqComponent } from './faq/faq.component';
 import { OurFleetComponent } from '../home/our-fleet/our-fleet.component';
+import { HomeSectionComponent } from '../home/home-section/home-section.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { OurFleetComponent } from '../home/our-fleet/our-fleet.component';
     ServicesBoxComponent,
     YachtVideoComponent,
     FaqComponent,
-    OurFleetComponent
+    OurFleetComponent,
+    HomeSectionComponent
   ],
     imports: [
         CommonModule,

@@ -96,6 +96,7 @@ export class AppComponent implements OnInit {
   settingSubscribe() {
     this.settingsService.get().subscribe(value => {
       this.settings = value;
+      this.settingsService.setSettings(value);
       this.ngxService.stop(); // stop foreground spinner of the master loader with 'default' taskId
       this.cdr.markForCheck();
     });
