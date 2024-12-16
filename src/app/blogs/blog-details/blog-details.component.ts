@@ -1,8 +1,9 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {BlogsService} from '../../../core/services/blogs.service';
 import {Blogs} from "../../../Models/blogs";
 import {MetaTagService} from "../../../core/services/Helpers/meta-tag.service";
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 declare global {
   interface Window { dataLayer: any[]; }
@@ -11,15 +12,18 @@ declare global {
 @Component({
   selector: 'app-blog-details',
   templateUrl: './blog-details.component.html',
-  styleUrls: ['./blog-details.component.css']
+  styleUrls: ['./blog-details.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class BlogDetailsComponent implements OnInit {
   slug: any;
   blog!: Blogs;
+  sanitizedContent: SafeHtml | null = null;
 
   constructor(private route: ActivatedRoute,
               private cdr: ChangeDetectorRef,
               private metaService: MetaTagService,
+              private sanitizer: DomSanitizer,
               private blogservice: BlogsService) {
   }
 
@@ -32,6 +36,7 @@ export class BlogDetailsComponent implements OnInit {
     this.blogservice.getBlog(this.slug).subscribe(data => {
       this.blog = data;
       this.updateMetaTags();
+      this.sanitizedContent = this.sanitizer.bypassSecurityTrustHtml(this.blog?.description.replace('<oembed url', '<iframe class="embed-responsive-item" src').replace('</oembed>', '</iframe>'));
       this.cdr.markForCheck();
     })
   }

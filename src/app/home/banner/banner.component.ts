@@ -18,7 +18,7 @@ export class BannerComponent implements OnInit {
     // {url:"assets/Banners/new/yacht2.png",titleEn:"yacht with slide",navigate:'/yachts/majesty-56ft',titleAr:"يخت مع الشريحة"},
     // {url:"assets/Banners/new/Jet car 2.png",titleEn:"Jet car dubai",navigate:'/yachts/luxury-jet-car',titleAr:"جت كار دبي"},
     // {url:"assets/Banners/new/yacht3.png",titleEn:"yacht with jacuzzi",navigate:'/yachts/azimut-with-jacuzzi-80ft',titleAr:"يخت مع جاكوزي"},
-    {url:"assets/Banners/new/yacht5.png",titleEn:"yacht birthday party",navigate:'/services/birthday-party',titleAr:"حفلة عيد ميلاد اليخت"}
+    {url:"assets/Banners/new/yacht5.png",titleEn:"boat rental dubai",navigate:'/services/birthday-party',titleAr:"حفلة عيد ميلاد اليخت"}
   ];
   constructor(config: NgbCarouselConfig,
               @Inject(PLATFORM_ID) private platformId: any,
