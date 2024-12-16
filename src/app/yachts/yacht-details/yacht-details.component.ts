@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
+import {ChangeDetectorRef, Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {NgbCarouselConfig} from '@ng-bootstrap/ng-bootstrap';
 import {ActivatedRoute} from '@angular/router';
 import {YachtService} from '../../../core/services/yacht.service';
@@ -8,6 +8,7 @@ import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import {MetaTagService} from "../../../core/services/Helpers/meta-tag.service";
 import {NgxGalleryAnimation, NgxGalleryImage, NgxGalleryOptions} from "@kolkov/ngx-gallery";
 import {LocalStorageService} from "../../../core/services/localStorage.service";
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 declare global {
   interface Window { dataLayer: any[]; }
@@ -16,7 +17,8 @@ declare global {
 @Component({
   selector: 'app-yacht-details',
   templateUrl: './yacht-details.component.html',
-  styleUrls: ['./yacht-details.component.css']
+  styleUrls: ['./yacht-details.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class YachtDetailsComponent implements OnInit {
   slug: any;
@@ -29,11 +31,13 @@ export class YachtDetailsComponent implements OnInit {
 
   galleryOptions: NgxGalleryOptions[] = [];
   galleryImages: NgxGalleryImage[] = [];
+  facilatiesSanitizedContent: SafeHtml | null = null;
 
   constructor(private route: ActivatedRoute,
               private yachtServie: YachtService,
               private metaService: MetaTagService,
               public dialog: MatDialog,
+              private sanitizer: DomSanitizer,
               private localStorageService: LocalStorageService,
               private cdr: ChangeDetectorRef) {
 
@@ -52,6 +56,7 @@ export class YachtDetailsComponent implements OnInit {
   getYacht() {
     this.yachtServie.getYacht(this.slug).subscribe(data => {
       this.yacht = data;
+      this.facilatiesSanitizedContent = this.sanitizer.bypassSecurityTrustHtml(this.yacht?.facilities.replace('<oembed url', '<iframe class="embed-responsive-item" src').replace('</oembed>', '</iframe>'));
       this.prepareImages();
       this.updateMetaTags(data);
       this.cdr.markForCheck();

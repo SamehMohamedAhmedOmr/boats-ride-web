@@ -3,3 +3,8 @@ a,a:hover{text-decoration:none;-webkit-transition:all .3s;transition:all .3s}
 .carousel-cells .carousel-cell img, .carousel-cells .carousel-cell video{
   width: unset!important;
 }
+
+.embed-responsive-item {    
+  width: 50%;
+  min-height: 400px;
+}
